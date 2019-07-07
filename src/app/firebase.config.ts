@@ -1,9 +1,9 @@
 export const firebaseKeys = {
-  // For your own projects please use different keys
-  apiKey: 'AIzaSyBUYZcc_HKi1TckbZPpSjSkxyFvml3Is0A',
-  authDomain: 'angular4materialdesign.firebaseapp.com',
-  databaseURL: 'https://angular4materialdesign.firebaseio.com',
-  projectId: 'angular4materialdesign',
-  storageBucket: 'angular4materialdesign.appspot.com',
-  messagingSenderId: '136985605193'
+  apiKey: "AIzaSyCXdbKsEuHGxmr0z2j-M4TxqnoyQVH43RU",
+  authDomain: "plin-kurz.firebaseapp.com",
+  databaseURL: "https://plin-kurz.firebaseio.com",
+  projectId: "plin-kurz",
+  storageBucket: "",
+  messagingSenderId: "766536944933",
+  appId: "1:766536944933:web:c1cb0c8f4eb371c9"
 }
