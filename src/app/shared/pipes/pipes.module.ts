@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 // Pipes
 import { YearPipeComponent } from './year-pipe.component';
 import { DatePipeComponent } from './date-pipe.component';
-import { TitleCasePipeComponent } from './titlecase-pipe.component';
 import { AsyncObservablePipeComponent } from './async-observable-pipe.component';
 import { CurrencyPipeComponent } from './currency-pipe.component';
 import { JsonPipeComponent } from './json-pipe.component';
@@ -14,7 +13,6 @@ import { JsonPipeComponent } from './json-pipe.component';
   declarations: [
     YearPipeComponent,
     DatePipeComponent,
-    TitleCasePipeComponent,
     AsyncObservablePipeComponent,
     CurrencyPipeComponent,
     JsonPipeComponent
@@ -25,7 +23,6 @@ import { JsonPipeComponent } from './json-pipe.component';
   exports: [
     YearPipeComponent,
     DatePipeComponent,
-    TitleCasePipeComponent,
     AsyncObservablePipeComponent,
     CurrencyPipeComponent,
     JsonPipeComponent
