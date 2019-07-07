@@ -9,12 +9,10 @@ import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
 // Components
 import { AuthComponent } from './auth.component';
-import { PhoneSigninComponent } from './phone-signin/phone-signin.component';
 
 @NgModule({
   declarations: [
-    AuthComponent,
-    PhoneSigninComponent
+    AuthComponent
   ],
   imports: [
     CommonModule,
@@ -30,8 +28,7 @@ import { PhoneSigninComponent } from './phone-signin/phone-signin.component';
     CUSTOM_ELEMENTS_SCHEMA
   ],
   exports: [
-    AuthComponent,
-    PhoneSigninComponent
+    AuthComponent
   ]
 })
 export class AuthModule {
