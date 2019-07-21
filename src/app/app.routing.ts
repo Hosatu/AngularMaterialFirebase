@@ -18,22 +18,40 @@ import { MiscComponent } from './components/misc/misc.component';
 
 // Protected
 import { AuthGuardService } from '@shared';
+import { CourseComponent } from './pages/course/course.component';
+import { LessonComponent } from './pages/lesson/lesson.component';
+import { LearnComponent } from './pages/learn/learn.component';
+import { QuizComponent } from './pages/quiz/quiz.component';
+import { ProgressComponent } from './pages/progress/progress.component';
 
 // Routing
 const appRoutes: Routes = [
 
   // Public pages
-  { path: '', redirectTo: '/home', pathMatch : 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutMeComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: '', redirectTo: '/uvod', pathMatch : 'full' },
+  { path: 'uvod', component: HomeComponent },
+  { path: 'o-nas', component: AboutMeComponent },
+  { path: 'kontakt', component: ContactComponent },
   { path: 'misc', component: MiscComponent },
-  { path: 'auth', component: AuthComponent },
+  { path: 'prihlaseni', component: AuthComponent },
 
   // Protected pages
   // { path: 'profile/:uid/:name', component: ProfileComponent, canActivate: [AuthGuardService] },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuardService] },
-  { path: 'profile-settings', component: ProfileSettingsComponent, canActivate: [AuthGuardService] },
+  { path: 'profil', component: ProfileComponent, canActivate: [AuthGuardService] },
+  { path: 'nastaveni', component: ProfileSettingsComponent, canActivate: [AuthGuardService] },
+  { path: 'postup-kurzem', component: ProgressComponent, canActivate: [AuthGuardService] },
+  { path: 'kurz', canActivate: [AuthGuardService], 
+    children: [
+      { path: '', component: CourseComponent },
+      { path: ':lesson',
+        children: [
+          { path: '', component: LessonComponent },
+          { path: ':section', component: LearnComponent },
+          { path: ':section/kviz', component: QuizComponent }
+        ]
+    }
+    ]
+  },
   { path: '**', component: PageNotFoundComponent }
 ];
 

@@ -1,0 +1,26 @@
+{
+    "fonetika": {
+        "title": "Fonetika",
+        "background": "url('/assets/img/mb-bg-06.png')",
+        "description": "alskdjalskdjaslkdjaslkdj",
+        "sections": ["1", "2"]
+    },
+    "morfologie": {
+        "title": "Morfologie",
+        "background": "yellow",
+        "description": "alskdjalskdjaslkdjaslkdj",
+        "sections": ["1"]
+    },
+    "syntax": {
+        "title": "Syntax",
+        "background": "blue",
+        "description": "alskdjalskdjaslkdjaslkdj",
+        "sections": ["1"]
+    },
+    "semantika": {
+        "title": "Sémantika",
+        "background": "red",
+        "description": "alskdjalskdjaslkdjaslkdj",
+        "sections": ["1"]
+    }
+}

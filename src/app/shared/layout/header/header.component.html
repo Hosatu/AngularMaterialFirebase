@@ -5,19 +5,24 @@
   <span><a href="/">PLINEK</a></span>
 
   <!-- Sidenav activate -->
-  <button mat-button routerLink="/home">
+  <button mat-button routerLink="/uvod">
     <mat-icon class="home">home</mat-icon>
-    <span>Home</span>
+    <span>Úvod</span>
   </button>
 
-  <button mat-button routerLink="/course">
+  <button mat-button routerLink="/kurz">
     <mat-icon class="course">school</mat-icon>
-    <span>Course</span>
+    <span>Kurz</span>
   </button>
 
-  <button mat-button routerLink="/about">
+  <button *ngIf="authService.isAuthenticated()" mat-button routerLink="/postup-kurzem">
+    <mat-icon class="timeline">timeline</mat-icon>
+    <span>Postup kurzem</span>
+  </button>
+
+  <button mat-button routerLink="/o-nas">
     <mat-icon class="about">language</mat-icon>
-    <span>About</span>
+    <span>O nás</span>
   </button>
 
   <!-- Menu -->
@@ -26,14 +31,14 @@
   <span class="spacer-light"></span>
 
   <div *ngIf="!authService.isAuthenticated(); else loggedin">
-    <button type="button" routerLink="/auth" mat-icon-button>
+    <button type="button" routerLink="/prihlaseni" mat-icon-button>
       <mat-icon>lock_open</mat-icon>
     </button>
   </div>
 
 
   <ng-template #loggedin>
-    <h4>Welcome</h4>
+    <h4>Vítejte</h4>
 
     <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>more_vert</mat-icon>
@@ -42,23 +47,21 @@
     <mat-menu #menu="matMenu" >
       <a
         mat-menu-item
-        [routerLink]="'/profile'">
+        [routerLink]="'/profil'">
         <mat-icon class="profile">face</mat-icon>
-        <span>Profile</span>
+        <span>Profil</span>
       </a>
 
       <a
         mat-menu-item
-        routerLink="/profile-settings"
-        [queryParams]="{profile: '1'}"
-        fragment="editProfile">
+        routerLink="/nastaveni">
         <mat-icon class="settings">settings</mat-icon>
-        <span>Settings</span>
+        <span>Nastavení</span>
       </a>
 
       <a mat-menu-item (click)="onLogout()">
         <mat-icon class="logout">lock_outline</mat-icon>
-        <span>Logout</span>
+        <span>Odhlásit</span>
       </a>
     </mat-menu>
 

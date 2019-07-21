@@ -1,0 +1,29 @@
+<div id="content">
+    <mat-grid-list cols="1" *ngIf="isLoading; else lessonContent"  rowHeight="200px">
+        <mat-grid-tile colspan="1" rowspan="1">
+            <mat-spinner color="accent"></mat-spinner>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <ng-template #lessonContent>
+        <mat-grid-list *ngIf="currentLesson; else unknownLesson" [cols]="currentLesson.sections.length" rowHeight="80px">
+            <mat-grid-tile [colspan]="currentLesson.sections.length"  [style.background]="currentLesson.background" rowspan="1">
+                <h1>{{currentLesson.title}}</h1>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="currentLesson.sections.length" rowspan="2">
+                {{currentLesson.description}}
+            </mat-grid-tile>
+            <mat-grid-tile colspan="1" rowspan="1" *ngFor="let section of currentLesson.sections" [routerLink]="[section]">
+                <mat-card>
+                    <mat-card-header>
+                        <mat-card-title>{{section}}</mat-card-title>
+                    </mat-card-header>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </ng-template>
+    <ng-template #unknownLesson>
+        <mat-card>
+            <h1>Neexistující lekce</h1> Lekce, kterou hledáte, neexistuje. <a routerLink="/kurz">Kurz</a>.
+        </mat-card>
+    </ng-template>
+</div>

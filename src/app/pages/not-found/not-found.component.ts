@@ -4,8 +4,8 @@ import { Component } from '@angular/core';
   template: `
     <div id="content">
       <mat-card>
-          <h1>Page not found 404</h1>
-            The page you're looking for doesn't exist, please return to the <a routerLink="/home">homepage</a>.
+          <h1>Stránka nenalezena 404</h1>
+            Stránka, kterou hledáte, neexistuje. <a routerLink="/uvod">homepage</a>.
       </mat-card>
    </div>
 `,
