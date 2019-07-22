@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     <div id="content">
       <mat-card>
           <h1>Stránka nenalezena 404</h1>
-            Stránka, kterou hledáte, neexistuje. <a routerLink="/uvod">homepage</a>.
+            Stránka, kterou hledáte, neexistuje. <a routerLink="/uvod">Hlavní stránka</a>.
       </mat-card>
    </div>
 `,
