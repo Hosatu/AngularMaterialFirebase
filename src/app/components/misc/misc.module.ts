@@ -11,8 +11,6 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MiscComponent } from './misc.component';
-import { ChangeDetectionComponent } from './change/change-detection.component';
-import { ChangeDetailComponent } from './change/change-detail.component';
 import { TableComponent } from './table/table.component';
 import { StepperComponent } from './stepper/stepper.component';
 import { DragDropComponent } from './drag-drop/drag-drop.component';
@@ -21,8 +19,6 @@ import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.compo
 @NgModule({
   declarations: [
     MiscComponent,
-    ChangeDetectionComponent,
-    ChangeDetailComponent,
     TableComponent,
     StepperComponent,
     DragDropComponent,
@@ -39,8 +35,6 @@ import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.compo
   ],
   exports: [
     MiscComponent,
-    ChangeDetectionComponent,
-    ChangeDetailComponent,
     TableComponent,
     StepperComponent,
     ExpansionPanelComponent
