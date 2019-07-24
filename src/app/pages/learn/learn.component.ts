@@ -12,12 +12,14 @@ import { Section } from '../../shared/models';
 export class LearnComponent extends HasSubscriptions implements OnInit {
 
   public currentSection: Section;
+  public isLoading: boolean = true;
 
   constructor(private route: ActivatedRoute, private files: HttpClient) {
     super();
     this.safeSubscribe<Params>(
       this.route.params,
       (params: Params) => {
+        this.isLoading = true;
         this.loadSection(params["lesson"], params["section"]);
       }
     );
@@ -27,7 +29,12 @@ export class LearnComponent extends HasSubscriptions implements OnInit {
     this.safeSubscribe(
       this.files.get("/assets/data/sections.json"),
       (fileContent) => {
-        this.currentSection = fileContent[lesson][section];
+        if(fileContent[lesson]) {
+          this.currentSection = fileContent[lesson][section];
+        } else {
+          this.currentSection = null;
+        }
+        this.isLoading = false;
       }
     );
   }

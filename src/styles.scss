@@ -5,6 +5,15 @@ body {
     background-color: #f7f7f7;
 }
 
+.carousel-indicators.ng-star-inserted {
+    margin-left: 0px;
+    width: auto;
+}
+
+.disabled-indicators .carousel-indicators.ng-star-inserted {
+    pointer-events: none;
+}
+
 /* Tablet format and lower */
 @media only screen and (max-width: 1024px) {
 

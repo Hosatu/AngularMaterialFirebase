@@ -1,1 +1,54 @@
-<p>Tady by měl být kvíz.</p>
+<ng-container *ngIf="!isLoading; else loading">
+    <ng-container *ngIf="currentSection; else unknownLesson" >
+        <mat-grid-list cols="1" rowHeight="60px">
+            <mat-grid-tile colspan="1" rowspan="1">
+                <h1>{{currentSection.title}}</h1>
+            </mat-grid-tile>
+        </mat-grid-list>
+        <mat-carousel class="disabled-indicators" [proportion]="40" [autoplay]="false" color="primary" [loop]="false" [hideArrows]="false" [hideIndicators]="false">
+            <mat-carousel-slide [hideOverlay]="true" *ngFor="let task of currentSection.quizes; let i = index">
+                <mat-grid-list cols="1" rowHeight="95%">
+                    <mat-grid-tile colspan="1" rowspan="1">
+                        <mat-card class="main-text">
+                            <mat-card-header>
+                                <mat-card-title>{{task.title}}</mat-card-title>
+                            </mat-card-header>
+                            <mat-card-content>
+                                <ng-template task></ng-template>
+                            </mat-card-content>
+                        </mat-card>
+                    </mat-grid-tile>
+                </mat-grid-list>
+            </mat-carousel-slide>
+            <mat-carousel-slide [hideOverlay]="true">
+                    <mat-grid-list cols="1" rowHeight="95%">
+                        <mat-grid-tile colspan="1" rowspan="1">
+                            <mat-card class="main-text">
+                                <mat-card-header>
+                                    <mat-card-title>RESULTS</mat-card-title>
+                                </mat-card-header>
+                                <mat-card-content>
+                                    
+                                </mat-card-content>
+                            </mat-card>
+                        </mat-grid-tile>
+                    </mat-grid-list>
+                </mat-carousel-slide>
+        </mat-carousel>
+    </ng-container>
+</ng-container>
+
+
+<ng-template #loading>
+    <mat-grid-list cols="1"  rowHeight="200px">
+        <mat-grid-tile colspan="1" rowspan="1">
+            <mat-spinner color="accent"></mat-spinner>
+        </mat-grid-tile>
+    </mat-grid-list>
+</ng-template>
+
+<ng-template #unknownLesson>
+    <mat-card>
+        <h1>Neexistující lekce/sekce</h1> Lekce nebo sekce, kterou hledáte, neexistuje. <a routerLink="/kurz">Kurz</a>.
+    </mat-card>
+</ng-template>

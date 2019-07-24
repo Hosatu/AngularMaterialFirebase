@@ -8,7 +8,6 @@ import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 // Pages
 import { HomeComponent } from './pages/home/home.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { AuthComponent } from './pages/auth/auth.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProfileSettingsComponent } from './pages/profile/profile-settings.component';
@@ -31,7 +30,6 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/uvod', pathMatch : 'full' },
   { path: 'uvod', component: HomeComponent },
   { path: 'o-nas', component: AboutMeComponent },
-  { path: 'kontakt', component: ContactComponent },
   { path: 'misc', component: MiscComponent },
   { path: 'prihlaseni', component: AuthComponent },
 

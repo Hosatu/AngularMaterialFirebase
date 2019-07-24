@@ -9,9 +9,7 @@ import { MatButtonModule, MatCheckboxModule, MatInputModule, MatNativeDateModule
 // import { CdkTableModule } from '@angular/cdk';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { PipesModule } from '@shared/pipes/pipes.module';
 
-import { CarouselComponent } from './carousel/carousel.component';
 import { MiscComponent } from './misc.component';
 import { ChangeDetectionComponent } from './change/change-detection.component';
 import { ChangeDetailComponent } from './change/change-detail.component';
@@ -22,7 +20,6 @@ import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.compo
 
 @NgModule({
   declarations: [
-    CarouselComponent,
     MiscComponent,
     ChangeDetectionComponent,
     ChangeDetailComponent,
@@ -38,11 +35,9 @@ import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.compo
     MatTableModule, MatCardModule, MatDatepickerModule, MatExpansionModule,
     MatIconModule, MatToolbarModule,
     FormsModule, ReactiveFormsModule,
-    PipesModule,
     DragDropModule
   ],
   exports: [
-    CarouselComponent,
     MiscComponent,
     ChangeDetectionComponent,
     ChangeDetailComponent,

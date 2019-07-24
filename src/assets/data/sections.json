@@ -15,6 +15,22 @@
                     "title": "Stránka 3",
                     "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
                 }
+            ],
+            "quizes": [
+                {
+                    "title": "asdasd",
+                    "type": "multichoice",
+                    "data": {
+                        "question": "Quo vadis?"
+                    }
+                },
+                {
+                    "title": "asdasd",
+                    "type": "multichoice",
+                    "data": {
+                        "question": "Who knows"
+                    }
+                }
             ]
         },
         "2":{
@@ -31,6 +47,15 @@
                 {
                     "title": "Stránka 3",
                     "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                }
+            ],
+            "quizes": [
+                {
+                    "title": "asdasd",
+                    "type": "multichoice",
+                    "data": {
+
+                    }
                 }
             ]
         }
@@ -51,6 +76,15 @@
                     "title": "Stránka 3",
                     "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
                 }
+            ],
+            "quizes": [
+                {
+                    "title": "asdasd",
+                    "type": "multichoice",
+                    "data": {
+
+                    }
+                }
             ]
         },
         "2":{
@@ -67,6 +101,15 @@
                 {
                     "title": "Stránka 3",
                     "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                }
+            ],
+            "quizes": [
+                {
+                    "title": "asdasd",
+                    "type": "multichoice",
+                    "data": {
+
+                    }
                 }
             ]
         }
@@ -87,6 +130,15 @@
                     "title": "Stránka 3",
                     "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
                 }
+            ],
+            "quizes": [
+                {
+                    "title": "asdasd",
+                    "type": "multichoice",
+                    "data": {
+
+                    }
+                }
             ]
         },
         "2":{
@@ -103,6 +155,15 @@
                 {
                     "title": "Stránka 3",
                     "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                }
+            ],
+            "quizes": [
+                {
+                    "title": "asdasd",
+                    "type": "multichoice",
+                    "data": {
+
+                    }
                 }
             ]
         }
@@ -123,6 +184,15 @@
                     "title": "Stránka 3",
                     "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
                 }
+            ],
+            "quizes": [
+                {
+                    "title": "asdasd",
+                    "type": "multichoice",
+                    "data": {
+
+                    }
+                }
             ]
         },
         "2":{
@@ -139,6 +209,15 @@
                 {
                     "title": "Stránka 3",
                     "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                }
+            ],
+            "quizes": [
+                {
+                    "title": "asdasd",
+                    "type": "multichoice",
+                    "data": {
+
+                    }
                 }
             ]
         }

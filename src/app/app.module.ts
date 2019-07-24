@@ -8,6 +8,7 @@ import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule, MatS
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+import { MatCarouselModule } from '@ngmodule/material-carousel'; 
 
 // Modules
 import { BlocksModule } from './components/blocks/blocks.module';
@@ -15,7 +16,6 @@ import { AuthModule } from './pages/auth/auth.module';
 import { BackgroundsModule } from './components/backgrounds/backgrounds.module';
 import { ProfileModule } from './pages/profile/profile.module';
 import { MiscModule } from './components/misc/misc.module';
-import { PipesModule } from '@shared/pipes/pipes.module';
 
 // Shared
 import {
@@ -36,7 +36,6 @@ import { firebaseKeys } from './firebase.config';
 // Pages
 import { HomeComponent } from './pages/home/home.component';
 import { AboutMeComponent } from './pages/about-me/about-me.component';
-import { ContactComponent } from './pages/contact/contact.component';
 import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 
 // Components
@@ -46,13 +45,13 @@ import { LessonComponent } from './pages/lesson/lesson.component';
 import { LearnComponent } from './pages/learn/learn.component';
 import { QuizComponent } from './pages/quiz/quiz.component';
 import { ProgressComponent } from './pages/progress/progress.component';
+import { TasksModule } from './tasks/tasks.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AboutMeComponent,
-    ContactComponent,
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
@@ -73,12 +72,13 @@ import { ProgressComponent } from './pages/progress/progress.component';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    PipesModule,
     BlocksModule,
     AuthModule,
+    TasksModule,
     BackgroundsModule,
     ProfileModule,
     MiscModule,
+    MatCarouselModule,
     NgxAuthFirebaseUIModule.forRoot(firebaseKeys)
   ],
   providers: [

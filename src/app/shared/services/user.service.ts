@@ -30,27 +30,6 @@ export class UserService {
     });
   }
 
-  public contactFormSend(
-    company: string,
-    firstname: string,
-    lastname: string,
-    address: string,
-    city: string,
-    postal: string,
-    message: string
-  ) {
-    this.alertService.showToaster('This contact form is saved');
-    return firebase.database().ref().child('contactform/').push({
-      company: company,
-      firstname: firstname,
-      lastname: lastname,
-      address: address,
-      city: city,
-      postal: postal,
-      message: message
-    });
-  }
-
   public getUserProfileInformation(): void {
     const user = firebase.auth().currentUser;
     let name, email, photoUrl, uid, emailVerified;
