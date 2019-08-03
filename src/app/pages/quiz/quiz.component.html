@@ -6,7 +6,7 @@
             </mat-grid-tile>
         </mat-grid-list>
         <mat-carousel class="disabled-indicators" [proportion]="40" [autoplay]="false" color="primary" [loop]="false" [hideArrows]="false" [hideIndicators]="false">
-            <mat-carousel-slide [hideOverlay]="true" *ngFor="let task of currentSection.quizes; let i = index">
+            <mat-carousel-slide [hideOverlay]="true" *ngFor="let task of currentSection.quizes; let i = index" [disabled]="!slideUnlocked(i)">
                 <mat-grid-list cols="1" rowHeight="95%">
                     <mat-grid-tile colspan="1" rowspan="1">
                         <mat-card class="main-text">
@@ -20,7 +20,7 @@
                     </mat-grid-tile>
                 </mat-grid-list>
             </mat-carousel-slide>
-            <mat-carousel-slide [hideOverlay]="true">
+            <mat-carousel-slide [hideOverlay]="true" [disabled]="!allSlidesDone()">
                     <mat-grid-list cols="1" rowHeight="95%">
                         <mat-grid-tile colspan="1" rowspan="1">
                             <mat-card class="main-text">

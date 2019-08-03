@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule, MatSnackBarModule,
          MatToolbarModule, MatDialogModule, MatSidenavModule, MatNativeDateModule,
-         MatCardModule, MatTabsModule, MatIconModule, MatProgressSpinnerModule, MatGridListModule } from '@angular/material';
+         MatCardModule, MatTabsModule, MatIconModule, MatProgressSpinnerModule, MatGridListModule, MatRadioModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
@@ -46,6 +46,7 @@ import { LearnComponent } from './pages/learn/learn.component';
 import { QuizComponent } from './pages/quiz/quiz.component';
 import { ProgressComponent } from './pages/progress/progress.component';
 import { TasksModule } from './tasks/tasks.module';
+import { SanitizePipe } from './shared/pipes/sanitize-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { TasksModule } from './tasks/tasks.module';
     MatButtonModule, MatCheckboxModule, MatMenuModule, MatInputModule, MatSnackBarModule,
     MatToolbarModule, MatDialogModule, MatSidenavModule, MatNativeDateModule,
     MatCardModule, MatTabsModule, MatIconModule, MatProgressSpinnerModule, MatGridListModule,
+    MatRadioModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

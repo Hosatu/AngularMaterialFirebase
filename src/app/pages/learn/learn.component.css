@@ -1,7 +1,14 @@
 .main-text {
     min-width: 75%;
     min-height: 90%;
-    padding: 20px 50px;
+    padding: 20px 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: justify;
+}
+
+.main-text mat-card-content {
+    font-size: 1.2em;
 }
 
 mat-card-header {

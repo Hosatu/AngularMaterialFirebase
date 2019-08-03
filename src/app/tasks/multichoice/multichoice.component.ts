@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TaskComponent } from '../task';
 
 @Component({
@@ -9,6 +9,7 @@ import { TaskComponent } from '../task';
 export class MultichoiceComponent implements TaskComponent, OnInit {
 
   @Input() data: any;
+  @Output() taskSubmitted: EventEmitter<boolean> = new EventEmitter();
   
   constructor() { }
 

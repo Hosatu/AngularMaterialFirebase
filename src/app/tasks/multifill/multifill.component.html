@@ -1,0 +1,2 @@
+<span [innerHTML]="data.template | sanitizePipe"></span>
+<button mat-button (click)="submit()" [disabled]="isAnswered || !isAllFilled()">Odeslat odpověď</button>

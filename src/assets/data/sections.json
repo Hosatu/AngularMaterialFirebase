@@ -1,60 +1,154 @@
 {
     "fonetika": {
-        "1":{
-            "title": "text1",
+        "úvod":{
+            "title": "Úvod do fonetiky a fonologie",
             "content": [
                 {
-                    "title": "Stránka 1",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": " ",
+                    "text": [
+                        "Abychom jazyk pochopili v širší perspektivě, musíme postupovat od nejnižší úrovně k vyšším rovinám. Nejnižší úroveň zaujímá fonetika a fonologie, protože se zabývají zvukovou stránkou jazyka, kterou můžeme pozorovat i na těch nejmenších částech slov – jednotlivých hláskách.",
+                        "<b>Fonetika</b> na zvukovou stránku jazyka pohlíží z hlediska samotného vzniku řeči a jejího vnímání. Její základní jednotkou je <b>hláska</b>. Zabývá se tím, jak jednotlivé hlásky vznikají, jak se vzájemně ovlivňují a jak je možné, že je slyšíme.",
+                        "Důležité je si uvědomit, že hláska není totéž co <b>písmeno</b>. Písmena používáme k záznamu hlásek, mnohdy však vyslovujeme jinou hlásku, než jaké napíšeme písmeno (například ve slově <i>sníh</i>). V některých jazycích dokonce písmena nereprezentují hlásky, ale celé slabiky nebo i slova. "
+
+                    ]
                 },
                 {
-                    "title": "Stránka 2",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                },
-                {
-                    "title": "Stránka 3",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": "",
+                    "text": [
+                        "Hlásky můžeme dělit do několika skupin podle místa a způsobu tvoření v ústní dutině. Nejjednodušší rozdělení je na <b>souhlásky</b> a <b>samohlásky</b>. Základem pro tvorbu souhlásek je překážka výdechovému proudu, výrazněji se pak podílejí například i patra, dásně, zuby a případně hlasivky. U samohlásek nedochází k tvorbě překážky a hlavní roli hraje postavení jazyka.",
+                        "<b>Fonologie</b> pak zkoumá zvukovou stránku jazyka z hlediska funkce, vlivu na význam. Její základní jednotkou je <b>foném</b>, což je hláska schopná rozlišit význam. Díky těmto jednotkám vnímáme rozdíl například mezi slovy <i>pes</i> a <i>pas</i>, <i>les</i> a <i>lev</i> a podobně. Význam však pouze rozlišují, jeho nositelem jsou až vyšší jazykové jednotky."
+                    ]
                 }
             ],
             "quizes": [
                 {
-                    "title": "asdasd",
-                    "type": "multichoice",
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
                     "data": {
-                        "question": "Quo vadis?"
+                        "question": "Čím se zabývá fonetika? ",
+                        "options": [ "zvukovou stránkou jazyka z hlediska vzniku a vnímání řeči", "zvukovou stránkou jazyka z hlediska funkce"],
+                        "correct": "zvukovou stránkou jazyka z hlediska vzniku a vnímání řeči"
+                    }
+                }, 
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Čím se zabývá fonologie? ",
+                        "options": [ "zvukovou stránkou jazyka z hlediska vzniku a vnímání řeči", "zvukovou stránkou jazyka z hlediska funkce"],
+                        "correct": "zvukovou stránkou jazyka z hlediska funkce"
                     }
                 },
                 {
-                    "title": "asdasd",
-                    "type": "multichoice",
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
                     "data": {
-                        "question": "Who knows"
+                        "question": "Základní jednotkou fonetiky je",
+                        "options": [ "hláska", "písmeno", "foném"],
+                        "correct": "hláska"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Základní jednotkou fonologie je",
+                        "options": [ "hláska", "písmeno", "foném"],
+                        "correct": "foném"
                     }
                 }
+                
+                
             ]
         },
-        "2":{
-            "title": "text2",
+        "výslovnost":{
+            "title": "Přizpůsobení výslovnosti",
             "content": [
                 {
-                    "title": "Stránka 1",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": "Alofony",
+                    "text": ["Jednotlivé hlásky také mnohdy vyslovujeme různě, ale zapisujeme je prostřednictvím jednoho písmene. Všimněte si, že <i>n</i> ve slově <i>lano</i> zní jinak než ve slově <i>lanko</i>. Tyto různé varianty výslovnosti nazýváme <b>alofony</b> určitého fonému (v uvedeném případě se tedy jedná o alofony fonému n). Jejich volba závisí na kontextu, tedy na tom, jaké hlásky (nebo spíše typy hlásek) se objevují v jejich bezprostředním okolí (typicky za nimi). Artikulace dané hlásky se tak mírně přizpůsobí artikulaci hlásky následující, díky čemuž se jejich spojení snáze vysloví. Proto se v této souvislosti používá také pojem <b>poziční varianty</b>. Zmíněné <i>n</i> se tedy vlivem <i>k</i> vysloví blíže zadnímu patru."
+                    ]
                 },
                 {
-                    "title": "Stránka 2",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": "Asimilace",
+                    "text": ["Ukázali jsme, že jednotlivé hlásky se v proudu řeči mohou navzájem ovlivňovat. Příkladem takového ovlivňování je i jev nazývaný <b>asimilace</b>. S tímto jevem jste se pravděpodobně už setkali, ačkoli jste pro něj možná používali český termín <b>spodoba</b>. Jedná se o přizpůsobení (sblížení) výslovnosti skupiny souhlásek nebo samohlásek. Nejznámějším případem je <b><i>asimilace znělosti</i></b>.",
+                    "Abychom ji však mohli přiblížit, musíme nejdříve vysvětlit, co znamená <b>znělost</b>. <b>Znělé hlásky</b> jsou takové, na jejichž vzniku se podílejí hlasivky (kmitají). V češtině k nim řadíme následující souhlásky: b, d, ď, g, m, n, ň, v, z, ž, j a h. Naopak <b>neznělé hlásky</b> vznikají bez účasti hlasivek (jsou v klidu) a patří k nim tyto souhlásky: p, t, ť, k, c, č, f, s, š a ch. Některé z těchto hlásek spolu tvoří <b>znělostní páry</b> – liší se pouze znělostí, jejich místo a způsob tvorby se shodují. Takovými páry jsou: b – p, d – t, ď – ť, v – f, z – s, ž – š a h – ch. "]
                 },
                 {
-                    "title": "Stránka 3",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": "Asimilace znělosti",
+                    "text": ["Asimilace znělosti způsobuje, že se znělá hláska přizpůsobí neznělé nebo naopak. To, která z nich se přizpůsobí, je typicky dáno jejich pořadím, v češtině se obvykle první v pořadí přizpůsobí té následující. První v pořadí je tak nahrazena svým znělostním protikladem. Například <i>zpívat</i> vyslovujeme jako <i>spívat</i>, protože <i>p</i> je neznělé, a proto se celá skupina vysloví nezněle, tudíž se <i>z</i> vysloví jako <i>s</i>. Naproti tomu u slova <i>sbírat</i> dojde k opačnému efektu. Slovo vyslovíme jako <i>zbírat</i>, protože <i>b</i> je znělé, a proto se i <i>s</i> vysloví zněle (jako <i>z</i>).",
+                    "Za důsledek asimilace znělosti můžeme považovat i takzvanou <b>neutralizaci znělosti</b>, což je pravidelný jev, při kterém dochází ke ztrátě znělosti na konci slova. Proto vyslovujeme <i>zpěv</i> jako <i>spěf</i>."]
                 }
             ],
             "quizes": [
                 {
-                    "title": "asdasd",
-                    "type": "multichoice",
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
                     "data": {
-
+                        "question": "Ve kterém případě se jedná o různé alofony daného fonému?",
+                        "options": ["<b>m</b>otyka, <b>m</b>ožnost", "ko<b>s</b>t, rado<b>s</b>t", "tra<b>m</b>vaj, <b>m</b>ýdlo", "ka<b>z</b>y, ka<b>z</b>it "],
+                        "correct": "tra<b>m</b>vaj, <b>m</b>ýdlo"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Ve které z následujících možnosti se znělá hláska přizpůsobuje neznělé?",
+                        "options": ["<b>sb</b>ěračka", "<b>st</b>isknout", "<b>sv</b>al", "<b>zt</b>roskotat"],
+                        "correct": "<b>zt</b>roskotat"
+                    }
+                },
+                {
+                    "title": "Doplňte správné odpovědi",
+                    "type": "multifill",
+                    "data": {
+                        "question": "Doplňte znělostní protiklady",
+                        "template":"<ul><li>p - <input id='answer-2-0'></li><li>z - <input id='answer-2-1'></li><li>t - <input id='answer-2-2'></li><li>f - <input id='answer-2-3'></li><li>š - <input id='answer-2-4'><li>ď - <input id='answer-2-5'></li></li></ul>",
+                        "answers": [
+                            {
+                                "id": "answer-2-0",
+                                "value":"b"
+                            }, 
+                            {
+                                "id": "answer-2-1",
+                                "value":"s"
+                            },
+                            {
+                                "id": "answer-2-2",
+                                "value":"d"
+                            },
+                            {
+                                "id": "answer-2-3",
+                                "value":"v"
+                            },
+                            {
+                                "id": "answer-2-4",
+                                "value":"ž"
+                            },
+                            {
+                                "id": "answer-2-5",
+                                "value":"ť"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Při neutralizaci znělosti",
+                        "options": ["se znělá hláska mění v neznělou", "se neznělá hláska mění ve znělou"],
+                        "correct": "se znělá hláska mění v neznělou"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Ve kterém případě nedochází k neutralizaci znělosti?",
+                        "options": ["dikobraz", "pes", "strakapoud", "lev"],
+                        "correct": "pes"
                     }
                 }
             ]
@@ -66,15 +160,15 @@
             "content": [
                 {
                     "title": "Stránka 1",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
                 },
                 {
                     "title": "Stránka 2",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
                 },
                 {
                     "title": "Stránka 3",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
                 }
             ],
             "quizes": [
@@ -92,15 +186,15 @@
             "content": [
                 {
                     "title": "Stránka 1",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
                 },
                 {
                     "title": "Stránka 2",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
                 },
                 {
                     "title": "Stránka 3",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
                 }
             ],
             "quizes": [

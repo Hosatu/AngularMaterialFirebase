@@ -3,7 +3,7 @@
         "title": "Fonetika",
         "background": "url('/assets/img/mb-bg-06.png')",
         "description": "alskdjalskdjaslkdjaslkdj",
-        "sections": ["1", "2"]
+        "sections": ["úvod", "výslovnost"]
     },
     "morfologie": {
         "title": "Morfologie",
