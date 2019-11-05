@@ -100,7 +100,7 @@
                     }
                 },
                 {
-                    "title": "Doplňte správné odpovědi",
+                    "title": "Doplňte znělostní protiklady",
                     "type": "multifill",
                     "data": {
                         "question": "Doplňte znělostní protiklady",
@@ -152,8 +152,143 @@
                     }
                 }
             ]
-        }
+        },
+        "vývoj":{
+            "title": "Vývoj v hláskové rovině",
+            "content": [
+                {
+                    "title": " ",
+                    "text": [
+                        "V hláskové rovině také dochází k postupným změnám. Stav jazyka, který můžeme pozorovat dnes, je tedy důsledkem stovek až tisíců let vývoje, který stále pokračuje, byť pomalým tempem. Jevy, které se nám ze současného hlediska zdají těžko pochopitelné, jsou pouze dokladem tohoto vývoje."
+
+                    ]
+                },
+                {
+                    "title": "Zánik a vokalizace jerů",
+                    "text": [
+                        "Jednou takovou otázkou, kterou jste si možná někdy položili, je, proč v češtině při skloňování velkého množství slov mizí <i>e</i>. Příkladem je slovo <i>pes</i> (bez psa, psu/psovi, psa, pse, …). Vysvětlení je poměrně jednoduché. Kdysi dávno, v dobách, kdy ještě neexistovala samostatná čeština, nebylo v tomto slově žádné <i>e</i>. Místo něj byla ve slově jiná hláska, kterou nazýváme <b>jer</b>. Tento jer se nacházel uprostřed slova (tedy na místě současného <i>e</i>), ale také na jeho konci. V době, kdy se začínala formovat čeština, došlo k zániku/přeměně této hlásky. V případě češtiny tak došlo k jejímu vypuštění nebo změně na <i>e</i> (protože <i>e</i> bylo výslovnostně nejblíže tomu, jak se tato hláska na našem území vyslovovala). V jiných příbuzných jazycích mohlo dojít ke změně na jinou samohlásku bližší výslovnosti jeru v dané oblasti."  
+                    ]
+                },
+                {
+                    "title": "Havlíkovo pravidlo",
+                    "text": [
+                        "To, jestli hláska zanikla, nebo se přeměnila, však nebylo náhodné – bylo to dáno pozicí ve slově. Co se se kterým jerem stalo, popisuje takzvané <b>Havlíkovo pravidlo</b>. Toto pravidlo říká, že v češtině (bráno od konce slova) liché jery zanikly a sudé se měnily v <i>e</i>. Pokud této řadě stála v cestě jiná samohláska, začalo se u dalšího jeru počítat od začátku. Jer, který byl na konci slova <i>pьsъ</i> (dnes <i>pes</i>), tedy zanikl, a ten, který se nacházel mezi <i>p</i> a <i>s</i>, se změnil v <i>e</i>. V případě druhého pádu (<i>pьsa</i>) však na konci žádný jer nebyl, a proto ten mezi <i>p</i> a <i>s</i> zanikl. Proto dnes používáme pro první pád formu <i>pes</i>, ale pro druhý pád formu <i>psa</i>."
+                    ]
+                },
+                {
+                    "title": "Nářečí",
+                    "text": [
+                        "Vývoj, který jsme nastínili, přinesl postupně mnoho změn, které většinou směřovaly ke zjednodušení výslovnosti. Ne všechny se ovšem rozšířily po celém území nebo proběhly všude stejně, díky čemuž se vyvinula různá nářečí. Na základě toho, jakým způsobem se v jednotlivých oblastech změnily ý a ú, rozlišujeme čtyři základní typy nářečí:", "1. <b>česká</b> (v užším smyslu, tj. na území Čech): ý > ej (mlýn > mlejn), ú > ou (múka > mouka)",
+                        "2. <b>středomoravská</b>: ý > é (mlýn > mlén), ú > ó (mouka > móka)",
+                        "3. <b>východomoravská</b>: ý, ú – zachováno",
+                        "4. <b>slezská</b>: ý > y (mlýn > mlyn), ú > u (múka > muka) – zkráceno"
+                        
+                    ]
+                }
+
+            ],
+            "quizes": [
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Havlíkovo pravidlo říká, že v případě češtiny:",
+                        "options": ["liché jery (od začátku slova) zanikly a sudé se změnily v e", "sudé jery (od začátku slova) zanikly a liché se změnily v e", "liché jery (od konce slova) zanikly a sudé se změnily v e", "sudé jery (od konce slova) zanikly a liché se změnily v e"],
+                        "correct": "liché jery (od konce slova) zanikly a sudé se změnily v e"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Do které skupiny nářečí spadá následující věta? <i>Dé móku ze mléna na vozék.</i>",
+                        "options": ["česká", "středomoravská", "východomoravská", "slezská" ],
+                        "correct": "středomoravská"
+
+                    }
+                }
+            ]
+
+  
     },
+    "základy programování":{
+        "title": "Základní koncepty v programování",
+        "content": [
+            {
+                "title": " ",
+                "text": [
+                    "Uvedli jsme, že počítačová lingvistika vyžaduje určitou míru znalostí z oblasti lingvistiky, ale také informatiky. V některých úlohách v tomto kurzu se tak budete setkávat s útržky kódu v <b>programovacím jazyce Python</b>. Nemusíte se obávat, nikdo po vás nebude chtít, abyste napsali vlastní program, jde spíše o pochopení základních konceptů a ukázku toho, jak je možné tyto dva zdánlivě zcela rozdílné světy (jazyk a informatiku) v praxi propojit.", "Nyní se seznámíte pouze s několika základními principy, které pro vás budou v tuto chvíli relevantní, a časem se zaměříme na některé další."
+
+                ]
+            },
+            {
+                "title": "Proměnná",
+                "text": [
+                    "Pojem <b>proměnná</b> nejspíš znáte z hodin matematiky, v programování se ovšem používá v trochu jiném kontextu. Zatímco v matematické rovnici proměnná znamená hodnotu, kterou se snažíme zjistit („neznámá“), v programování je to informace, se kterou dále pracujeme.", "Proměnná v programování je tedy něco, kam si uložíme informaci, kterou budeme chtít později použít. Důležité ovšem je, že její hodnota se může měnit. Nejprve v ní můžeme mít uložené například jméno „Petr“ a poté ho nahradit jménem „Pavel“. Ptáme-li se tedy na hodnotu nějaké proměnné, zajímá nás aktuální stav."  
+                ]
+            },
+            {
+                "title": "",
+                "text": [
+                    "V programovacím jazyce Python, který budeme v rámci tohoto kurzu používat, vytvoříme proměnnou tak, že pro ni zvolíme nějaký název a přiřadíme jí hodnotu. Toto přiřazení provádíme pomocí <b>operátoru =</b>, tedy například <i>name = \"Petr\"</i>. Pokud chceme hodnotu změnit, napíšeme totéž s novou hodnotou, tedy <code>name = \"Pavel\"</code>. V proměnné bude nově uloženo jméno Pavel.", "Často nás zajímá, zda je v proměnné aktuálně uložena určitá hodnota. To můžeme zjistit pomocí zdvojeného rovná se (<b>operátoru ==</b>), tedy například <code>name == \"Petr\"</code>, čímž získáme <b>pravdivostní hodnotu</b> (True/False). "
+                ]
+            },
+            {
+                "title": "Podmínka",
+                "text": [
+                    "Zmíněné porovnávání typicky využijeme v případě, že chceme nějakou část kódu (<b>příkaz</b> nebo jejich sérii) provést pouze za určitých okolností, například pokud je v proměnné uloženo „Petr“, změň hodnotu na „Pavel“.", "V Pythonu používáme pro vyjádření podmínky klíčové slovo <b>if</b>. Na řádku s tímto klíčovým slovem je tedy uvedena podmínka a na následujících řádcích se nachází příkaz nebo příkazy, které mají být provedeny, pokud je podmínka splněna. To, kde tyto instrukce nebo jakákoliv jiná skupina příkazů, které patří k sobě, začínají a končí, poznáme podle odsazení (jedná se o tzv. <b>bloky kódu</b>). Zmíněný příklad se změnou jména by vypadal takto:", "<code>if name == \"Petr\":</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavel\"</code>"
+  
+                ]
+            },
+            {
+                "title": " ",
+                "text": [
+                    "Takto vypadá základní podoba podmínky, často se však také setkáme s podmínkou, která kromě „pokud“ obsahuje i „jinak“, tedy co se má stát v ostatních případech. Pro tuto druhou část používáme klíčové slovo <b>else</b> a zapisuje se následujícím způsobem:", "<code>if name == \"Petr\":</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavel\"</code>", "<code>else:</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"nebyl Petr, není Pavel\"</code>"
+  
+  
+                ]
+            },
+            {
+                "title": " ",
+                "text": [
+                    "Pokud je mezi if a else ještě nějaká jiná možnost, můžeme použít klíčové slovo elif (jinak se zapisuje stejně jako if). která kromě „pokud“ obsahuje i „jinak“, tedy co se má stát v ostatních případech.", "<code>if name == \"Petr\":</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavel\"</code>", "<code>elif name == \"Pavel\"</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavell II.\"</code>", "<code>else:</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavlové došli\"</code>"
+  
+  
+                ]
+            }, 
+            {
+                "title": "",
+                "text": ["Všimněte si, že všechny uvedené proměnné jsou psány v uvozovkách. Je to proto, že se jedná o <b>datový typ</b> odpovídající <b>textu</b>. Mimo něj existují datové typy pro celá čísla, desetinná čísla, pravdivostní hodnoty a podobně, tím se ale teď nebudeme podrobněji zabývat."]
+            }
+
+        ],
+        "quizes": [
+            {
+                "title": "Zvolte správnou odpověď",
+                "type": "singlechoice",
+                "data": {
+                    "question": ["<code>if last_character == \"h\":</code>",
+                        "<code>&nbsp;&nbsp;&nbsp;&nbsp; last_character = \"ch\"</code>",
+                        "<code>if last_character == \"d\":</code>",
+                        "<code>&nbsp;&nbsp;&nbsp;&nbsp; last_character = \"t\"</code>"],
+                    "options": ["liché jery (od začátku slova) zanikly a sudé se změnily v e", "sudé jery (od začátku slova) zanikly a liché se změnily v e", "liché jery (od konce slova) zanikly a sudé se změnily v e", "sudé jery (od konce slova) zanikly a liché se změnily v e"],
+                    "correct": "liché jery (od konce slova) zanikly a sudé se změnily v e"
+                }
+            },
+            {
+                "title": "Zvolte správnou odpověď",
+                "type": "singlechoice",
+                "data": {
+                    "question": "Do které skupiny nářečí spadá následující věta? <i>Dé móku ze mléna na vozék.</i>",
+                    "options": ["česká", "středomoravská", "východomoravská", "slezská" ],
+                    "correct": "středomoravská"
+
+                }
+            }
+        ]
+
+
+},
     "morfologie": {
         "1":{
             "title": "text2-1",
@@ -317,4 +452,5 @@
         }
     }
 
+}
 }
