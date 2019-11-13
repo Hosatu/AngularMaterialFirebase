@@ -5,15 +5,11 @@ import { MatButtonModule, MatCardModule } from '@angular/material';
 
 // Components
 import { CardBlockComponent } from './card-block/card-block.component';
-import { FirstBlockComponent } from './first-block/first-block.component';
-import { SecondBlockComponent } from './second-block/second-block.component';
 import { ThirdBlockComponent } from './third-block/third-block.component';
 
 @NgModule({
   declarations: [
     CardBlockComponent,
-    FirstBlockComponent,
-    SecondBlockComponent,
     ThirdBlockComponent
   ],
   imports: [
@@ -22,8 +18,6 @@ import { ThirdBlockComponent } from './third-block/third-block.component';
   ],
   exports: [
     CardBlockComponent,
-    FirstBlockComponent,
-    SecondBlockComponent,
     ThirdBlockComponent
   ]
 })

@@ -236,7 +236,9 @@
             {
                 "title": "Podmínka",
                 "text": [
-                    "Zmíněné porovnávání typicky využijeme v případě, že chceme nějakou část kódu (<b>příkaz</b> nebo jejich sérii) provést pouze za určitých okolností, například pokud je v proměnné uloženo „Petr“, změň hodnotu na „Pavel“.", "V Pythonu používáme pro vyjádření podmínky klíčové slovo <b>if</b>. Na řádku s tímto klíčovým slovem je tedy uvedena podmínka a na následujících řádcích se nachází příkaz nebo příkazy, které mají být provedeny, pokud je podmínka splněna. To, kde tyto instrukce nebo jakákoliv jiná skupina příkazů, které patří k sobě, začínají a končí, poznáme podle odsazení (jedná se o tzv. <b>bloky kódu</b>). Zmíněný příklad se změnou jména by vypadal takto:", "<code>if name == \"Petr\":</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavel\"</code>"
+                    "Zmíněné porovnávání typicky využijeme v případě, že chceme nějakou část kódu (<b>příkaz</b> nebo jejich sérii) provést pouze za určitých okolností, například pokud je v proměnné uloženo „Petr“, změň hodnotu na „Pavel“.", 
+                    "V Pythonu používáme pro vyjádření podmínky klíčové slovo <b>if</b>. Na řádku s tímto klíčovým slovem je tedy uvedena podmínka a na následujících řádcích se nachází příkaz nebo příkazy, které mají být provedeny, pokud je podmínka splněna. To, kde tyto instrukce nebo jakákoliv jiná skupina příkazů, které patří k sobě, začínají a končí, poznáme podle odsazení (jedná se o tzv. <b>bloky kódu</b>). Zmíněný příklad se změnou jména by vypadal takto:", 
+                    "<code>if name == \"Petr\":\n    name = \"Pavel\"</code>"
   
                 ]
             },

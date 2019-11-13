@@ -1,0 +1,48 @@
+.background-slant {
+    position: relative;
+    overflow: hidden;
+    background-color: #d32f2f;
+    transform: skew(0,-4deg);
+    -webkit-transform: skew(0,-4deg);
+    -ms-transform: skew(0,-4deg);
+    left: 0px;
+    right: 0px;
+    height: 520px;
+    z-index: 1;
+  }
+
+  .background img {
+    position: relative;
+    width: 100%;
+    max-height: 300px;
+    margin: 0 auto;
+    z-index: 1;
+    box-shadow: 2px 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+  }
+
+  button {
+    position: fixed;
+    bottom: 70px;
+    float: right;
+    right: 10px;
+    z-index: 10;
+  }
+
+
+  .contentCard {
+    width: 930px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 60px 20px;
+    z-index: 1;
+    position: relative;
+  } 
+  
+  @media only screen and (max-width: 1024px) {
+  
+    .contentCard {
+        width: 100%;
+    }
+  
+  }

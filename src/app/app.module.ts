@@ -13,7 +13,6 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
 // Modules
 import { BlocksModule } from './components/blocks/blocks.module';
 import { AuthModule } from './pages/auth/auth.module';
-import { BackgroundsModule } from './components/backgrounds/backgrounds.module';
 import { ProfileModule } from './pages/profile/profile.module';
 import { MiscModule } from './components/misc/misc.module';
 
@@ -39,7 +38,6 @@ import { AboutMeComponent } from './pages/about-me/about-me.component';
 import { PageNotFoundComponent } from './pages/not-found/not-found.component';
 
 // Components
-import { EmailMeComponent } from './components/email-me/email-me.component';
 import { CourseComponent } from './pages/course/course.component';
 import { LessonComponent } from './pages/lesson/lesson.component';
 import { LearnComponent } from './pages/learn/learn.component';
@@ -56,7 +54,6 @@ import { SanitizePipe } from './shared/pipes/sanitize-pipe.pipe';
     HeaderComponent,
     FooterComponent,
     PageNotFoundComponent,
-    EmailMeComponent,
     CourseComponent,
     LessonComponent,
     LearnComponent,
@@ -77,7 +74,6 @@ import { SanitizePipe } from './shared/pipes/sanitize-pipe.pipe';
     BlocksModule,
     AuthModule,
     TasksModule,
-    BackgroundsModule,
     ProfileModule,
     MiscModule,
     MatCarouselModule,

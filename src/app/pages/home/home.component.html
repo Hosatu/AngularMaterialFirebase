@@ -1,17 +1,27 @@
-<app-first-block></app-first-block>
+<div class="contentCard">
+    <mat-card>
+        <h1>Starter kit</h1>
+        <p>Angular 8 | Material Design | Firebase (OAuth authentication and NoSQL database)</p>
+    </mat-card>
+</div>
 
 <br /><br /><br />
 
 <app-card-block></app-card-block>
-<app-background-slant></app-background-slant>
+<div class="background-slant"></div>
 
-<app-second-block></app-second-block>
+<div class="contentCard">
+    <mat-card>
+        <h1>Authentication and Database</h1>
+        <p>Provided by Firebase</p>
+    </mat-card>
+</div>
 
-<app-background-normal></app-background-normal>
+<div class="background">
+    <img [src]="fullImagePath">
+  </div>
 
 <app-third-block></app-third-block>
 
-<app-email-me></app-email-me>
-<app-background-email></app-background-email>
 
 <button mat-raised-button class="mat-raised mat-primary" (click)="onToTop()">Top</button>
