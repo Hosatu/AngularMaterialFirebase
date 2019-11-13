@@ -1,0 +1,10 @@
+mat-grid-tile button {
+    width: 80%;
+    height: 80%;
+}
+
+#content mat-card{
+    margin-top: 20px;
+    margin-left: 20px; 
+    margin-right: 20px
+}

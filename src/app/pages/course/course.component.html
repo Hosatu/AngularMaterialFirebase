@@ -1,8 +1,39 @@
-<p>Tady by měl být úvod kurzu s přehledem lekcí.</p>
-<p></p>
-<p><button mat-button routerLink="/kurz/fonetika">Fonetika</button></p>
-<p><button mat-button routerLink="/kurz/morfologie">Morfologie</button></p>
-<p><button mat-button routerLink="/kurz/syntax">Syntax</button></p>
-<p><button mat-button routerLink="/kurz/semantika">Sémantika</button></p>
-<p></p>
+<div id="content">
+    <h2 class="center">Lekce</h2>
+    <mat-grid-list cols="5" rowHeight="60px">
+        <mat-grid-tile colspan="1" rowspan="2">
+            <button mat-flat-button color="primary" routerLink="/kurz/fonetika">Fonetika</button>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="2">
+            <button mat-flat-button color="accent" routerLink="/kurz/morfologie">Morfologie</button>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+            <button mat-flat-button color="accent" routerLink="/kurz/syntax">Syntax</button>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="2">
+                <button mat-flat-button color="accent" routerLink="/kurz/aplikace">Aplikace</button>
+            </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="2">
+            <button mat-flat-button color="accent" routerLink="/kurz/test">Test</button>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1" rowspan="1">
+            <button mat-flat-button color="accent" routerLink="/kurz/semantika">Sémantika</button>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <mat-card>
+        <h1>O kurzu</h1>
+        <p>Abyste se mohli stát počítačovými lingvisty, potřebujete získat alespoň částečný vhled do tří různých oblastí – lingvistiky (jazykovědy), 
+            informatiky/matematiky a samotné počítačové lingvistiky. V tomto kurzu se vám tedy pokusíme předat některé základní poznatky, které vám lépe přiblíží, 
+            o co se jedná a s čím byste se během studia tohoto oboru mohli setkat, a zároveň vám usnadní případné začátky studia.
+        </p>
+    
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend metus vel imperdiet cursus. 
+            Etiam pretium sem a metus tristique, ut luctus quam rutrum. Vivamus commodo venenatis nunc ut placerat.
+            imperdiet nec tincidunt at, sodales nec nulla. Nam suscipit urna eu vulputate aliquet. Vestibulum consequat nisl vel erat congue sollicitudin.
+            Proin mattis ultrices blandit. Vivamus accumsan vulputate sem vel tincidunt. Etiam imperdiet imperdiet ante, sit amet suscipit tortor finibus maximus.
+            Maecenas euismod pulvinar lorem.
+        </p>
+        
+    </mat-card>
+</div>
 
