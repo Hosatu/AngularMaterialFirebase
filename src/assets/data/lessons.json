@@ -1,8 +1,8 @@
 {
     "fonetika": {
         "title": "Fonetika",
-        "background": "url('/assets/img/mb-bg-06.png')",
-        "description": "alskdjalskdjaslkdjaslkdj",
+        "background": "red",
+        "description": "V této lekci se naučíte ... a vyzkoušíte si ...",
         "sections": ["úvod", "výslovnost", "vývoj", "základy programování"]
     },
     "morfologie": {

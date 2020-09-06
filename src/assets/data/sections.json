@@ -230,7 +230,7 @@
             {
                 "title": "",
                 "text": [
-                    "V programovacím jazyce Python, který budeme v rámci tohoto kurzu používat, vytvoříme proměnnou tak, že pro ni zvolíme nějaký název a přiřadíme jí hodnotu. Toto přiřazení provádíme pomocí <b>operátoru =</b>, tedy například <i>name = \"Petr\"</i>. Pokud chceme hodnotu změnit, napíšeme totéž s novou hodnotou, tedy <code>name = \"Pavel\"</code>. V proměnné bude nově uloženo jméno Pavel.", "Často nás zajímá, zda je v proměnné aktuálně uložena určitá hodnota. To můžeme zjistit pomocí zdvojeného rovná se (<b>operátoru ==</b>), tedy například <code>name == \"Petr\"</code>, čímž získáme <b>pravdivostní hodnotu</b> (True/False). "
+                    "V programovacím jazyce Python, který budeme v rámci tohoto kurzu používat, vytvoříme proměnnou tak, že pro ni zvolíme nějaký název a přiřadíme jí hodnotu. Toto přiřazení provádíme pomocí <b>operátoru =</b>, tedy například <code>name = \"Petr\"</code>. Pokud chceme hodnotu změnit, napíšeme totéž s novou hodnotou, tedy <code>name = \"Pavel\"</code>. V proměnné bude nově uloženo jméno Pavel.", "Často nás zajímá, zda je v proměnné aktuálně uložena určitá hodnota. To můžeme zjistit pomocí zdvojeného rovná se (<b>operátoru ==</b>), tedy například <code>name == \"Petr\"</code>, čímž získáme <b>pravdivostní hodnotu</b> (True/False). "
                 ]
             },
             {
