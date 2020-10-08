@@ -209,250 +209,318 @@
                 }
             ]
 
-  
-    },
-    "základy programování":{
-        "title": "Základní koncepty v programování",
-        "content": [
-            {
-                "title": " ",
-                "text": [
-                    "Uvedli jsme, že počítačová lingvistika vyžaduje určitou míru znalostí z oblasti lingvistiky, ale také informatiky. V některých úlohách v tomto kurzu se tak budete setkávat s útržky kódu v <b>programovacím jazyce Python</b>. Nemusíte se obávat, nikdo po vás nebude chtít, abyste napsali vlastní program, jde spíše o pochopení základních konceptů a ukázku toho, jak je možné tyto dva zdánlivě zcela rozdílné světy (jazyk a informatiku) v praxi propojit.", "Nyní se seznámíte pouze s několika základními principy, které pro vás budou v tuto chvíli relevantní, a časem se zaměříme na některé další."
+        },
+        "programování":{
+            "title": "Základní koncepty v programování",
+            "content": [
+                {
+                    "title": " ",
+                    "text": [
+                        "Uvedli jsme, že počítačová lingvistika vyžaduje určitou míru znalostí z oblasti lingvistiky, ale také informatiky. V některých úlohách v tomto kurzu se tak budete setkávat s útržky kódu v <b>programovacím jazyce Python</b>. Nemusíte se obávat, nikdo po vás nebude chtít, abyste napsali vlastní program, jde spíše o pochopení základních konceptů a ukázku toho, jak je možné tyto dva zdánlivě zcela rozdílné světy (jazyk a informatiku) v praxi propojit.", "Nyní se seznámíte pouze s několika základními principy, které pro vás budou v tuto chvíli relevantní, a časem se zaměříme na některé další."
 
+                    ]
+                },
+                {
+                    "title": "Proměnná",
+                    "text": [
+                        "Pojem <b>proměnná</b> nejspíš znáte z hodin matematiky, v programování se ovšem používá v trochu jiném kontextu. Zatímco v matematické rovnici proměnná znamená hodnotu, kterou se snažíme zjistit („neznámá“), v programování je to informace, se kterou dále pracujeme.", "Proměnná v programování je tedy něco, kam si uložíme informaci, kterou budeme chtít později použít. Důležité ovšem je, že její hodnota se může měnit. Nejprve v ní můžeme mít uložené například jméno „Petr“ a poté ho nahradit jménem „Pavel“. Ptáme-li se tedy na hodnotu nějaké proměnné, zajímá nás aktuální stav."  
+                    ]
+                },
+                {
+                    "title": "",
+                    "text": [
+                        "V programovacím jazyce Python, který budeme v rámci tohoto kurzu používat, vytvoříme proměnnou tak, že pro ni zvolíme nějaký název a přiřadíme jí hodnotu. Toto přiřazení provádíme pomocí <b>operátoru =</b>, tedy například <code>name = \"Petr\"</code>. Pokud chceme hodnotu změnit, napíšeme totéž s novou hodnotou, tedy <code>name = \"Pavel\"</code>. V proměnné bude nově uloženo jméno Pavel.", "Často nás zajímá, zda je v proměnné aktuálně uložena určitá hodnota. To můžeme zjistit pomocí zdvojeného rovná se (<b>operátoru ==</b>), tedy například <code>name == \"Petr\"</code>, čímž získáme <b>pravdivostní hodnotu</b> (True/False). "
+                    ]
+                },
+                {
+                    "title": "Podmínka",
+                    "text": [
+                        "Zmíněné porovnávání typicky využijeme v případě, že chceme nějakou část kódu (<b>příkaz</b> nebo jejich sérii) provést pouze za určitých okolností, například pokud je v proměnné uloženo „Petr“, změň hodnotu na „Pavel“.", 
+                        "V Pythonu používáme pro vyjádření podmínky klíčové slovo <b>if</b>. Na řádku s tímto klíčovým slovem je tedy uvedena podmínka a na následujících řádcích se nachází příkaz nebo příkazy, které mají být provedeny, pokud je podmínka splněna. To, kde tyto instrukce nebo jakákoliv jiná skupina příkazů, které patří k sobě, začínají a končí, poznáme podle odsazení (jedná se o tzv. <b>bloky kódu</b>). Zmíněný příklad se změnou jména by vypadal takto:", 
+                        "<code>if name == \"Petr\":\n    name = \"Pavel\"</code>"
+    
+                    ]
+                },
+                {
+                    "title": " ",
+                    "text": [
+                        "Takto vypadá základní podoba podmínky, často se však také setkáme s podmínkou, která kromě „pokud“ obsahuje i „jinak“, tedy co se má stát v ostatních případech. Pro tuto druhou část používáme klíčové slovo <b>else</b> a zapisuje se následujícím způsobem:", "<code>if name == \"Petr\":</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavel\"</code>", "<code>else:</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"nebyl Petr, není Pavel\"</code>"
+    
+    
+                    ]
+                },
+                {
+                    "title": " ",
+                    "text": [
+                        "Pokud je mezi if a else ještě nějaká jiná možnost, můžeme použít klíčové slovo elif (jinak se zapisuje stejně jako if). která kromě „pokud“ obsahuje i „jinak“, tedy co se má stát v ostatních případech.", "<code>if name == \"Petr\":</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavel\"</code>", "<code>elif name == \"Pavel\"</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavell II.\"</code>", "<code>else:</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavlové došli\"</code>"
+    
+    
+                    ]
+                }, 
+                {
+                    "title": "",
+                    "text": ["Všimněte si, že všechny uvedené proměnné jsou psány v uvozovkách. Je to proto, že se jedná o <b>datový typ</b> odpovídající <b>textu</b>. Mimo něj existují datové typy pro celá čísla, desetinná čísla, pravdivostní hodnoty a podobně, tím se ale teď nebudeme podrobněji zabývat."]
+                }
+
+            ],
+            "quizes": [
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": ["<code>if last_character == \"h\":</code>",
+                            "<code>&nbsp;&nbsp;&nbsp;&nbsp; last_character = \"ch\"</code>",
+                            "<code>if last_character == \"d\":</code>",
+                            "<code>&nbsp;&nbsp;&nbsp;&nbsp; last_character = \"t\"</code>"],
+                        "options": ["liché jery (od začátku slova) zanikly a sudé se změnily v e", "sudé jery (od začátku slova) zanikly a liché se změnily v e", "liché jery (od konce slova) zanikly a sudé se změnily v e", "sudé jery (od konce slova) zanikly a liché se změnily v e"],
+                        "correct": "liché jery (od konce slova) zanikly a sudé se změnily v e"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Do které skupiny nářečí spadá následující věta? <i>Dé móku ze mléna na vozék.</i>",
+                        "options": ["česká", "středomoravská", "východomoravská", "slezská" ],
+                        "correct": "středomoravská"
+
+                    }
+                }
+            ]
+        },   
+        "morfologie": {
+            "úvod":{
+                "title": "Úvod do morfologie",
+                "content": [
+                    {
+                        "title": "",
+                        "text": ["Rovinou, která se nachází nad fonetikou a fonologií, je morfologie. Zabývá se <b>stavbou slov, slovními tvary</b> a <b>významem a funkcí jazykových jednotek v rámci slov.</b>", "Jednotkám, se kterými se na této úrovni setkáváme, říkáme <b>morfémy</b>. Tento pojem označuje nejmenší část slova, která nese význam. Ta přitom může mít v různých kontextech (uvnitř různých slov) různou podobu. V takovém případě mluvíme o skupině <b>morfů</b> (respektive <b>alomorfů</b>, podobně jako je tomu v případě alofonů), které jsou realizací jednoho morfému (například <i>sníh</i>, <i>sněh-ový</i> a <i>sněž-it</i>)."]
+                    },
+                    {
+                        "title": "Jak poznat morfém",
+                        "text": ["Abychom mohli rozhodnout, jestli určitá část slova skutečně odpovídá morfému, posuzujeme splnění těchto vlastností: <b>izolovatelnost</b>, <b>opakování</b>, <b>význam</b> a <b>kontrastivnost</b>.", "Izolovatelnost znamená, že jsme schopni určitou část slova „vypíchnout“ jako samostatnou jednotku."]
+                    },
+                    {
+                        "title": "",
+                    "text": ["Opakování nám říká, že se nejedná o jediný kontext, ve kterém se morfém může objevit (tedy že například morfém <i>ob-</i> najdeme jak u slovesa <i>objet</i>, tak i u sloves jako <i>obcházet</i>, <i>obtočit</i> a podobně)."]
+                    },
+                    {
+                        "title": "",
+                    "text": ["Význam je prostý – každý morfém by měl nést nějaký význam (buď plný, nebo třeba jen přidání nebo změnu nějaké vlastnosti, například čísla nebo vidu).", "Kontrastivnost pak znamená, že přítomnost různých morfémů ve stejném okolí značí (alespoň do určité míry) jiný význam (<i>na-ložit</i> není totéž co <i>vy-ložit</i>)."]
+                    }
+                ],
+                "quizes": [
+                    {
+                        "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Morfologie se zabývá",
+                        "options": ["větnou stavbou", "stavbou slov, slovními tvary a významem a funkcí jazykových jednotek", "zvukovou stránkou jazyka z hlediska funkce", "zvukovou stránkou jazyka z hlediska vzniku a vnímání řeči" ],
+                        "correct": "stavbou slov, slovními tvary a významem a funkcí jazykových jednotek"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Základní jednotkou morfologie je",
+                        "options": ["morf", "alomorf", "morfém", "foném" ],
+                        "correct": "morfém"
+                    }
+                },
+                {
+                    "title": "Zvolte všechny správné odpovědi",
+                    "type": "multichoice",
+                    "data": {
+                        "question": "Mezi vlastnosti morfému patří",
+                        "options": ["izolovatelnost", "neopakovatelnost", "jednoslabičnost", "kontrastivnost" ],
+                        "correct": ["izolovatelnost", "kontrastivnost"]
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Základní skupiny morfémů jsou",
+                        "options": ["předpony a přípony", "předpony a koncovky", "kořeny a afixy", "kořeny a koncovky" ],
+                        "correct": "kořeny a afixy"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Která část slova <i>nejen</i> tvoří morfém?",
+                        "options": ["nej", "ne", "nejen", "en" ],
+                        "correct": "ne"
+                    }
+                }
                 ]
             },
-            {
-                "title": "Proměnná",
-                "text": [
-                    "Pojem <b>proměnná</b> nejspíš znáte z hodin matematiky, v programování se ovšem používá v trochu jiném kontextu. Zatímco v matematické rovnici proměnná znamená hodnotu, kterou se snažíme zjistit („neznámá“), v programování je to informace, se kterou dále pracujeme.", "Proměnná v programování je tedy něco, kam si uložíme informaci, kterou budeme chtít později použít. Důležité ovšem je, že její hodnota se může měnit. Nejprve v ní můžeme mít uložené například jméno „Petr“ a poté ho nahradit jménem „Pavel“. Ptáme-li se tedy na hodnotu nějaké proměnné, zajímá nás aktuální stav."  
+            "korpusy": {
+                "title": "text2-2",
+                "content": [
+                    {
+                        "title": "Představení korpusů",
+                        "text": ["Korpus není jen základ dortu. V souvislosti s jazykem dostává toto slovo nový význam. Jedná se o rozsáhlou <b>elektronickou sbírku textů</b>, která nám umožňuje pozorovat jazyk v přirozeném kontextu a provádět nejrůznější výzkumy."]
+                    },
+                    {
+                        "title": "",
+                        "text": ["Aby byl korpus zdrojem, který o jazyku dostatečně vypovídá, musí obsahovat obrovské množství dat. Rozsah korpusů se tak obvykle pohybuje od milionů až k miliardám slov. Největší rozsah mají zpravidla <b>webové korpusy</b>, jejichž obsah se s využitím různých nástrojů automaticky stahuje z internetu. Tradičním korpusem však zůstává <b>textový (psaný) korpus</b>, jehož zdroje podléhají určitému výběru a snaze o vyváženost. Materiály pro tyto korpusy se obvykle získávají z beletrie, odborné literatury a publicistiky. Texty mohou být získány přímo v elektronické podobně, nebo jsou skenovány z tištěné podoby a pomocí specializovaných nástrojů převáděny do elektronické verze. Existují ale také <b>mluvené korpusy</b>, které obsahují přepisy promluv a rozhovorů, případně také samotné nahrávky."]
+                    },
+                    {
+                        "title": "",
+                        "text": ["Z jiného hlediska můžeme korpusy dělit na synchronní a diachronní. Synchronní korpusy mají za úkol zachytit současnou podobu jazyka, vycházejí tedy z podkladů vytvořených během několika posledních let, zatímco diachronní korpusy slouží ke sledování vývoje jazyka, proto je cílem shromáždit v nich materiály z nejrůznějších období."]
+                    },
+                    {
+                        "title": "Značkování",
+                        "text": ["Jednotlivé texty v korpusu jsou rozděleny na slova, která jsou typicky <b>označkována</b> – jsou jim přiřazeny hodnoty relevantních kategorií, jako je například slovní druh, rod, číslo nebo pád. Výsledná kombinace těchto hodnot se nazývá <b>morfologická značka</b> nebo také <b>tag</b>. Díky těmto značkám můžeme korpus využívat k vyhledávání podle různých kritérií."]
+                    },
+                    {
+                        "title": "",
+                        "text": ["Samotný proces přiřazování morfologické značky (<b>značkování</b>, <b>anotace</b>) může probíhat několika způsoby. Samozřejmě je možné ho provádět ručně, to je ale velmi nákladné a poměrně pomalé, proto se upřednostňují spíše automatické přístupy, které jsou založené na předem stanovených pravidlech nebo statistice. V praxi se ovšem tyto přístupy často kombinují."]
+                    },
+                    {
+                        "title": "",
+                        "text": ["Jak má výsledná podoba značky vypadat a jaké hodnoty kategorií se v ní mohou objevit určuje takzvaný tagset. Zároveň se jedná o jakousi legendu, která nám pomáhá rozluštit, co značka znamená.", "Pro porozumění značkám se vyplatí znát základní latinskou terminologii, jejíž zkratky se ve značkách objevují."]
+                    },
+                    {
+                        "title": "Latinská terminologie",
+                        "text": ["<b>slovní druh</b>: substantivum (podstatné jméno), adjektivum (přídavné jméno), pronomen (zájmeno), numerale (číslovka), verbum (sloveso), adverbium (příslovce), prepozice (předložka), konjunkce (spojka), partikule (částice), interjekce (citoslovce)", "<b>číslo</b> (numerus): singulár (jednotné), plurál (množné), duál (dvojné)", "<b>rod</b> (genus): maskulinum (mužský) – animatum (životný), inanimatum (neživotný), femininum (ženský), neutrum (střední)","<b>pád</b> (casus): nominativ (1.), genitiv (2.), dativ (3.), akuzativ (4.), vokativ (5.), lokál (6.), instrumentál (7.)"]
+                    },
+                    {
+                        "title": "",
+                        "text": ["Pro slovní druhy a pády se ovšem často využívá číslovka odpovídající pořadí daného slovního druhu nebo pádu.", "Ke značkování se přistupuje různě, a to občas i v rámci jednoho jazyka. Morfologická značka podle brněnského způsobu značkování pro slovo kachna by mohla vypadat třeba takto: k1gFnSc1, přičemž malá písmena reprezentují kategorie a velká písmena nebo číslice odpovídající hodnoty."]
+                    },
+                    {
+                        "title": "Lemma vs. slovní tvar",
+                        "text": ["Pojem <b>lemma</b> označuje <b>základní tvar</b> slova, který toto slovo reprezentuje. Je to forma, pod kterou bychom mohli slovo hledat ve slovníku. U ohebných slov se jde o první pád jednotného čísla (kachna) nebo infinitiv (psát), u neohebných je to slovo samo (haf). Slovní tvar pak odpovídá jakékoliv další formě slova (například <i>kachnou</i> nebo <i>psala</i>)."]
+                    },
+                    {
+                        "title": "",
+                        "text": ["Při tvorbě korpusu obvykle dochází k tzv. lemmatizaci, což je proces, při kterém se slovu přiřadí jeho lemma. Díky tomu pak můžeme vyhledávat nejen konkrétní tvary slov (prostřednictvím atributu word), ale také libovolné tvary, které se v korpusu objevují (s využitím lemmatu). To nám umožňuje lépe upřesnit, co hledáme, a získat tak relevantní výsledky pro různé účely."]
+                    }
+                    
+                ],
+                "quizes": [
+                    {
+                        "title": "asdasd",
+                        "type": "multichoice",
+                        "data": {
+
+                        }
+                    }
                 ]
-            },
-            {
-                "title": "",
-                "text": [
-                    "V programovacím jazyce Python, který budeme v rámci tohoto kurzu používat, vytvoříme proměnnou tak, že pro ni zvolíme nějaký název a přiřadíme jí hodnotu. Toto přiřazení provádíme pomocí <b>operátoru =</b>, tedy například <code>name = \"Petr\"</code>. Pokud chceme hodnotu změnit, napíšeme totéž s novou hodnotou, tedy <code>name = \"Pavel\"</code>. V proměnné bude nově uloženo jméno Pavel.", "Často nás zajímá, zda je v proměnné aktuálně uložena určitá hodnota. To můžeme zjistit pomocí zdvojeného rovná se (<b>operátoru ==</b>), tedy například <code>name == \"Petr\"</code>, čímž získáme <b>pravdivostní hodnotu</b> (True/False). "
-                ]
-            },
-            {
-                "title": "Podmínka",
-                "text": [
-                    "Zmíněné porovnávání typicky využijeme v případě, že chceme nějakou část kódu (<b>příkaz</b> nebo jejich sérii) provést pouze za určitých okolností, například pokud je v proměnné uloženo „Petr“, změň hodnotu na „Pavel“.", 
-                    "V Pythonu používáme pro vyjádření podmínky klíčové slovo <b>if</b>. Na řádku s tímto klíčovým slovem je tedy uvedena podmínka a na následujících řádcích se nachází příkaz nebo příkazy, které mají být provedeny, pokud je podmínka splněna. To, kde tyto instrukce nebo jakákoliv jiná skupina příkazů, které patří k sobě, začínají a končí, poznáme podle odsazení (jedná se o tzv. <b>bloky kódu</b>). Zmíněný příklad se změnou jména by vypadal takto:", 
-                    "<code>if name == \"Petr\":\n    name = \"Pavel\"</code>"
-  
-                ]
-            },
-            {
-                "title": " ",
-                "text": [
-                    "Takto vypadá základní podoba podmínky, často se však také setkáme s podmínkou, která kromě „pokud“ obsahuje i „jinak“, tedy co se má stát v ostatních případech. Pro tuto druhou část používáme klíčové slovo <b>else</b> a zapisuje se následujícím způsobem:", "<code>if name == \"Petr\":</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavel\"</code>", "<code>else:</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"nebyl Petr, není Pavel\"</code>"
-  
-  
-                ]
-            },
-            {
-                "title": " ",
-                "text": [
-                    "Pokud je mezi if a else ještě nějaká jiná možnost, můžeme použít klíčové slovo elif (jinak se zapisuje stejně jako if). která kromě „pokud“ obsahuje i „jinak“, tedy co se má stát v ostatních případech.", "<code>if name == \"Petr\":</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavel\"</code>", "<code>elif name == \"Pavel\"</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavell II.\"</code>", "<code>else:</code>", "<code>&nbsp;&nbsp;&nbsp;&nbsp; name = \"Pavlové došli\"</code>"
-  
-  
-                ]
-            }, 
-            {
-                "title": "",
-                "text": ["Všimněte si, že všechny uvedené proměnné jsou psány v uvozovkách. Je to proto, že se jedná o <b>datový typ</b> odpovídající <b>textu</b>. Mimo něj existují datové typy pro celá čísla, desetinná čísla, pravdivostní hodnoty a podobně, tím se ale teď nebudeme podrobněji zabývat."]
             }
+        },
+        "syntax": {
+            "1":{
+                "title": "text3-1",
+                "content": [
+                    {
+                        "title": "Stránka 1",
+                        "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    },
+                    {
+                        "title": "Stránka 2",
+                        "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    },
+                    {
+                        "title": "Stránka 3",
+                        "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    }
+                ],
+                "quizes": [
+                    {
+                        "title": "asdasd",
+                        "type": "multichoice",
+                        "data": {
 
-        ],
-        "quizes": [
-            {
-                "title": "Zvolte správnou odpověď",
-                "type": "singlechoice",
-                "data": {
-                    "question": ["<code>if last_character == \"h\":</code>",
-                        "<code>&nbsp;&nbsp;&nbsp;&nbsp; last_character = \"ch\"</code>",
-                        "<code>if last_character == \"d\":</code>",
-                        "<code>&nbsp;&nbsp;&nbsp;&nbsp; last_character = \"t\"</code>"],
-                    "options": ["liché jery (od začátku slova) zanikly a sudé se změnily v e", "sudé jery (od začátku slova) zanikly a liché se změnily v e", "liché jery (od konce slova) zanikly a sudé se změnily v e", "sudé jery (od konce slova) zanikly a liché se změnily v e"],
-                    "correct": "liché jery (od konce slova) zanikly a sudé se změnily v e"
-                }
+                        }
+                    }
+                ]
             },
-            {
-                "title": "Zvolte správnou odpověď",
-                "type": "singlechoice",
-                "data": {
-                    "question": "Do které skupiny nářečí spadá následující věta? <i>Dé móku ze mléna na vozék.</i>",
-                    "options": ["česká", "středomoravská", "východomoravská", "slezská" ],
-                    "correct": "středomoravská"
+            "2":{
+                "title": "text3-2",
+                "content": [
+                    {
+                        "title": "Stránka 1",
+                        "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    },
+                    {
+                        "title": "Stránka 2",
+                        "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    },
+                    {
+                        "title": "Stránka 3",
+                        "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    }
+                ],
+                "quizes": [
+                    {
+                        "title": "asdasd",
+                        "type": "multichoice",
+                        "data": {
 
-                }
+                        }
+                    }
+                ]
             }
-        ]
-
-
-},
-    "morfologie": {
-        "1":{
-            "title": "text2-1",
-            "content": [
-                {
-                    "title": "Stránka 1",
-                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
-                },
-                {
-                    "title": "Stránka 2",
-                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
-                },
-                {
-                    "title": "Stránka 3",
-                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
-                }
-            ],
-            "quizes": [
-                {
-                    "title": "asdasd",
-                    "type": "multichoice",
-                    "data": {
-
-                    }
-                }
-            ]
         },
-        "2":{
-            "title": "text2-2",
-            "content": [
-                {
-                    "title": "Stránka 1",
-                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
-                },
-                {
-                    "title": "Stránka 2",
-                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
-                },
-                {
-                    "title": "Stránka 3",
-                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
-                }
-            ],
-            "quizes": [
-                {
-                    "title": "asdasd",
-                    "type": "multichoice",
-                    "data": {
-
+        "semantika": {
+            "1":{
+                "title": "text4-1",
+                "content": [
+                    {
+                        "title": "Stránka 1",
+                        "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    },
+                    {
+                        "title": "Stránka 2",
+                        "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    },
+                    {
+                        "title": "Stránka 3",
+                        "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
                     }
-                }
-            ]
+                ],
+                "quizes": [
+                    {
+                        "title": "asdasd",
+                        "type": "multichoice",
+                        "data": {
+
+                        }
+                    }
+                ]
+            },
+            "2":{
+                "title": "text4-2",
+                "content": [
+                    {
+                        "title": "Stránka 1",
+                        "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    },
+                    {
+                        "title": "Stránka 2",
+                        "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    },
+                    {
+                        "title": "Stránka 3",
+                        "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    }
+                ],
+                "quizes": [
+                    {
+                        "title": "asdasd",
+                        "type": "multichoice",
+                        "data": {
+
+                        }
+                    }
+                ]
+            }
         }
-    },
-    "syntax": {
-        "1":{
-            "title": "text3-1",
-            "content": [
-                {
-                    "title": "Stránka 1",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                },
-                {
-                    "title": "Stránka 2",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                },
-                {
-                    "title": "Stránka 3",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                }
-            ],
-            "quizes": [
-                {
-                    "title": "asdasd",
-                    "type": "multichoice",
-                    "data": {
 
-                    }
-                }
-            ]
-        },
-        "2":{
-            "title": "text3-2",
-            "content": [
-                {
-                    "title": "Stránka 1",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                },
-                {
-                    "title": "Stránka 2",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                },
-                {
-                    "title": "Stránka 3",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                }
-            ],
-            "quizes": [
-                {
-                    "title": "asdasd",
-                    "type": "multichoice",
-                    "data": {
-
-                    }
-                }
-            ]
-        }
-    },
-    "semantika": {
-        "1":{
-            "title": "text4-1",
-            "content": [
-                {
-                    "title": "Stránka 1",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                },
-                {
-                    "title": "Stránka 2",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                },
-                {
-                    "title": "Stránka 3",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                }
-            ],
-            "quizes": [
-                {
-                    "title": "asdasd",
-                    "type": "multichoice",
-                    "data": {
-
-                    }
-                }
-            ]
-        },
-        "2":{
-            "title": "text4-2",
-            "content": [
-                {
-                    "title": "Stránka 1",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                },
-                {
-                    "title": "Stránka 2",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                },
-                {
-                    "title": "Stránka 3",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                }
-            ],
-            "quizes": [
-                {
-                    "title": "asdasd",
-                    "type": "multichoice",
-                    "data": {
-
-                    }
-                }
-            ]
-        }
     }
-
-}
 }

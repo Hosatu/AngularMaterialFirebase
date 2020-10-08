@@ -23,7 +23,11 @@
     </ng-template>
     <ng-template #unknownLesson>
         <mat-card>
-            <h1>Neexistující lekce</h1> Lekce, kterou hledáte, neexistuje. <a routerLink="/kurz">Kurz</a>.
+            <mat-card-header>
+                <mat-card-title><h1>Neexistující lekce</h1></mat-card-title>
+            </mat-card-header>
+            <p></p>
+            <mat-card-content>Lekce, kterou hledáte, neexistuje. <a routerLink="/kurz">Kurz</a>.</mat-card-content>
         </mat-card>
     </ng-template>
 </div>

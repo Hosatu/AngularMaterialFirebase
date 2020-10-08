@@ -37,6 +37,8 @@
     padding: 60px 20px;
     z-index: 1;
     position: relative;
+    text-align: justify;
+    align-content: center
   } 
   
   @media only screen and (max-width: 1024px) {

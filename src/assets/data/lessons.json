@@ -3,24 +3,24 @@
         "title": "Fonetika",
         "background": "red",
         "description": "V této lekci se naučíte ... a vyzkoušíte si ...",
-        "sections": ["úvod", "výslovnost", "vývoj", "základy programování"]
+        "sections": ["úvod", "výslovnost", "vývoj", "programování", "zpracování řeči"]
     },
     "morfologie": {
         "title": "Morfologie",
         "background": "yellow",
         "description": "alskdjalskdjaslkdjaslkdj",
-        "sections": ["1"]
+        "sections": ["úvod", "korpusy", "statistika", "programování", "morfolog. analýza"]
     },
     "syntax": {
         "title": "Syntax",
         "background": "blue",
         "description": "alskdjalskdjaslkdjaslkdj",
-        "sections": ["1"]
+        "sections": ["grafy", "úvod", "konstituenty", "typy konstituentů", "synt. analýza"]
     },
     "semantika": {
         "title": "Sémantika",
         "background": "red",
         "description": "alskdjalskdjaslkdjaslkdj",
-        "sections": ["1"]
+        "sections": ["úvod", "význam", "lexikografie a nástroje", "predikátová logika"]
     }
 }
