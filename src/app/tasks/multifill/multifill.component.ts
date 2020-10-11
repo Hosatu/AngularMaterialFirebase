@@ -6,7 +6,7 @@ import * as _ from "lodash";
 export declare type MultifillData = {
   question: string;
   template: string;
-  answers: {id: string, values: string[]}[];
+  answers: {id: string, values: string[], reference?: string}[];
 };
 
 @Component({
@@ -26,6 +26,13 @@ export class MultifillComponent implements TaskComponent, OnInit {
   }
 
   ngOnInit() {
+    for(let answerIndex in this.data.answers) {
+      let inputEl = this.document.getElementById(this.data.answers[answerIndex].id);
+      inputEl.className = "";
+      let label = inputEl.parentNode.querySelector("label[for='" + inputEl.id + "']");
+      console.log(label);
+      label.innerText = "";
+    }
   }
 
   submit() {
@@ -34,9 +41,15 @@ export class MultifillComponent implements TaskComponent, OnInit {
       let answer = this.data.answers[answerIndex];
       let userAnswer = this.getAnswer(parseInt(answerIndex));
       this.isCorrect.push(_.some(answer.values, (value) => userAnswer.match(new RegExp(value))));
+      let inputEl = this.document.getElementById(this.data.answers[answerIndex].id);
+      inputEl.className = this.isCorrect[answerIndex] ? "correct" : "incorrect";
+      let label = inputEl.parentNode.querySelector("label[for='" + inputEl.id + "']");
+      console.log(label);
+      label.innerText = this.isCorrect[answerIndex] ? "" : "(správná odpověď: " +this.data.answers[answerIndex].reference + ")"
     }
     if(_.every(this.isCorrect)) {
       this.taskSubmitted.emit(true);
+      
     } else {
       this.taskSubmitted.emit(false);
     }
