@@ -28,7 +28,7 @@ export class MultifillComponent implements TaskComponent, OnInit {
   ngOnInit() {
     for(let answerIndex in this.data.answers) {
       let inputEl = this.document.getElementById(this.data.answers[answerIndex].id);
-      inputEl.className = "";
+      inputEl.className = "multifill";
       let label = inputEl.parentNode.querySelector("label[for='" + inputEl.id + "']");
       console.log(label);
       label.innerText = "";
@@ -42,7 +42,7 @@ export class MultifillComponent implements TaskComponent, OnInit {
       let userAnswer = this.getAnswer(parseInt(answerIndex));
       this.isCorrect.push(_.some(answer.values, (value) => userAnswer.match(new RegExp(value))));
       let inputEl = this.document.getElementById(this.data.answers[answerIndex].id);
-      inputEl.className = this.isCorrect[answerIndex] ? "correct" : "incorrect";
+      inputEl.className = this.isCorrect[answerIndex] ? "multifill correct" : "multifill incorrect";
       let label = inputEl.parentNode.querySelector("label[for='" + inputEl.id + "']");
       console.log(label);
       label.innerText = this.isCorrect[answerIndex] ? "" : "(správná odpověď: " +this.data.answers[answerIndex].reference + ")"

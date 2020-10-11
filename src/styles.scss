@@ -27,6 +27,24 @@ ul {
     list-style-type:none;
 }
 
+input.multifill {
+    border: #c7254e 1px solid;
+}
+input.incorrect.multifill {
+    border-color: red;
+    border-width: 2px;
+}
+input.incorrect.multifill ~ label {
+    color: black;
+    font-style: italic;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+input.correct.multifill {
+    border-color: green;
+    border-width: 2px;
+}
+
 code {
     padding: 4px 4px;
     white-space: pre;
