@@ -28,6 +28,10 @@ code {
     white-space: pre;
 }
 
+code.multiline {
+    display: block;
+}
+
 .carousel-indicators.ng-star-inserted {
     margin-left: 0px;
     width: auto;

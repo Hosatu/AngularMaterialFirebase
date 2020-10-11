@@ -6,7 +6,7 @@ import * as _ from "lodash";
 export declare type MultifillData = {
   question: string;
   template: string;
-  answers: {id: string, value: string}[];
+  answers: {id: string, values: string[]}[];
 };
 
 @Component({
@@ -33,7 +33,7 @@ export class MultifillComponent implements TaskComponent, OnInit {
     for(let answerIndex in this.data.answers) {
       let answer = this.data.answers[answerIndex];
       let userAnswer = this.getAnswer(parseInt(answerIndex));
-      this.isCorrect.push(userAnswer == answer.value);
+      this.isCorrect.push(_.some(answer.values, (value) => userAnswer.match(new RegExp(value))));
     }
     if(_.every(this.isCorrect)) {
       this.taskSubmitted.emit(true);
