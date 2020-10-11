@@ -1,1 +1,9 @@
-<p>{{data.question ? data.question : "No question yet"}}</p>
+<label id="example-radio-group-label" [innerHTML]="data.question"></label>
+<ul>
+    <li *ngFor="let option of data.options; let i = index">
+        <mat-checkbox color="primary" class="example-checkbox" [(ngModel)]="answer[i]">
+            <span [innerHtml]="option"></span>
+        </mat-checkbox>
+    </li>
+</ul>
+<button mat-raised-button color="primary" (click)="submit()" [disabled]="isAnswered">Odeslat odpověď</button>

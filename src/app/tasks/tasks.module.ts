@@ -4,7 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { TaskDirective } from "./task.directive";
 import { MultichoiceComponent } from './multichoice/multichoice.component';
 import { SinglechoiceComponent } from './singlechoice/singlechoice.component';
-import { MatRadioModule, MatButtonModule, MatInputModule } from "@angular/material";
+import { MatRadioModule, MatButtonModule, MatInputModule, MatCheckboxModule } from "@angular/material";
 import { MultifillComponent } from './multifill/multifill.component';
 import { SanitizePipe } from "@shared/pipes/sanitize-pipe.pipe";
 
@@ -14,6 +14,7 @@ import { SanitizePipe } from "@shared/pipes/sanitize-pipe.pipe";
     CommonModule,
     FormsModule,
     MatRadioModule,
+    MatCheckboxModule,
     MatButtonModule,
     MatInputModule
   ],

@@ -424,8 +424,10 @@
                             "kontrastivnost"
                         ],
                         "correct": [
-                            "izolovatelnost",
-                            "kontrastivnost"
+                            true,
+                            false,
+                            false,
+                            true
                         ]
                     }
                 },
