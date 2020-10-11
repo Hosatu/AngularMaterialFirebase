@@ -5,6 +5,15 @@ body {
     background-color: #f7f7f7;
 }
 
+app-multifill ul {
+    font-family: monospace;
+    label {
+        font-family: Roboto, "Helvetica Neue", sans-serif;;
+    }
+    input {
+        font-family: Roboto, "Helvetica Neue", sans-serif;;
+    }
+}
 .body {
     padding-top: 56px;
     min-height:100vh;
