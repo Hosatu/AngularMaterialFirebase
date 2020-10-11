@@ -7,6 +7,19 @@
     text-align: justify;
 }
 
+.main-text.quiz-start-card {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-text.quiz-start-card button {
+    height: 3em;
+    width: 8em;
+    font-size: 1.5em;
+}
+
 .main-text mat-card-content {
     font-size: 1.2em;
 }
