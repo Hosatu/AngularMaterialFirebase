@@ -346,14 +346,14 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
-                        "question": "Do které skupiny nářečí spadá následující věta? <i>Dé móku ze mléna na vozék.</i>",
+                        "question": "Mohli bychom některá klíčová slova v uvedeném kódu nahradit jinými?",
                         "options": [
-                            "česká",
-                            "středomoravská",
-                            "východomoravská",
-                            "slezská"
+                            "ne, klíčová slova musejí být použita tímto způsobem",
+                            "ano, <i>if</i> můžeme ve všech případech nahradit klíčovým slovem <i>else</i>",
+                            "ano, <i>if</i> můžeme ve všech případech nahradit klíčovým slovem <i>elif</i>",
+                            "ano, <i>if</i> můžeme v některých případech nahradit klíčovým slovem <i>elif</i>"
                         ],
-                        "correct": "středomoravská"
+                        "correct": "ano, <i>if</i> můžeme v některých případech nahradit klíčovým slovem <i>elif</i>"
                     }
                 }
             ]
@@ -374,13 +374,7 @@
                     "title": "Jak poznat morfém",
                     "text": [
                         "Abychom mohli rozhodnout, jestli určitá část slova skutečně odpovídá morfému, posuzujeme splnění těchto vlastností: <b>izolovatelnost</b>, <b>opakování</b>, <b>význam</b> a <b>kontrastivnost</b>.",
-                        "Izolovatelnost znamená, že jsme schopni určitou část slova „vypíchnout“ jako samostatnou jednotku."
-                    ]
-                },
-                {
-                    "title": "",
-                    "text": [
-                        "Opakování nám říká, že se nejedná o jediný kontext, ve kterém se morfém může objevit (tedy že například morfém <i>ob-</i> najdeme jak u slovesa <i>objet</i>, tak i u sloves jako <i>obcházet</i>, <i>obtočit</i> a podobně)."
+                        "Izolovatelnost znamená, že jsme schopni určitou část slova „vypíchnout“ jako samostatnou jednotku.", "Opakování nám říká, že se nejedná o jediný kontext, ve kterém se morfém může objevit (tedy že například morfém <i>ob-</i> najdeme jak u slovesa <i>objet</i>, tak i u sloves jako <i>obcházet</i>, <i>obtočit</i> a podobně)."
                     ]
                 },
                 {
@@ -470,7 +464,7 @@
             ]
         },
         "korpusy": {
-            "title": "text2-2",
+            "title": "Korpusy",
             "content": [
                 {
                     "title": "Představení korpusů",
@@ -487,7 +481,7 @@
                 {
                     "title": "",
                     "text": [
-                        "Z jiného hlediska můžeme korpusy dělit na synchronní a diachronní. Synchronní korpusy mají za úkol zachytit současnou podobu jazyka, vycházejí tedy z podkladů vytvořených během několika posledních let, zatímco diachronní korpusy slouží ke sledování vývoje jazyka, proto je cílem shromáždit v nich materiály z nejrůznějších období."
+                        "Z jiného hlediska můžeme korpusy dělit na <b>synchronní</b> a <b>diachronní</b>. Synchronní korpusy mají za úkol zachytit současnou podobu jazyka, vycházejí tedy z podkladů vytvořených během několika posledních let, zatímco diachronní korpusy slouží ke sledování vývoje jazyka, proto je cílem shromáždit v nich materiály z nejrůznějších období."
                     ]
                 },
                 {
