@@ -134,32 +134,44 @@
                         "answers": [
                             {
                                 "id": "answer-2-0",
-                                "values": ["b"],
+                                "values": [
+                                    "b"
+                                ],
                                 "reference": "b"
                             },
                             {
                                 "id": "answer-2-1",
-                                "values": ["s"],
+                                "values": [
+                                    "s"
+                                ],
                                 "reference": "s"
                             },
                             {
                                 "id": "answer-2-2",
-                                "values": ["d"],
+                                "values": [
+                                    "d"
+                                ],
                                 "reference": "d"
                             },
                             {
                                 "id": "answer-2-3",
-                                "values": ["v"],
+                                "values": [
+                                    "v"
+                                ],
                                 "reference": "v"
                             },
                             {
                                 "id": "answer-2-4",
-                                "values": ["ž"],
+                                "values": [
+                                    "ž"
+                                ],
                                 "reference": "ž"
                             },
                             {
                                 "id": "answer-2-5",
-                                "values": ["ť"],
+                                "values": [
+                                    "ť"
+                                ],
                                 "reference": "ť"
                             }
                         ]
@@ -331,12 +343,18 @@
                         "answers": [
                             {
                                 "id": "answer-2-0",
-                                "values": ["[ ]*==[ ]*\"z\"[ ]*","[ ]*==[ ]*'z'[ ]*"],
+                                "values": [
+                                    "[ ]*==[ ]*\"z\"[ ]*",
+                                    "[ ]*==[ ]*'z'[ ]*"
+                                ],
                                 "reference": "== \"z\""
                             },
                             {
                                 "id": "answer-2-1",
-                                "values": ["[ ]*=[ ]*\"š\"[ ]*","[ ]*=[ ]*'š'[ ]*"],
+                                "values": [
+                                    "[ ]*=[ ]*\"š\"[ ]*",
+                                    "[ ]*=[ ]*'š'[ ]*"
+                                ],
                                 "reference": "= \"š\""
                             }
                         ]
@@ -374,7 +392,8 @@
                     "title": "Jak poznat morfém",
                     "text": [
                         "Abychom mohli rozhodnout, jestli určitá část slova skutečně odpovídá morfému, posuzujeme splnění těchto vlastností: <b>izolovatelnost</b>, <b>opakování</b>, <b>význam</b> a <b>kontrastivnost</b>.",
-                        "Izolovatelnost znamená, že jsme schopni určitou část slova „vypíchnout“ jako samostatnou jednotku.", "Opakování nám říká, že se nejedná o jediný kontext, ve kterém se morfém může objevit (tedy že například morfém <i>ob-</i> najdeme jak u slovesa <i>objet</i>, tak i u sloves jako <i>obcházet</i>, <i>obtočit</i> a podobně)."
+                        "Izolovatelnost znamená, že jsme schopni určitou část slova „vypíchnout“ jako samostatnou jednotku.",
+                        "Opakování nám říká, že se nejedná o jediný kontext, ve kterém se morfém může objevit (tedy že například morfém <i>ob-</i> najdeme jak u slovesa <i>objet</i>, tak i u sloves jako <i>obcházet</i>, <i>obtočit</i> a podobně)."
                     ]
                 },
                 {
@@ -516,7 +535,7 @@
                     "title": "",
                     "text": [
                         "Pro slovní druhy a pády se ovšem často využívá číslovka odpovídající pořadí daného slovního druhu nebo pádu.",
-                        "Ke značkování se přistupuje různě, a to občas i v rámci jednoho jazyka. Morfologická značka podle brněnského způsobu značkování pro slovo kachna by mohla vypadat třeba takto: k1gFnSc1, přičemž malá písmena reprezentují kategorie a velká písmena nebo číslice odpovídající hodnoty."
+                        "Ke značkování se přistupuje různě, a to občas i v rámci jednoho jazyka. Morfologická značka podle brněnského způsobu značkování pro slovo <i>kachna</i> by mohla vypadat třeba takto: k1gFnSc1, přičemž malá písmena reprezentují kategorie a velká písmena nebo číslice odpovídající hodnoty."
                     ]
                 },
                 {
@@ -534,9 +553,266 @@
             ],
             "quizes": [
                 {
-                    "title": "asdasd",
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Co je to korpus?",
+                        "options": [
+                            "abecedně řazený seznam slovní zásoby",
+                            "systém souborů s pevnou strukturou záznamů",
+                            "úplný slovník určitého jazyka",
+                            "rozsáhlá elektronická sbírka textů"
+                        ],
+                        "correct": "rozsáhlá elektronická sbírka textů"
+                    }
+                },
+                {
+                    "title": "Zvolte všechny správné odpovědi",
                     "type": "multichoice",
-                    "data": {}
+                    "data": {
+                        "question": "Vyber kritéria, podle kterých se dělí korpusy.",
+                        "options": [
+                            "synchronní x diachronní",
+                            "webové x mobilní",
+                            "mluvené x psané",
+                            "synchronní x asynchronní"
+                        ],
+                        "correct": [
+                            true,
+                            false,
+                            true,
+                            false
+                        ]
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "latinská terminologie - TODO matching",
+                        "options": [
+                            "k1gNnSc4",
+                            "k1gNnSc2",
+                            "k1gFnSc4",
+                            "k1gFnSc2"
+                        ],
+                        "correct": "k1gFnSc4"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Vyber správnou značku pro slovo <i>kávu</i> v kontextu <i>Dali si spolu kávu.</i>",
+                        "options": [
+                            "k1gNnSc4",
+                            "k1gNnSc2",
+                            "k1gFnSc4",
+                            "k1gFnSc2"
+                        ],
+                        "correct": "k1gFnSc4"
+                    }
+                }
+            ]
+        },
+        "statistika": {
+            "title": "Úvod do statistiky",
+            "content": [
+                {
+                    "title": "",
+                    "text": [
+                        "Při práci s korpusovými daty nás mohou zajímat statistické údaje. K tomu se nám hodí znát základy statistiky. S těmi jste se pravděpodobně setkali už na základní nebo střední škole, ale nezaškodí si je trochu připomenout. Pojďme si nyní přiblížit ty nejdůležitější pojmy."
+                    ]
+                },
+                {
+                    "title": "Základní a statistický soubor",
+                    "text": [
+                        "Základní soubor je soubor prvků, o kterém se chceme něco dozvědět. Protože je ale obvykle obrovský a není možné každý jeho prvek jednotlivě prozkoumat, přichází na scénu statistický soubor, který obsahuje prvky ze základního souboru, které se podařilo shromáždit. Ty můžeme dále zkoumat a na jejich základě vyvozovat závěry o souboru základním. Každý korpus je tak vlastně statistickým souborem ve vztahu k základnímu souboru, kterým je daný jazyk (nebo všechna slova tohoto jazyka)."
+                    ]
+                },
+                {
+                    "title": "Průměr",
+                    "text": [
+                        "S průměrem jste se během svého studia setkali určitě, běžně se používá například pro výpočet konečné známky z předmětu. Jeho hodnotu zjistíme sečtením jednotlivých hodnot ze souboru a následným vydělením jejich počtem. Takto bychom mohli zjišťovat kupříkladu průměrnou délku slova ve větě."
+                    ]
+                },
+                {
+                    "title": "Modus",
+                    "text": [
+                        "Modus vyjadřuje nejčastější hodnotu. Získáme ho tak, že spočítáme, kolikrát se která hodnota v našem souboru vyskytuje (zjistíme jednotlivé frekvence), a vybereme nejvyšší číslo. Tímto způsobem bychom mohli hledat třeba nejčastější délku slova."
+                    ]
+                },
+                {
+                    "title": "Medián",
+                    "text": [
+                        "Medián udává střední hodnotu. Seřadíme-li si jednotlivé hodnoty od nejnižší po nejvyšší, medián se bude nacházet přesně uprostřed. Pokud například budeme mít pět seřazených hodnot, mediánem bude ta třetí. Pokud budeme mít sudý počet hodnot, sečteme dvě prostřední a tento součet vydělíme dvěma."
+                    ]
+                }
+            ],
+            "quizes": [
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Co je to modus?",
+                        "options": [
+                            "nejčastější hodnota",
+                            "nejvyšší hodnota",
+                            "prostřední hodnota",
+                            "průměrná hodnota"
+                        ],
+                        "correct": "nejčastější hodnota"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Co je to medián?",
+                        "options": [
+                            "nejčastější hodnota",
+                            "nejvyšší hodnota",
+                            "prostřední hodnota",
+                            "průměrná hodnota"
+                        ],
+                        "correct": "prostřední hodnota"
+                    }
+                }
+            ]
+        },
+        "programování": {
+            "title": "Programování ve statistice",
+            "content": [
+                {
+                    "title": "Slovníky a seznamy",
+                    "text": [
+                        "Pokud nás zajímají statistické údaje o jazyce, můžeme jako zdroj informací využít korpus. Jak jsme si však vysvětlili, rozsah takového korpusu je zpravidla obrovský, a těžko bychom tedy mohli provádět výpočty ručně. Zde tedy opět oceníme kouzlo programování."
+                    ]
+                },
+                {
+                    "title": "",
+                    "text": [
+                        "Nejprve je třeba si uvědomit, že korpus jako takový je vlastně jen velké množství slov, ke kterým jsou připojeny další informace v podobě lemmatu a značky. V různém kontextu tak získáváme různá slova, a tím pádem i různé doprovodné informace. Slovo tedy odpovídá proměnné, která má s sebou něco navíc. V tomto případě se nejedná o jednoduchou, ale o <b>složenou proměnnou</b>. Můžete si ji představit jako žáka, který má různé vlastnosti (např. jméno a věk). Celá třída se pak skládá třeba ze třiceti takových žáků. Podobně je tomu v případě korpusu, kde je ovšem těchto žáků (slov) mnohonásobně více."
+                    ]
+                },
+                {
+                    "title": "",
+                    "text": [
+                        "Proměnná, kterou můžeme pro uchovávání těchto informací o slově nebo žákovi (obecně nějaké položce) použít, se nazývá <b>slovník</b>. V Pythonu ho zapisujeme takto:",
+                        "<code>název_položky = {„vlastnost“: hodnota, „vlastnost_2“: hodnota_2}</code>",
+                        "V případě žáka tedy například: <code>žák_1 = {„jméno“: „Adam“, „věk“: 12}</code>",
+                        "Pro slovo <i>kachnou</i> by to bylo:",
+                        "<code>položka_1 = {„tvar“: „kachnou“, „lemma“: „kachna“, „značka“: „k1gFnSc7“}</code>"
+                    ]
+                },
+                {
+                    "title": "",
+                    "text": [
+                        "Jak můžete vidět, do proměnné opět přiřazujeme pomocí rovná se. Protože se ovšem na pravé straně nachází více informací, musíme nějak určit, co všechno chceme do proměnné uložit, tedy co tvoří dohromady jeden balíček (žáka, slovo). Podobně jako v matematice používáme pro tyto účely závorky, v tomto případě ale volíme složené. Jednotlivé charakteristiky pak tvoří dvojice <b>vlastnost (klíč) – hodnota</b>, přičemž vlastnost píšeme v uvozovkách, za nimi následuje dvojtečka a poté hodnota. Tyto dvojice pak oddělujeme čárkou."
+                    ]
+                },
+                {
+                    "title": "",
+                    "text": [
+                        "Tímto způsobem tedy získáme balíček s informacemi o <b>jednom prvku</b> (žákovi, slově). Pokud ale chceme držet pohromadě informace o celé školní třídě nebo korpusu, potřebujeme další proměnnou, která je hodí do jednoho pytle (a srovná do latě). Takovou proměnnou je seznam. Jak už název napovídá, není to nic jiného než <b>soupis za sebou následujících položek</b>, které mohou mít podobu jednoduchých, ale i složených proměnných.",
+                        "Nejjednodušší seznam v Pythonu vypadá takto: <code>seznam = [položka_1, položka_2, položka_3]</code>",
+                        "Jde tedy o čárkami oddělené položky uvnitř hranatých závorek.",
+                        "Pro žáky by mohl vypadat třeba takto:",
+                        "<code>žáci = [{„jméno“: „Adam“, „věk“: 12}, {„jméno“: „Anna“, „věk“: 11}]</code>"
+                    ]
+                },
+                {
+                    "title": "Cykly",
+                    "text": [
+                        "Cyklus používáme pro <b>opakující se činnosti</b>. Existuje několik typů cyklů. Nás bude zajímat cyklus, který se nazývá for. Ten totiž můžeme použít k postupnému <b>procházení položek ze seznamu</b> a manipulaci s nimi. Pro každou položku seznamu tedy provádí stanovenou akci (tyto položky postupně dosazuje do proměnné, jejíž název je uveden za klíčovým slovem <b>for</b>).",
+                        "Tedy například:",
+                        "<code class='multiline'>seznam = [položka_1, položka_2, položka_3]\nfor položka in seznam:\n\t print(položka) \t<i># vypíše hodnotu položky</i></code>"
+                    ]
+                },
+                {
+                    "title": "",
+                    "text": [
+                        "Tímto způsobem bychom mohli zjistit například průměrný věk žáků:",
+                        "<code class='multiline'>žáci = [{„jméno“: „Adam“, „věk“: 12}, {„jméno“: „Anna“, „věk“: 11}]\ncelkový_věk = 0\nfor žák in žáci:\n\tcelkový_věk += žák[„věk“]\t<i># přičte pravou stranu k levé</i>\nprint(celkový_věk/len(žáci))\t<i># vypíše podíl celkového věku a počtu žáků v seznamu</i>"
+                    ]
+                }
+            ],
+            "quizes": [
+                {
+                    "title": "Zvolte všechny správné odpovědi",
+                    "type": "multichoice",
+                    "data": {
+                        "question": "Mezi složené proměnné patří:",
+                        "options": [
+                            "slovník",
+                            "číslo",
+                            "text",
+                            "seznam"
+                        ],
+                        "correct": [
+                            true,
+                            false,
+                            false,
+                            true
+                        ]
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Pro opakující se činnosti se v programovaní používají konstrukce zvané",
+                        "options": [
+                            "podmínky",
+                            "cykly",
+                            "slovníky",
+                            "klíče"
+                        ],
+                        "correct": "cykly"
+                    }
+                },
+                {
+                    "title": "Doplňte kód pro výpočet průměrné délky slova v korpusu (zachovejte diakritiku).",
+                    "type": "multifill",
+                    "data": {
+                        "question": "Doplňte kód pro výpočet průměrné délky slova v korpusu (zachovejte diakritiku).",
+                        "template": "<code class='multiline'>korpus = [{\"tvar\": \"kočkou\", \"lemma\": \"kočka\", \"značka\": \"k1gFnSc7\"}, {\"tvar\": \"divokou\", \"lemma\": \"divoký\", \"značka\": \"k2gFnSc7\"}]\ncelková_délka = 0\nfor položka in korpus:\n\tcelková_délka += len(položka<input class=\"multifill\" id='answer-3-0'><label for=\"answer-3-0\"></label>:\nprint(<input class=\"multifill\" id='answer-3-1'><label for=\"answer-3-1\"></label> /len(korpus))\t<i># len(x) je délka slova, pokud je x text, a počet položek, pokud je x seznam</i></code>",
+                        "answers": [
+                            {
+                                "id": "answer-3-0",
+                                "values": [
+                                    "[ ]*\\[\"tvar\"\\][ ]*",
+                                    "[ ]*\\['tvar'\\][ ]*"
+                                ],
+                                "reference": "[\"tvar\"]"
+                            },
+                            {
+                                "id": "answer-3-1",
+                                "values": [
+                                    "[ ]*celková_délka[ ]*"
+                                ],
+                                "reference": "celková_délka"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "morfolog. analýza": {
+            "title": "Automatická morfologická analýza",
+            "content": [
+                {
+                    "title": "",
+                    "text": [
+                        "Morfologická analýza si klade za cíl rozeznávat a vytvářet správné tvary vzniklé skloňováním nebo časováním jednotlivých slov. Výsledkem je označkovaný tvar s přiřazenými hodnotami jednotlivých kategorií (slovní druh, rod, číslo apod.). V rámci automatického zpracování se přiřazuje také lemma a slovní vzor, podle kterého by mělo být možné určit (a generovat) další tvary daného slova. Zjednodušeně si to můžete představit jako vzory podstatných jmen, které jste se učili ve škole (pán, hrad, muž, stroj, …), v praxi je však takových vzorů pro různé slovní druhy obrovské množství."
+                    ]
+                },
+                {
+                    "title": "",
+                    "text": [
+                        "Výstupy morfologického analyzátoru běžně využíváme například ve vyhledávačích, různých gramatických korektorech (pomáhají nám odhalovat chyby) nebo v korpusech, kde usnadňují vyhledávání.",
+                        "Příkladem takového analyzátoru pro češtinu je <b>Majka</b>, vytvořená v Centru zpracování přirozeného jazyka Fakulty informatiky Masarykovy univerzity. Zahrnuje více než 6 milionů slovních tvarů a využívá se například ve vyhledávači Seznam nebo projektech napojených na informační systém Masarykovy univerzity. Na jejím základě vznikl také podobný nástroj pro slovenštinu nebo gramatický korektor."
+                    ]
                 }
             ]
         }
