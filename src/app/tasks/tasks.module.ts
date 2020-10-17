@@ -7,6 +7,8 @@ import { SinglechoiceComponent } from './singlechoice/singlechoice.component';
 import { MatRadioModule, MatButtonModule, MatInputModule, MatCheckboxModule } from "@angular/material";
 import { MultifillComponent } from './multifill/multifill.component';
 import { SanitizePipe } from "@shared/pipes/sanitize-pipe.pipe";
+import { MatchingComponent } from "./matching/matching.component";
+import { DragDropModule } from "@angular/cdk/drag-drop";
 
 
 @NgModule({
@@ -16,25 +18,29 @@ import { SanitizePipe } from "@shared/pipes/sanitize-pipe.pipe";
     MatRadioModule,
     MatCheckboxModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    DragDropModule
   ],
   declarations: [
     TaskDirective,
     MultichoiceComponent,
     SinglechoiceComponent,
     MultifillComponent,
+    MatchingComponent,
     SanitizePipe
   ],
   exports: [
     TaskDirective,
     MultichoiceComponent,
     SinglechoiceComponent,
-    MultifillComponent
+    MultifillComponent,
+    MatchingComponent
   ],
   entryComponents: [
     MultichoiceComponent,
     SinglechoiceComponent,
-    MultifillComponent
+    MultifillComponent,
+    MatchingComponent
   ]
 })
 export class TasksModule { }
