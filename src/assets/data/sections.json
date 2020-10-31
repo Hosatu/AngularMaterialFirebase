@@ -96,7 +96,15 @@
                     ]
                 }
             ],
-            "quizes": [
+            "quizes": [                
+                {
+                    "title": "TEST",
+                    "type": "corpus",
+                    "data":{
+                        "question": "TEST QUESTION",
+                        "correct": [{ "word":"Pavel","lemma": "Pavel", "tag":"k1"}]
+                    }
+                },
                 {
                     "title": "TEST",
                     "type": "matching",
