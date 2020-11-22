@@ -350,10 +350,10 @@
                     "data": {
                         "question": "Prohlédněte si následující kód. Co by mohl simulovat?<code class='multiline'>if last_character == \"h\":\n\tlast_character = \"ch\"\nif last_character == \"d\":\n\tlast_character = \"t\"</code>",
                         "options": [
-                            "asimilace znělosti",
-                            "neutralizace znělosti"
+                            "asimilaci znělosti",
+                            "neutralizaci znělosti"
                         ],
-                        "correct": "neutralizace znělosti"
+                        "correct": "neutralizaci znělosti"
                     }
                 },
                 {
