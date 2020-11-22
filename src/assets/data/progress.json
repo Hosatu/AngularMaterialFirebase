@@ -1,0 +1,156 @@
+{
+    "fonetika": {
+        "unlocked": true,
+        "finished": false,
+        "sections": {
+            "úvod": {
+                "unlocked": true,
+                "finished": false,
+                "quiz-results":[
+
+                ]
+            }, 
+            "výslovnost": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "vývoj": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "programování": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "zpracování řeči": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }
+        }
+    },
+    "morfologie": {
+        "unlocked": false,
+        "finished": false,
+        "sections": {
+            "úvod": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "korpusy": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "statistika": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "programování": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "morfolog. analýza": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }
+        }
+    },
+    "syntax": {
+        "unlocked": false,
+        "sections": {
+            "grafy": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "úvod": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "konstituenty": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "typy konstituentů": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "synt. analýza": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }}
+    },
+    "semantika": {
+        "unlocked": false,
+        "sections": {
+            "úvod": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "význam": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "lexikografie a nástroje": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "predikátová logika": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }
+        }
+    }
+}

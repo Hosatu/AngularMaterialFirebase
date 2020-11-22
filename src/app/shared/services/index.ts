@@ -4,4 +4,5 @@ export * from './alert.service';
 export * from './user.service';
 export * from './window.service';
 export * from './corpora.service';
+export * from './progress.service';
 

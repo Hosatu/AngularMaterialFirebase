@@ -12,7 +12,7 @@
             <mat-grid-tile [colspan]="currentLesson.sections.length" rowspan="2">
                 {{currentLesson.description}}
             </mat-grid-tile>
-            <mat-grid-tile colspan="1" rowspan="1" *ngFor="let section of currentLesson.sections" [routerLink]="[section]">
+            <mat-grid-tile colspan="1" rowspan="1" *ngFor="let section of currentLesson.sections" [routerLink]="[isUnlocked(section)?section:null]" [class.disabled]="!isUnlocked(section)">
                 <mat-card>
                     <mat-card-header>
                         <mat-card-title>{{section}}</mat-card-title>

@@ -1,23 +1,27 @@
 {
     "fonetika": {
+        "id": "fonetika",
         "title": "Fonetika",
         "background": "red",
         "description": "V této lekci se naučíte ... a vyzkoušíte si ...",
         "sections": ["úvod", "výslovnost", "vývoj", "programování", "zpracování řeči"]
     },
     "morfologie": {
+        "id": "morfologie",
         "title": "Morfologie",
         "background": "yellow",
         "description": "alskdjalskdjaslkdjaslkdj",
         "sections": ["úvod", "korpusy", "statistika", "programování", "morfolog. analýza"]
     },
     "syntax": {
+        "id": "syntax",
         "title": "Syntax",
         "background": "blue",
         "description": "alskdjalskdjaslkdjaslkdj",
         "sections": ["grafy", "úvod", "konstituenty", "typy konstituentů", "synt. analýza"]
     },
     "semantika": {
+        "id": "semantika",
         "title": "Sémantika",
         "background": "red",
         "description": "alskdjalskdjaslkdjaslkdj",

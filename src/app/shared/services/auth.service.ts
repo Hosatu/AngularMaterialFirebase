@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import * as firebase from 'firebase';
+import { ProgressService } from './progress.service';
 
 @Injectable()
 export class AuthService {
@@ -9,10 +10,12 @@ export class AuthService {
 
   constructor(
     private router: Router,
-    private auth: AngularFireAuth) { }
+    private auth: AngularFireAuth,
+    private progress: ProgressService) { }
 
   public onSuccess(): void {
     sessionStorage.setItem('session-alive', 'true');
+    this.progress.initProgress();
     this.token = 'some-temporary-token';
     this.router.navigate(['/']);
     console.log('AUTH: ', this.auth);

@@ -1,5 +1,6 @@
 export class Section {
     title: string;
+    next: string[];
     content: Page[];
     quizes: Quiz[];
 }

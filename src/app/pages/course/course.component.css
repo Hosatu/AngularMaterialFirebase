@@ -9,3 +9,8 @@ mat-grid-tile button {
     margin-right: 20px;
     text-align: justify;
 }
+
+.disabled * {
+    opacity: 0.5;
+    pointer-events: none;
+}
