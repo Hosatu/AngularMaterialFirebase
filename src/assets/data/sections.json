@@ -335,7 +335,7 @@
                     }
                 },
                 {
-                    "title": "Doplňte znělostní protiklady",
+                    "title": "Znovu si prohlédněte kód a zkuste doplnit pravidla",
                     "type": "multifill",
                     "data": {
                         "question": "Znovu si prohlédněte kód a zkuste doplnit pravidla.",
