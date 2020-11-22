@@ -8,6 +8,8 @@ import { TaskComponent } from 'src/app/tasks/task';
 import { Tasks } from 'src/app/tasks/task.constants';
 import * as _ from "lodash";
 import { MatSnackBar } from '@angular/material';
+import { ProgressService } from '@shared/services';
+import * as firebase from 'firebase';
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
@@ -16,11 +18,13 @@ import { MatSnackBar } from '@angular/material';
 export class QuizComponent extends HasSubscriptions implements OnInit {
 
   public currentSection: Section;
+  public currentLesson: string;
+  public currentSectionId: string;
   public isLoading: boolean = true;
   public slideDone: boolean[];
   @ViewChildren(TaskDirective) taskContainers: QueryList<TaskDirective>;
 
-  constructor(private snackBar: MatSnackBar, public url: ActivatedRoute, public files: HttpClient, private componentFactoryResolver: ComponentFactoryResolver ) {
+  constructor(private snackBar: MatSnackBar, public url: ActivatedRoute, public files: HttpClient, private componentFactoryResolver: ComponentFactoryResolver, private progress: ProgressService ) {
     super();
   }
 
@@ -30,6 +34,8 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
       (params: Params) => {
         this.isLoading = true;
         this.loadSection(params["lesson"], params["section"]);
+        this.currentLesson = params['lesson'];
+        this.currentSectionId = params['section'];
       }
     )
   }
@@ -67,6 +73,31 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
       (correct: boolean) => {
         if(this.slideDone.indexOf(false) != -1) {
           this.slideDone[this.slideDone.indexOf(false)] = true;
+          if(this.allSlidesDone()) {
+            this.progress.updateProgress(firebase.auth().currentUser.uid, 
+            _.merge(
+              this.progress.getProgress(),
+            {
+              [this.currentLesson]: {
+                finished: this.currentLesson != this.currentSection.next[0],
+                sections: {
+                  [this.currentSectionId]: {
+                    finished: true
+                  }
+                }
+              }
+            },
+            {
+              [this.currentSection.next[0]]: {
+                unlocked: true,
+                sections: {
+                  [this.currentSection.next[1]]: {
+                    unlocked: true
+                  }
+                }
+              }
+            }))
+          }
         }
         if(correct == true) {
           this.snackBar.open('Správná odpověď!', "Zavřít", {

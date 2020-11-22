@@ -2,6 +2,7 @@
     "fonetika": {
         "úvod": {
             "title": "Úvod do fonetiky a fonologie",
+            "next": ["fonetika", "výslovnost"],
             "content": [
                 {
                     "title": " ",
@@ -73,6 +74,7 @@
             ]
         },
         "výslovnost": {
+            "next": ["fonetika", "vývoj"],
             "title": "Přizpůsobení výslovnosti",
             "content": [
                 {
@@ -228,6 +230,7 @@
             ]
         },
         "vývoj": {
+            "next": ["fonetika", "programování"],
             "title": "Vývoj v hláskové rovině",
             "content": [
                 {
@@ -291,6 +294,7 @@
             ]
         },
         "programování": {
+            "next": ["morfologie", "úvod"],
             "title": "Základní koncepty v programování",
             "content": [
                 {
@@ -357,7 +361,7 @@
                     }
                 },
                 {
-                    "title": "Znovu si prohlédněte kód a zkuste doplnit pravidla",
+                    "title": "Doplňte znělostní protiklady",
                     "type": "multifill",
                     "data": {
                         "question": "Znovu si prohlédněte kód a zkuste doplnit pravidla.",
@@ -401,6 +405,7 @@
     },
     "morfologie": {
         "úvod": {
+            "next": ["morfologie", "korpusy"],
             "title": "Úvod do morfologie",
             "content": [
                 {
@@ -505,6 +510,7 @@
             ]
         },
         "korpusy": {
+            "next": ["morfologie", "statistika"],
             "title": "Korpusy",
             "content": [
                 {
@@ -638,6 +644,7 @@
             ]
         },
         "statistika": {
+            "next": ["morfologie", "programování"],
             "title": "Úvod do statistiky",
             "content": [
                 {
@@ -703,6 +710,7 @@
             ]
         },
         "programování": {
+            "next": ["morfologie", "morfolog. analýza"],
             "title": "Programování ve statistice",
             "content": [
                 {
@@ -821,6 +829,7 @@
             ]
         },
         "morfolog. analýza": {
+            "next": ["syntax", "grafy"],
             "title": "Automatická morfologická analýza",
             "content": [
                 {

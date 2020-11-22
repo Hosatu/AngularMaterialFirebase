@@ -25,7 +25,8 @@ import {
   AuthGuardService,
   AuthService,
   WindowService,
-  CorporaService
+  CorporaService,
+  ProgressService
 } from '@shared';
 
 // Main
@@ -86,7 +87,8 @@ import { SanitizePipe } from './shared/pipes/sanitize-pipe.pipe';
     AuthGuardService,
     AuthService,
     WindowService,
-    CorporaService
+    CorporaService,
+    ProgressService
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

@@ -5,7 +5,8 @@ import { takeUntil } from 'rxjs/operators';
 import { HasSubscriptions } from '../../shared/utilities';
 import { HttpClient } from '@angular/common/http';
 import { Lesson } from '../../shared/models';
-
+import { ProgressService } from '@shared/services';
+import * as firebase from 'firebase';
 @Component({
   selector: 'app-lesson',
   templateUrl: './lesson.component.html',
@@ -16,7 +17,7 @@ export class LessonComponent extends HasSubscriptions implements OnInit {
   public currentLesson: Lesson;
   public isLoading: boolean = true;
 
-  constructor(private files: HttpClient, private route: ActivatedRoute) { 
+  constructor(private files: HttpClient, private route: ActivatedRoute, private progress: ProgressService) { 
     super();
     this.safeSubscribe<Params>(
       this.route.params,
@@ -24,7 +25,6 @@ export class LessonComponent extends HasSubscriptions implements OnInit {
         this.isLoading = true;
         this.loadLesson(params["lesson"]);
       }
-      
     );
   }
 
@@ -39,5 +39,9 @@ export class LessonComponent extends HasSubscriptions implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  isUnlocked(section) {
+    return this.progress.getProgress()[this.currentLesson.id].sections[section].unlocked;
   }
 }
