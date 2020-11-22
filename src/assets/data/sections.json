@@ -96,7 +96,29 @@
                     ]
                 }
             ],
-            "quizes": [
+            "quizes": [                
+                {
+                    "title": "TEST",
+                    "type": "corpus",
+                    "data":{
+                        "question": "TEST QUESTION",
+                        "correct": [{ "word":"Pavel","lemma": "Pavel", "tag":"k1"}]
+                    }
+                },
+                {
+                    "title": "TEST",
+                    "type": "matching",
+                    "data":{
+                        "question": "TEST QUESTION",
+                        "optionsFixed": ["A","B","C"],
+                        "optionsMatch": ["1","2","3"],
+                        "correct": {
+                            "A": ["1"],
+                            "B": ["2"],
+                            "C": ["3"]
+                        }
+                    }
+                },
                 {
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
