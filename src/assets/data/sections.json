@@ -1334,8 +1334,8 @@
         }
     },
     "sémantika": {
-        "next":["sémantika", "význam"],
         "úvod": {
+            "next":["sémantika", "význam"],
             "title": "Lexikologie a sémantika",
             "content": [
                 {
@@ -1353,40 +1353,168 @@
             ],
             "quizes": [
                 {
-                    "title": "asdasd",
-                    "type": "multichoice",
-                    "data": {}
+                    "title": "Zvol správnou ospověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question":"Jak se jmenují dvě složky, kterými se zabývá lexikologie?",
+                        "options":["onomastika a sémiologie",
+                            "lexikalistika a lexikografie",
+                            "onomaziologie a sémaziologie",
+                            "homonymie a heteronymie"
+                        ],
+                        "correct":"onomaziologie a sémaziologie"
+                    }
+                },
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question":"Na co se zaměřuje lexikální onomaziologie?",
+                        "options":["teorie pojmenování",
+                            "význam a významové vztahy",
+                            "vztahy mezi slovy ve větě",
+                            "stavba slov"
+                        ],
+                        "correct":"teorie pojmenování"
+                    }
+                },
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question":"Co je předmětem sémantiky?",
+                        "options":["teorie pojmenování",
+                            "význam a významové vztahy",
+                            "vztahy mezi slovy ve větě",
+                            "stavba slov"
+                        ],
+                        "correct":"význam a významové vztahy"
+                    }
                 }
             ]
         },
         "význam": {
-            "next": ["sémantika", "lexikografie"],
-            "title": "text4-2",
+            "next": ["sémantika", "lexikografie a nástroje"],
+            "title": "Význam",
             "content": [
                 {
-                    "title": "Stránka 1",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": "Popis významu",
+                    "text": ["Existovaly různé snahy o popis významu, například <b>komponentová analýza</b>, která si kladla za cíl pomocí zjednodušených obecných rysů a jejich přítomnosti či nepřítomnosti (například +/- životný, +/- lidský, +/- dospělý apod.) popsat význam konkrétních slov.",
+                    "I když bychom pomocí omezeného množství takovýchto rysů mohli popsat daleko větší množství slov a jejich významů, těchto rysů by stále bylo potřeba velmi mnoho a v některých případech by ani nebylo možné dostatečně obecný rys najít nebo pokrýt celý význam daného slova. Význam totiž netvoří jen jedna základní složka, jsou zde i další významové obaly, jako například to, jaké emoce dané slovo vyvolává, s čím se často pojí nebo co může asociovat."]
                 },
                 {
-                    "title": "Stránka 2",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": "Homonymie",
+                    "text": ["Dalším problémem je pak <b>homonymie</b> (víceznačnost), kdy jedno slovo může mít v závislosti na kontextu více různých významů.",
+                        "Pravděpodobně jste se setkali s typickými příklady, jako je <i>koruna</i> (platidlo, část stromu, královský klenot). K homonymii ale může docházet i napříč slovními druhy, viz například <i>stát</i> (sloveso a podstatné jméno se zcela odlišným významem). Někdy se naopak mohou významy lišit jen mírně – například u podstatných jmen typu <i>stavení</i> (může označovat řadu pádových forem a bez kontextu nedokážeme určit, o kterou z nich se jedná). "
+                    ]
                 },
                 {
-                    "title": "Stránka 3",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": "",
+                    "text": ["Tato víceznačnost způsobuje komplikace například při automatickém značkování korpusů, kdy je na výběr více možných značek pro dané slovo. Je tedy třeba na základě kontextu rozhodnout, která značka je správná (tento proces se nazývá <b>desambiguace</b>), což nemusejí automatické nástroje vždy správně vyhodnotit."]
+                },
+                {
+                    "title": "WordNet",
+                    "text": ["K zachycení významů a vztahů mezi nimi můžeme mimo jiné použít takzvanou sémantickou síť. Tu si můžeme představit jako graf, který propojuje jednotlivá slova různými typy vztahů. Příkladem takové sítě je WordNet. Jeho základ tvoří synonymické řady, které nazýváme <b>synsety</b>. Ty mají přiřazený význam. Mezi jednotlivými synsety můžeme pozorovat další vztahy, například nadřazenost – podřazenost, celek – část a podobně. První WordNet byl vytvořený v 80. letech na univerzitě v Princetonu a stále se vyvíjí. Dnes už existuje i česká verze (která vzniká na Fakultě informatiky Masarykovy univerzity) nebo mezinárodní projekt EuroWordNet."]
+                },
+                {
+                    "title": "Ukízka z WordNetu - TODO",
+                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
+                },
+                {
+                    "title": "Naivní Leskův algoritmus",
+                    "text": ["Tento algoritmus se snaží určit význam slova v textu (vybrat z několika možných) na základě slov, která se nacházejí v jeho okolí. Tato okolní slova porovnává se slovy obsaženými v jednotlivý definicích a příkladech. Aby se porovnávání trochu zjednodušilo, všechna slova se nejdříve lemmatizují. Jako vítězný význam pak označí ten, v jehož definici se nachází nejvíce slov společných s těmi v okolí hledaného výrazu."]
                 }
             ],
             "quizes": [
                 {
-                    "title": "asdasd",
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Přístup, který se snažil zachytit význam pomocí binárních (+/-) rysů se nazývá",
+                        "options": ["lexikální sémaziologie",
+                            "desambiguace",
+                            "komponentová analýza",
+                            "binární popis"
+                        ],
+                        "correct": "komponentová analýza"
+                    }
+                },
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Homonymie je",
+                        "options": ["když má více různých slov stejný význam",
+                            "když má jedno slovo více různých významů",
+                            "když je jedno slovo obecnějším vyjádřením druhého",
+                            "když mají dvě slova opačný význam"
+                        ],
+                        "correct": "když má jedno slovo více různých významů"
+                    }
+                },
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Proces, kdy se na základě kontextu vybírá správná značka pro určité slovo, se nazývá",
+                        "options": ["sémantická analýza",
+                            "desambiguace",
+                            "komponentová analýza",
+                            "lemmatizace"
+                        ],
+                        "correct": "desambiguace"
+                    }
+                },
+                {
+                    "title": "Zvol všechny správné odpovědi",
                     "type": "multichoice",
-                    "data": {}
+                    "data": {
+                        "question": "Vyber slova, která jsou homonymní",
+                        "options": ["polévka",
+                            "svišti",
+                            "kolo",
+                            "tygr"
+                        ],
+                        "correct": [
+                            false,
+                            true,
+                            true,
+                            false
+                        ]
+                    }
+                },
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "WordNet - TODO",
+                        "options": ["a",
+                            "b",
+                            "c",
+                            "d"
+                        ],
+                        "correct": "d"
+                    }
+                },
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Naivní Leskův algoritmus - TODO",
+                        "options": ["a",
+                            "b",
+                            "c",
+                            "d"
+                        ],
+                        "correct": "d"
+                    }
                 }
+
             ]
         },
-        "lexikografie": {
+        "lexikografie a nástroje": {
             "next": ["sémantika", "predikátová logika"],
-            "title": "text4-1",
+            "title": "Lexikografie",
             "content": [
                 {
                     "title": "Stránka 1",
