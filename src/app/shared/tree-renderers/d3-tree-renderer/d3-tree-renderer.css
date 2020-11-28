@@ -1,0 +1,5 @@
+div.rendered-tree {
+    max-height: 400px;
+    border: rgb(198, 236, 198) 1px solid;
+    overflow: scroll;
+}

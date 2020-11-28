@@ -20,7 +20,24 @@
                     ]
                 }
             ],
-            "quizes": [
+            "quizes": [   
+                {
+                    "title": "Zvolte správné lemma a označkování",
+                    "type": "majka",
+                    "data": {
+                        "question": "Jdu svou <b>cestou</b>",
+                        "correct": "cesta:k1gFnSc7"
+                    }
+                },
+                    {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "trees",
+                    "data": {
+                        "question": "Vytvoř strukturu věty",
+                        "constituents": "<Pron>I,<V>see,<N>trees,<P>of,<A>green",
+                        "correct": "[I,[see,[trees,[of,green]]]]"
+                    }
+                },
                 {
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",

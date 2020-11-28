@@ -1,0 +1,9 @@
+<label id="example-radio-group-label" [innerHTML]="data.question"></label>
+<input type="text" [(ngModel)]="majkaWord"/><button mat-raised-button color="primary" (click)="loadMajka()">MAJKA</button>
+
+<mat-radio-group *ngIf="majkaOptions" aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="answer">
+  <mat-radio-button color="primary" class="example-radio-button" *ngFor="let option of majkaOptions" [value]="option">
+    <span [innerHtml]="option"></span>
+  </mat-radio-button>
+</mat-radio-group>
+<button mat-raised-button color="primary" (click)="submit()" [disabled]="isAnswered || !answer">Odeslat odpověď</button>

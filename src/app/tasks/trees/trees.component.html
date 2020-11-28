@@ -1,0 +1,9 @@
+<label id="example-radio-group-label" [innerHTML]="data.question"></label>
+<p *ngFor="let alert of alerts">
+  <span (close)="closeAlert(alert)">{{ alert.message }}</span>
+</p>
+<d3-tree-renderer class="canvas" (nodeSelected)="onNodeSelected($event)" fontSize="15" fontColor="green" [initialNodes]="data.constituents" height="350" [width]="windowWidth"></d3-tree-renderer>
+<button mat-raised-button color="primary" [disabled]="!canMerge()" (click)="mergeNodes()">Merge nodes</button> 
+<button mat-raised-button color="danger" [disabled]="!canUnselect()" (click)="clearSelected()">Clear selected</button>
+<button mat-raised-button color="danger" (click)="clear()">Reset</button>
+<button mat-raised-button color="primary" [disabled]="isAnswered || !tree" (click)="submit()" >Odeslat odpověď</button>
