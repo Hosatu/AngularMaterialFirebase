@@ -35,7 +35,7 @@ export class MajkaComponent implements TaskComponent, OnInit {
       }
     }).toPromise();
     console.log(data);
-    this.majkaOptions = data['Annot'];
+    this.majkaOptions = _.map(data[0]['Annot'], (option) => this.processOption(option));
   }
 
   submit() {
@@ -45,6 +45,26 @@ export class MajkaComponent implements TaskComponent, OnInit {
       this.taskSubmitted.emit(false);
     }
     this.isAnswered = true;
+  }
+
+  processOption(option: {Lemma: string, Tag: string}) {
+    const category = option.Tag.match(/k[0-9]+/g),
+      gender = option.Tag.match(/g[MNIF]/g),
+      number = option.Tag.match(/n[PS]/g),
+      casus = option.Tag.match(/c[1-7]/g);
+    let newTag = category[0];
+    if (gender) {
+      newTag += gender[0];
+    }
+    if (number) {
+      newTag += number[0];
+    }
+    if (casus) {
+      newTag += casus[0];
+    }
+    option.Tag = newTag;
+    return option;
+
   }
 
 }
