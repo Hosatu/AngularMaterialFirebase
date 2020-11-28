@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TaskComponent } from '../task';
+import * as _ from 'lodash';
 
 export declare type MajkaData = {
   question: string;
@@ -39,7 +40,7 @@ export class MajkaComponent implements TaskComponent, OnInit {
   }
 
   submit() {
-    if(this.answer == this.data.correct) {
+    if (this.answer == this.data.correct) {
       this.taskSubmitted.emit(true);
     } else {
       this.taskSubmitted.emit(false);
