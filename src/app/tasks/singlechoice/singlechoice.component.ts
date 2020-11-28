@@ -18,7 +18,7 @@ export class SinglechoiceComponent implements TaskComponent, OnInit {
   @Output() taskSubmitted: EventEmitter<boolean> = new EventEmitter();
   public answer: string;
   public isAnswered: boolean = false;
-  
+
   constructor() { }
 
   ngOnInit() {

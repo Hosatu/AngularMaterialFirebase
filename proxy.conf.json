@@ -1,0 +1,7 @@
+{
+    "/languageservices/*": {
+      "target": "https://nlp.fi.muni.cz",
+      "secure": true,
+      "changeOrigin": true
+    }
+  }

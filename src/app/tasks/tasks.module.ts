@@ -10,6 +10,10 @@ import { SanitizePipe } from "@shared/pipes/sanitize-pipe.pipe";
 import { MatchingComponent } from "./matching/matching.component";
 import { DragDropModule } from "@angular/cdk/drag-drop";
 import { CorpusComponent } from "./corpus/corpus.component";
+import { TreesComponent } from "./trees/trees.component";
+import { TreeRenderersModule } from "@shared/tree-renderers/tree-renderers.module";
+import { HttpClientModule } from "@angular/common/http";
+import { MajkaComponent } from "./majka/majka.component";
 
 
 @NgModule({
@@ -22,7 +26,9 @@ import { CorpusComponent } from "./corpus/corpus.component";
     MatInputModule,
     MatTableModule,
     MatPaginatorModule,
-    DragDropModule
+    DragDropModule,
+    TreeRenderersModule,
+    HttpClientModule
   ],
   declarations: [
     TaskDirective,
@@ -31,6 +37,8 @@ import { CorpusComponent } from "./corpus/corpus.component";
     MultifillComponent,
     MatchingComponent,
     CorpusComponent,
+    TreesComponent,
+    MajkaComponent,
     SanitizePipe
   ],
   exports: [
@@ -39,14 +47,18 @@ import { CorpusComponent } from "./corpus/corpus.component";
     SinglechoiceComponent,
     MultifillComponent,
     MatchingComponent,
-    CorpusComponent
+    CorpusComponent,
+    TreesComponent,
+    MajkaComponent
   ],
   entryComponents: [
     MultichoiceComponent,
     SinglechoiceComponent,
     MultifillComponent,
     MatchingComponent,
-    CorpusComponent
+    CorpusComponent,
+    TreesComponent,
+    MajkaComponent
   ]
 })
 export class TasksModule { }

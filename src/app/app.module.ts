@@ -47,6 +47,8 @@ import { QuizComponent } from './pages/quiz/quiz.component';
 import { ProgressComponent } from './pages/progress/progress.component';
 import { TasksModule } from './tasks/tasks.module';
 import { SanitizePipe } from './shared/pipes/sanitize-pipe.pipe';
+import { TreeRenderersModule } from '@shared/tree-renderers/tree-renderers.module';
+import { D3CreatorService } from '@shared/services/d3-creator.service';
 
 @NgModule({
   declarations: [
@@ -79,6 +81,7 @@ import { SanitizePipe } from './shared/pipes/sanitize-pipe.pipe';
     ProfileModule,
     MiscModule,
     MatCarouselModule,
+    TreeRenderersModule,
     NgxAuthFirebaseUIModule.forRoot(firebaseKeys)
   ],
   providers: [
@@ -88,7 +91,8 @@ import { SanitizePipe } from './shared/pipes/sanitize-pipe.pipe';
     AuthService,
     WindowService,
     CorporaService,
-    ProgressService
+    ProgressService,
+    D3CreatorService
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
