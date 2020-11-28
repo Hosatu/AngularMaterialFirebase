@@ -20,11 +20,11 @@
         "description": "alskdjalskdjaslkdjaslkdj",
         "sections": ["grafy", "úvod", "konstituenty", "typy konstituentů", "synt. analýza"]
     },
-    "semantika": {
+    "sémantika": {
         "id": "semantika",
         "title": "Sémantika",
         "background": "red",
         "description": "alskdjalskdjaslkdjaslkdj",
-        "sections": ["úvod", "význam", "lexikografie a nástroje", "predikátová logika"]
+        "sections": ["úvod", "význam", "lexikografie", "predikátová logika"]
     }
 }

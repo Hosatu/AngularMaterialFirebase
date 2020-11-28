@@ -117,28 +117,6 @@
             ],
             "quizes": [                
                 {
-                    "title": "TEST",
-                    "type": "corpus",
-                    "data":{
-                        "question": "TEST QUESTION",
-                        "correct": [{ "word":"Pavel","lemma": "Pavel", "tag":"k1"}]
-                    }
-                },
-                {
-                    "title": "TEST",
-                    "type": "matching",
-                    "data":{
-                        "question": "TEST QUESTION",
-                        "optionsFixed": ["A","B","C"],
-                        "optionsMatch": ["1","2","3"],
-                        "correct": {
-                            "A": ["1"],
-                            "B": ["2"],
-                            "C": ["3"]
-                        }
-                    }
-                },
-                {
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
@@ -311,7 +289,7 @@
             ]
         },
         "programování": {
-            "next": ["morfologie", "úvod"],
+            "next": ["fonetika", "zpracování řeči"],
             "title": "Základní koncepty v programování",
             "content": [
                 {
@@ -338,7 +316,7 @@
                 {
                     "title": "Podmínka",
                     "text": [
-                        "Zmíněné porovnávání typicky využijeme v případě, že chceme nějakou část kódu (<b>příkaz</b> nebo jejich sérii) provést pouze za určitých okolností, například pokud je v proměnné uloženo „Petr“, změň hodnotu na „Pavel“.",
+                        "Zmíněné porovnávání typicky využijeme v případě, že chceme nějakou část kódu (<b>příkaz</b> nebo sérii příkazů) provést pouze za určitých okolností, například pokud je v proměnné uloženo „Petr“, změníme hodnotu na „Pavel“.",
                         "V Pythonu používáme pro vyjádření podmínky klíčové slovo <b>if</b>. Na řádku s tímto klíčovým slovem je tedy uvedena podmínka a na následujících řádcích se nachází příkaz nebo příkazy, které mají být provedeny, pokud je podmínka splněna. To, kde tyto instrukce nebo jakákoliv jiná skupina příkazů, které patří k sobě, začínají a končí, poznáme podle odsazení (jedná se o tzv. <b>bloky kódu</b>). Zmíněný příklad se změnou jména by vypadal takto:",
                         "<code class=\"multiline\">if name == \"Petr\":\n\tname = \"Pavel\"</code>"
                     ]
@@ -360,7 +338,7 @@
                 {
                     "title": "",
                     "text": [
-                        "Všimněte si, že všechny uvedené proměnné jsou psány v uvozovkách. Je to proto, že se jedná o <b>datový typ</b> odpovídající <b>textu</b>. Mimo něj existují datové typy pro celá čísla, desetinná čísla, pravdivostní hodnoty a podobně, tím se ale teď nebudeme podrobněji zabývat."
+                        "Všimněte si, že všechny uvedené proměnné jsou psány v uvozovkách (v programování nepoužíváme klasické české horní a dolní uvozovky, ale univerzální strojové). Je to proto, že se jedná o <b>datový typ</b> odpovídající <b>textu</b>. Mimo něj existují datové typy pro celá čísla, desetinná čísla, pravdivostní hodnoty a podobně, tím se ale teď nebudeme podrobněji zabývat."
                     ]
                 }
             ],
@@ -371,10 +349,10 @@
                     "data": {
                         "question": "Prohlédněte si následující kód. Co by mohl simulovat?<code class='multiline'>if last_character == \"h\":\n\tlast_character = \"ch\"\nif last_character == \"d\":\n\tlast_character = \"t\"</code>",
                         "options": [
-                            "asimilace znělosti",
-                            "neutralizace znělosti"
+                            "asimilaci znělosti",
+                            "neutralizaci znělosti"
                         ],
-                        "correct": "neutralizace znělosti"
+                        "correct": "neutralizaci znělosti"
                     }
                 },
                 {
@@ -418,6 +396,90 @@
                     }
                 }
             ]
+        },
+        "zpracování řeči": {
+            "next": ["morfologie", "úvod"],
+            "title": "Analýza a syntéza řeči",
+            "content":[
+                {
+                    "title":"",
+                    "text": [
+                        "Výstupem počítačové lingvistiky, který bychom v souvislosti s fonetikou rozhodně měli zmínit, je analýza a syntéza řeči. V případě analýzy se jedná o převod řeči na text, syntéza pak odpovídá opačnému procesu."
+                    ]
+                },
+                {
+                    "title": "Analýza řeči",
+                    "text": ["V případě analýzy nebo také rozpoznání řeči může jít o rozpoznání jednotlivých slov, která mají mezi sebou jasně slyšitelné pauzy, nebo delšího proudu řeči, což už je náročnější úkol. Řeč zde představuje signál, který je třeba digitalizovat a rozdělit na menší úseky, které mají určité charakteristiky. Ty se pak porovnávají s charakteristikami vzorových nahrávek, které odpovídají jednotlivým fonémům, jejich kombinacím, slabikám nebo i celým slovům, a na základě podobnosti se pak přepisují na daný text."
+                    ]
+                },
+                {
+                    "title": "Syntéza řeči",
+                    "text": [
+                        "V rámci syntézy řeči naopak dochází k převodu textu do mluvené podoby, která by měla pokud možno znít co nejpřirozeněji, proto je třeba zohlednit i intonaci, přízvuk a další charakteristiky. Na začátku celého procesu se text rozčlení na věty a rozepíší se všechny zkratky, jednotky, čísla a další „skryté“ části textu. Poté se vytvoří fonetický přepis, který zaznamená výslovnost pro daný text. Připojí se informace o intonaci, tempu řeči, pauzách, přízvuku a souvisejících jevech a pak už dochází k samotnému modelování řeči, které může probíhat různými způsoby. Asi nejjednodušším z nich je skládání z předpřipravených (namluvených) kombinací hlásek. Nejedná se ovšem o samostatné hlásky, ale například slabiky, protože výslovnost hlásky je vždy ovlivněna jejím okolím."
+                    ]
+                }
+            ],
+            "quizes":[
+                {
+                    "title": "Zvolte všechny správné odpovědi",
+                    "type":"singlechoice",
+                    "data": {
+                        "question": "Analýza řeči se zabývá",
+                        "options":[
+                            "rozpoznáváním jazyka, kterým dotyčný mluví (čeština, angličtina, němčina, ...)",
+                            "převodem textu do mluvené podoby",
+                            "zkoumáním řečových vad daného jedince",
+                            "převodem řeči do textové podoby"
+                        ],
+                        "correct": "převodem řeči do textové podoby"
+
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Syntéza řeči se zabývá",
+                        "options":[
+                            "zkoumáním řečových vad daného jedince",
+                            "převodem textu do mluvené podoby",
+                            "převodem řeči do textové podoby",
+                            "rozpoznáváním jazyka, kterým dotyčný mluví (čeština, angličtina, němčina, ...)"
+                        ],
+                        "correct": "převodem textu do mluvené podoby"
+
+                    }
+                },
+                {
+                    "title": "Zvolte všechny správné odpovědi",
+                    "type":"multichoice",
+                    "data":{
+                        "question": "Kterou část / které části věty <i>Věž kostela sv. Gabriela měří 43 m.</i> by bylo nutné v rámci syntézy řeči rozepsat?",
+                        "options":[
+                            "Věž",
+                            "kostela",
+                            "sv.",
+                            "Gabriela",
+                            "měří",
+                            "43",
+                            "m"
+
+                        ],
+                        "correct": [
+                            false,
+                            false,
+                            true,
+                            false,
+                            false,
+                            true,
+                            true                    
+                        ]
+                    
+                    }
+                }
+
+            ]
+
         }
     },
     "morfologie": {
@@ -539,7 +601,7 @@
                 {
                     "title": "",
                     "text": [
-                        "Aby byl korpus zdrojem, který o jazyku dostatečně vypovídá, musí obsahovat obrovské množství dat. Rozsah korpusů se tak obvykle pohybuje od milionů až k miliardám slov. Největší rozsah mají zpravidla <b>webové korpusy</b>, jejichž obsah se s využitím různých nástrojů automaticky stahuje z internetu. Tradičním korpusem však zůstává <b>textový (psaný) korpus</b>, jehož zdroje podléhají určitému výběru a snaze o vyváženost. Materiály pro tyto korpusy se obvykle získávají z beletrie, odborné literatury a publicistiky. Texty mohou být získány přímo v elektronické podobně, nebo jsou skenovány z tištěné podoby a pomocí specializovaných nástrojů převáděny do elektronické verze. Existují ale také <b>mluvené korpusy</b>, které obsahují přepisy promluv a rozhovorů, případně také samotné nahrávky."
+                        "Aby byl korpus zdrojem, který o jazyku dostatečně vypovídá, musí obsahovat obrovské množství dat. Rozsah korpusů se tak obvykle pohybuje od milionů až k miliardám slov. Největší rozsah mají zpravidla <b>webové korpusy</b>, jejichž obsah se s využitím různých nástrojů automaticky stahuje z internetu. Tradičním korpusem však zůstává <b>textový (psaný) korpus</b>, jehož zdroje podléhají určitému výběru a snaze o vyváženost. Materiály pro tyto korpusy se obvykle získávají z beletrie, odborné literatury a publicistiky. Texty mohou být získány přímo v elektronické podobě, nebo jsou skenovány z tištěné podoby a pomocí specializovaných nástrojů převáděny do elektronické verze. Existují ale také <b>mluvené korpusy</b>, které obsahují přepisy promluv a rozhovorů, případně také samotné nahrávky."
                     ]
                 },
                 {
@@ -586,7 +648,7 @@
                 {
                     "title": "Lemma vs. slovní tvar",
                     "text": [
-                        "Pojem <b>lemma</b> označuje <b>základní tvar</b> slova, který toto slovo reprezentuje. Je to forma, pod kterou bychom mohli slovo hledat ve slovníku. U ohebných slov se jde o první pád jednotného čísla (kachna) nebo infinitiv (psát), u neohebných je to slovo samo (haf). Slovní tvar pak odpovídá jakékoliv další formě slova (například <i>kachnou</i> nebo <i>psala</i>)."
+                        "Pojem <b>lemma</b> označuje <b>základní tvar</b> slova, který toto slovo reprezentuje. Je to forma, pod kterou bychom mohli slovo hledat ve slovníku. U ohebných slov jde o první pád jednotného čísla (kachna) nebo infinitiv (psát), u neohebných je to slovo samo (haf). Slovní tvar pak odpovídá jakékoliv další formě slova (například <i>kachnou</i> nebo <i>psala</i>)."
                     ]
                 },
                 {
@@ -631,17 +693,33 @@
                     }
                 },
                 {
-                    "title": "Zvolte správnou odpověď",
-                    "type": "singlechoice",
-                    "data": {
-                        "question": "latinská terminologie - TODO matching",
-                        "options": [
-                            "k1gNnSc4",
-                            "k1gNnSc2",
-                            "k1gFnSc4",
-                            "k1gFnSc2"
-                        ],
-                        "correct": "k1gFnSc4"
+                    "title": "Na vynechaná místa přesuň odpovídající položky z nabídky",
+                    "type": "matching",
+                    "data":{
+                        "question": "Přiřaď české termíny k latinským ekvivalentům.",
+                        "optionsFixed": ["casus","verbum","akuzativ", "substantivum"],
+                        "optionsMatch": ["4. pád","podstatné jméno","sloveso","pád"],
+                        "correct": {
+                            "casus": ["pád"],
+                            "verbum": ["sloveso"],
+                            "akuzativ": ["4. pád"],
+                            "substantivum": ["podstatné jméno"]
+                        }
+                    }
+                },
+                {
+                    "title": "Na vynechaná místa přesuň odpovídající položky z nabídky",
+                    "type": "matching",
+                    "data":{
+                        "question": "Přiřaď české termíny k latinským ekvivalentům.",
+                        "optionsFixed": ["genus","neutrum","femininum", "maskulinum"],
+                        "optionsMatch": ["rod mužský","rod","rod střední","rod ženský"],
+                        "correct": {
+                            "genus": ["rod"],
+                            "neutrum": ["rod střední"],
+                            "femininum": ["rod ženský"],
+                            "maskulinum": ["rod mužský"]
+                        }
                     }
                 },
                 {
@@ -657,6 +735,14 @@
                         ],
                         "correct": "k1gFnSc4"
                     }
+                },
+                {
+                    "title": "TEST",
+                    "type": "corpus",
+                    "data":{
+                        "question": "TEST QUESTION",
+                        "correct": [{ "word":"Pavel","lemma": "Pavel", "tag":"k1"}]
+                    }
                 }
             ]
         },
@@ -667,7 +753,7 @@
                 {
                     "title": "",
                     "text": [
-                        "Při práci s korpusovými daty nás mohou zajímat statistické údaje. K tomu se nám hodí znát základy statistiky. S těmi jste se pravděpodobně setkali už na základní nebo střední škole, ale nezaškodí si je trochu připomenout. Pojďme si nyní přiblížit ty nejdůležitější pojmy."
+                        "Při práci s korpusovými daty nás mohou zajímat statistické údaje. K tomu se hodí znát základy statistiky. S těmi jste se pravděpodobně setkali už na základní nebo střední škole, ale nezaškodí si je trochu připomenout. Pojďme si nyní přiblížit ty nejdůležitější pojmy."
                     ]
                 },
                 {
@@ -780,7 +866,7 @@
                     "title": "",
                     "text": [
                         "Tímto způsobem bychom mohli zjistit například průměrný věk žáků:",
-                        "<code class='multiline'>žáci = [{„jméno“: „Adam“, „věk“: 12}, {„jméno“: „Anna“, „věk“: 11}]\ncelkový_věk = 0\nfor žák in žáci:\n\tcelkový_věk += žák[„věk“]\t<i># přičte pravou stranu k levé</i>\nprint(celkový_věk/len(žáci))\t<i># vypíše podíl celkového věku a počtu žáků v seznamu</i>"
+                        "<code class='multiline'>žáci = [{„jméno“: „Adam“, „věk“: 12}, {„jméno“: „Anna“, „věk“: 11}]\ncelkový_věk = 0\nfor žák in žáci:\n\tcelkový_věk += žák[„věk“]\t<i># přičte pravou stranu k levé</i>\nprint(celkový_věk/len(žáci))\t<i># len(x) odpovídá počtu znaků, pokud je x text, \n\t\t\t\ta počtu položek, pokud je x seznam; \n\t\t\t\tcelý řádek vypíše podíl celkového věku a počtu \n\t\t\t\tžáků v seznamu</i>"
                     ]
                 }
             ],
@@ -862,12 +948,437 @@
                         "Příkladem takového analyzátoru pro češtinu je <b>Majka</b>, vytvořená v Centru zpracování přirozeného jazyka Fakulty informatiky Masarykovy univerzity. Zahrnuje více než 6 milionů slovních tvarů a využívá se například ve vyhledávači Seznam nebo projektech napojených na informační systém Masarykovy univerzity. Na jejím základě vznikl také podobný nástroj pro slovenštinu nebo gramatický korektor."
                     ]
                 }
+            ],
+            "quizes": [
+                {
+                    "title": "asdasd",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "PROVIZORNÍ OTÁZKA",
+                        "options":[
+                            "a",
+                            "b",
+                            "c",
+                            "d"
+                        ],
+                        "correct": "d"
+                    }
+                }
             ]
         }
     },
     "syntax": {
-        "1": {
-            "title": "text3-1",
+        "grafy": {
+            "next": ["syntax", "úvod"],
+            "title": "Grafy",
+            "content": [
+                {
+                    "title": "",
+                    "text": ["Abychom mohli správně zachycovat syntaktické struktury, potřebujeme nejprve pochopit základy teorie grafů. Graf představuje skupinu několika <b>vrcholů</b> (<b>uzlů</b>), které jsou propojeny <b>hranami</b>. Každý graf je tedy dán množinou vrcholů (V) a množinou hran (H), přičemž každá hrana spojuje dva vrcholy, a zapisujeme ji tedy jako množinu těchto dvou prvků. Například:",
+                    "OBRÁZEK",
+                    "V = {1, 2, 3, 4}",
+                    "H = {{1, 2}, {1, 4}, {2, 3}, {3, 4}}" 
+                    ]
+                    
+                },
+                {
+                    "title": "Základní pojmy",
+                    "text": [
+                        "<b>Sousední vrcholy</b> jsou takové, mezi kterými vede hrana.",
+                        "<b>Stupeň vrcholu</b> uvádí počet hran, které z/do vrcholu vedou.",
+                        "<b>Úplný graf</b> je takový, ve kterém jsou každé dva vrcholy propojeny hranou.",
+                        "<b>Podgraf</b> je vybraná část (vrcholy a hrany) původního grafu."
+                       
+                    ]
+                },
+                {
+                    "title": "Uspořádání",
+                    "text": [ 
+                        "<b>Kružnice</b> (<b>cyklus</b>) je graf, ve kterém jsou propojeny všechny uzly, a to tak, že z každého vycházejí právě dvě hrany (tvoří tedy uzavřený okruh).",
+                        "<b>Cesta</b> je graf, který tvoří „trasu“ procházející všemi vrcholy, aniž by se jakkoli rozdvojoval nebo se vracel (je to tedy opravdu cesta z prvního uzlu do posledního s případnými mezistanicemi); přidáním hrany mezi první a poslední uzel bychom získali kružnici (cyklus).",
+                        "<b>Souvislý graf</b> je takový, ve kterém bychom našli cestu mezi každými dvěma vrcholy (z/do každého uzlu vede alespoň jedna hrana; žádný z nich není na nedostupném ostrově). Opakem je graf <b>nesouvislý</b>, který může obsahovat několik „ostrůvků“ s propojenými vrcholy, přičemž ostrůvek může být tvořen i jedním vrcholem."
+                    ]
+                },
+                {
+                    "title": "",
+                    "text": [ 
+                        "<b>Acyklický graf</b> je takový, ve kterém není žádný cyklus. Jeho souvislé části tvoří stromy, proto ho někdy nazýváme také les.",
+                        "<b>Strom</b> je souvislý graf, který neobsahuje žádný cyklus.",
+                        "<i>Zajímavé je, že v rámci teorie grafů je vlastně každý strom zároveň les, ale naopak to samozřejmě už neplatí.</i>",
+                        "<b>Orientovaný graf</b> je takový, u kterého je dán směr hrany (rozlišuje se tedy počáteční a koncový bod), ten se určuje pomocí šipky; v tomto případě jsou tedy hrany definovány jako množina uspořádaných dvojic (první uvedený vrchol odpovídá počátečnímu a druhý koncovému vrcholu)."
+
+                    ]
+                }
+            ],
+            "quizes": [
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question":"Na kterém obrázku je znázorněn úplný graf? OBRÁZEK",
+                        "options": [
+                            "Obr. A",
+                            "Obr. B",
+                            "Obr. C",
+                            "Obr. D"
+                        ],
+                        "correct": "Obr. B"
+                    }
+                },
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question":"Na kterém obrázku je znázorněn graf, který není souvislý? OBRÁZEK",
+                        "options": [
+                            "Obr. A",
+                            "Obr. B",
+                            "Obr. C",
+                            "Obr. D"
+                        ],
+                        "correct": "Obr. D"
+                    }
+                },
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question":"Na kterém obrázku je znázorněn stromový graf? OBRÁZEK",
+                        "options": [
+                            "Obr. A",
+                            "Obr. B",
+                            "Obr. C",
+                            "Obr. D"
+                        ],
+                        "correct": "Obr. A"
+                    }
+                },
+                {
+                    "title": "Zvolte všechny správné odpovědi",
+                    "type": "multichoice",
+                    "data": {
+                        "question":"Které kombinace vrcholů z uvedeného obrázku (při zachování všech hran, které do nich vedou) mohou tvořit podgraf v podobě cyklu? OBRÁZEK",
+                        "options": [
+                            "1, 2, 3, 4",
+                            "3, 4, 5, 6",
+                            "3, 4, 6, 7",
+                            "3, 4, 5, 6, 7",
+                            "4, 5, 6, 7"
+                        ],
+                        "correct": [
+                            false,
+                            true,
+                            true,
+                            false,
+                            true
+                        ]
+                    }
+                }
+            ]
+        },
+        "úvod": {
+            "next": ["syntax", "konstituenty"],
+            "title": "Úvod do syntaxe",
+            "content": [
+                {
+                    "title": "",
+                    "text": ["Rovinou, na které se spojují dohromady jednotlivá slova, a vytvářejí tak větší celky, je syntax (jinak také <b>skladba</b>, <b>větná stavba</b>). Zabývá se vztahy mezi jednotlivými slovy v rámci věty nebo souvětí.",
+                        "Abychom správně pochopili význam nějaké věty, musíme určit její strukturu. Význam věty jako takové totiž nezjistíme jen z významu jednotlivých za sebou jdoucích slov, ale také z toho, jak se tato slova postupně spojují dohromady a vytvářejí větší celky, které mají také svůj význam.",
+                        "Tento princip umožňuje i dvojznačnost sdělení – tedy že jeden řetězec slov může mít více možných významů (můžeme ho chápat různými způsoby). Proto můžeme například větu <i>Přišel mi pohled s obrázkem.</i> chápat dvěma různými způsoby."
+                    ]
+                },
+                {
+                    "title": "Tradiční přístup",
+                    "text": ["Tradiční přístup k syntaxi, se kterým jste se pravděpodobně setkali na základní nebo střední škole, nazýváme <b>závislostní</b>. Struktura věty se zde zachycuje pomocí stromového grafu (tj. graf, který propojuje jednotlivé body – <b>uzly</b>, ale nevytváří cykly, tedy uzavřené posloupnosti propojených vrcholů). V něm jsou jednotlivá slova (uzly) propojena čarami, které naznačují, která slova jsou na kterých závislá (například je rozvíjejí). Na jednom slově může záviset více slov, ale každé slovo může být závislé jen na jednom uzlu. Rozlišují se zde různé větné členy, jako je podmět, přísudek, předmět, přívlastek či příslovečné určení."]
+                },
+                {
+                    "title": "Generativní pojetí",
+                    "text": ["Pohled na syntax, který bychom vám chtěli představit, se od toho klasického mírně liší. Nazýváme ho <b>generativní</b> a podobně jako v závislostním v něm můžeme zachycovat strukturu věty pomocí stromových grafů. V tomto případě jde o tzv. <b>složkové stromy</b>. Na rozdíl od závislostního přístupu, který zachycuje vztahy mezi slovy přímým propojováním těchto slov v grafu, generativní přístup používá i tzv. <b>neterminální symboly</b>. To znamená, že nezakresluje vztahy přímo mezi jednotlivými slovy, ale spojuje je do společných uzlů, které mohou být následně kombinovány s dalšími uzly. Samotná slova se pak nacházejí jen na nejnižší úrovni grafu a odpovídají terminálním symbolům."]
+                },
+                {
+                    "title": "",
+                    "text": ["Nepoužívají se zde klasické větné členy, spíše typy frází, jako je slovesná fráze, jmenná fráze a podobně.",
+                        "Důležité je také zachovat pořadí slov v grafu tak, aby odpovídalo dané větě (čáry spojující jednotlivé uzly se přitom nesmějí křížit).",
+                        "Tento způsob umožňuje lépe zachytit skutečnost, že se na významu věty podílejí nejen jednotlivá slova, ale i to, jak jsou spojena dohromady. Pomocí složkových stromů totiž můžeme zaznamenat i určitou hierarchii a postupné skládání významů."
+                    ]
+                },           {
+                    "title": "Binární větvení",
+                    "text": ["Zmíněné skládání významů probíhá v generativní syntaxi vždy po dvojicích. Nové uzly se tak tvoří spojením dvou složek a z jednoho uzlu mohou jít pouze dvě větve (čáry do dalšího uzlu). Samotná slova (jednotky na nejnižší úrovni) představují také uzly.",
+                        "Základní struktura pak vypadá tak, že se sloveso spojí s předmětem, čímž vznikne událost, která může být lokalizována. Například <i>[[Číst knihu] [v knihovně]].</i>",
+                        "OBRÁZEK"
+                    ]
+                }
+            ],
+            "quizes": [
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Čím se zabývá syntax?",
+                        "options":[
+                            "zvukovou stránkou jazyka z hlediska funkce",
+                            "zvukovou stránkou jazyka z hlediska vzniku a vnímání řeči",
+                            "vztahy mezi jednotlivými slovy ve větě/souvětí",
+                            "stavbou slov, slovními tvary a významem a funkcí jazykových jednotek"
+                        ],
+                        "correct": "vztahy mezi jednotlivými slovy ve větě/souvětí"
+                    }
+                },
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "V generativní syntaxi se používají",
+                        "options":[
+                            "složkové stromy",
+                            "závislostní stromy",
+                            "cyklické grafy"
+                        ],
+                        "correct": "složkové stromy"
+                    }
+                },
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Při zachycování struktury složkovým stromem",
+                        "options":[
+                            "se používají jen terminální symboly a záleží na pořadí slov",
+                            "se používají jen neterminální symboly a nezáleží na pořadí slov",
+                            "se používají terminální i neterminální symboly a nezáleží na pořadí slov",
+                            "se používají terminální i neterminální symboly a záleží na pořadí slov"
+                        ],
+                        "correct": "se používají terminální i neterminální symboly a záleží na pořadí slov"
+                    }
+                },
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Uzly jsou v generativní syntaxi tvořeny",
+                        "options":[
+                            "jednou složkou",
+                            "jednou nebo dvěma složkami",
+                            "vždy dvěma složkami",
+                            "libovolným množstvím složek"
+                        ],
+                        "correct": "jednou nebo dvěma složkami"
+                    }
+                }
+            ]
+        },
+        "konstituenty": {
+            "next":["syntax", "typy konstituentů"],
+            "title": "Konstituenty",
+            "content": [
+                {
+                    "title": "",
+                    "text": ["Pojem konstituent označuje <b>významovou jednotku</b>, která <b>odpovídá uzlu</b>. Můžeme si ho představit jako určitý blok, který bychom mohli v určitém kontextu nahradit jiným, typově podobným blokem. Například ve spojení <i>učitel českého jazyka</i> bychom spojení <i>českého jazyka</i> mohli nahradit například spojením <i>anglického jazyka</i> nebo <i>výtvarné výchovy</i>. Na stejném místě by ale také mohla stát například matematika nebo zeměpis. <i>Českého jazyka</i> je tedy konstituent (podobně jako <i>anglického jazyka</i>, <i>výtvarné výchovy</i>, ale i <i>matematiky</i> nebo <i>zeměpisu</i>) a získáme ho spojením menších konstituentů – <i>českého</i> a <i>jazyka</i>. Připojením slova <i>učitel</i> pak získáme ještě větší konstituent, tedy <i>učitel českého jazyka</i>. Pod touto strukturou jsme zároveň schopni si představit určitý význam – češtináře. Tento význam bychom ale nezískali, kdybychom slova <i>učitel</i>, <i>českého</i> a <i>jazyka</i> postupně nesložili dohromady.",
+                    "Nejmenším konstituentem je obvykle slovo, dalším pak fráze, která vznikne spojením tohoto slova s jiným slovem."
+                ]
+                },
+                {
+                    "title": "Testy konstituentů",
+                    "text": ["K tomu, abychom poznali, jestli daná slova tvoří konstituent, můžeme použít několik testů. Ukážeme si to například na větě <i>Petr musí umývat nádobí</i>. Zajímá nás, jakým způsobem se pojí slovo <i>umývat</i> (jestli je konstituent <i>musí umývat</i>, nebo <i>umývat nádobí</i>)."]
+                },
+                {
+                    "title": "Vypuštění",
+                    "text": ["Prvním testem, který nám může napovědět, je vypuštění konstituentu. To znamená, že řetězec, který testujeme, zkusíme zopakovat v podobné větě (souvětí) a poté vypustit:",
+                        "<i>Petr musí umývat nádobí, ale Karel nemusí <strike>umývat nádobí</strike>.</i>",
+                        "Takovou strukturu můžeme klidně použít.",
+                        "Naopak formulaci <i>Petr musí umývat nádobí, ale Karel ne<strike>musí umývat</strike> nádobí.</i> použít nejde. Vypadá to tedy, že by konstituentem mělo být <i>spíše umývat nádobí</i>."
+                    ]
+                },
+                {
+                    "title": "Nahrazení zájmenem",
+                    "text": ["Dalším možným testem je nahrazení zájmenem. Můžeme použít i formu otázky, na kterou odpovíme daným konstituentem:",
+                        "<i>Co Petr musí? Umývat nádobí.</i>",
+                        "Kdybychom se zkusili ptát <i>Co Petr nádobí?</i>, získali bychom otázku, která by byla tak trochu děravá a nezněla by příliš česky. Výsledek tohoto testu nám tedy také napovídá, že konstituentem bude spíše <i>umývat nádobí</i>."
+                    ]
+                },
+                {
+                    "title": "Spojení s konstituentem podobného typu",
+                    "text": ["Třetím testem je spojení s dalším konstituentem podobného typu:",
+                        "<i>Petr musí umývat nádobí a <b>utírat prach<b>.</i>",
+                        "Část struktury, kterou jsme připojili, musí nutně tvořit konstituent (jinak bychom ji nemohli přidávat a odebírat bez narušení smysluplnosti). Protože jsme ale použili spojku a, která spojuje konstituenty na stejné úrovni, znamená to, že by mělo být konstituentem i spojení <i>umývat nádobí</i>."
+                    ]
+                },
+                {
+                    "title": "Příklonky/předklonky",
+                    "text": ["Posledním možným testem je využití příklonky/předklonky. Pro ty totiž platí, že jsou v češtině vždy na druhém místě (za prvním konstituentem). Můžeme tedy větu upravit tak, aby obsahovala příklonku/předklonku, a zkoušet ji přeuspořádat. Pokud získáme přijatelnou českou větu, víme, že to, co jsme umístili před příklonku/předklonku, by mělo tvořit konstituent:",
+                    "<i>Musí se umývat nádobí.</i>",
+                    "<i>Umývat nádobí se musí.</i>",
+                    "Naopak <i>Musí umývat se nádobí.</i> nedává smysl. I tento test nám tedy napovídá, že spojení <i>umývat nádobí</i> tvoří konstituent, zatímco <i>musí umývat</i> ho netvoří."
+                    ]
+                },
+                {
+                    "title": "Shrnutí",
+                    "text": ["Na základě všech zmíněných testů jsme tedy došli k závěru, že slovo <i>umývat</i> se pojí se slovem <i>nádobí</i> a společně tvoří konstituent. Naproti tomu dvojice <i>musí</i> a <i>umývat</i> konstituent netvoří."
+                    ]
+                }
+            ],
+            "quizes": [
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Nejobecnější pojmenování významové jednotky je",
+                        "options":[
+                            "bod",
+                            "slovo",
+                            "konstituent",
+                            "fráze"
+                        ],
+                        "correct": "konstituent"
+                    }
+                },
+                {
+                    "title": "Zvol správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Mezi testy konstituentů nepatří",
+                        "options":[
+                            "vypuštění konstituentu",
+                            "nahrazení zájmenem",
+                            "využití příklonky/předklonky",
+                            "rozdělení konstituentu"
+                        ],
+                        "correct": "rozdělení konstituentu"
+                    }
+                },
+                {
+                    "title": "ÚLOHA I ICTrees - TODO",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Vytvoř strukturu spojení vyhnání podvodníka z Brna ve významu zachycujícím původ podvodníka (nově vzniklé uzly označuj čísly od 1)",
+                        "options":[
+                            "vypuštění konstituentu",
+                            "nahrazení zájmenem",
+                            "využití příklonky/předklonky",
+                            "rozdělení konstituentu"
+                        ],
+                        "correct": "rozdělení konstituentu"
+                    }
+                },
+                {
+                    "title": "ÚLOHA I ICTrees - TODO",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Vytvoř strukturu spojení vyhnání podvodníka z Brna ve významu zachycujícím místo, kde k události došlo (nově vzniklé uzly označuj čísly od 1)",
+                        "options":[
+                            "vypuštění konstituentu",
+                            "nahrazení zájmenem",
+                            "využití příklonky/předklonky",
+                            "rozdělení konstituentu"
+                        ],
+                        "correct": "rozdělení konstituentu"
+                    }
+                }
+            ]
+        },
+        "typy konstituentů": {
+            "next":["syntax", "synt. analýza"],
+            "title": "Typy konstituentů",
+            "content": [
+                {
+                    "title": "",
+                    "text": ["Jak jsme zmínili, konstituent se obvykle skládá ze dvou částí, které ale nejsou rovnocenné. Jedna z nich je nadřazena druhé a říkáme jí hlava. Ta je zpravidla doplněna komplementem a společně vytvářejí frázi. Tato fráze bývá rozvíjena specifikátorem a celé toto spojení může být doplněno adjunktem.",
+                        "Každý konečný uzel má také svůj typ, který odpovídá jeho funkci ve větě (slovnímu druhu). Pro plnovýznamová slovesa je to V (verbum), pro podstatná jména je to N (nomen), pro přídavná jména A (adjektivum) apod."
+                    ]
+                },
+                {
+                    "title": "Hlava",
+                    "text": ["Hlava tvoří základ fráze. Určuje totiž typ významu, tedy například jestli se jedná o činnost/děj (pak jde o slovesnou frázi), nebo spíše nějakou věc (v případě jmenné fráze). Např. <i>umývat nádobí</i> je fráze, která se skládá z podstatného jména (nádobí) a slovesa (umývat). Ty ale nejsou rovnocenné, protože fráze <i>umývat nádobí</i> není napůl sloveso/děj a napůl podstatné jméno / věc. Fráze <i>umývat nádobí</i> označuje děj (zaměřený na nějakou věc). Naopak spojení <i>umývané nádobí</i> označuje věc (která je zasažena dějem). Hlavou <i>umývat nádobí</i> je tedy slovo <i>umývat</i>, zatímco hlavou fráze <i>umývané nádobí</i> je <i>nádobí</i>.",
+                    "Typ hlavy se také promítne do názvu celého konstituentu. Pokud jde například o sloveso, výsledný uzel (fráze) bude označen VP (verbal phrase). Hlava také určuje tvar nehlavy (například udává pád)."
+                    ]
+                },
+                {
+                    "title": "Komplement",
+                    "text": ["Komplement je „sestrou“ hlavy. Uzel, který je bezprostředně nad nějakým jiným uzlem, se nazývá „matkou“ tohoto uzlu. Sestra hlavy je tedy uzel, který je dcerou stejné matky. Při troše představivosti můžeme při pohledu na grafické znázornění říct, že spolu žijí pod jednou střechou.",
+                        "Komplement zpravidla bývá ve struktuře obsažen. Typickým příkladem je předmět slovesa."
+                    ]
+                },
+                {
+                    "title": "Specifikátor",
+                    "text": ["Specifikátor doplňuje základní strukturu. Rozvíjí uzel složený z hlavy a komplementu. Jedná se tedy o jakousi nástavbu, která dále specifikuje celou frázi. V pozici specifikátoru se typicky nachází podmět."]
+                },
+                {
+                    "title": "Adjunkt",
+                    "text": ["Adjunkt představuje další možné (ale ne nutné) rozšíření struktury. Obvykle se jedná o různá příslovečná určení. Může být ke struktuře připojen zleva i zprava, v češtině se však většinou nachází napravo od hlavy."]
+                }
+            ],
+            "quizes": [
+                {
+                    "title": "ÚLOHY TODO",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "strom věty, vybrat, který uzel je specifikátor, komplement, hlava, adjunkt / určit typ zadaného uzlu",
+                        "options": ["a","b"],
+                        "correct": "b"
+                    }
+                }
+            ]
+        },
+        "synt. analýza": {
+            "next":["sémantika", "úvod"],
+            "title": "Syntaktická analýza",
+            "content": [
+                {
+                    "title": "",
+                    "text": ["Automatická syntaktická analýzy má za úkol rozpoznat, jestli je nějaký vstupní řetězec slov větou v daném (přirozeném) jazyce (například češtině). Pokud ano, je výsledkem analýzy syntaktická struktura věty, například ve formě stromového grafu. Cílem této analýzy je, aby počítač „porozuměl“ gramatice daného přirozeného jazyka (v našem případě češtiny).",
+                        "Toho se využívá například při tvorbě syntaktického korektoru na opravu interpunkce, různých dialogových systémů (počítačové programy, které umožňují komunikaci s člověkem pomocí mluvené řeči) nebo v rámci strojového překladu."
+                    ]
+                },
+                {
+                    "title": "",
+                    "text": ["Čeština se z důvodu bohaté ohebnosti (velkého množství pádových koncovek, shody apod.) a volného slovosledu řadí k nejobtížněji analyzovatelným jazykům, protože vyžaduje více pravidel gramatiky než většina ostatních jazyků.",
+                        "Centrum zpracování přirozeného jazyka na Fakultě informatiky Masarykovy univerzity vyvíjí několik syntaktických analyzátorů. Příkladem je syntaktický analyzátor synt a dále SET. Oba systémy fungují na trochu jiných principech a dosahují přesnosti až 90 %."
+                    ]
+                }
+
+            ],
+            "quizes": [
+                {
+                    "title": "OTÁZKA/ÚKOL SYNT/SET - TODO",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "Xy",
+                        "options": ["a", "b"],
+                        "correct": "a"
+                    }
+                }
+            ]
+        }
+    },
+    "sémantika": {
+        "next":["sémantika", "význam"],
+        "úvod": {
+            "title": "Lexikologie a sémantika",
+            "content": [
+                {
+                    "title": "Lexikologie",
+                    "text": ["Lexikologie zahrnuje lexikální onomaziologii a lexikální sémaziologii (sémantiku). Lexikální onomaziologie se zajímá o to, jak jsou pojmenovávány obsahy v daném jazyce. Soustředí se tedy na teorii pojmenování."]
+                },
+                {
+                    "title": "Sémantika",
+                    "text": ["Sémantika se zabývá významem slov a významovými vztahy, jako je například synonymie. Význam je ovšem velmi obtížně uchopitelný, a proto je tato rovina z hlediska počítačového zpracování patrně nejvíce problematická."]
+                },
+                {
+                    "title": "Stránka 3",
+                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                }
+            ],
+            "quizes": [
+                {
+                    "title": "asdasd",
+                    "type": "multichoice",
+                    "data": {}
+                }
+            ]
+        },
+        "význam": {
+            "next": ["sémantika", "lexikografie"],
+            "title": "text4-2",
             "content": [
                 {
                     "title": "Stránka 1",
@@ -890,33 +1401,8 @@
                 }
             ]
         },
-        "2": {
-            "title": "text3-2",
-            "content": [
-                {
-                    "title": "Stránka 1",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                },
-                {
-                    "title": "Stránka 2",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                },
-                {
-                    "title": "Stránka 3",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
-                }
-            ],
-            "quizes": [
-                {
-                    "title": "asdasd",
-                    "type": "multichoice",
-                    "data": {}
-                }
-            ]
-        }
-    },
-    "semantika": {
-        "1": {
+        "lexikografie": {
+            "next": ["sémantika", "predikátová logika"],
             "title": "text4-1",
             "content": [
                 {
@@ -940,8 +1426,8 @@
                 }
             ]
         },
-        "2": {
-            "title": "text4-2",
+        "predikátová logika": {
+            "title": "text4-1",
             "content": [
                 {
                     "title": "Stránka 1",
