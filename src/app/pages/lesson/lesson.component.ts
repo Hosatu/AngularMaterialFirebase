@@ -42,6 +42,7 @@ export class LessonComponent extends HasSubscriptions implements OnInit {
   }
 
   isUnlocked(section) {
+    console.log(this.progress.getProgress()[this.currentLesson.id].sections, section)
     return this.progress.getProgress()[this.currentLesson.id].sections[section].unlocked;
   }
 }

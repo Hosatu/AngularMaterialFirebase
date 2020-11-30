@@ -3,28 +3,35 @@
         "id": "fonetika",
         "title": "Fonetika",
         "background": "red",
-        "description": "V této lekci se naučíte ... a vyzkoušíte si ...",
+        "description": "V této lekci si vysvětlíme základní pojmy a principy z oblasti fonetiky a fonologie, letmo nahlédneme také do vývoje češtiny a na česká nářečí. V neposlední řadě si ukážeme základní principy programování v jazyce Python a také to, jak mohou být poznatky z fonetiky a fonologie využity v počítačovém světě.",
         "sections": ["úvod", "výslovnost", "vývoj", "programování", "zpracování řeči"]
     },
     "morfologie": {
         "id": "morfologie",
         "title": "Morfologie",
         "background": "yellow",
-        "description": "alskdjalskdjaslkdjaslkdj",
+        "description": "V této lekci se zaměříme na základní pojmy a principy z oblasti morfologie, ale také korpusové lingvistiky. Seznámíme se rovněž s dalšími principy využívanými v programování a vysvětlíme si, k čemu je dobrá morfologická analýza.",
         "sections": ["úvod", "korpusy", "statistika", "programování", "morfolog. analýza"]
     },
     "syntax": {
         "id": "syntax",
         "title": "Syntax",
         "background": "blue",
-        "description": "alskdjalskdjaslkdjaslkdj",
+        "description": "V této lekci trochu nezvykle nezačneme úvodem do lingvistické disciplíny, nejprve se zaměříme na teorii grafů, jejíž pochopení je důležité pro grafické znázornění syntaktických struktur. Poté se zaměříme na oblast syntaxe a ukážeme si, v čem spočívá její generativní pojetí. Nakonec se podíváme na syntaktickou analýzu.",
         "sections": ["grafy", "úvod", "konstituenty", "typy konstituentů", "synt. analýza"]
     },
     "sémantika": {
         "id": "sémantika",
         "title": "Sémantika",
         "background": "red",
-        "description": "alskdjalskdjaslkdjaslkdj",
+        "description": "V této lekci se zaměříme na sémantiku, ale také lexikologii a lexikografii. Důležitými pojmy tak pro nás budou význam a slovní zásoba, ale také například slovníky. Ukážeme si některé užitečné nástroje, které s těmito oblastmi souvisejí, a v neposlední řadě se pokusíme popsat význam prostřednictvím predikátové logiky.  ",
         "sections": ["úvod", "význam", "lexikografie a nástroje", "predikátová logika"]
+    },
+    "nástroje": {
+        "id": "nástroje",
+        "title": "Nástroje",
+        "background": "red",
+        "description": "V této lekci si ukážeme některé konkrétní nástroje, které představují výstupy počítačové lingvistiky. Možná zjistíte, že s některými z nich se běžně setkáváte, aniž byste si to uvědomovali, a snad mezi nimi najdete i takové, které by pro vás mohly být v budoucnu užitečné. ",
+        "sections": ["našeptávače a korektory", "překladače a chatboty", "další nástroje"]
     }
 }

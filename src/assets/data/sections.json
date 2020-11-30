@@ -356,7 +356,7 @@
                     }
                 },
                 {
-                    "title": "Doplňte znělostní protiklady",
+                    "title": "Doplňte odpovídající text",
                     "type": "multifill",
                     "data": {
                         "question": "Znovu si prohlédněte kód a zkuste doplnit pravidla.",
@@ -642,7 +642,7 @@
                     "title": "",
                     "text": [
                         "Pro slovní druhy a pády se ovšem často využívá číslovka odpovídající pořadí daného slovního druhu nebo pádu.",
-                        "Ke značkování se přistupuje různě, a to občas i v rámci jednoho jazyka. Morfologická značka podle brněnského způsobu značkování pro slovo <i>kachna</i> by mohla vypadat třeba takto: k1gFnSc1, přičemž malá písmena reprezentují kategorie a velká písmena nebo číslice odpovídající hodnoty."
+                        "Ke značkování se přistupuje různě, a to občas i v rámci jednoho jazyka. Morfologická značka podle brněnského způsobu značkování pro slovo <i>kachna</i> by mohla vypadat třeba takto: <b>k1gFnSc1</b>, přičemž malá písmena reprezentují kategorie a velká písmena nebo číslice odpovídající hodnoty. Písmeno <i>k</i> zde reprezentuje slovní druh, jehož hodnota je <i>1</i> (jedná se tedy o substantivum), <i>g</i> označuje rod (genus) a v tomto případě jde o rod ženský (femininum, tedy <i>F</i>). Malé <i>n</i> pak zastupuje číslo (numerus), jeho hodnota je v tomto případě <i>S</i>, protože se jedná o singulár (číslo jednotné). Poslední atribut pak označuje pád (casus, proto <i>c</i>) a jeho hodnota je <i>1</i>, slovo je tedy v prvním pádě. Stejné kategorie můžeme určovat i u většiny přídavných jmen a také zájmen."
                     ]
                 },
                 {
@@ -655,6 +655,20 @@
                     "title": "",
                     "text": [
                         "Při tvorbě korpusu obvykle dochází k tzv. lemmatizaci, což je proces, při kterém se slovu přiřadí jeho lemma. Díky tomu pak můžeme vyhledávat nejen konkrétní tvary slov (prostřednictvím atributu word), ale také libovolné tvary, které se v korpusu objevují (s využitím lemmatu). To nám umožňuje lépe upřesnit, co hledáme, a získat tak relevantní výsledky pro různé účely."
+                    ]
+                },
+                {
+                    "title": "Regulární výrazy",
+                    "text": [
+                        "Aby se dalo v korpusech vyhledávat efektivněji, používají se zde také tzv. <b>regulární výrazy</b>. S těmi jste se možná už setkali v jiných oblastech. Jedná se o výrazy, které mají speciální význam. Pomocí nich můžeme v korpusu vyhledávat slova, která <b>mají něco společného</b>, ale nemusí mít stejné lemma, například slova, která začínají nebo končí nějakým řetězcem znaků, slova, různé varianty slova (například dubletní tvary typu diskuze a diskuse) a mnoho dalšího. My si zde představíme dva základní symboly, které vám mohou při vyhledávání velmi pomoci. Jedná se o <b>tečku</b> (tj. <b>symbol .</b>) a <b>hvězdičku</b> (<b>symbol *</b>)."
+                    ]
+                },
+                {
+                    "title": "",
+                    "text": [
+                        "Tečka reprezentuje <b>libovolný znak</b>. Na místě, kde ji v dotazu použije, tak může být ve vyhledaných slovech jakékoliv písmeno (nebo jiný znak).",
+                        "Symbol * pak značí <b>libovolný počet opakování</b> předcházejícího znaku nebo skupiny znaků (pak bychom ovšem už museli použít další regulární výraz, abychom tuto skupinu ohraničili.",
+                        "Pokud tyto dva výrazy spojíme do podoby <b>.*</b>, můžeme hledat slova, jejichž <b>část má libovolnou podobu</b>. Například všechna slova začínající řetězcem <i>auto-</i> (pomocí dotazu <i>auto.*</i>) nebo končící řetězcem <i>-mat>/i> (dotazem <i>.*mat</i>)."
                     ]
                 }
             ],
@@ -677,7 +691,7 @@
                     "title": "Zvolte všechny správné odpovědi",
                     "type": "multichoice",
                     "data": {
-                        "question": "Vyber kritéria, podle kterých se dělí korpusy.",
+                        "question": "Vyberte kritéria, podle kterých se dělí korpusy.",
                         "options": [
                             "synchronní x diachronní",
                             "webové x mobilní",
@@ -693,10 +707,10 @@
                     }
                 },
                 {
-                    "title": "Na vynechaná místa přesuň odpovídající položky z nabídky",
+                    "title": "Na vynechaná místa přesuňte odpovídající položky z nabídky",
                     "type": "matching",
                     "data":{
-                        "question": "Přiřaď české termíny k latinským ekvivalentům.",
+                        "question": "Přiřaďte české termíny k latinským ekvivalentům.",
                         "optionsFixed": ["casus","verbum","akuzativ", "substantivum"],
                         "optionsMatch": ["4. pád","podstatné jméno","sloveso","pád"],
                         "correct": {
@@ -708,10 +722,10 @@
                     }
                 },
                 {
-                    "title": "Na vynechaná místa přesuň odpovídající položky z nabídky",
+                    "title": "Na vynechaná místa přesuňte odpovídající položky z nabídky",
                     "type": "matching",
                     "data":{
-                        "question": "Přiřaď české termíny k latinským ekvivalentům.",
+                        "question": "Přiřaďte české termíny k latinským ekvivalentům.",
                         "optionsFixed": ["genus","neutrum","femininum", "maskulinum"],
                         "optionsMatch": ["rod mužský","rod","rod střední","rod ženský"],
                         "correct": {
@@ -726,7 +740,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
-                        "question": "Vyber správnou značku pro slovo <i>kávu</i> v kontextu <i>Dali si spolu kávu.</i>",
+                        "question": "Vyberte správnou značku pro slovo <i>kávu</i> v kontextu <i>Dali si spolu kávu.</i>",
                         "options": [
                             "k1gNnSc4",
                             "k1gNnSc2",
@@ -1012,7 +1026,7 @@
             ],
             "quizes": [
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "question":"Na kterém obrázku je znázorněn úplný graf? OBRÁZEK",
@@ -1026,7 +1040,7 @@
                     }
                 },
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "question":"Na kterém obrázku je znázorněn graf, který není souvislý? OBRÁZEK",
@@ -1040,7 +1054,7 @@
                     }
                 },
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "question":"Na kterém obrázku je znázorněn stromový graf? OBRÁZEK",
@@ -1219,7 +1233,7 @@
             ],
             "quizes": [
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "question": "Nejobecnější pojmenování významové jednotky je",
@@ -1233,7 +1247,7 @@
                     }
                 },
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "question": "Mezi testy konstituentů nepatří",
@@ -1370,7 +1384,7 @@
             ],
             "quizes": [
                 {
-                    "title": "Zvol správnou ospověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "question":"Jak se jmenují dvě složky, kterými se zabývá lexikologie?",
@@ -1383,7 +1397,7 @@
                     }
                 },
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "question":"Na co se zaměřuje lexikální onomaziologie?",
@@ -1396,7 +1410,7 @@
                     }
                 },
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "question":"Co je předmětem sémantiky?",
@@ -1444,7 +1458,7 @@
             ],
             "quizes": [
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "question": "Přístup, který se snažil zachytit význam pomocí binárních (+/-) rysů se nazývá",
@@ -1457,7 +1471,7 @@
                     }
                 },
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "question": "Homonymie je",
@@ -1470,7 +1484,7 @@
                     }
                 },
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "question": "Proces, kdy se na základě kontextu vybírá správná značka pro určité slovo, se nazývá",
@@ -1483,10 +1497,10 @@
                     }
                 },
                 {
-                    "title": "Zvol všechny správné odpovědi",
+                    "title": "Zvolte všechny správné odpovědi",
                     "type": "multichoice",
                     "data": {
-                        "question": "Vyber slova, která jsou homonymní",
+                        "question": "Vyberte slova, která jsou homonymní",
                         "options": ["polévka",
                             "svišti",
                             "kolo",
@@ -1501,7 +1515,7 @@
                     }
                 },
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "question": "WordNet - TODO",
@@ -1514,7 +1528,7 @@
                     }
                 },
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "question": "Naivní Leskův algoritmus - TODO",
@@ -1534,49 +1548,333 @@
             "title": "Lexikografie",
             "content": [
                 {
-                    "title": "Stránka 1",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": "",
+                    "text": ["S lexikologií a sémantikou souvisí také oblast zvaná <b>lexikografie</b>. Ta se zabývá tvorbou slovníků, která může být i částečně automatizovaná nebo využívat různé počítačové nástroje. K tvorbě definic nebo nalezení vhodných příkladů užití se například mohou používat <b>korpusy<b/>."]
                 },
                 {
-                    "title": "Stránka 2",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": "Nástroje",
+                    "text": ["Užitečným nástrojem je například <b>platforma DEB</b>, která byla vyvinuta v Centru zpracování přirozeného jazyka na Fakultě informatiky Masarykovy univerzity a poskytuje rozhraní k tvorbě slovníků.",
+                        "Zajímavým počinem vytvořeným na bázi této platformy je pak <b>DebDict</b>, který sdružuje elektronické verze několika českých slovníků a umožňuje je procházet najednou, tedy vyhledávat hesla ve více slovnících zároveň.",
+                        "Dalším takovým výtvorem je <b>Internetová jazyková příručka</b>, se kterou jste se možná už setkali, a pokud ne, doporučujeme vám se na ni podívat. Provoz této příručky opět zajišťuje Centrum zpracování přirozeného jazyka a její obsah vytvářejí pracovníci Ústavu pro jazyk český Akademie věd České republiky. Obsahuje <b>slovníkovou a výkladovou část</b>."
+                    ]
                 },
                 {
-                    "title": "Stránka 3",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": "",
+                    "text": ["<b>Slovníková část</b> nám umožňuje vyhledávat konkrétní slova, a zjistit tak jejich správnou podobu a jednotlivé tvary (ty se získávají pomocí morfologického analyzátoru a následně kontrolují). Zahrnuje více než <b>100 000</b> hesel získaných především z <b>Pravidel českého pravopisu</b> a <b>Slovníku spisovného jazyka českého pro školu a veřejnost</b>, částečně ale také například z Nového akademického slovníku cizích slov. S elektronickými verzemi těchto slovníků je zároveň propojena, takže k zadanému výrazu obvykle získáme nejen tabulku správných tvarů, ale i výklad významů, případně odvozená slova.",
+                        "Ve <b>výkladové části</b> pak najdeme popis různých jazykových jevů, zejména takových, na které se lidé často ptají Jazykové poradny, a vysvětlení jsou často podrobnější a ucelenější než v jednotlivých tištěných příručkách. "
+                    ]
                 }
             ],
             "quizes": [
                 {
                     "title": "asdasd",
-                    "type": "multichoice",
-                    "data": {}
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "DebDict TODO",
+                        "options": ["a"],
+                        "correct": "a"
+                    }
                 }
             ]
         },
         "predikátová logika": {
-            "title": "text4-1",
+            "next":["nástroje", "našeptávače a korektory"],
+            "title": "Predikátová logika",
             "content": [
                 {
-                    "title": "Stránka 1",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": "",
+                    "text": ["Jednou z možností, jak nějakou skutečnost vyjádřit formalizovatelným a snáze zpracovatelným způsobem, je predikátová logika. Využívá prostředky výrokové logiky, jako je a, nebo, vyplývání, ekvivalence či negace, navíc ale přidává některá další rozšíření. Těmi jsou zejména proměnné, predikáty a kvantifikátory."]
                 },
                 {
-                    "title": "Stránka 2",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": "Proměnné",
+                    "text": ["Proměnné obvykle označujeme malými písmeny a mohou získávat různé hodnoty. Pravdivost či nepravdivost nějakého výroku/formule pak může záviset na ohodnocení proměnné na (tom, jaká hodnota je jí aktuálně přiřazena). Například x = 3 je pravda pouze tehdy, pokud je proměnné x přiřazena hodnota 3."]
                 },
                 {
-                    "title": "Stránka 3",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
+                    "title": "Predikáty",
+                    "text": ["Predikát nám umožňuje definovat nějakou <b>vlastnost</b> (případně <b>vztah</b>), kterou můžeme vztáhnout k určité proměnné (nějakému prvku, individuu). Označujeme ho obvykle velkým písmenem nebo slovem s velkým počátečním písmenem. Každý predikát má danou aritu, tedy počet vyžadovaných parametrů. Ty jsou uvedeny v závorce za názvem predikátu. Pokud má aritu 0, jedná se o konstantu.",
+                        "Např. Červený(x), kde x zastupuje nějaký předmět, a Židle(x)",
+                        "Výraz Červený(x) je pravdivý, pokud x spadá do skupiny věcí, které jsou červené (je součástí množiny červených věcí). Židle(x) je pravdivý výraz, pokud x spadá do skupiny věcí, které můžeme označit jako židle."
+                    
+                    ]
+                },
+                {
+                    "title": "",
+                    "text": ["Výraz Červený(x) ∧ Židle(x), je pravdivý, pokud x spadá množiny červených věcí a zároveň množiny židlí, tj. x je červená židle.",
+                        "Výraz Spolužáci(x, y) je pravdivý tehdy, pokud x je spolužákem y (v tomto případě by byl výraz platný i v opačném pořadí, tedy y je spolužákem x).",
+                        "Předchozí výraz srovnejme s výrazem Bratr(x, y), který je pravdivý, pokud x je bratrem y, ale v opačném případě to platit nemusí (y může být sestra)."
+                    ]
+                },
+                {
+                    "title": "Kvantifikátory",
+                    "text": ["Kvantifikátory umožňují využívat proměnné tak, že pravdivost výroku/formule není závislá na ohodnocení. Rozlišujeme dva kvantifikátory – <b>univerzální</b> a <b>existenční</b>."]
+                },
+                {
+                    "title": "Univerzální kvantifikátor",
+                    "text": ["<b>Univerzální</b> (nebo také obecný či všeobecný) kvantifikátor označujeme <b>symbolem ∀</b>. Říká, že dané tvrzení <b>platí pro všechna možná ohodnocení</b> proměnné za kvantifikátorem. Jinak řečeno – formule je platná ve všech možných případech.",
+                        "Při přepisu z vět nebo na věty přirozeného jazyka odpovídají tomuto kvantifikátoru výrazy jako <i>každý</i>, <i>všichni</i>, <i>veškerý</i>, ale také <i>nikdo</i> nebo <i>žádný</i>.",
+                        "Např. větu <i>Všichni psi jsou savci.</i> můžeme zapsat jako ∀x(Pes(x) => Savec(x))",
+                        "Nemůžeme použít výraz ∀x(Pes(x) ∧ Savec(x), protože by to znamenalo, že všechno je pes a zároveň savec, zatímco první věta říká, že všechno, co je pes, je zároveň savec (ale ne naopak)."
+                    ]
+                },
+                {
+                    "title": "Existenční kvantifikátor",
+                    "text": ["Pro existenční kvantifikátor používáme <b>symbol ∃</b> a říká, že <b>existuje alespoň jeden prvek, pro který je dané tvrzení platné</b>, tedy platí v některých případech.",
+                        "Výrazy z přirozeného jazyka, které odpovídají existenčnímu kvantifikátoru, jsou například <i>některý</i>, <i>nějaký</i>, <i>někdo</i> nebo <i>alespoň jeden</i>.",
+                        "Např. <i>Existuje savec, který má ploutev.</i> můžeme zapsat jako ∃x (Savec(x) ∧ Má_ploutev(x))"
+                    ]
+                },
+                {
+                    "title": "Kvantifikátory a negace",
+                    "text": ["Negaci značíme <b>symbolem ¬</b>, v některých případech se pro tyto účely také používá vykřičník. V predikátové logice platí, že <b>negací kvantifikátoru získáme kvantifikátor opačný</b>, tj. z univerzálního kvantifikátoru se stane kvantifikátor existenční a naopak. Představte si to na příkladu. Někdo vám řekne, že <b>všichni psi jsou hnědí</b>. Vy mu na to odpovíte, že to není pravda, protože znáte spoustu černých a bílých psů, a dokonce i několik strakatých. To znamená, že <b>existují psi, kteří nejsou hnědí</b>. Netvrdíte tím ale, že jsou takoví všichni psi, protože víte, že to by také nebyla pravda."]
+                },
+                {
+                    "title": "",
+                    "text": ["Negací věty <i>Všichni psi jsou hnědí</i> je tedy věta <i>Někteří psi nejsou hnědí</i> (nebo <i>Existují psi, kteří nejsou hnědí</i>, případně <i>Existuje pes, který není hnědý</i> a samozřejmě také <i>Není pravda, že všichni psi jsou hnědí</i>, význam je stejný). Kdybychom chtěli vytvořit negaci k větě <i>Žádný pes není hnědý</i>, bylo by to tvrzení, že <i>existuje pes, který je hnědý</i>.",
+                        "¬ ∀x (Pes(x) => Hnědý(x)) – není pravda, že všichni psi jsou hnědí",
+                        "∃x ¬ (Pes(x) => Hnědý(x)) – někteří psi nejsou hnědí",
+                        "Po několika úpravách můžeme získat výrok:",
+                        "∃x (Pes(x) ∧ ¬Hnědý(x)) – existuje jedinec, který je pes, ale není hnědý"
+                    ]
                 }
             ],
             "quizes": [
                 {
-                    "title": "asdasd",
+                    "title": "Zvolte všechny správné odpovědi",
                     "type": "multichoice",
-                    "data": {}
+                    "data": {
+                        "question": "Vyberte odpovídající přepis/y věty <i>Někteří lidé mají zelené oči.</i>",
+                        "options":[
+                            "∃x Clovek(x) ∧ Zelene_oci(x)",
+                            "∀x Clovek(x) => Zelene_oci(x)",
+                            "∃x Clovek(x) => Zelene_oci(x)",
+                            "∀x Clovek(x) ∧ Zelene_oci(x)"
+                        ],
+                        "correct": [
+                            true,
+                            false,
+                            false,
+                            false
+                        ]
+                    }
+                },
+                {
+                    "title": "Zvolte všechny správné odpovědi",
+                    "type": "multichoice",
+                    "data": {
+                        "question": "Vyberte odpovídající přepis/y věty <i>Existují lidé, kteří nemají sourozence.</i>",
+                        "options":[
+                            "∃x∀y ¬Sourozenec(x, y) ",
+                            "∀x∃y ¬Sourozenec(x, y)",
+                            "¬ ∃x∀y Sourozenec(x, y)",
+                            "¬ ∀x∃y Sourozenec(x, y) "
+                        ],
+                        "correct":[
+                            true,
+                            false,
+                            false,
+                            true
+                        ]
+                    }
+                },
+                {
+                    "title": "Zvolte všechny správné odpovědi",
+                    "type": "multichoice",
+                    "data": {
+                        "question": "Vyberte odpovídající přepis/y věty <i>Všechny kočky mňoukají.</i>",
+                        "options":[
+                            "∀x Kocka(x) ∧ Mnouka(x)",
+                            "∀x Kocka(x) => Mnouka(x) ",
+                            "∃x Kocka(x) ∧ Mnouka(x)",
+                            "∃x Kocka(x) => Mnouka(x)"
+                        ],
+                        "correct":[
+                            false,
+                            true,
+                            false,
+                            false
+                        ]
+                    }
+                },
+                {
+                    "title": "Zvolte všechny správné odpovědi",
+                    "type": "multichoice",
+                    "data": {
+                        "question": "Vyberte negaci věty <i>Všechny krabice jsou z papíru.</i>",
+                        "options":[
+                            "∃x Krabice(x) ∧ ¬Papirova(x)",
+                            "¬ ∀x Krabice(x) ∧ Papirova(x)",
+                            "¬ ∀x Krabice(x) => Papirova(x)",
+                            "∃x Krabice(x) => ¬Papirova(x)"
+                        ],
+                        "correct":[
+                            true,
+                            false,
+                            true,
+                            false
+                        ]
+                    }
+                },
+                {
+                    "title":"Na vynechaná místa přesuňte odpovídající položky z nabídky",
+                    "type":"matching",
+                    "data":{
+                        "question": "Spojte věty s odpovídajícími výrazy",
+                        "optionsFixed": ["Všichni učitelé mají všechny své žáky rádi",
+                            "Všichni žáci mají všechny své učitele rádi",
+                            "Existují učitelé, kteří mají všechny své žáky rádi",
+                            "Existují žáci, kteří mají všechny své učitele rádi"
+                            ],
+                        "optionsMatch": [
+                            "∀x∀y Ucitel(x, y) => Rad(y, x)",
+                            "∃y∀x Ucitel(x, y) => Rad(y, x)",
+                            "∃x∀y Ucitel(x, y) => Rad(x, y)",
+                            "∀x∀y Ucitel(x, y) => Rad(x, y)"
+                        ],
+                        "correct": {
+                            "Všichni učitelé mají všechny své žáky rádi": ["∀x∀y Ucitel(x, y) => Rad(x, y)"],
+                            "Všichni žáci mají všechny své učitele rádi": ["∀x∀y Ucitel(x, y) => Rad(y, x)"],
+                            "Existují učitelé, kteří mají všechny své žáky rádi": ["∃x∀y Ucitel(x, y) => Rad(x, y)"],
+                            "Existují žáci, kteří mají všechny své učitele rádi": ["∃y∀x Ucitel(x, y) => Rad(y, x)"]
+                        }
+                    }
+                },
+                {
+                    "title":"Na vynechaná místa přesuňte odpovídající položky z nabídky",
+                    "type":"matching",
+                    "data":{
+                        "question": "Spojte věty s odpovídajícími výrazy",
+                        "optionsFixed": [
+                            "Neexistuje žák, který má rád všechny své učitele",
+                            "Neexistuje žák, který má všechny své učitele nerad",
+                            "Neexistuje učitel, který má rád všechny své žáky",
+                            "Neexistuje učitel, který má všechny své žáky nerad"
+                            ],
+                        "optionsMatch": [
+                            "¬ ∃y∀x Ucitel(x, y) => Rad(y, x)",
+                            "¬ ∃x∀y Ucitel(x, y)=> ¬Rad(x, y)",
+                            "¬ ∃x∀y Ucitel(x, y) => Rad(x, y)",
+                            "¬ ∃y∀x Ucitel(x, y)=> ¬Rad(y, x)"
+                        ],
+                        "correct": {
+                            "Neexistuje žák, který má rád všechny své učitele": ["¬ ∃y∀x Ucitel(x, y) => Rad(y, x)"],
+                            "Neexistuje žák, který má všechny své učitele nerad": ["¬ ∃y∀x Ucitel(x, y)=> ¬Rad(y, x)"],
+                            "Neexistuje učitel, který má rád všechny své žáky": ["¬ ∃x∀y Ucitel(x, y) => Rad(x, y)"],
+                            "Neexistuje učitel, který má všechny své žáky nerad": ["¬ ∃x∀y Ucitel(x, y)=> ¬Rad(x, y)"]
+                        }
+                    }
                 }
+                
             ]
+        }
+    },
+    "nástroje": {
+        "našeptávače a korektory": {
+            "next": ["nástroje", "překladače a chatboty"],
+            "title": "Našeptávače a korektory",
+            "content": [
+                {
+                    "title": "Prediktivní psaní",
+                    "text":["Kromě nástrojů, které jsme si představili v předchozích lekcích, má počítačová lingvistika využití v celé řadě dalších situací. Jednou z těch, se kterými jste se pravděpodobně setkali, je takzvané <b>prediktivní psaní</b>. Jedná se o funkci, kterou známe například z <b>chytrých telefonů</b>, které nám během psaní napovídají, co (možná) chceme psát. S obdobnou funkcí se můžeme setkat i u <b>internetových vyhledávačů</b>, které mimo jiné využívají i zmíněnou <b>morfologickou analýzu</b>. Díky tomu můžeme klíčová slova vyhledávat ve všech možných tvarech zároveň, čímž získáme mnohem více výsledků."]
+                },
+                {
+                    "title": "Korektory",
+                    "text":["Dalším poměrně běžným případem, kdy se s počítačovou lingvistikou setkáváme, jsou <b>korektory v textových editorech</b>. Ty v základu pracují se <b>slovníkem správných</b> (tvarů) <b>slov</b>, čímž dokážou odhalit především <b>pravopisné chyby</b>. Dnešní korektory, v jejichž pozadí stojí algoritmy počítačové lingvistiky, už ale často umožňují i kontrolu <b>gramatiky</b> či <b>stylistiky</b>. Jeden takový korektor, který by měl dokázat odhalit chyby nejrůznějšího druhu, vzniká také na Ústavu českého jazyka v rámci Filozofické fakulty Masarykovy univerzity a na jeho vývoji se podílí i několik absolventů počítačové lingvistiky."]
+                }
+            ],
+            "quizes":[
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "xy",
+                        "options": ["a", "b"],
+                        "correct": "a"
+                    }
+                }
+
+            ]
+
+        },
+        "překladače a chatboty": {
+            "next":["nástroje", "další nástroje"],
+            "title": "",
+            "content": [
+                {
+                    "title": "Strojový překlad",
+                    "text":["Počítačová lingvistika se také uplatňuje například u <b>strojového překladu</b>. Aplikace, které převádějí <b>souvislejší text</b> (tedy ne jen samostatné slovo) <b>z jednoho jazyka do jiného</b> také využívají principy počítačové lingvistiky a počítačového zpracování přirozeného jazyka. Opět se zde uplatňuje <b>statistika</b> a zejména v posledních letech se v této oblasti hojně využívají <b>neuronové sítě</b>, které se snaží napodobit fungování lidského mozku."
+                        
+                    ]
+                },
+                {
+                    "title": "",
+                    "text":[
+                        "Síť je tvořena vzájemně propojenými <b>neurony</b>, které s využitím speciální funkce pracují se <b>vstupy</b>, které dostanou, přičemž jednotlivá propojení jsou <b>ohodnocena</b> (mají různou váhu). Takovéto sítě se postupně <b>učí reagovat na možné vstupy</b> tak, aby předkládaly <b>požadované výstupy</b>. Děje se tak prostřednictvím <b>trénovacích dat</b>, která se skládají ze vstupu a odpovídajícího výstupu. Postupně se upravují váhy jednotlivých propojení tak, aby byly výstupem vzorových vstupů očekávané výstupy."
+                    ]
+                },
+                {
+                    "title": "Chatboty",
+                    "text":["Dalším produktem počítačové lingvistiky, se kterým jste se pravděpodobně mohli setkat, jsou <b>chatboty</b>, respektive chatboti (vzhledem k tomu, že se jedná o slovo s trochu diskutabilní kategorií životnosti, se objevují obě varianty). Jedná se o programy s prvky umělé inteligence, které slouží k <b>automatizované komunikaci</b> s lidmi. To znamená, že veškeré zprávy, které nám chatbot pošle, jsou jeho vlastním výtvorem, na „druhé straně“ tedy není žádný člověk. Tyto programy využívají principy <b>strojového učení</b> a <b>umělé inteligence</b> (učí se od uživatelů, můžeme říci, že si „trénují lepší a přesnější odpovědi“). Často se používají v rámci uživatelské podpory namísto operátorů nebo například na různých e-shopech, využívají se ale i pro jiné účely."
+                        
+                    ]
+                },
+                {
+                    "title": "",
+                    "text":["Prvním úspěšnějším pokusem o chatbota byl v šedesátých letech projekt <b>Eliza</b>, který napodoboval rozhovor s psychoterapeutem. Poměrně zajímavým příkladem ze současnosti je pak mobilní aplikace <b>Replika</b> (má ovšem i webové rozhraní), která má představovat věrnou a naslouchající virtuální kamarádku nebo kamaráda, a poskytnout tak psychickou podporu a pocit zázemí."
+                        
+                    ]
+                }
+            ],
+            "quizes":[
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "xy",
+                        "options": ["a", "b"],
+                        "correct": "a"
+                    }
+                }
+                
+            ]
+
+        },
+        "další nástroje": {
+            "title": "Další nástroje",
+            "content": [
+                {
+                    "title": "",
+                    "text":["V rámci počítačové lingvistiky a zpracování přirozeného jazyka vzniká celá řada dalších specializovaných programů, nástrojů a výzkumů. Existují například nástroje na <b>určování autorství</b> (tedy hledání pravděpodobného autora na základě typických znaků v textu, jako jsou konkrétní slova, ale i jejich spojení, slovosled a podobně). Nejspíše jste zaznamenali i nástroje na <b>kontrolu plagiátů</b>, které porovnávají texty a hledají mezi nimi shody. Provádí se také <b>analýza sentimentu</b>, v rámci níž se například zjišťuje, které z recenzí jsou pozitivní a které negativní, a mnoho dalšího."]
+                },
+                {
+                    "title": "",
+                    "text":["Nakonec si ukážeme ještě některé konkrétní nástroje, které by pro vás mohly být zajímavé. Jedním takovým je například <a href=\"https://nlp.fi.muni.cz/projekty/punctuation/\">Webové rozhraní pro systém doplňování čárek</a>.",
+                        "V současné době stále více lidí píše na internetu nebo do různých messengerů bez diakritiky. V Centru zpracování přirozeného jazyka tak vznikl <a href=\"http://nlp.fi.muni.cz/cz_accent/\">nástroj</a>, který <b>diakritiku doplňuje</b>.",
+                        "Za zmínku určitě stojí také <a href=\"http://www.webovatypografie.cz/\">Webová typografie</a>, která by měla pomoci odstranit nejčastější <b>typografické chyby</b>."
+                    ]
+                },
+                {
+                    "title": "Korpusy a korpusové nástroje",
+                    "text":["Pro práci s jazykovými daty, vyhledávání různých jevů, ale i zajímavostí je pak možné využít nejrůznější korpusy a řadu korpusových nástrojů, které jsou k nalezení na <a href=\"https://www.korpus.cz/\">korpus.cz</a>",
+                        "Pro učení jazyků může být užitečný nástroj <a href=\"https://skell.sketchengine.co.uk/run.cgi/skell\">SKELL</a>, který je založen na <b>korpusu</b> a poskytuje k hledaným výrazům <b>příklady užití</b>, <b>častý kontext</b> a slova, která se objevují v <b>podobném kontextu</b> (tedy nejen synonyma). Data jsou aktuálně dostupná pro češtinu, angličtinu, němčinu, ruštinu, italštinu a estonštinu."]
+                },
+                {
+                    "title": "",
+                    "text":[""]
+                }
+            ],
+            "quizes":[
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "question": "xy",
+                        "options": ["a", "b"],
+                        "correct": "a"
+                    }
+                }
+                
+            ]
+
         }
     }
 }
