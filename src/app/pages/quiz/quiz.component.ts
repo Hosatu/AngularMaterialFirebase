@@ -63,6 +63,12 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
     }
   }
 
+  preventDragOnMatching(index, e) {
+    if (this.currentSection.quizes[index].type == 'matching') {
+      e.stopPropagation();
+    }
+  }
+
   private loadTask(viewContainerRef: ViewContainerRef, task: Quiz) {
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(Tasks[task.type]);
     viewContainerRef.clear();
