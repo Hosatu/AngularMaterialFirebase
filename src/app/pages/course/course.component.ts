@@ -28,8 +28,8 @@ export class CourseComponent implements OnInit {
       rowspan: 1,
     },
     {
-      id: 'aplikace',
-      label: 'Aplikace',
+      id: 'nástroje',
+      label: 'Nástroje',
       colspan: 1,
       rowspan: 2,
     },
@@ -40,7 +40,7 @@ export class CourseComponent implements OnInit {
       rowspan: 2,
     },
     {
-      id: 'semantika',
+      id: 'sémantika',
       label: 'Sémantika',
       colspan: 1,
       rowspan: 1,

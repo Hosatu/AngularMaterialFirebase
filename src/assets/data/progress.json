@@ -114,5 +114,31 @@
                 "quizResults":{}
             }
         }
+    },
+    "nástroje": {
+        "unlocked": false,
+        "sections": {
+            "našeptávače a korektory": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "překladače a chatboty": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }, 
+            "další nástroje": {
+                "unlocked": false,
+                "finished": false,
+                "quiz-results":[
+                    
+                ]
+            }
+        }
     }
 }
