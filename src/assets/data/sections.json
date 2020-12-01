@@ -20,19 +20,74 @@
                     ]
                 }
             ],
-            "quizes": [   
+            "quizes": [  
+                {
+                    "title": "TEST",
+                    "type": "corpus",
+                    "data":{
+                        "question": "TEST QUESTION",
+                        "points": 5,
+                        "correct": [3]
+                    }
+                }, 
                 {
                     "title": "Zvolte správné lemma a označkování",
                     "type": "majka",
                     "data": {
+                        "points": 5,
                         "question": "Jdu svou <b>cestou</b>",
                         "correct": "cesta:k1gFnSc7"
                     }
                 },
-                    {
+                {
+                    "title": "Zvolte všechny správné odpovědi",
+                    "type":"multichoice",
+                    "data":{
+                        "points": 5,
+                        "question": "Kterou část / které části věty <i>Věž kostela sv. Gabriela měří 43 m.</i> by bylo nutné v rámci syntézy řeči rozepsat?",
+                        "options":[
+                            "Věž",
+                            "kostela",
+                            "sv.",
+                            "Gabriela",
+                            "měří",
+                            "43",
+                            "m"
+
+                        ],
+                        "correct": [
+                            false,
+                            false,
+                            true,
+                            false,
+                            false,
+                            true,
+                            true                    
+                        ]
+                    
+                    }
+                },
+                {
+                    "title": "Na vynechaná místa přesuň odpovídající položky z nabídky",
+                    "type": "matching",
+                    "data":{
+                        "points": 5,
+                        "question": "Přiřaď české termíny k latinským ekvivalentům.",
+                        "optionsFixed": ["casus","verbum","akuzativ", "substantivum"],
+                        "optionsMatch": ["4. pád","podstatné jméno","sloveso","pád"],
+                        "correct": {
+                            "casus": ["pád"],
+                            "verbum": ["sloveso"],
+                            "akuzativ": ["4. pád"],
+                            "substantivum": ["podstatné jméno"]
+                        }
+                    }
+                },
+                {
                     "title": "Zvolte správnou odpověď",
                     "type": "trees",
                     "data": {
+                        "points": 5,
                         "question": "Vytvoř strukturu věty",
                         "constituents": "<Pron>I,<V>see,<N>trees,<P>of,<A>green",
                         "correct": "[I,[see,[trees,[of,green]]]]"
@@ -42,6 +97,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 5,
                         "question": "Čím se zabývá fonetika? ",
                         "options": [
                             "zvukovou stránkou jazyka z hlediska vzniku a vnímání řeči",
@@ -54,6 +110,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 5,
                         "question": "Čím se zabývá fonologie? ",
                         "options": [
                             "zvukovou stránkou jazyka z hlediska vzniku a vnímání řeči",
@@ -66,6 +123,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 5,
                         "question": "Základní jednotkou fonetiky je",
                         "options": [
                             "hláska",
@@ -79,6 +137,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 5,
                         "question": "Základní jednotkou fonologie je",
                         "options": [
                             "hláska",
@@ -748,14 +807,6 @@
                             "k1gFnSc2"
                         ],
                         "correct": "k1gFnSc4"
-                    }
-                },
-                {
-                    "title": "TEST",
-                    "type": "corpus",
-                    "data":{
-                        "question": "TEST QUESTION",
-                        "correct": [{ "word":"Pavel","lemma": "Pavel", "tag":"k1"}]
                     }
                 }
             ]
