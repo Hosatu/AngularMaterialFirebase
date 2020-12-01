@@ -42,6 +42,12 @@ export class LessonComponent extends HasSubscriptions implements OnInit {
   }
 
   isUnlocked(section) {
-    return this.progress.getProgress()[this.currentLesson.id].sections[section].unlocked;
+    const progressData = this.progress.getProgress();
+    return progressData && progressData[this.currentLesson.id] && progressData[this.currentLesson.id].sections[section] && progressData[this.currentLesson.id].sections[section].unlocked;
+  }
+
+  isFinished(section) {
+    const progressData = this.progress.getProgress();
+    return progressData && progressData[this.currentLesson.id] && progressData[this.currentLesson.id].sections[section] && progressData[this.currentLesson.id].sections[section].finished;
   }
 }

@@ -4,6 +4,7 @@ import { HasSubscriptions } from '@shared/utilities';
 import * as _ from 'lodash';
 
 export interface CorporaItem {
+  position: number;
   tag: string;
   lemma: string;
   word: string;
@@ -25,13 +26,27 @@ export class CorporaService extends HasSubscriptions {
     );
   }
 
-  get(word = /.*/, tag = /.*/, lemma = /.*/) {
-    return _.filter(
-      this.corpora,
-      (item: CorporaItem) => {
-        return item.word.match(word) && item.tag.match(tag) && item.lemma.match(lemma);
-      }
+  find(word = /.*/, tag = /.*/, lemma = /.*/) {
+    return _.map(
+      _.filter(
+        this.corpora,
+        (item: CorporaItem, index: number) => {
+          return item.word.match(word) && item.tag.match(tag) && item.lemma.match(lemma);
+        }
+      ),
+      (item) => item.position
     );
+  }
+
+  getSize(): number {
+    return this.corpora.length;
+  }
+
+  get(index: number): CorporaItem {
+    if(index >= 0 && index < this.getSize()) {
+      return this.corpora[index];
+    }
+    return null;
   }
 
 

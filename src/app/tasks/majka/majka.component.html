@@ -1,7 +1,7 @@
 <label id="example-radio-group-label" [innerHTML]="data.question"></label><br/>
 <input type="text" [(ngModel)]="majkaWord"/><button mat-raised-button color="primary" (click)="loadMajka()">MAJKA</button>
 
-<mat-radio-group *ngIf="majkaOptions" aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="answer">
+<mat-radio-group *ngIf="majkaOptions" [disabled]="isAnswered" aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="answer">
   <mat-radio-button color="primary" class="example-radio-button" *ngFor="let option of majkaOptions" [value]="option.Lemma+':'+option.Tag">
     {{option.Lemma}} {{option.Tag}}
   </mat-radio-button>

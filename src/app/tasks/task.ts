@@ -3,5 +3,6 @@ import { EventEmitter } from "@angular/core";
 
 export interface TaskComponent {
     data: any;
-    taskSubmitted: EventEmitter<boolean>;
+    progress: any;
+    taskSubmitted: EventEmitter<{points:number, answer: any}>;
 }

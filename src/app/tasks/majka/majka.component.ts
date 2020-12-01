@@ -5,6 +5,7 @@ import * as _ from 'lodash';
 
 export declare type MajkaData = {
   question: string;
+  points: number;
   correct: string;
 };
 
@@ -16,7 +17,15 @@ export declare type MajkaData = {
 export class MajkaComponent implements TaskComponent, OnInit {
 
   @Input() data: MajkaData;
-  @Output() taskSubmitted: EventEmitter<boolean> = new EventEmitter();
+  private _progress: any;
+  get progress(): any {
+      return this._progress;
+  }
+  @Input() set progress(value: any) {
+      this._progress = value;
+      this.loadProgress();
+  }
+  @Output() taskSubmitted: EventEmitter<{points:number, answer: any}> = new EventEmitter();
   public answer: string;
   public majkaWord: string;
   public isAnswered: boolean = false;
@@ -24,6 +33,16 @@ export class MajkaComponent implements TaskComponent, OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
+  }
+
+  async loadProgress() {
+    console.log(this.progress);
+    if (this.progress && this.progress.answer) {
+      this.majkaWord = this.progress.answer.word;
+      await this.loadMajka();
+      this.answer = this.progress.answer.selected;
+      this.isAnswered = true;
+    }
   }
 
   async loadMajka() {
@@ -40,10 +59,10 @@ export class MajkaComponent implements TaskComponent, OnInit {
   }
 
   submit() {
-    if (this.answer == this.data.correct) {
-      this.taskSubmitted.emit(true);
+    if(this.answer == this.data.correct) {
+      this.taskSubmitted.emit({points: this.data.points, answer: { word: this.majkaWord, selected: this.answer}});
     } else {
-      this.taskSubmitted.emit(false);
+      this.taskSubmitted.emit({points: 0, answer: this.answer});
     }
     this.isAnswered = true;
   }

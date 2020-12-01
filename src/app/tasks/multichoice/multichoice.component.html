@@ -1,7 +1,7 @@
 <label id="example-radio-group-label" [innerHTML]="data.question"></label>
 <ul>
     <li *ngFor="let option of data.options; let i = index">
-        <mat-checkbox color="primary" class="example-checkbox" [(ngModel)]="answer[i]">
+        <mat-checkbox color="primary" class="example-checkbox" [disabled]="isAnswered" [(ngModel)]="answer[i]">
             <span [innerHtml]="option"></span>
         </mat-checkbox>
     </li>

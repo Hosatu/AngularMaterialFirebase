@@ -5,6 +5,7 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 
 export declare interface MatchingData {
   question: string;
+  points: number;
   optionsFixed: string[];
   optionsMatch: string[];
   correct: {[fixed: string]: string[]};
@@ -18,8 +19,16 @@ export declare interface MatchingData {
 export class MatchingComponent implements TaskComponent, OnInit {
 
   @Input() data: MatchingData;
-  @Output() taskSubmitted: EventEmitter<boolean> = new EventEmitter();
-  public answer: (string[])[];
+  private _progress: any;
+  get progress(): any {
+      return this._progress;
+  }
+  @Input() set progress(value: any) {
+      this._progress = value;
+      this.loadProgress();
+  }
+  @Output() taskSubmitted: EventEmitter<{points: number, answer: any}> = new EventEmitter();
+  public answer: {[key: number]: string[]};
   public optionsPool: string[];
   public isCorrect: boolean[];
   public isAnswered: boolean = false;
@@ -28,7 +37,24 @@ export class MatchingComponent implements TaskComponent, OnInit {
 
   ngOnInit() {
     this.optionsPool = _.shuffle(this.data.optionsMatch);
-    this.answer = new Array(this.data.optionsFixed.length).fill([]);
+    this.answer = {};
+    for (const i of _.range(this.data.optionsFixed.length)) {
+      this.answer[parseInt(i)] = [];
+    }
+  }
+
+
+  loadProgress() {
+    console.log(this.progress);
+    if (this.progress && this.progress.answer) {
+      this.isCorrect = [];
+      this.optionsPool = [];
+      this.answer = this.progress.answer;
+      for (let fixedIndex in _.keys(this.data.optionsFixed)) {
+        this.isCorrect.push(_.xor(this.answer[fixedIndex], this.data.correct[this.data.optionsFixed[fixedIndex]]).length === 0);
+      }
+      this.isAnswered = true;
+    }
   }
 
   submit() {
@@ -36,11 +62,7 @@ export class MatchingComponent implements TaskComponent, OnInit {
     for (let fixedIndex in _.keys(this.data.optionsFixed)) {
       this.isCorrect.push(_.xor(this.answer[fixedIndex], this.data.correct[this.data.optionsFixed[fixedIndex]]).length === 0);
     }
-    if (_.every(this.isCorrect)) {
-      this.taskSubmitted.emit(true);
-    } else {
-      this.taskSubmitted.emit(false);
-    }
+    this.taskSubmitted.emit({points: Math.round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points), answer: this.answer});
     this.isAnswered = true;
   }
 

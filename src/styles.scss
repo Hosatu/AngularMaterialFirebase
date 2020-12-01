@@ -90,6 +90,10 @@ code.multiline {
     pointer-events: none;
 }
 
+.carousel-indicators.ng-star-inserted {
+    bottom: 50px !important;
+}
+
 .example-radio-button label{
     font-weight: 500;
 }

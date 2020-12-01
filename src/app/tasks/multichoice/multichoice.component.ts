@@ -5,6 +5,7 @@ import * as _ from "lodash";
 export declare type MultichoiceData = {
   question: string;
   options: string[];
+  points: number;
   correct: boolean[];
 };
 @Component({
@@ -15,7 +16,15 @@ export declare type MultichoiceData = {
 export class MultichoiceComponent implements TaskComponent, OnInit {
 
   @Input() data: MultichoiceData;
-  @Output() taskSubmitted: EventEmitter<boolean> = new EventEmitter();
+  private _progress: any;
+  get progress(): any {
+      return this._progress;
+  }
+  @Input() set progress(value: any) {
+      this._progress = value;
+      this.loadProgress();
+  }
+  @Output() taskSubmitted: EventEmitter<{points: number, answer: boolean[]}> = new EventEmitter();
   public answer: boolean[];
   public isCorrect: boolean[];
   public isAnswered: boolean = false;
@@ -23,7 +32,22 @@ export class MultichoiceComponent implements TaskComponent, OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.answer = new Array(this.data.options.length).fill(false);
+    if(!this.answer) {
+      this.answer = new Array(this.data.options.length).fill(false);
+    }
+  }
+
+
+  loadProgress() {
+    console.log(this.progress);
+    if (this.progress && this.progress.answer) {
+      this.answer = this.progress.answer;
+      this.isCorrect = [];
+      for(let answerIndex in this.data.correct) {
+        this.isCorrect.push(this.answer[answerIndex] == this.data.correct[answerIndex]);
+      }
+      this.isAnswered = true;
+    }
   }
 
   submit() {
@@ -31,11 +55,7 @@ export class MultichoiceComponent implements TaskComponent, OnInit {
     for(let answerIndex in this.data.correct) {
       this.isCorrect.push(this.answer[answerIndex] == this.data.correct[answerIndex]);
     }
-    if(_.every(this.isCorrect)) {
-      this.taskSubmitted.emit(true);
-    } else {
-      this.taskSubmitted.emit(false);
-    }
+    this.taskSubmitted.emit({points: Math.round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points), answer: this.answer});
     this.isAnswered = true;
   }
 

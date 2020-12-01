@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
+import { BehaviorSubject, Subject } from 'rxjs';
 import { HasSubscriptions } from '../../shared/utilities';
 
 @Injectable({
@@ -8,6 +9,7 @@ import { HasSubscriptions } from '../../shared/utilities';
 })
 export class ProgressService extends HasSubscriptions{
   private progress;
+  public updated: Subject<void> = new BehaviorSubject<void>(null);
   constructor(private files: HttpClient) {
     super();
   }
@@ -34,8 +36,9 @@ export class ProgressService extends HasSubscriptions{
    }
 
    loadProgress(uid) {
-    firebase.firestore().collection(`progress`).doc(uid).get().then((snap) => snap.data()).then((data) => {
+    return firebase.firestore().collection(`progress`).doc(uid).get().then((snap) => snap.data()).then((data) => {
       this.progress = data;
+      this.updated.next();
     })
    }
 
@@ -46,6 +49,7 @@ export class ProgressService extends HasSubscriptions{
    updateProgress(uid, value) {
     firebase.firestore().collection(`progress`).doc(uid).update(value).then(()=> {
       this.loadProgress(uid);
+      this.updated.next();
     });
    }
 }

@@ -6,7 +6,7 @@ import { Section, Quiz } from '@shared/models';
 import { TaskDirective } from 'src/app/tasks/task.directive';
 import { TaskComponent } from 'src/app/tasks/task';
 import { Tasks } from 'src/app/tasks/task.constants';
-import * as _ from "lodash";
+import * as _ from 'lodash';
 import { MatSnackBar } from '@angular/material';
 import { ProgressService } from '@shared/services';
 import * as firebase from 'firebase';
@@ -20,7 +20,7 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
   public currentSection: Section;
   public currentLesson: string;
   public currentSectionId: string;
-  public isLoading: boolean = true;
+  public isLoading = true;
   public slideDone: boolean[];
   @ViewChildren(TaskDirective) taskContainers: QueryList<TaskDirective>;
 
@@ -33,18 +33,18 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
       this.url.params,
       (params: Params) => {
         this.isLoading = true;
-        this.loadSection(params["lesson"], params["section"]);
+        this.loadSection(params['lesson'], params['section']);
         this.currentLesson = params['lesson'];
         this.currentSectionId = params['section'];
       }
-    )
+    );
   }
 
   private loadSection(lesson: string, section: string) {
     this.safeSubscribe(
-      this.files.get("/assets/data/sections.json"),
+      this.files.get('/assets/data/sections.json'),
       (fileContent) => {
-        if(fileContent[lesson]) {
+        if (fileContent[lesson]) {
           this.slideDone = new Array(fileContent[lesson][section].quizes.length).fill(false);
           this.currentSection = fileContent[lesson][section];
         } else {
@@ -53,13 +53,13 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
         this.isLoading = false;
         setTimeout(() => this.loadAllTasks(this.currentSection.quizes));
       }
-    )
-    
+    );
+
   }
 
   private loadAllTasks(quizes: Quiz[]) {
-    for(let quizIndex in quizes) {
-      this.loadTask(this.taskContainers.toArray()[quizIndex].viewContainerRef, quizes[quizIndex]);
+    for (const quizIndex in quizes) {
+      this.loadTask(this.taskContainers.toArray()[quizIndex].viewContainerRef, quizes[quizIndex], parseInt(quizIndex));
     }
   }
 
@@ -69,20 +69,36 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
     }
   }
 
-  private loadTask(viewContainerRef: ViewContainerRef, task: Quiz) {
+  private loadTask(viewContainerRef: ViewContainerRef, task: Quiz, index: number) {
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(Tasks[task.type]);
     viewContainerRef.clear();
     const componentRef = viewContainerRef.createComponent(componentFactory);
+    this.progress.updated.subscribe(() => {
+      const progressData = this.progress.getProgress();
+      if(progressData) {
+        (<TaskComponent>componentRef.instance).progress = progressData[this.currentLesson].sections[this.currentSectionId].quizResults[index];
+        if((<TaskComponent>componentRef.instance).progress && (<TaskComponent>componentRef.instance).progress.answer) {
+          this.slideDone[index] = true;
+        }
+        componentRef.changeDetectorRef.detectChanges();
+      }
+    });
     (<TaskComponent>componentRef.instance).data = task.data;
     this.safeSubscribe(
       (<TaskComponent>componentRef.instance).taskSubmitted,
-      (correct: boolean) => {
-        if(this.slideDone.indexOf(false) != -1) {
+      (data: {points: number, answer: any}) => {
+        console.log(task.data, data)
+        if (this.slideDone.indexOf(false) != -1) {
+          let newProgress = this.progress.getProgress();
+          newProgress[this.currentLesson].sections[this.currentSectionId].quizResults[index] = {
+            maxPoints: task.data.points,
+            points: data.points,
+            answer: data.answer
+          };
           this.slideDone[this.slideDone.indexOf(false)] = true;
-          if(this.allSlidesDone()) {
-            this.progress.updateProgress(firebase.auth().currentUser.uid, 
-            _.merge(
-              this.progress.getProgress(),
+          if (this.allSlidesDone()) {
+            newProgress = _.merge(
+              newProgress,
             {
               [this.currentLesson]: {
                 finished: this.currentLesson != this.currentSection.next[0],
@@ -102,20 +118,30 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
                   }
                 }
               }
-            }))
+            });
           }
+          this.progress.updateProgress(firebase.auth().currentUser.uid, newProgress);
         }
-        if(correct == true) {
-          this.snackBar.open('Správná odpověď!', "Zavřít", {
+        if (data.points == task.data.points) {
+          this.snackBar.open('Správná odpověď! ' + data.points + ' bod' + this.getInflection(data.points) + '.', 'Zavřít', {
+            verticalPosition: 'bottom'
+          });
+        } else if (data.points == 0) {
+          this.snackBar.open('Špatná odpověď! ' + data.points + ' bod' + this.getInflection(data.points) + '.', 'Zavřít', {
             verticalPosition: 'bottom'
           });
         } else {
-          this.snackBar.open('Špatná odpověď!', "Zavřít", {
+          this.snackBar.open('Částečně správná odpověď! ' + data.points + ' bod' + this.getInflection(data.points) + '.', 'Zavřít', {
             verticalPosition: 'bottom'
           });
         }
       }
     );
+  }
+
+  getInflection(points: number) {
+    console.log(points);
+    return points === 1 ? '' : (points > 1 && points < 5 ? 'y' : 'ů');
   }
 
   public allSlidesDone() {

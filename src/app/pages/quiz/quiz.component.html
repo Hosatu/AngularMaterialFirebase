@@ -1,12 +1,12 @@
 <ng-container *ngIf="!isLoading; else loading"> 
     <ng-container *ngIf="currentSection; else unknownLesson" >
-        <div (pointermove)="preventDragOnMatching(carousel.currentIndex, $event)">
+        <div (pointermove)="preventDragOnMatching(carousel.currentIndex, $event)" style="height:80vh">
         <mat-grid-list cols="1" rowHeight="60px">
             <mat-grid-tile colspan="1" rowspan="1">
                 <h1>{{currentSection.title}}</h1>
             </mat-grid-tile>
         </mat-grid-list>
-        <mat-carousel #carousel class="disabled-indicators" [proportion]="40" [autoplay]="false" color="primary" [loop]="false" [hideArrows]="false" [hideIndicators]="false">
+        <mat-carousel #carousel class="disabled-indicators" [maintainAspectRatio]="false" [autoplay]="false" color="primary" [loop]="false" [hideArrows]="false" [hideIndicators]="false">
             <mat-carousel-slide [hideOverlay]="true" *ngFor="let task of currentSection.quizes; let i = index" [disabled]="!slideUnlocked(i)">
                 <mat-grid-list cols="1" rowHeight="95%">
                     <mat-grid-tile colspan="1" rowspan="1">

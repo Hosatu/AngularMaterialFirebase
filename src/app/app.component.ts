@@ -16,9 +16,12 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit(): void {
+    if(firebase.auth().currentUser) {
+      this.progress.initProgress();
+    }
     firebase.auth().onAuthStateChanged((authState)=> {
       if(authState.uid) {
-        this.progress.loadProgress(authState.uid);
+        this.progress.initProgress();
       }
     });
   }

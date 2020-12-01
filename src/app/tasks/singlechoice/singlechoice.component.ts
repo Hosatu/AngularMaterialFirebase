@@ -4,6 +4,7 @@ import { TaskComponent } from '../task';
 export declare type SinglechoiceData = {
   question: string;
   options: string[];
+  points: number;
   correct: string;
 };
 
@@ -15,7 +16,15 @@ export declare type SinglechoiceData = {
 export class SinglechoiceComponent implements TaskComponent, OnInit {
 
   @Input() data: SinglechoiceData;
-  @Output() taskSubmitted: EventEmitter<boolean> = new EventEmitter();
+  private _progress: any;
+  get progress(): any {
+      return this._progress;
+  }
+  @Input() set progress(value: any) {
+      this._progress = value;
+      this.loadProgress();
+  }
+  @Output() taskSubmitted: EventEmitter<{points:number, answer: string}> = new EventEmitter();
   public answer: string;
   public isAnswered: boolean = false;
 
@@ -24,11 +33,20 @@ export class SinglechoiceComponent implements TaskComponent, OnInit {
   ngOnInit() {
   }
 
+
+  loadProgress() {
+    console.log(this.progress);
+    if (this.progress && this.progress.answer) {
+      this.answer = this.progress.answer;
+      this.isAnswered = true;
+    }
+  }
+
   submit() {
     if(this.answer == this.data.correct) {
-      this.taskSubmitted.emit(true);
+      this.taskSubmitted.emit({points: this.data.points, answer: this.answer});
     } else {
-      this.taskSubmitted.emit(false);
+      this.taskSubmitted.emit({points: 0, answer: this.answer});
     }
     this.isAnswered = true;
   }

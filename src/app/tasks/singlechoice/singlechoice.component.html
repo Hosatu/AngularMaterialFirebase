@@ -1,5 +1,5 @@
 <label id="example-radio-group-label" [innerHTML]="data.question"></label>
-<mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="answer">
+<mat-radio-group [disabled]="isAnswered" aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="answer">
   <mat-radio-button color="primary" class="example-radio-button" *ngFor="let option of data.options" [value]="option">
     <span [innerHtml]="option"></span>
   </mat-radio-button>

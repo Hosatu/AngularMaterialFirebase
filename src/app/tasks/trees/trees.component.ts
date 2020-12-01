@@ -7,6 +7,7 @@ import { D3TreeRendererComponent } from '@shared/tree-renderers/d3-tree-renderer
 
 export declare interface TreesData {
   question: string;
+  points: number;
   constituents: string;
   correct: string;
 }
@@ -25,7 +26,15 @@ const sameMembers = (arr1, arr2) =>
 export class TreesComponent implements TaskComponent, OnInit {
 
   @Input() data: TreesData;
-  @Output() taskSubmitted: EventEmitter<boolean> = new EventEmitter();
+  private _progress: any;
+  get progress(): any {
+      return this._progress;
+  }
+  @Input() set progress(value: any) {
+      this._progress = value;
+      this.loadProgress();
+  }
+  @Output() taskSubmitted: EventEmitter<{points:number, answer: string}> = new EventEmitter();
   private selected: { [key: string]: TreeModel } = { 'first': null, 'second': null };
   public alerts: any[] = [];
   public constituents;
@@ -35,6 +44,15 @@ export class TreesComponent implements TaskComponent, OnInit {
   public tree: TreeModel;
   @ViewChild(D3TreeRendererComponent, {static: false}) renderer: D3TreeRendererComponent;
 
+
+
+  loadProgress() {
+    console.log(this.progress);
+    if (this.progress && this.progress.answer) {
+
+    }
+  };
+  
   constructor(
     ) {
       this.windowWidth = window.innerWidth - 100;
@@ -126,9 +144,9 @@ export class TreesComponent implements TaskComponent, OnInit {
   submit() {
     const result = this.tree.export();
     if(result == this.data.correct) {
-      this.taskSubmitted.emit(true);
+      this.taskSubmitted.emit({points: this.data.points, answer: result});
     } else {
-      this.taskSubmitted.emit(false);
+      this.taskSubmitted.emit({points: 0, answer: result});
     }
     this.isAnswered = true;
   }

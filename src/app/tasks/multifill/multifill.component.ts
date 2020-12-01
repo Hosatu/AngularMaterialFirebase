@@ -1,10 +1,11 @@
 import { Component, OnInit, Input, Output, EventEmitter, ViewChildren, TemplateRef, ElementRef, QueryList, Inject } from '@angular/core';
 import { TaskComponent } from '../task';
 import { DOCUMENT } from '@angular/common';
-import * as _ from "lodash";
+import * as _ from 'lodash';
 
 export declare type MultifillData = {
   question: string;
+  points: number;
   template: string;
   answers: {id: string, values: string[], reference?: string}[];
 };
@@ -16,7 +17,15 @@ export declare type MultifillData = {
 })
 export class MultifillComponent implements TaskComponent, OnInit {
   @Input() data: MultifillData;
-  @Output() taskSubmitted: EventEmitter<boolean> = new EventEmitter();
+  private _progress: any;
+  get progress(): any {
+      return this._progress;
+  }
+  @Input() set progress(value: any) {
+      this._progress = value;
+      this.loadProgress();
+  }
+  @Output() taskSubmitted: EventEmitter<{points: number, answer: any[]}> = new EventEmitter();
   private document;
   public isAnswered = false;
   public isCorrect: boolean[] = [];
@@ -25,34 +34,39 @@ export class MultifillComponent implements TaskComponent, OnInit {
     this.document = document;
   }
 
+
+  loadProgress() {
+    console.log(this.progress);
+    if (this.progress && this.progress.answer) {
+
+    }
+  }
+
   ngOnInit() {
     for(let answerIndex in this.data.answers) {
       let inputEl = this.document.getElementById(this.data.answers[answerIndex].id);
-      inputEl.className = "multifill";
-      let label = inputEl.parentNode.querySelector("label[for='" + inputEl.id + "']");
+      inputEl.className = 'multifill';
+      let label = inputEl.parentNode.querySelector('label[for=\'' + inputEl.id + '\']');
       console.log(label);
-      label.innerText = "";
+      label.innerText = '';
     }
   }
 
   submit() {
     this.isCorrect = [];
+    let answers = [];
     for(let answerIndex in this.data.answers) {
       let answer = this.data.answers[answerIndex];
       let userAnswer = this.getAnswer(parseInt(answerIndex));
+      answers.push(userAnswer);
       this.isCorrect.push(_.some(answer.values, (value) => userAnswer.match(new RegExp(value))));
       let inputEl = this.document.getElementById(this.data.answers[answerIndex].id);
-      inputEl.className = this.isCorrect[answerIndex] ? "multifill correct" : "multifill incorrect";
-      let label = inputEl.parentNode.querySelector("label[for='" + inputEl.id + "']");
+      inputEl.className = this.isCorrect[answerIndex] ? 'multifill correct' : 'multifill incorrect';
+      let label = inputEl.parentNode.querySelector('label[for=\'' + inputEl.id + '\']');
       console.log(label);
-      label.innerText = this.isCorrect[answerIndex] ? "" : "(správná odpověď: " +this.data.answers[answerIndex].reference + ")"
+      label.innerText = this.isCorrect[answerIndex] ? '' : '(správná odpověď: ' +this.data.answers[answerIndex].reference + ')'
     }
-    if(_.every(this.isCorrect)) {
-      this.taskSubmitted.emit(true);
-      
-    } else {
-      this.taskSubmitted.emit(false);
-    }
+    this.taskSubmitted.emit({points: Math.round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points), answer: answers});
     this.isAnswered = true;
   }
 
