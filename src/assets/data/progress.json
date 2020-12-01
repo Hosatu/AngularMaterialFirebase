@@ -6,37 +6,27 @@
             "úvod": {
                 "unlocked": true,
                 "finished": false,
-                "quiz-results":[
-
-                ]
+                "quizResults":{}
             }, 
             "výslovnost": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "vývoj": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "programování": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "zpracování řeči": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }
         }
     },
@@ -47,37 +37,27 @@
             "úvod": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "korpusy": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "statistika": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "programování": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "morfolog. analýza": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }
         }
     },
@@ -87,69 +67,51 @@
             "grafy": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "úvod": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "konstituenty": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "typy konstituentů": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "synt. analýza": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }}
     },
-    "semantika": {
+    "sémantika": {
         "unlocked": false,
         "sections": {
             "úvod": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "význam": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "lexikografie a nástroje": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }, 
             "predikátová logika": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
             }
         }
     }

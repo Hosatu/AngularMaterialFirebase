@@ -1,6 +1,7 @@
 [
-    { "word":"Petr","lemma": "Petr", "tag":"k1"},
-    { "word":"Jan","lemma": "Jan", "tag":"k1"},
-    { "word":"Petr","lemma": "Petr", "tag":"k1"},
-    { "word":"Pavel","lemma": "Pavel", "tag":"k1"}
+    { "position": 0, "word":"Petr","lemma": "Petr", "tag":"k1"},
+    { "position": 1, "word":"Jan","lemma": "Jan", "tag":"k1"},
+    { "position": 2, "word":"Petr","lemma": "Petr", "tag":"k1"},
+    { "position": 3, "word":"Pavel","lemma": "Pavel", "tag":"k1"},
+    { "position": 4, "word":"Pavla","lemma": "Pavel", "tag":"k4"}
 ]
