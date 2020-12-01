@@ -25,7 +25,7 @@ export class MultifillComponent implements TaskComponent, OnInit {
       this._progress = value;
       this.loadProgress();
   }
-  @Output() taskSubmitted: EventEmitter<{points: number, answer: any[]}> = new EventEmitter();
+  @Output() taskSubmitted: EventEmitter<{points: number, answer: any}> = new EventEmitter();
   private document;
   public isAnswered = false;
   public isCorrect: boolean[] = [];
@@ -38,7 +38,10 @@ export class MultifillComponent implements TaskComponent, OnInit {
   loadProgress() {
     console.log(this.progress);
     if (this.progress && this.progress.answer) {
-
+      for (const answerId of _.keys(this.progress.answer)) {
+        this.document.getElementById(answerId).value = this.progress.answer[answerId];
+      }
+      this.submit(false);
     }
   }
 
@@ -52,21 +55,24 @@ export class MultifillComponent implements TaskComponent, OnInit {
     }
   }
 
-  submit() {
+  submit(send = true) {
     this.isCorrect = [];
-    let answers = [];
+    let answers = {};
     for(let answerIndex in this.data.answers) {
       let answer = this.data.answers[answerIndex];
       let userAnswer = this.getAnswer(parseInt(answerIndex));
-      answers.push(userAnswer);
+      answers[this.data.answers[parseInt(answerIndex)].id]= userAnswer;
       this.isCorrect.push(_.some(answer.values, (value) => userAnswer.match(new RegExp(value))));
       let inputEl = this.document.getElementById(this.data.answers[answerIndex].id);
       inputEl.className = this.isCorrect[answerIndex] ? 'multifill correct' : 'multifill incorrect';
+      inputEl.disabled = true;
       let label = inputEl.parentNode.querySelector('label[for=\'' + inputEl.id + '\']');
       console.log(label);
       label.innerText = this.isCorrect[answerIndex] ? '' : '(správná odpověď: ' +this.data.answers[answerIndex].reference + ')'
     }
-    this.taskSubmitted.emit({points: Math.round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points), answer: answers});
+    if(send) {
+      this.taskSubmitted.emit({points: Math.round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points), answer: answers});
+    }
     this.isAnswered = true;
   }
 
