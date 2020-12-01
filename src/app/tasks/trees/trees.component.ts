@@ -12,12 +12,6 @@ export declare interface TreesData {
   correct: string;
 }
 
-const containsAll = (arr1, arr2) =>
-                arr2.every(arr2Item => arr1.includes(arr2Item));
-
-const sameMembers = (arr1, arr2) =>
-                        arr1.length === arr2.length && containsAll(arr1, arr2) && containsAll(arr2, arr1);
-
 @Component({
   selector: 'app-trees',
   templateUrl: './trees.component.html',
@@ -42,20 +36,42 @@ export class TreesComponent implements TaskComponent, OnInit {
   public isAnswered: boolean = false;
   public counter = 1;
   public tree: TreeModel;
-  @ViewChild(D3TreeRendererComponent, {static: false}) renderer: D3TreeRendererComponent;
+  @ViewChild("mainRenderer", {static: false}) renderer: D3TreeRendererComponent;
+  @ViewChild("resultRenderer", {static: false}) result: D3TreeRendererComponent;
 
 
 
   loadProgress() {
     console.log(this.progress);
     if (this.progress && this.progress.answer) {
-
+      this.isAnswered = true;
+      this.reconstructTree(this.progress.answer, this.renderer);
+      if(this.progress.answer != this.data.correct) {
+        this.reconstructTree(this.data.correct, this.result);
+      }
     }
   };
-  
+
+  reconstructTree(encoded, renderer) {
+      let lowestNodes = encoded.match(/\[([^\[\],]*),([^\[\],]*)\]/g);
+      while(lowestNodes) {
+        for(let node of lowestNodes) {
+          let [left, right] = node.split(',');
+          left = left.replace('[', '');
+          right = right.replace(']', '');
+          let leftModel = left == 'MERGED_NODE' ? this.tree : _.find(renderer.getNodes(), (item: TreeModel) => item.value == left);
+          let rightModel = right == 'MERGED_NODE' ? this.tree : _.find(renderer.getNodes(), (item: TreeModel) => item.value == right);
+          this.onNodeSelected(renderer, leftModel);
+          this.onNodeSelected(renderer, rightModel);
+          this.mergeNodes(renderer);
+          encoded = encoded.replace(lowestNodes, 'MERGED_NODE');
+          lowestNodes = encoded.match(/\[([^\[\],]*),([^\[\],]*)\]/g);
+        }
+      }
+  }
   constructor(
     ) {
-      this.windowWidth = window.innerWidth - 100;
+      this.windowWidth = (window.innerWidth - 100);
     }
 
   ngOnInit() {
@@ -77,13 +93,13 @@ export class TreesComponent implements TaskComponent, OnInit {
     return !allSelected[0].parent && !allSelected[1].parent;
   }
 
-  clearSelected() {
+  clearSelected(renderer) {
     if (this.selected['first'] !== null) {
-      this.renderer.onNodeSelected(this.selected['first'], 'unselect');
+      renderer.onNodeSelected(this.selected['first'], 'unselect');
       this.selected['first'] = null;
     }
     if (this.selected['second'] !== null) {
-      this.renderer.onNodeSelected(this.selected['second'], 'unselect');
+      renderer.onNodeSelected(this.selected['second'], 'unselect');
       this.selected['second'] = null;
     }
   }
@@ -92,18 +108,18 @@ export class TreesComponent implements TaskComponent, OnInit {
     return this.selected['first'] !== null || this.selected['second'] !== null;
   }
 
-  onNodeSelected(node: TreeModel) {
+  onNodeSelected(renderer, node: TreeModel) {
     if (this.selected['first'] === node) {
-      this.renderer.onNodeSelected(node, 'unselect');
+      renderer.onNodeSelected(node, 'unselect');
       this.selected['first'] = null;
     } else if (this.selected['second'] === node) {
-      this.renderer.onNodeSelected(node, 'unselect');
+      renderer.onNodeSelected(node, 'unselect');
       this.selected['second'] = null;
     } else if (this.selected['first'] === null) {
-      this.renderer.onNodeSelected(node, 'selectFirst');
+      renderer.onNodeSelected(node, 'selectFirst');
       this.selected['first'] = node;
     } else if (this.selected['second'] === null) {
-      this.renderer.onNodeSelected(node, 'selectSecond');
+      renderer.onNodeSelected(node, 'selectSecond');
       this.selected['second'] = node;
     } else {
       this.alerts.push({
@@ -113,9 +129,9 @@ export class TreesComponent implements TaskComponent, OnInit {
     }
   }
 
-  clear() {
-    this.cleanSelection();
-    this.renderer.clear();
+  clear(renderer) {
+    this.cleanSelection(renderer);
+    renderer.clear();
     this.counter = 0;
     this.tree = null;
   }
@@ -125,17 +141,17 @@ export class TreesComponent implements TaskComponent, OnInit {
     this.alerts.splice(index, 1);
   }
 
-  mergeNodes() {
+  mergeNodes(renderer) {
     const allSelected = _.filter(this.selected, (s) => s != null);
-    this.tree = this.renderer.merge(this.counter.toString(), allSelected[0], _.last(allSelected) );
-    this.cleanSelection();
+    this.tree = renderer.merge(this.counter.toString(), allSelected[0], _.last(allSelected) );
+    this.cleanSelection(renderer);
     this.counter++;
   }
 
-  cleanSelection() {
+  cleanSelection(renderer) {
     for (const id in this.selected) {
       if (this.selected[id] != null) {
-        this.renderer.onNodeSelected(this.selected[id], 'unselect');
+        renderer.onNodeSelected(this.selected[id], 'unselect');
         this.selected[id] = null;
       }
     }
@@ -143,11 +159,12 @@ export class TreesComponent implements TaskComponent, OnInit {
 
   submit() {
     const result = this.tree.export();
+    this.isAnswered = true;
     if(result == this.data.correct) {
       this.taskSubmitted.emit({points: this.data.points, answer: result});
     } else {
       this.taskSubmitted.emit({points: 0, answer: result});
+      this.reconstructTree(this.data.correct, this.result);
     }
-    this.isAnswered = true;
   }
 }

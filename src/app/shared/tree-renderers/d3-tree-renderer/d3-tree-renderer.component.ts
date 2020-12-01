@@ -40,7 +40,8 @@ export class D3TreeRendererComponent extends TreeRenderer implements AfterViewIn
         this.parentNativeElement = this.container.nativeElement;
         if (this.parentNativeElement !== null) {
             this.parentElement = d3.select(this.parentNativeElement)
-            .append('svg').attr('height', this.height).attr('width', this.width);
+            .append('svg').attr('height', this.height).attr('width', this.width).attr(
+                'viewbox', '100 -50 300 350');
             this.clear();
             this.rendered = true;
         }
@@ -71,7 +72,7 @@ export class D3TreeRendererComponent extends TreeRenderer implements AfterViewIn
         this.d3Creator.changeElement(this.parentElement, {
             'attr': {
                 'width': width,
-                'height': height
+                'height': height                      
             }
         });
     }
