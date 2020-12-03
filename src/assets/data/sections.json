@@ -31,19 +31,10 @@
                     }
                 }, 
                 {
-                    "title": "Zvolte správné lemma a označkování",
-                    "type": "majka",
-                    "data": {
-                        "points": 5,
-                        "question": "Jdu svou <b>cestou</b>",
-                        "correct": "cesta:k1gFnSc7"
-                    }
-                },
-                {
                     "title": "Zvolte všechny správné odpovědi",
                     "type":"multichoice",
                     "data":{
-                        "points": 5,
+                        "points": 3,
                         "question": "Kterou část / které části věty <i>Věž kostela sv. Gabriela měří 43 m.</i> by bylo nutné v rámci syntézy řeči rozepsat?",
                         "options":[
                             "Věž",
@@ -71,7 +62,7 @@
                     "title": "Na vynechaná místa přesuň odpovídající položky z nabídky",
                     "type": "matching",
                     "data":{
-                        "points": 5,
+                        "points": 4,
                         "question": "Přiřaď české termíny k latinským ekvivalentům.",
                         "optionsFixed": ["casus","verbum","akuzativ", "substantivum"],
                         "optionsMatch": ["4. pád","podstatné jméno","sloveso","pád"],
@@ -110,7 +101,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
-                        "points": 5,
+                        "points": 1,
                         "question": "Čím se zabývá fonologie? ",
                         "options": [
                             "zvukovou stránkou jazyka z hlediska vzniku a vnímání řeči",
@@ -123,7 +114,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
-                        "points": 5,
+                        "points": 1,
                         "question": "Základní jednotkou fonetiky je",
                         "options": [
                             "hláska",
@@ -137,7 +128,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
-                        "points": 5,
+                        "points": 1,
                         "question": "Základní jednotkou fonologie je",
                         "options": [
                             "hláska",
@@ -186,7 +177,8 @@
                             "tra<b>m</b>vaj, <b>m</b>ýdlo",
                             "ka<b>z</b>y, ka<b>z</b>it "
                         ],
-                        "correct": "tra<b>m</b>vaj, <b>m</b>ýdlo"
+                        "correct": "tra<b>m</b>vaj, <b>m</b>ýdlo",
+                        "points": 1
                     }
                 },
                 {
@@ -200,13 +192,15 @@
                             "<b>sv</b>al",
                             "<b>zt</b>roskotat"
                         ],
-                        "correct": "<b>zt</b>roskotat"
+                        "correct": "<b>zt</b>roskotat",
+                        "points": 1
                     }
                 },
                 {
                     "title": "Doplňte znělostní protiklady",
                     "type": "multifill",
                     "data": {
+                        "points": 6,
                         "question": "Doplňte znělostní protiklady",
                         "template": "<ul><li>p - <input class=\"multifill\" id='answer-2-0'><label for=\"answer-2-0\"></label></li><li>z - <input class=\"multifill\" id='answer-2-1'><label for=\"answer-2-1\"></label></li><li>t - <input class=\"multifill\" id='answer-2-2'><label for=\"answer-2-2\"></label></li><li>f - <input class=\"multifill\" id='answer-2-3'><label for=\"answer-2-3\"></label></li><li>š - <input class=\"multifill\" id='answer-2-4'><label for=\"answer-2-4\"></label><li>ď - <input class=\"multifill\" id='answer-2-5'><label for=\"answer-2-5\"></label></li></li></ul>",
                         "answers": [
@@ -264,7 +258,8 @@
                             "se znělá hláska mění v neznělou",
                             "se neznělá hláska mění ve znělou"
                         ],
-                        "correct": "se znělá hláska mění v neznělou"
+                        "correct": "se znělá hláska mění v neznělou",
+                        "points": 1
                     }
                 },
                 {
@@ -278,7 +273,8 @@
                             "strakapoud",
                             "lev"
                         ],
-                        "correct": "pes"
+                        "correct": "pes",
+                        "points": 1
                     }
                 }
             ]
@@ -328,7 +324,8 @@
                             "liché jery (od konce slova) zanikly a sudé se změnily v e",
                             "sudé jery (od konce slova) zanikly a liché se změnily v e"
                         ],
-                        "correct": "liché jery (od konce slova) zanikly a sudé se změnily v e"
+                        "correct": "liché jery (od konce slova) zanikly a sudé se změnily v e",
+                        "points": 1
                     }
                 },
                 {
@@ -342,7 +339,8 @@
                             "východomoravská",
                             "slezská"
                         ],
-                        "correct": "středomoravská"
+                        "correct": "středomoravská",
+                        "points": 1
                     }
                 }
             ]
@@ -418,6 +416,7 @@
                     "title": "Doplňte odpovídající text",
                     "type": "multifill",
                     "data": {
+                        "points": 2,
                         "question": "Znovu si prohlédněte kód a zkuste doplnit pravidla.",
                         "template": "<code class='multiline'>if last_character <input class=\"multifill\" id='answer-2-0'><label for=\"answer-2-0\"></label>:\n\tlast_character = \"s\"\nif last_character == \"ž\":\n\tlast_character <input class=\"multifill\" id='answer-2-1'><label for=\"answer-2-1\"></label></code>",
                         "answers": [
@@ -444,6 +443,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Mohli bychom některá klíčová slova v uvedeném kódu nahradit jinými?",
                         "options": [
                             "ne, klíčová slova musejí být použita tímto způsobem",
@@ -483,6 +483,7 @@
                     "title": "Zvolte všechny správné odpovědi",
                     "type":"singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Analýza řeči se zabývá",
                         "options":[
                             "rozpoznáváním jazyka, kterým dotyčný mluví (čeština, angličtina, němčina, ...)",
@@ -498,6 +499,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Syntéza řeči se zabývá",
                         "options":[
                             "zkoumáním řečových vad daného jedince",
@@ -513,6 +515,7 @@
                     "title": "Zvolte všechny správné odpovědi",
                     "type":"multichoice",
                     "data":{
+                        "points": 3,
                         "question": "Kterou část / které části věty <i>Věž kostela sv. Gabriela měří 43 m.</i> by bylo nutné v rámci syntézy řeči rozepsat?",
                         "options":[
                             "Věž",
@@ -574,6 +577,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Morfologie se zabývá",
                         "options": [
                             "větnou stavbou",
@@ -588,6 +592,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Základní jednotkou morfologie je",
                         "options": [
                             "morf",
@@ -602,6 +607,7 @@
                     "title": "Zvolte všechny správné odpovědi",
                     "type": "multichoice",
                     "data": {
+                        "points": 2,
                         "question": "Mezi vlastnosti morfému patří",
                         "options": [
                             "izolovatelnost",
@@ -621,6 +627,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Základní skupiny morfémů jsou",
                         "options": [
                             "předpony a přípony",
@@ -635,6 +642,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Která část slova <i>nejen</i> tvoří morfém?",
                         "options": [
                             "nej",
@@ -736,6 +744,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Co je to korpus?",
                         "options": [
                             "abecedně řazený seznam slovní zásoby",
@@ -750,6 +759,7 @@
                     "title": "Zvolte všechny správné odpovědi",
                     "type": "multichoice",
                     "data": {
+                        "points": 2,
                         "question": "Vyberte kritéria, podle kterých se dělí korpusy.",
                         "options": [
                             "synchronní x diachronní",
@@ -769,6 +779,7 @@
                     "title": "Na vynechaná místa přesuňte odpovídající položky z nabídky",
                     "type": "matching",
                     "data":{
+                        "points": 4,
                         "question": "Přiřaďte české termíny k latinským ekvivalentům.",
                         "optionsFixed": ["casus","verbum","akuzativ", "substantivum"],
                         "optionsMatch": ["4. pád","podstatné jméno","sloveso","pád"],
@@ -784,6 +795,7 @@
                     "title": "Na vynechaná místa přesuňte odpovídající položky z nabídky",
                     "type": "matching",
                     "data":{
+                        "points": 4,
                         "question": "Přiřaďte české termíny k latinským ekvivalentům.",
                         "optionsFixed": ["genus","neutrum","femininum", "maskulinum"],
                         "optionsMatch": ["rod mužský","rod","rod střední","rod ženský"],
@@ -799,6 +811,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Vyberte správnou značku pro slovo <i>kávu</i> v kontextu <i>Dali si spolu kávu.</i>",
                         "options": [
                             "k1gNnSc4",
@@ -851,6 +864,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Co je to modus?",
                         "options": [
                             "nejčastější hodnota",
@@ -865,6 +879,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Co je to medián?",
                         "options": [
                             "nejčastější hodnota",
@@ -973,6 +988,7 @@
                     "title": "Doplňte kód pro výpočet průměrné délky slova v korpusu (zachovejte diakritiku).",
                     "type": "multifill",
                     "data": {
+                        "points": 2,
                         "question": "Doplňte kód pro výpočet průměrné délky slova v korpusu (zachovejte diakritiku).",
                         "template": "<code class='multiline'>korpus = [{\"tvar\": \"kočkou\", \"lemma\": \"kočka\", \"značka\": \"k1gFnSc7\"}, {\"tvar\": \"divokou\", \"lemma\": \"divoký\", \"značka\": \"k2gFnSc7\"}]\ncelková_délka = 0\nfor položka in korpus:\n\tcelková_délka += len(položka<input class=\"multifill\" id='answer-3-0'><label for=\"answer-3-0\"></label>:\nprint(<input class=\"multifill\" id='answer-3-1'><label for=\"answer-3-1\"></label> /len(korpus))\t<i># len(x) je délka slova, pokud je x text, a počet položek, pokud je x seznam</i></code>",
                         "answers": [
@@ -1016,17 +1032,48 @@
             ],
             "quizes": [
                 {
-                    "title": "asdasd",
-                    "type": "singlechoice",
+                    "title": "Pomocí nástroje Majka analyzujte zvýrazněné slovo a vyberte nejvhodnější lemma a značku.",
+                    "type": "majka",
                     "data": {
-                        "question": "PROVIZORNÍ OTÁZKA",
-                        "options":[
-                            "a",
-                            "b",
-                            "c",
-                            "d"
-                        ],
-                        "correct": "d"
+                        "points": 1,
+                        "question": "V hlavní <b>roli</b> se představí Antonín Smyšlený.",
+                        "correct": "role:k1gFnSc6"
+                    }
+                },
+                {
+                    "title": "Pomocí nástroje Majka analyzujte zvýrazněné slovo a vyberte nejvhodnější lemma a značku.",
+                    "type": "majka",
+                    "data": {
+                        "points": 1,
+                        "question": "Umístil se na <b>třetím</b> místě.",
+                        "correct": "třetí:k4gNnSc6"
+                    }
+                },
+                {
+                    "title": "Pomocí nástroje Majka analyzujte zvýrazněné slovo a vyberte nejvhodnější lemma a značku.",
+                    "type": "majka",
+                    "data": {
+                        "points": 1,
+                        "question": "Dal si k obědu <b>rizoto</b>",
+                        "correct": "rizoto:k1gNnSc4"
+                    }
+                },
+                {
+                    "title": "Pomocí nástroje Majka analyzujte zvýrazněné slovo a vyberte nejvhodnější lemma a značku.",
+                    "type": "majka",
+                    "data": {
+                        "points": 1,
+                        "question": "Hlavním městem <b>Portugalska</b> je Lisabon.",
+                        "correct": "Portugalsko:k1gNnSc2"
+                    }
+                },
+                {
+                    "title": "Pomocí nástroje Majka analyzujte zvýrazněné slovo a vyberte nejvhodnější lemma a značku. (atribut p označuje osobu)",
+                    "type": "majka",
+                    "data": {
+                        "points": 1,
+                        "question": "Je to ve <b>vašich</b> rukou",
+                        "correct": "váš:k3p2gFnPc6"
                     }
                 }
             ]
@@ -1080,6 +1127,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question":"Na kterém obrázku je znázorněn úplný graf? OBRÁZEK",
                         "options": [
                             "Obr. A",
@@ -1094,6 +1142,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question":"Na kterém obrázku je znázorněn graf, který není souvislý? OBRÁZEK",
                         "options": [
                             "Obr. A",
@@ -1108,6 +1157,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question":"Na kterém obrázku je znázorněn stromový graf? OBRÁZEK",
                         "options": [
                             "Obr. A",
@@ -1122,6 +1172,7 @@
                     "title": "Zvolte všechny správné odpovědi",
                     "type": "multichoice",
                     "data": {
+                        "points": 3,
                         "question":"Které kombinace vrcholů z uvedeného obrázku (při zachování všech hran, které do nich vedou) mohou tvořit podgraf v podobě cyklu? OBRÁZEK",
                         "options": [
                             "1, 2, 3, 4",
@@ -1179,6 +1230,7 @@
                     "title": "Zvol správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Čím se zabývá syntax?",
                         "options":[
                             "zvukovou stránkou jazyka z hlediska funkce",
@@ -1193,6 +1245,7 @@
                     "title": "Zvol správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "V generativní syntaxi se používají",
                         "options":[
                             "složkové stromy",
@@ -1206,6 +1259,7 @@
                     "title": "Zvol správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Při zachycování struktury složkovým stromem",
                         "options":[
                             "se používají jen terminální symboly a záleží na pořadí slov",
@@ -1220,6 +1274,7 @@
                     "title": "Zvol správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Uzly jsou v generativní syntaxi tvořeny",
                         "options":[
                             "jednou složkou",
@@ -1283,10 +1338,12 @@
                 }
             ],
             "quizes": [
+
                 {
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Nejobecnější pojmenování významové jednotky je",
                         "options":[
                             "bod",
@@ -1301,6 +1358,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Mezi testy konstituentů nepatří",
                         "options":[
                             "vypuštění konstituentu",
@@ -1312,31 +1370,33 @@
                     }
                 },
                 {
-                    "title": "ÚLOHA I ICTrees - TODO",
-                    "type": "singlechoice",
+                    "title": "Zvolte správnou odpověď",
+                    "type": "trees",
                     "data": {
-                        "question": "Vytvoř strukturu spojení vyhnání podvodníka z Brna ve významu zachycujícím původ podvodníka (nově vzniklé uzly označuj čísly od 1)",
-                        "options":[
-                            "vypuštění konstituentu",
-                            "nahrazení zájmenem",
-                            "využití příklonky/předklonky",
-                            "rozdělení konstituentu"
-                        ],
-                        "correct": "rozdělení konstituentu"
+                        "points": 5,
+                        "question": "Vytvoř strukturu věty",
+                        "constituents": "<Pron>I,<V>see,<N>trees,<P>of,<A>green",
+                        "correct": "[I,[see,[trees,[of,green]]]]"
                     }
                 },
                 {
-                    "title": "ÚLOHA I ICTrees - TODO",
-                    "type": "singlechoice",
+                    "title": "Kliknutím vyberte uzly, které chcete spojit, a spojte je pomocí tlačítka Merge",
+                    "type": "trees",
                     "data": {
-                        "question": "Vytvoř strukturu spojení vyhnání podvodníka z Brna ve významu zachycujícím místo, kde k události došlo (nově vzniklé uzly označuj čísly od 1)",
-                        "options":[
-                            "vypuštění konstituentu",
-                            "nahrazení zájmenem",
-                            "využití příklonky/předklonky",
-                            "rozdělení konstituentu"
-                        ],
-                        "correct": "rozdělení konstituentu"
+                        "points": 2,
+                        "question": "Vytvoř strukturu spojení <i>vyhnání podvodníka z Brna</i> ve významu zachycujícím původ podvodníka (nově vzniklé uzly označuj čísly od 1)",
+                        "constituents": "<vyhnání>,<podvodníků>, <z Brna>",
+                        "correct": "[vyhnání,[podvodníků,z Brna]"
+                    }
+                },
+                {
+                    "title": "Kliknutím vyberte uzly, které chcete spojit, a spojte je pomocí tlačítka Merge",
+                    "type": "trees",
+                    "data": {
+                        "points": 2,
+                        "question": "Vytvoř strukturu spojení vyhnání podvodníka z Brna ve významu zachycujícím původ podvodníka (nově vzniklé uzly označuj čísly od 1)",
+                        "constituents": "<vyhnání>,<podvodníků>, <z Brna>",
+                        "correct": "[vyhnání,podvodníků],z Brna]"
                     }
                 }
             ]
@@ -1374,14 +1434,71 @@
             ],
             "quizes": [
                 {
-                    "title": "ÚLOHY TODO",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
-                        "question": "strom věty, vybrat, který uzel je specifikátor, komplement, hlava, adjunkt / určit typ zadaného uzlu",
-                        "options": ["a","b"],
-                        "correct": "b"
+                        "points": 1,
+                        "question": "Ve frázi <i>psát knihu</i> je hlavou",
+                        "options": ["psát","knihu"],
+                        "correct": "psát"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "points": 1,
+                        "question": "Ve frázi <i>večerní šaty</i> je hlavou",
+                        "options": ["večerní","šaty"],
+                        "correct": "šaty"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "points": 1,
+                        "question": "Slovo <i>nástroj</i> ve větě <i>Nástroj vyhodnotil data.</i> odpovídá",
+                        "options": ["komplementu","hlavě", "specifikátoru", "adjunktu"],
+                        "correct": "specifikátoru"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "points": 1,
+                        "question": "Ve větě <i>Jana s Pavlem šli do kina.</i> odpovídá fráze <i>do kina</i>",
+                        "options": ["komplementu","hlavě", "specifikátoru", "adjunktu"],
+                        "correct": "adjunktu"
+                    }
+                }, 
+                {
+                    "title":"Na vynechaná místa přesuňte odpovídající položky z nabídky",
+                    "type":"matching",
+                    "data":{
+                        "points": 4,
+                        "question": "V následující větě určete, který uzel odpovídá kterému typu konstituentu OBRÁZEK",
+                        "optionsFixed": ["komplement",
+                            "hlava",
+                            "specifikátor",
+                            "adjunkt"
+                            ],
+                        "optionsMatch": [
+                            "Jana",
+                            "kreslila",
+                            "obrázek",
+                            "do pomátníku"
+                        ],
+                        "correct": {
+                            "komplement": ["obrázek"],
+                            "hlava": ["kreslila"],
+                            "specifikátor": ["Jana"],
+                            "adjunkt": ["do památníku"]
+                        }
                     }
                 }
+
             ]
         },
         "synt. analýza": {
@@ -1407,6 +1524,7 @@
                     "title": "OTÁZKA/ÚKOL SYNT/SET - TODO",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Xy",
                         "options": ["a", "b"],
                         "correct": "a"
@@ -1438,6 +1556,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question":"Jak se jmenují dvě složky, kterými se zabývá lexikologie?",
                         "options":["onomastika a sémiologie",
                             "lexikalistika a lexikografie",
@@ -1451,6 +1570,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question":"Na co se zaměřuje lexikální onomaziologie?",
                         "options":["teorie pojmenování",
                             "význam a významové vztahy",
@@ -1464,6 +1584,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question":"Co je předmětem sémantiky?",
                         "options":["teorie pojmenování",
                             "význam a významové vztahy",
@@ -1499,7 +1620,7 @@
                     "text": ["K zachycení významů a vztahů mezi nimi můžeme mimo jiné použít takzvanou sémantickou síť. Tu si můžeme představit jako graf, který propojuje jednotlivá slova různými typy vztahů. Příkladem takové sítě je WordNet. Jeho základ tvoří synonymické řady, které nazýváme <b>synsety</b>. Ty mají přiřazený význam. Mezi jednotlivými synsety můžeme pozorovat další vztahy, například nadřazenost – podřazenost, celek – část a podobně. První WordNet byl vytvořený v 80. letech na univerzitě v Princetonu a stále se vyvíjí. Dnes už existuje i česká verze (která vzniká na Fakultě informatiky Masarykovy univerzity) nebo mezinárodní projekt EuroWordNet."]
                 },
                 {
-                    "title": "Ukízka z WordNetu - TODO",
+                    "title": "Ukázka z WordNetu - TODO",
                     "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
                 },
                 {
@@ -1512,6 +1633,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Přístup, který se snažil zachytit význam pomocí binárních (+/-) rysů se nazývá",
                         "options": ["lexikální sémaziologie",
                             "desambiguace",
@@ -1525,6 +1647,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Homonymie je",
                         "options": ["když má více různých slov stejný význam",
                             "když má jedno slovo více různých významů",
@@ -1538,6 +1661,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Proces, kdy se na základě kontextu vybírá správná značka pro určité slovo, se nazývá",
                         "options": ["sémantická analýza",
                             "desambiguace",
@@ -1551,6 +1675,7 @@
                     "title": "Zvolte všechny správné odpovědi",
                     "type": "multichoice",
                     "data": {
+                        "points": 2,
                         "question": "Vyberte slova, která jsou homonymní",
                         "options": ["polévka",
                             "svišti",
@@ -1566,23 +1691,31 @@
                     }
                 },
                 {
-                    "title": "Zvolte správnou odpověď",
-                    "type": "singlechoice",
+                    "title": "Zvolte všechny správné odpovědi",
+                    "type": "multichoice",
                     "data": {
-                        "question": "WordNet - TODO",
-                        "options": ["a",
-                            "b",
-                            "c",
-                            "d"
+                        "points": 3,
+                        "question": "Vyberte slova, která jsou homonymní",
+                        "options": ["psaní",
+                            "ponožka",
+                            "hnát",
+                            "slunečnice"
                         ],
-                        "correct": "d"
+                        "correct": [
+                            true,
+                            false,
+                            true,
+                            true
+                        ]
                     }
                 },
+
                 {
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
-                        "question": "Naivní Leskův algoritmus - TODO",
+                        "points": 1,
+                        "question": "Wordnet - TOFinish",
                         "options": ["a",
                             "b",
                             "c",
@@ -1618,12 +1751,17 @@
             ],
             "quizes": [
                 {
-                    "title": "asdasd",
+                    "title": "Na základě využití Internetové jazykové příručky zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
-                        "question": "DebDict TODO",
-                        "options": ["a"],
-                        "correct": "a"
+                        "points":1,
+                        "question": "Jak je to podle příručky s velkými písmeny u pohádkové KARKULKY?",
+                        "options": ["jediný možný zápis je Červená Karkulka", 
+                        "jediný možný zápis je Červená karkulka",
+                        "oba zápisy jsou možné, ale Červená Karkulka je v souladu s Pravidly českého pravopisu",
+                        "oba zápisy jsou možné, ale Červená karkulka je v souladu s Pravidly českého pravopisu"
+                    ],
+                        "correct": "oba zápisy jsou možné, ale Červená karkulka je v souladu s Pravidly českého pravopisu"
                     }
                 }
             ]
@@ -1693,6 +1831,7 @@
                     "title": "Zvolte všechny správné odpovědi",
                     "type": "multichoice",
                     "data": {
+                        "points": 1,
                         "question": "Vyberte odpovídající přepis/y věty <i>Někteří lidé mají zelené oči.</i>",
                         "options":[
                             "∃x Clovek(x) ∧ Zelene_oci(x)",
@@ -1712,6 +1851,7 @@
                     "title": "Zvolte všechny správné odpovědi",
                     "type": "multichoice",
                     "data": {
+                        "points": 2,
                         "question": "Vyberte odpovídající přepis/y věty <i>Existují lidé, kteří nemají sourozence.</i>",
                         "options":[
                             "∃x∀y ¬Sourozenec(x, y) ",
@@ -1731,6 +1871,7 @@
                     "title": "Zvolte všechny správné odpovědi",
                     "type": "multichoice",
                     "data": {
+                        "points": 1,
                         "question": "Vyberte odpovídající přepis/y věty <i>Všechny kočky mňoukají.</i>",
                         "options":[
                             "∀x Kocka(x) ∧ Mnouka(x)",
@@ -1750,6 +1891,7 @@
                     "title": "Zvolte všechny správné odpovědi",
                     "type": "multichoice",
                     "data": {
+                        "points": 2,
                         "question": "Vyberte negaci věty <i>Všechny krabice jsou z papíru.</i>",
                         "options":[
                             "∃x Krabice(x) ∧ ¬Papirova(x)",
@@ -1769,6 +1911,7 @@
                     "title":"Na vynechaná místa přesuňte odpovídající položky z nabídky",
                     "type":"matching",
                     "data":{
+                        "points": 4,
                         "question": "Spojte věty s odpovídajícími výrazy",
                         "optionsFixed": ["Všichni učitelé mají všechny své žáky rádi",
                             "Všichni žáci mají všechny své učitele rádi",
@@ -1793,6 +1936,7 @@
                     "title":"Na vynechaná místa přesuňte odpovídající položky z nabídky",
                     "type":"matching",
                     "data":{
+                        "points": 4,
                         "question": "Spojte věty s odpovídajícími výrazy",
                         "optionsFixed": [
                             "Neexistuje žák, který má rád všechny své učitele",
@@ -1837,9 +1981,28 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
-                        "question": "xy",
-                        "options": ["a", "b"],
-                        "correct": "a"
+                        "points": 1,
+                        "question": "Různé tvary slov můžeme prostřednictvím vyhledávačů nacházet díky",
+                        "options": ["sémantické analýze", 
+                            "syntaktické analýze", 
+                            "komponentové analýze", 
+                            "morfologické analýze"
+                        ],
+                        "correct": "morfologické analýze"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "points": 1,
+                        "question": "Nejjednodušší korektory, které fungují pouze na principu slovníku, dokážou opravit ",
+                        "options": ["chybu ve shodě přísudku s podmětem", 
+                            "chybějící čárku v souvětí", 
+                            "překlep, pokud nevytváří existující slovo", 
+                            "použití archaického výrazu"
+                        ],
+                        "correct": "překlep, pokud nevytváří existující slovo"
                     }
                 }
 
@@ -1880,6 +2043,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "xy",
                         "options": ["a", "b"],
                         "correct": "a"
@@ -1918,6 +2082,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "xy",
                         "options": ["a", "b"],
                         "correct": "a"
