@@ -26,7 +26,7 @@
                     "type": "corpus",
                     "data":{
                         "question": "TEST QUESTION",
-                        "points": 5,
+                        "points": 3,
                         "correct": [3]
                     }
                 }, 
@@ -78,7 +78,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "trees",
                     "data": {
-                        "points": 5,
+                        "points": 2,
                         "question": "Vytvoř strukturu věty",
                         "constituents": "<Pron>I,<V>see,<N>trees,<P>of,<A>green",
                         "correct": "[I,[see,[trees,[of,green]]]]"
@@ -88,7 +88,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
-                        "points": 5,
+                        "points": 1,
                         "question": "Čím se zabývá fonetika? ",
                         "options": [
                             "zvukovou stránkou jazyka z hlediska vzniku a vnímání řeči",
@@ -1068,12 +1068,12 @@
                     }
                 },
                 {
-                    "title": "Pomocí nástroje Majka analyzujte zvýrazněné slovo a vyberte nejvhodnější lemma a značku. (atribut p označuje osobu)",
+                    "title": "Pomocí nástroje Majka analyzujte zvýrazněné slovo a vyberte nejvhodnější lemma a značku.",
                     "type": "majka",
                     "data": {
                         "points": 1,
                         "question": "Je to ve <b>vašich</b> rukou",
-                        "correct": "váš:k3p2gFnPc6"
+                        "correct": "váš:k3gFnPc6"
                     }
                 }
             ]
@@ -1217,7 +1217,8 @@
                         "Důležité je také zachovat pořadí slov v grafu tak, aby odpovídalo dané větě (čáry spojující jednotlivé uzly se přitom nesmějí křížit).",
                         "Tento způsob umožňuje lépe zachytit skutečnost, že se na významu věty podílejí nejen jednotlivá slova, ale i to, jak jsou spojena dohromady. Pomocí složkových stromů totiž můžeme zaznamenat i určitou hierarchii a postupné skládání významů."
                     ]
-                },           {
+                },          
+                {
                     "title": "Binární větvení",
                     "text": ["Zmíněné skládání významů probíhá v generativní syntaxi vždy po dvojicích. Nové uzly se tak tvoří spojením dvou složek a z jednoho uzlu mohou jít pouze dvě větve (čáry do dalšího uzlu). Samotná slova (jednotky na nejnižší úrovni) představují také uzly.",
                         "Základní struktura pak vypadá tak, že se sloveso spojí s předmětem, čímž vznikne událost, která může být lokalizována. Například <i>[[Číst knihu] [v knihovně]].</i>",
@@ -1622,10 +1623,6 @@
                 {
                     "title": "Ukázka z WordNetu - TODO",
                     "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
-                },
-                {
-                    "title": "Naivní Leskův algoritmus",
-                    "text": ["Tento algoritmus se snaží určit význam slova v textu (vybrat z několika možných) na základě slov, která se nacházejí v jeho okolí. Tato okolní slova porovnává se slovy obsaženými v jednotlivý definicích a příkladech. Aby se porovnávání trochu zjednodušilo, všechna slova se nejdříve lemmatizují. Jako vítězný význam pak označí ten, v jehož definici se nachází nejvíce slov společných s těmi v okolí hledaného výrazu."]
                 }
             ],
             "quizes": [
@@ -1715,13 +1712,13 @@
                     "type": "singlechoice",
                     "data": {
                         "points": 1,
-                        "question": "Wordnet - TOFinish",
-                        "options": ["a",
-                            "b",
-                            "c",
-                            "d"
+                        "question": "a obrázku je zachycen výpis z WordNetu pro slovo lev. Co označuje relace pojmenovaná jako mero_part (vztahy jsou popisovány v pořadí související slovo ku hledanému)? OBRÁZEK",
+                        "options": ["vztah celek – část",
+                            "vztah část – celek",
+                            "nadřazené slovo",
+                            "odvozené slovo"
                         ],
-                        "correct": "d"
+                        "correct": "vztah část – celek"
                     }
                 }
 
@@ -1972,6 +1969,10 @@
                     "text":["Kromě nástrojů, které jsme si představili v předchozích lekcích, má počítačová lingvistika využití v celé řadě dalších situací. Jednou z těch, se kterými jste se pravděpodobně setkali, je takzvané <b>prediktivní psaní</b>. Jedná se o funkci, kterou známe například z <b>chytrých telefonů</b>, které nám během psaní napovídají, co (možná) chceme psát. S obdobnou funkcí se můžeme setkat i u <b>internetových vyhledávačů</b>, které mimo jiné využívají i zmíněnou <b>morfologickou analýzu</b>. Díky tomu můžeme klíčová slova vyhledávat ve všech možných tvarech zároveň, čímž získáme mnohem více výsledků."]
                 },
                 {
+                    "title": "",
+                    "text":["Vyzkoušejte si nástroj pro prediktivní psaní vyvíjený v Centru zpracování přirozeného jazyka na Fakultě informatiky Masarykovy univerzity. Snažte se co nejvíce využít možnosti, které vám nabízí. Zkuste s jeho pomocí napsat třeba krátkou pohádku a nechte se překvapit, co z toho vznikne. Bylo nebylo... IFRAME"]
+                },
+                {
                     "title": "Korektory",
                     "text":["Dalším poměrně běžným případem, kdy se s počítačovou lingvistikou setkáváme, jsou <b>korektory v textových editorech</b>. Ty v základu pracují se <b>slovníkem správných</b> (tvarů) <b>slov</b>, čímž dokážou odhalit především <b>pravopisné chyby</b>. Dnešní korektory, v jejichž pozadí stojí algoritmy počítačové lingvistiky, už ale často umožňují i kontrolu <b>gramatiky</b> či <b>stylistiky</b>. Jeden takový korektor, který by měl dokázat odhalit chyby nejrůznějšího druhu, vzniká také na Ústavu českého jazyka v rámci Filozofické fakulty Masarykovy univerzity a na jeho vývoji se podílí i několik absolventů počítačové lingvistiky."]
                 }
@@ -2033,8 +2034,12 @@
                 },
                 {
                     "title": "",
-                    "text":["Prvním úspěšnějším pokusem o chatbota byl v šedesátých letech projekt <b>Eliza</b>, který napodoboval rozhovor s psychoterapeutem. Poměrně zajímavým příkladem ze současnosti je pak mobilní aplikace <b>Replika</b> (má ovšem i webové rozhraní), která má představovat věrnou a naslouchající virtuální kamarádku nebo kamaráda, a poskytnout tak psychickou podporu a pocit zázemí."
-                        
+                    "text":["Prvním úspěšnějším pokusem o chatbota byl v šedesátých letech projekt <b>Eliza</b>, který napodoboval rozhovor s psychoterapeutem. Poměrně zajímavým příkladem ze současnosti je pak mobilní aplikace <b>Replika</b> (má ovšem i webové rozhraní), která má představovat věrnou a naslouchající virtuální kamarádku nebo kamaráda, a poskytnout tak psychickou podporu a pocit zázemí."                       
+                    ]
+                },
+                {
+                    "title": "Eliza",
+                    "text":["Vyzkoušejte si chatování s Elizou (probíhá v angličtině). IFRAME: http://psych.fullerton.edu/mbirnbaum/psych101/Eliza.htm"                       
                     ]
                 }
             ],
@@ -2044,11 +2049,30 @@
                     "type": "singlechoice",
                     "data": {
                         "points": 1,
-                        "question": "xy",
-                        "options": ["a", "b"],
-                        "correct": "a"
+                        "question": "Neuronové sítě se učí pomocí",
+                        "options": ["trénovacích dat v podobě vstupů a požadovaných výstupů", 
+                            "trénovacích dat v podobě velkého množství náhodných vstupů",
+                            "testovacích dat v podobě pravděpodobných výstupů",
+                            "testovacích dat v podobě pravděpodobných vstupů"
+                        ],
+                        "correct": "trénovacích dat v podobě vstupů a požadovaných výstupů"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "points": 1,
+                        "question": "Chatbot Eliza simuloval rozhovor s",
+                        "options": ["filozofem", 
+                            "psychoterapeutem",
+                            "pacientem",
+                            "kamarádem"
+                        ],
+                        "correct": "psychoterapeutem"
                     }
                 }
+
                 
             ]
 
@@ -2058,23 +2082,38 @@
             "content": [
                 {
                     "title": "",
-                    "text":["V rámci počítačové lingvistiky a zpracování přirozeného jazyka vzniká celá řada dalších specializovaných programů, nástrojů a výzkumů. Existují například nástroje na <b>určování autorství</b> (tedy hledání pravděpodobného autora na základě typických znaků v textu, jako jsou konkrétní slova, ale i jejich spojení, slovosled a podobně). Nejspíše jste zaznamenali i nástroje na <b>kontrolu plagiátů</b>, které porovnávají texty a hledají mezi nimi shody. Provádí se také <b>analýza sentimentu</b>, v rámci níž se například zjišťuje, které z recenzí jsou pozitivní a které negativní, a mnoho dalšího."]
+                    "text":["V rámci počítačové lingvistiky a zpracování přirozeného jazyka vzniká celá řada dalších specializovaných programů, nástrojů a výzkumů. Existují například nástroje na <b>určování autorství</b> (tedy hledání pravděpodobného autora na základě typických znaků v textu, jako jsou konkrétní slova, ale i jejich spojení, slovosled a podobně) nebo tématu textu. Nejspíše jste zaznamenali i nástroje na <b>kontrolu plagiátů</b>, které porovnávají texty a hledají mezi nimi shody. Provádí se také <b>analýza sentimentu</b>, v rámci níž se například zjišťuje, které z recenzí jsou pozitivní a které negativní, a mnoho dalšího."]
                 },
                 {
                     "title": "",
                     "text":["Nakonec si ukážeme ještě některé konkrétní nástroje, které by pro vás mohly být zajímavé. Jedním takovým je například <a href=\"https://nlp.fi.muni.cz/projekty/punctuation/\">Webové rozhraní pro systém doplňování čárek</a>.",
-                        "V současné době stále více lidí píše na internetu nebo do různých messengerů bez diakritiky. V Centru zpracování přirozeného jazyka tak vznikl <a href=\"http://nlp.fi.muni.cz/cz_accent/\">nástroj</a>, který <b>diakritiku doplňuje</b>.",
-                        "Za zmínku určitě stojí také <a href=\"http://www.webovatypografie.cz/\">Webová typografie</a>, která by měla pomoci odstranit nejčastější <b>typografické chyby</b>."
+                        "Vyzkoušejte si ho. IFRAME"
                     ]
+                },
+                {
+                    "title": "Doplňování diakritiky",
+                    "text":["V současné době stále více lidí píše na internetu nebo do různých messengerů bez diakritiky. V Centru zpracování přirozeného jazyka tak vznikl <a href=\"http://nlp.fi.muni.cz/cz_accent/\">nástroj</a>, který <b>diakritiku doplňuje</b>.",
+                    "Můžete si ho sami vyzkoušet. IFRAME"]
+                },
+                {
+                    "title": "Webová typografie",
+                    "text":["Za zmínku určitě stojí také <a href=\"http://www.webovatypografie.cz/\">Webová typografie</a>, která by měla pomoci odstranit nejčastější <b>typografické chyby</b>.",
+                        "Vyzkoušejte si práci s Webovou typografií IFRAME"]
+
                 },
                 {
                     "title": "Korpusy a korpusové nástroje",
                     "text":["Pro práci s jazykovými daty, vyhledávání různých jevů, ale i zajímavostí je pak možné využít nejrůznější korpusy a řadu korpusových nástrojů, které jsou k nalezení na <a href=\"https://www.korpus.cz/\">korpus.cz</a>",
-                        "Pro učení jazyků může být užitečný nástroj <a href=\"https://skell.sketchengine.co.uk/run.cgi/skell\">SKELL</a>, který je založen na <b>korpusu</b> a poskytuje k hledaným výrazům <b>příklady užití</b>, <b>častý kontext</b> a slova, která se objevují v <b>podobném kontextu</b> (tedy nejen synonyma). Data jsou aktuálně dostupná pro češtinu, angličtinu, němčinu, ruštinu, italštinu a estonštinu."]
+                        "Pro vyhledávání konkrétních slov a získání základního přehledu o tom, jak používají, můžeme použít nástroj Slovo v kostce, který sdružuje různé informace o slově. Pro pokročilejší práci s korpusem pak můžeme použít korpusový manažer KonText, který nám umožňuje vybrat si nejvhodnější korpus, zadávat specifičtější dotazy a zobrazit všechny odpovídající výskyty. SyD pak umožňuje porovnávat užití dvou a více slov (například synonym nebo dublet), a to jak v současném jazyce, tak i z hlediska proměny v čase. Pro zkoumání slovotvorby je užitečný nástroj Morfio, Treq slouží k vyhledávání překladových ekvivalentů a KWords k odhalení klíčových slov v zadaném textu."
+                        ]
                 },
                 {
-                    "title": "",
-                    "text":[""]
+                    "title": "Korpusové nástroje",
+                    "text":["Vyzkoušejte si práci s korpusovými nástroji. V horní liště vloženého okna můžete přepínat mezi jednotlivými nástroji. IFRAME"]
+                },
+                {
+                    "title":"SKELL",
+                    "text":["Pro učení jazyků může být užitečný nástroj <a href=\"https://skell.sketchengine.co.uk/run.cgi/skell\">SKELL</a>, který je založen na <b>korpusu</b> a poskytuje k hledaným výrazům <b>příklady užití</b>, <b>častý kontext</b> a slova, která se objevují v <b>podobném kontextu</b> (tedy nejen synonyma). Data jsou aktuálně dostupná pro češtinu, angličtinu, němčinu, ruštinu, italštinu a estonštinu. Opět si ho můžete sami vyzkoušet. IFRAME"]
                 }
             ],
             "quizes":[
@@ -2083,9 +2122,42 @@
                     "type": "singlechoice",
                     "data": {
                         "points": 1,
-                        "question": "xy",
-                        "options": ["a", "b"],
-                        "correct": "a"
+                        "question": "Pro opravu uvozovek nebo přidání nedělitelných mezer můžete použít nástroj",
+                        "options": ["Webová typografie", "SKELL", "SyD", "CZACCENT"],
+                        "correct": "Webová typografie"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "points": 1,
+                        "question": "Pokud vás zajímá reálné použití slova v cizím jazyce, může vám pomoci nástroj",
+                        "options": ["CZACCENT", "Treq", "SKELL", "KWords"],
+                        "correct": "SKELL"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "points": 1,
+                        "question": "Pokud by vás zajímalo, jaká slova se tvoří podle vzoru -<i>it</i> a -<i>ený</i> (např. <i>kreslit</i> a <i>kreslený</i>), použijete",
+                        "options": ["SyD", "Morfio", "Treq", "SKELL"],
+                        "correct": "Morfio"
+                    }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "points": 1,
+                        "question": "Pomocí nástroje SyD porovnejte slova skříň a almara. Kdy bylo podle dostupných dat jejich používání nejvyrovnanější? IFRAME",
+                        "options": ["v první polovině 18. století", 
+                            "ve druhé polovině 18. století", 
+                            "v první polovině 19. století", 
+                            "ve druhé polovině 19. století"],
+                        "correct": "v první polovině 19. století"
                     }
                 }
                 

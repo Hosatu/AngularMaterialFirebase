@@ -1,9 +1,9 @@
 <div>
   <label id="example-radio-group-label" [innerHTML]="data.question"></label>
 
-  <input type="text" [(ngModel)]="word" placeholder="slovo"/>
-  <input type="text" [(ngModel)]="tag" placeholder="tag"/>
-  <input type="text" [(ngModel)]="lemma" placeholder="lemma"/>
+ <b> tvar</b><input type="text" [(ngModel)]="word" placeholder="slovo"/>
+ <b> tag</b> <input type="text" [(ngModel)]="tag" placeholder="tag"/>
+ <b> lemma</b><input type="text" [(ngModel)]="lemma" placeholder="lemma"/>
   <button mat-raised-button color="primary" (click)="show()" [disabled]="corpus.isLoading">Vyhledat</button>
 
 
