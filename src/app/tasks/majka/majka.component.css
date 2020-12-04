@@ -9,3 +9,11 @@
 #example-radio-group-label {
   font-weight: 300;
 }
+
+.incorrect {
+  color: red;
+}
+
+.correct {
+  color: green;
+}

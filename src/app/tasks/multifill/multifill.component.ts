@@ -37,7 +37,7 @@ export class MultifillComponent implements TaskComponent, OnInit {
 
   loadProgress() {
     console.log(this.progress);
-    if (this.progress && this.progress.answer) {
+    if (this.progress && this.progress.answer && !this.isAnswered) {
       for (const answerId of _.keys(this.progress.answer)) {
         this.document.getElementById(answerId).value = this.progress.answer[answerId];
       }
@@ -71,9 +71,17 @@ export class MultifillComponent implements TaskComponent, OnInit {
       label.innerText = this.isCorrect[answerIndex] ? '' : '(správná odpověď: ' +this.data.answers[answerIndex].reference + ')'
     }
     if(send) {
-      this.taskSubmitted.emit({points: Math.round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points), answer: answers});
+      this.taskSubmitted.emit({points: this.getPoints(), answer: answers});
     }
     this.isAnswered = true;
+  }
+
+  getInflection(points: number) {
+    return points === 1 ? '' : (points > 1 && points < 5 ? 'y' : 'ů');
+  }
+
+  getPoints() {
+    return Math.round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points);
   }
 
   getAnswer(id: number) {

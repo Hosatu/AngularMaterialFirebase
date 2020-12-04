@@ -40,7 +40,7 @@ export class MultichoiceComponent implements TaskComponent, OnInit {
 
   loadProgress() {
     console.log(this.progress);
-    if (this.progress && this.progress.answer) {
+    if (this.progress && this.progress.answer && !this.isAnswered) {
       this.answer = this.progress.answer;
       this.isCorrect = [];
       for(let answerIndex in this.data.correct) {
@@ -55,8 +55,36 @@ export class MultichoiceComponent implements TaskComponent, OnInit {
     for(let answerIndex in this.data.correct) {
       this.isCorrect.push(this.answer[answerIndex] == this.data.correct[answerIndex]);
     }
-    this.taskSubmitted.emit({points: Math.round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points), answer: this.answer});
+    this.taskSubmitted.emit({points: this.getPoints(), answer: this.answer});
     this.isAnswered = true;
+  }
+
+  getPoints() {
+    return Math.round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points);
+  }
+
+  getInflection(points: number) {
+    return points === 1 ? '' : (points > 1 && points < 5 ? 'y' : 'ů');
+  }
+
+  getOptionColor(index) {
+    if(this.isAnswered == false) {
+      return [];
+    }
+    if (this.answer[index] == this.data.correct[index]) {
+      return ['correct'];
+    }
+    return ['incorrect'];
+  }
+
+  getCorrectAnswer(index) {
+    if(this.isAnswered == false || this.data.correct == this.answer) {
+      return '';
+    }
+    if (this.answer[index] == this.data.correct[index]) {
+      return 'Správně!';
+    }
+    return 'Špatně!';
   }
 
 }

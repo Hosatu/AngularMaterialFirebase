@@ -3,7 +3,8 @@
 
 <mat-radio-group *ngIf="majkaOptions" [disabled]="isAnswered" aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="answer">
   <mat-radio-button color="primary" class="example-radio-button" *ngFor="let option of majkaOptions" [value]="option.Lemma+':'+option.Tag">
-    {{option.Lemma}} {{option.Tag}}
+   <span [ngClass]="getOptionColor(option)"> {{option.Lemma}} {{option.Tag}} </span>
   </mat-radio-button>
 </mat-radio-group>
+<b>{{getCorrectAnswer()}}</b><br/>
 <button mat-raised-button color="primary" (click)="submit()" [disabled]="isAnswered || !answer">Odeslat odpověď</button>

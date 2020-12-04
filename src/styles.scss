@@ -128,3 +128,9 @@ code.multiline {
 @media only screen and (max-width: 320px) {
 
 }
+
+app-corpus .mat-grid-tile figure {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: left !important;
+}

@@ -8,7 +8,7 @@
                     <h3><mat-icon>{{ getBlockIcon(progressData[lesson].sections[section])}}</mat-icon> <a [routerLink]="isSectionUnlocked(lesson, section)?'/kurz/'+lesson+'/'+section:null">{{section}}</a> {{pointsShow(calculatePoints(lesson, section))}}</h3>
                     <ul>
                         <li *ngFor="let quiz of _.keys(progressData[lesson].sections[section].quizResults)">
-                            <h3><mat-icon>{{ getQuizIcon(progressData[lesson].sections[section].quizResults[quiz])}}</mat-icon> {{_.toInteger(quiz) + 1}} {{pointsShow(calculatePoints(lesson, section, quiz))}}</h3>
+                            <h3><mat-icon>{{ getQuizIcon(progressData[lesson].sections[section].quizResults[quiz])}}</mat-icon> Úloha {{_.toInteger(quiz) + 1}} {{pointsShow(calculatePoints(lesson, section, quiz))}}</h3>
                         </li>
                     </ul>
                 </li>

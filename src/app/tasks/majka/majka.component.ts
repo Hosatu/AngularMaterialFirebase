@@ -37,12 +37,36 @@ export class MajkaComponent implements TaskComponent, OnInit {
 
   async loadProgress() {
     console.log(this.progress);
-    if (this.progress && this.progress.answer) {
+    if (this.progress && this.progress.answer && !this.isAnswered) {
       this.majkaWord = this.progress.answer.word;
       await this.loadMajka();
       this.answer = this.progress.answer.selected;
       this.isAnswered = true;
     }
+  }
+
+  getOptionColor(option) {
+    if(this.isAnswered == false) {
+      return [];
+    }
+    if (option == this.data.correct) {
+      return ['correct'];
+    }
+      return ['incorrect'];
+  }
+
+  getCorrectAnswer() {
+    if(this.isAnswered == false) {
+      return '';
+    }
+    if (this.data.correct == this.answer) {
+      return 'Správně! (' + this.data.points + ' bod' + this.getInflection(this.data.points) + ')';
+    }
+    return 'Špatně! Správná odpověď je ' + this.data.correct + '. (0 bodů)';
+  }
+
+  getInflection(points: number) {
+    return points === 1 ? '' : (points > 1 && points < 5 ? 'y' : 'ů');
   }
 
   async loadMajka() {

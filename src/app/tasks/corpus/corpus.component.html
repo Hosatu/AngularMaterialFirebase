@@ -6,8 +6,8 @@
   <input type="text" [(ngModel)]="lemma" placeholder="lemma"/>
   <button mat-raised-button color="primary" (click)="show()" [disabled]="corpus.isLoading">Vyhledat</button>
 
-
-
+  <mat-grid-list cols="2">
+<mat-grid-tile>
   <table mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="record">
       <th mat-header-cell *matHeaderCellDef> Záznam </th>
@@ -16,10 +16,21 @@
     <tr mat-header-row *matHeaderRowDef="['record']"></tr>
     <tr mat-row *matRowDef="let row; columns: ['record'];"></tr>
   </table>
-  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  <mat-paginator #main hidePageSize [pageSizeOptions]="[5]"></mat-paginator>
+</mat-grid-tile>
+<mat-grid-tile>
+  <table mat-table [dataSource]="dataSourceResults" *ngIf="isAnswered">
+    <ng-container matColumnDef="record">
+      <th mat-header-cell *matHeaderCellDef> Správný výsledek </th>
+      <td mat-cell *matCellDef="let element"> {{corpus.get(element.position - 5)?.word}} {{corpus.get(element.position - 4)?.word}} {{corpus.get(element.position - 3)?.word}} {{corpus.get(element.position - 2)?.word}} {{corpus.get(element.position - 1)?.word}} <span class="KWIC"><b>{{element.word}}</b>/{{element.lemma}}/{{element.tag}}</span> {{corpus.get(element.position + 1)?.word}} {{corpus.get(element.position + 2)?.word}} {{corpus.get(element.position + 3)?.word}} {{corpus.get(element.position + 4)?.word}} {{corpus.get(element.position + 5)?.word}}</td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="['record']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['record'];"></tr>
+  </table>
+  <mat-paginator #results hidePageSize [pageSizeOptions]="[5]" *ngIf="isAnswered"></mat-paginator>
+</mat-grid-tile>
+</mat-grid-list>
 
-
-
-
+  <b *ngIf="isAnswered">{{getPoints() == 0 ? 'Špatně' : getPoints() == data.points ? 'Správně' : 'Částečně správně' }}! ({{getPoints()}} bod{{getInflection(getPoints())}})</b><br/>
   <button mat-raised-button color="primary" (click)="submit()" [disabled]="isAnswered || !answer">Odeslat odpověď</button>
 </div>

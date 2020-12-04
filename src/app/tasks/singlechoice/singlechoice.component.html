@@ -1,7 +1,8 @@
 <label id="example-radio-group-label" [innerHTML]="data.question"></label>
 <mat-radio-group [disabled]="isAnswered" aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="answer">
-  <mat-radio-button color="primary" class="example-radio-button" *ngFor="let option of data.options" [value]="option">
-    <span [innerHtml]="option"></span>
+  <mat-radio-button color="primary" class="example-radio-button" *ngFor="let option of data.options" [value]="option" >
+    <span [innerHtml]="option" [ngClass]="getOptionColor(option)"></span> 
   </mat-radio-button>
 </mat-radio-group>
+<b>{{getCorrectAnswer()}}</b><br/>
 <button mat-raised-button color="primary" (click)="submit()" [disabled]="isAnswered || !answer">Odeslat odpověď</button>

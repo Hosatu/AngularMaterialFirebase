@@ -4,10 +4,11 @@
     <div class="drag-drop-container" *ngFor="let option of data.optionsFixed;let i = index">
         <div class="title">{{option}}</div>
 
-        <div cdkDropList [cdkDropListData]="answer[i]" class="drag-drop-list" (cdkDropListDropped)="drop($event, i)">
+        <div cdkDropList [cdkDropListData]="answer[i]" class="drag-drop-list" (cdkDropListDropped)="drop($event, i)" [ngClass]="getOptionColor(i)">
             <div class="drag-drop-box" *ngFor="let ans of answer[i]" cdkDrag>{{ans}}</div>
         </div>
-    </div>
+        {{getCorrectAnswer(i)}}
+    </div> 
     <div class="drag-drop-container blocky">
         <h4>Možnosti</h4>
         <div cdkDropList [cdkDropListData]="optionsPool" class="drag-drop-list" (cdkDropListDropped)="drop($event)">
@@ -15,4 +16,5 @@
         </div>
     </div>
 </div>
+<b *ngIf="isAnswered">{{getPoints() == 0 ? 'Špatně' : this.getPoints() == this.data.points ? 'Správně' : 'Částečně správně' }}! ({{getPoints()}} bod{{getInflection(this.getPoints())}})</b><br/>
 <button mat-raised-button color="primary" (click)="submit()" [disabled]="isAnswered">Odeslat odpověď</button>

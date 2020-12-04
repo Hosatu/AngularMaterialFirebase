@@ -1,2 +1,3 @@
 <span [innerHTML]="data.template | sanitizePipe"></span>
+<b *ngIf="isAnswered">{{this.getPoints() == 0 ? 'Špatně' : this.getPoints() == this.data.points ? 'Správně' : 'Částečně správně' }}! ({{getPoints()}} bod{{getInflection(this.getPoints())}})</b><br/>
 <button mat-raised-button color="primary" (click)="submit()" [disabled]="isAnswered || !isAllFilled()">Odeslat odpověď</button>
