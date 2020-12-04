@@ -10,6 +10,7 @@ import * as _ from 'lodash';
 import { MatSnackBar } from '@angular/material';
 import { ProgressService } from '@shared/services';
 import * as firebase from 'firebase';
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
@@ -27,7 +28,7 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
 
   @ViewChildren(TaskDirective) taskContainers: QueryList<TaskDirective>;
 
-  constructor(private snackBar: MatSnackBar, public url: ActivatedRoute, public files: HttpClient, private componentFactoryResolver: ComponentFactoryResolver, private progress: ProgressService ) {
+  constructor(private sanitizer: DomSanitizer, private snackBar: MatSnackBar, public url: ActivatedRoute, public files: HttpClient, private componentFactoryResolver: ComponentFactoryResolver, private progress: ProgressService ) {
     super();
   }
 
@@ -86,6 +87,9 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
         componentRef.changeDetectorRef.detectChanges();
       }
     });
+    if(task.data.question) {
+      task.data.question = this.sanitizer.bypassSecurityTrustHtml(task.data.question);
+    }
     (<TaskComponent>componentRef.instance).data = task.data;
     this.safeSubscribe(
       (<TaskComponent>componentRef.instance).taskSubmitted,
