@@ -11,7 +11,7 @@
   <table mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="record">
       <th mat-header-cell *matHeaderCellDef> Záznam </th>
-      <td mat-cell *matCellDef="let element"> {{corpus.get(element.position - 5)?.word}} {{corpus.get(element.position - 4)?.word}} {{corpus.get(element.position - 3)?.word}} {{corpus.get(element.position - 2)?.word}} {{corpus.get(element.position - 1)?.word}} <span class="KWIC"><b>{{element.word}}</b>/{{element.lemma}}/{{element.tag}}</span> {{corpus.get(element.position + 1)?.word}} {{corpus.get(element.position + 2)?.word}} {{corpus.get(element.position + 3)?.word}} {{corpus.get(element.position + 4)?.word}} {{corpus.get(element.position + 5)?.word}}</td>
+      <td mat-cell *matCellDef="let element"> {{corpus.get(element.position - 3)?.word}} {{corpus.get(element.position - 2)?.word}} {{corpus.get(element.position - 1)?.word}} <span class="KWIC"><b>{{element.word}}</b><span *ngIf="element.tag.length">/{{element.lemma}}/{{element.tag}}</span></span> {{corpus.get(element.position + 1)?.word}} {{corpus.get(element.position + 2)?.word}} {{corpus.get(element.position + 3)?.word}}</td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="['record']"></tr>
     <tr mat-row *matRowDef="let row; columns: ['record'];"></tr>
@@ -22,7 +22,7 @@
   <table mat-table [dataSource]="dataSourceResults" *ngIf="isAnswered">
     <ng-container matColumnDef="record">
       <th mat-header-cell *matHeaderCellDef> Správný výsledek </th>
-      <td mat-cell *matCellDef="let element"> {{corpus.get(element.position - 5)?.word}} {{corpus.get(element.position - 4)?.word}} {{corpus.get(element.position - 3)?.word}} {{corpus.get(element.position - 2)?.word}} {{corpus.get(element.position - 1)?.word}} <span class="KWIC"><b>{{element.word}}</b>/{{element.lemma}}/{{element.tag}}</span> {{corpus.get(element.position + 1)?.word}} {{corpus.get(element.position + 2)?.word}} {{corpus.get(element.position + 3)?.word}} {{corpus.get(element.position + 4)?.word}} {{corpus.get(element.position + 5)?.word}}</td>
+      <td mat-cell *matCellDef="let element"> {{corpus.get(element.position - 3)?.word}} {{corpus.get(element.position - 2)?.word}} {{corpus.get(element.position - 1)?.word}} <span class="KWIC"><b>{{element.word}}</b>/{{element.lemma}}/{{element.tag}}</span> {{corpus.get(element.position + 1)?.word}} {{corpus.get(element.position + 2)?.word}} {{corpus.get(element.position + 3)?.word}}</td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="['record']"></tr>
     <tr mat-row *matRowDef="let row; columns: ['record'];"></tr>

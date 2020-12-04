@@ -1,7 +1,2066 @@
 [
-    { "position": 0, "word":"Petr","lemma": "Petr", "tag":"k1"},
-    { "position": 1, "word":"Jan","lemma": "Jan", "tag":"k1"},
-    { "position": 2, "word":"Petr","lemma": "Petr", "tag":"k1"},
-    { "position": 3, "word":"Pavel","lemma": "Pavel", "tag":"k1"},
-    { "position": 4, "word":"Pavla","lemma": "Pavel", "tag":"k4"}
+    {
+        "position": 0,
+        "word": "A",
+        "lemma": "a",
+        "tag": "k9"
+    },
+    {
+        "position": 1,
+        "word": "do",
+        "lemma": "do",
+        "tag": "k7"
+    },
+    {
+        "position": 2,
+        "word": "pytle",
+        "lemma": "pytel",
+        "tag": "k1gMnSc2"
+    },
+    {
+        "position": 3,
+        "word": "!",
+        "lemma": "!",
+        "tag": ""
+    },
+    {
+        "position": 4,
+        "word": "Každý",
+        "lemma": "každý",
+        "tag": "k3gMnSc1"
+    },
+    {
+        "position": 5,
+        "word": "z",
+        "lemma": "z",
+        "tag": "k7"
+    },
+    {
+        "position": 6,
+        "word": "nás",
+        "lemma": "my",
+        "tag": "k3nPc2"
+    },
+    {
+        "position": 7,
+        "word": "to",
+        "lemma": "to",
+        "tag": "k3gNnSc4"
+    },
+    {
+        "position": 8,
+        "word": "nejspíš",
+        "lemma": "nejspíš",
+        "tag": "k9"
+    },
+    {
+        "position": 9,
+        "word": "zná",
+        "lemma": "znát",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 10,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 11,
+        "word": "Pravděpodobně",
+        "lemma": "pravděpodobně",
+        "tag": "k9"
+    },
+    {
+        "position": 12,
+        "word": "se",
+        "lemma": "se",
+        "tag": "k3"
+    },
+    {
+        "position": 13,
+        "word": "někdy",
+        "lemma": "někdy",
+        "tag": "k6"
+    },
+    {
+        "position": 14,
+        "word": "ocitl",
+        "lemma": "ocitnout",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 15,
+        "word": "v",
+        "lemma": "v",
+        "tag": "k7"
+    },
+    {
+        "position": 16,
+        "word": "situaci",
+        "lemma": "situace",
+        "tag": "k1gFnSc6"
+    },
+    {
+        "position": 17,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 18,
+        "word": "kdy",
+        "lemma": "kdy",
+        "tag": "k6"
+    },
+    {
+        "position": 19,
+        "word": "byl",
+        "lemma": "být",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 20,
+        "word": "sprostě",
+        "lemma": "sprostě",
+        "tag": "k6"
+    },
+    {
+        "position": 21,
+        "word": "a",
+        "lemma": "a",
+        "tag": "k8"
+    },
+    {
+        "position": 22,
+        "word": "jednoduše",
+        "lemma": "jednoduše",
+        "tag": "k6"
+    },
+    {
+        "position": 23,
+        "word": "zaškatulkován",
+        "lemma": "zaškatulkovaný",
+        "tag": "k2gMnS"
+    },
+    {
+        "position": 24,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 25,
+        "word": "Takové",
+        "lemma": "takový",
+        "tag": "k3gFnSc3"
+    },
+    {
+        "position": 26,
+        "word": "činnosti",
+        "lemma": "činnost",
+        "tag": "k1gFnSc3"
+    },
+    {
+        "position": 27,
+        "word": "říkám",
+        "lemma": "říkat",
+        "tag": "k5p1nS"
+    },
+    {
+        "position": 28,
+        "word": "pytlování",
+        "lemma": "pytlování",
+        "tag": "k1gNnSc1"
+    },
+    {
+        "position": 29,
+        "word": "protože",
+        "lemma": "protože",
+        "tag": "k8"
+    },
+    {
+        "position": 30,
+        "word": "je",
+        "lemma": "být",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 31,
+        "word": "pro",
+        "lemma": "pro",
+        "tag": "k7"
+    },
+    {
+        "position": 32,
+        "word": "ni",
+        "lemma": "ona",
+        "tag": "k3gFnSc4"
+    },
+    {
+        "position": 33,
+        "word": "typické",
+        "lemma": "typický",
+        "tag": "k2gNnSc1"
+    },
+    {
+        "position": 34,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 35,
+        "word": "že",
+        "lemma": "že",
+        "tag": "k8"
+    },
+    {
+        "position": 36,
+        "word": "se",
+        "lemma": "se",
+        "tag": "k3"
+    },
+    {
+        "position": 37,
+        "word": "mnoho",
+        "lemma": "mnoho",
+        "tag": "k4gNnSc1"
+    },
+    {
+        "position": 38,
+        "word": "jedinců",
+        "lemma": "jedinec",
+        "tag": "k1gMnPc2"
+    },
+    {
+        "position": 39,
+        "word": "hází",
+        "lemma": "házet",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 40,
+        "word": "do",
+        "lemma": "do",
+        "tag": "k7"
+    },
+    {
+        "position": 41,
+        "word": "stejného",
+        "lemma": "stejný",
+        "tag": "k2gMnSc2"
+    },
+    {
+        "position": 42,
+        "word": "pytle",
+        "lemma": "pytel",
+        "tag": "k1gMnSc2"
+    },
+    {
+        "position": 43,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 44,
+        "word": "A",
+        "lemma": "a",
+        "tag": "k9"
+    },
+    {
+        "position": 45,
+        "word": "když",
+        "lemma": "když",
+        "tag": "k8"
+    },
+    {
+        "position": 46,
+        "word": "jste",
+        "lemma": "být",
+        "tag": "k5p2nP"
+    },
+    {
+        "position": 47,
+        "word": "v",
+        "lemma": "v",
+        "tag": "k7"
+    },
+    {
+        "position": 48,
+        "word": "takovém",
+        "lemma": "takový",
+        "tag": "k3gMnSc6"
+    },
+    {
+        "position": 49,
+        "word": "pytli",
+        "lemma": "pytel",
+        "tag": "k1gMnSc6"
+    },
+    {
+        "position": 50,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 51,
+        "word": "tak",
+        "lemma": "tak",
+        "tag": "k8"
+    },
+    {
+        "position": 52,
+        "word": "jste",
+        "lemma": "být",
+        "tag": "k5p2nP"
+    },
+    {
+        "position": 53,
+        "word": "mnohdy",
+        "lemma": "mnohdy",
+        "tag": "k6"
+    },
+    {
+        "position": 54,
+        "word": "v",
+        "lemma": "v",
+        "tag": "k7"
+    },
+    {
+        "position": 55,
+        "word": "pytli",
+        "lemma": "pytel",
+        "tag": "k1gMnSc6"
+    },
+    {
+        "position": 56,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 57,
+        "word": "Osobně",
+        "lemma": "osobně",
+        "tag": "k6"
+    },
+    {
+        "position": 58,
+        "word": "si",
+        "lemma": "si",
+        "tag": "k3"
+    },
+    {
+        "position": 59,
+        "word": "vybavím",
+        "lemma": "vybavit",
+        "tag": "k5p1nS"
+    },
+    {
+        "position": 60,
+        "word": "Mikuláše",
+        "lemma": "Mikuláš",
+        "tag": "k1gMnSc4"
+    },
+    {
+        "position": 61,
+        "word": "a",
+        "lemma": "a",
+        "tag": "k8"
+    },
+    {
+        "position": 62,
+        "word": "čertův",
+        "lemma": "čertův",
+        "tag": " k2"
+    },
+    {
+        "position": 63,
+        "word": "pytel",
+        "lemma": "pytel",
+        "tag": "k1gMnSc4"
+    },
+    {
+        "position": 64,
+        "word": "na",
+        "lemma": "na",
+        "tag": "k7"
+    },
+    {
+        "position": 65,
+        "word": "hříšníky",
+        "lemma": "hříšník",
+        "tag": "k1gMnPc4"
+    },
+    {
+        "position": 66,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 67,
+        "word": "To",
+        "lemma": "to",
+        "tag": "k9"
+    },
+    {
+        "position": 68,
+        "word": "máme",
+        "lemma": "mít",
+        "tag": "k5p1nP"
+    },
+    {
+        "position": 69,
+        "word": "hned",
+        "lemma": "hned",
+        "tag": "k9"
+    },
+    {
+        "position": 70,
+        "word": "v",
+        "lemma": "v",
+        "tag": "k7"
+    },
+    {
+        "position": 71,
+        "word": "pytli",
+        "lemma": "pytel",
+        "tag": "k1gMnSc6"
+    },
+    {
+        "position": 72,
+        "word": "a",
+        "lemma": "a",
+        "tag": "k8"
+    },
+    {
+        "position": 73,
+        "word": "do",
+        "lemma": "do",
+        "tag": "k7"
+    },
+    {
+        "position": 74,
+        "word": "pekla",
+        "lemma": "peklo",
+        "tag": "k1gNnSc2"
+    },
+    {
+        "position": 75,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 76,
+        "word": "Není",
+        "lemma": "být",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 77,
+        "word": "to",
+        "lemma": "to",
+        "tag": "k3gNnSc1"
+    },
+    {
+        "position": 78,
+        "word": "výstižné",
+        "lemma": "výstižný",
+        "tag": "k2gNnSc2"
+    },
+    {
+        "position": 79,
+        "word": "?",
+        "lemma": "?",
+        "tag": ""
+    },
+    {
+        "position": 80,
+        "word": "Když",
+        "lemma": "když",
+        "tag": "k8"
+    },
+    {
+        "position": 81,
+        "word": "se",
+        "lemma": "se",
+        "tag": "k3"
+    },
+    {
+        "position": 82,
+        "word": "totiž",
+        "lemma": "totiž",
+        "tag": "k9"
+    },
+    {
+        "position": 83,
+        "word": "ocitnete",
+        "lemma": "ocitnout",
+        "tag": "k5p2nP"
+    },
+    {
+        "position": 84,
+        "word": "v",
+        "lemma": "v",
+        "tag": "k7"
+    },
+    {
+        "position": 85,
+        "word": "jednom",
+        "lemma": "jeden",
+        "tag": "k4gMnSc6"
+    },
+    {
+        "position": 86,
+        "word": "vaku",
+        "lemma": "vak",
+        "tag": "k1gMnSc6"
+    },
+    {
+        "position": 87,
+        "word": "s",
+        "lemma": "s",
+        "tag": "k7"
+    },
+    {
+        "position": 88,
+        "word": "lidmi",
+        "lemma": "člověk",
+        "tag": "k1gMnPc7"
+    },
+    {
+        "position": 89,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 90,
+        "word": "se",
+        "lemma": "s",
+        "tag": "k7"
+    },
+    {
+        "position": 91,
+        "word": "kterými",
+        "lemma": "který",
+        "tag": "k3gMnPc7"
+    },
+    {
+        "position": 92,
+        "word": "vás",
+        "lemma": "vy",
+        "tag": "k3p2nPc4"
+    },
+    {
+        "position": 93,
+        "word": "spojuje",
+        "lemma": "spojovat",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 94,
+        "word": "jen",
+        "lemma": "jen",
+        "tag": "k6"
+    },
+    {
+        "position": 95,
+        "word": "nepatrná",
+        "lemma": "patrný",
+        "tag": "k2gFnSc1"
+    },
+    {
+        "position": 96,
+        "word": "drobnost",
+        "lemma": "drobnost",
+        "tag": "k1gFnSc1"
+    },
+    {
+        "position": 97,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 98,
+        "word": "rozhodně",
+        "lemma": "rozhodně",
+        "tag": "k9"
+    },
+    {
+        "position": 99,
+        "word": "se",
+        "lemma": "se",
+        "tag": "k3"
+    },
+    {
+        "position": 100,
+        "word": "to",
+        "lemma": "to",
+        "tag": "k3gNnSc1"
+    },
+    {
+        "position": 101,
+        "word": "nedá",
+        "lemma": "dát",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 102,
+        "word": "považovat",
+        "lemma": "považovat",
+        "tag": "k5"
+    },
+    {
+        "position": 103,
+        "word": "za",
+        "lemma": "za",
+        "tag": "k7"
+    },
+    {
+        "position": 104,
+        "word": "dobré",
+        "lemma": "dobrý",
+        "tag": "k2gNnSc4"
+    },
+    {
+        "position": 105,
+        "word": "znamení",
+        "lemma": "znamení",
+        "tag": "k1gNnSc4"
+    },
+    {
+        "position": 106,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 107,
+        "word": "Typické",
+        "lemma": "typický",
+        "tag": "k2gNnSc1"
+    },
+    {
+        "position": 108,
+        "word": "je",
+        "lemma": "být",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 109,
+        "word": "třeba",
+        "lemma": "třeba",
+        "tag": "k9"
+    },
+    {
+        "position": 110,
+        "word": "pytlování",
+        "lemma": "pytlování",
+        "tag": "k1gNnSc1"
+    },
+    {
+        "position": 111,
+        "word": "podle",
+        "lemma": "podle",
+        "tag": "k7"
+    },
+    {
+        "position": 112,
+        "word": "pohlaví",
+        "lemma": "pohlaví",
+        "tag": "k1gNnSc2"
+    },
+    {
+        "position": 113,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 114,
+        "word": "Všechny",
+        "lemma": "všechen",
+        "tag": "k4gFnPc1"
+    },
+    {
+        "position": 115,
+        "word": "ženy",
+        "lemma": "žena",
+        "tag": "k1gFnPc1"
+    },
+    {
+        "position": 116,
+        "word": "jsou",
+        "lemma": "být",
+        "tag": "k5p3nP"
+    },
+    {
+        "position": 117,
+        "word": "takové",
+        "lemma": "takový",
+        "tag": "k2gFnPc1"
+    },
+    {
+        "position": 118,
+        "word": "a",
+        "lemma": "a",
+        "tag": "k8"
+    },
+    {
+        "position": 119,
+        "word": "makové",
+        "lemma": "takový",
+        "tag": "K2gFnPc1"
+    },
+    {
+        "position": 120,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 121,
+        "word": "muži",
+        "lemma": "muž",
+        "tag": "k1gMnPc1"
+    },
+    {
+        "position": 122,
+        "word": "zase",
+        "lemma": "zase",
+        "tag": "k6"
+    },
+    {
+        "position": 123,
+        "word": "takoví",
+        "lemma": "takový",
+        "tag": "k2gMnPc1"
+    },
+    {
+        "position": 124,
+        "word": "a",
+        "lemma": "a",
+        "tag": "k8"
+    },
+    {
+        "position": 125,
+        "word": "tvarohoví",
+        "lemma": "tvarohový",
+        "tag": "k2gMnPc1"
+    },
+    {
+        "position": 126,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 127,
+        "word": "A",
+        "lemma": "a",
+        "tag": "k9"
+    },
+    {
+        "position": 128,
+        "word": "můžete",
+        "lemma": "moct",
+        "tag": "k5p2nP"
+    },
+    {
+        "position": 129,
+        "word": "donekonečna",
+        "lemma": "donekonečna",
+        "tag": "k6"
+    },
+    {
+        "position": 130,
+        "word": "vysvětlovat",
+        "lemma": "vysvětlovat",
+        "tag": "k5"
+    },
+    {
+        "position": 131,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 132,
+        "word": "že",
+        "lemma": "že",
+        "tag": "k8"
+    },
+    {
+        "position": 133,
+        "word": "makoví",
+        "lemma": "makový",
+        "tag": "k2gMnPc1"
+    },
+    {
+        "position": 134,
+        "word": "nejste",
+        "lemma": "být",
+        "tag": "k5p2nP"
+    },
+    {
+        "position": 135,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 136,
+        "word": "protože",
+        "lemma": "protože",
+        "tag": "k8"
+    },
+    {
+        "position": 137,
+        "word": "mák",
+        "lemma": "mák",
+        "tag": "k1gMnSc1"
+    },
+    {
+        "position": 138,
+        "word": "vůbec",
+        "lemma": "vůbec",
+        "tag": "k9"
+    },
+    {
+        "position": 139,
+        "word": "není",
+        "lemma": "být",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 140,
+        "word": "váš",
+        "lemma": "váš",
+        "tag": "k3"
+    },
+    {
+        "position": 141,
+        "word": "šálek",
+        "lemma": "šálek",
+        "tag": "k1gMnSc1"
+    },
+    {
+        "position": 142,
+        "word": "kávy",
+        "lemma": "káva",
+        "tag": "k1gFnSc2"
+    },
+    {
+        "position": 143,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 144,
+        "word": "nehledě",
+        "lemma": "nehledě",
+        "tag": "k7"
+    },
+    {
+        "position": 145,
+        "word": "na",
+        "lemma": "na",
+        "tag": "k7"
+    },
+    {
+        "position": 146,
+        "word": "to",
+        "lemma": "to",
+        "tag": "k3gNnSc4"
+    },
+    {
+        "position": 147,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 148,
+        "word": "že",
+        "lemma": "že",
+        "tag": "k8"
+    },
+    {
+        "position": 149,
+        "word": "ani",
+        "lemma": "ani",
+        "tag": "k9"
+    },
+    {
+        "position": 150,
+        "word": "šálek",
+        "lemma": "šálek",
+        "tag": "k1gMnSc1"
+    },
+    {
+        "position": 151,
+        "word": "kávy",
+        "lemma": "káva",
+        "tag": "k1gFnSc2"
+    },
+    {
+        "position": 152,
+        "word": "pro",
+        "lemma": "pro",
+        "tag": "k7"
+    },
+    {
+        "position": 153,
+        "word": "vás",
+        "lemma": "vy",
+        "tag": "k3p2nPc4"
+    },
+    {
+        "position": 154,
+        "word": "není",
+        "lemma": "být",
+        "tag": "k5p3nP"
+    },
+    {
+        "position": 155,
+        "word": "to",
+        "lemma": "to",
+        "tag": "k3gNnSc1"
+    },
+    {
+        "position": 156,
+        "word": "pravé",
+        "lemma": "pravý",
+        "tag": "k2gNnSc1"
+    },
+    {
+        "position": 157,
+        "word": "ořechové",
+        "lemma": "ořechový",
+        "tag": "k2gNnSc1"
+    },
+    {
+        "position": 158,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 159,
+        "word": "zvlášť",
+        "lemma": "zvlášť",
+        "tag": "k9"
+    },
+    {
+        "position": 160,
+        "word": "když",
+        "lemma": "když",
+        "tag": "k8"
+    },
+    {
+        "position": 161,
+        "word": "nemusíte",
+        "lemma": "muset",
+        "tag": "k5p2nP"
+    },
+    {
+        "position": 162,
+        "word": "ani",
+        "lemma": "ani",
+        "tag": "k9"
+    },
+    {
+        "position": 163,
+        "word": "ořechy",
+        "lemma": "ořech",
+        "tag": "k1gMnPc4"
+    },
+    {
+        "position": 164,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 165,
+        "word": "Jste",
+        "lemma": "být",
+        "tag": "k5p2nP"
+    },
+    {
+        "position": 166,
+        "word": "třeba",
+        "lemma": "třeba",
+        "tag": "k9"
+    },
+    {
+        "position": 167,
+        "word": "mnohem",
+        "lemma": "mnohem",
+        "tag": "k6"
+    },
+    {
+        "position": 168,
+        "word": "víc",
+        "lemma": "víc",
+        "tag": "k6"
+    },
+    {
+        "position": 169,
+        "word": "tvarohoví",
+        "lemma": "tvarohový",
+        "tag": "k2gMnPc1"
+    },
+    {
+        "position": 170,
+        "word": "než",
+        "lemma": "než",
+        "tag": "k8"
+    },
+    {
+        "position": 171,
+        "word": "makoví",
+        "lemma": "makový",
+        "tag": "k2gMnPc1"
+    },
+    {
+        "position": 172,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 173,
+        "word": "A",
+        "lemma": "a",
+        "tag": "k9"
+    },
+    {
+        "position": 174,
+        "word": "možná",
+        "lemma": "možná",
+        "tag": "k9"
+    },
+    {
+        "position": 175,
+        "word": "jste",
+        "lemma": "být",
+        "tag": "k5p2nP"
+    },
+    {
+        "position": 176,
+        "word": "nakonec",
+        "lemma": "nakonec",
+        "tag": "k9"
+    },
+    {
+        "position": 177,
+        "word": "jableční",
+        "lemma": "jablečný",
+        "tag": "k2gMnPc1"
+    },
+    {
+        "position": 178,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 179,
+        "word": "Další",
+        "lemma": "další",
+        "tag": "k2gFnSc7"
+    },
+    {
+        "position": 180,
+        "word": "takovou",
+        "lemma": "takový",
+        "tag": "k3gFnSc7"
+    },
+    {
+        "position": 181,
+        "word": "pytlohodnou",
+        "lemma": "pytlohodný",
+        "tag": "k2gFnSc7"
+    },
+    {
+        "position": 182,
+        "word": "vlastností",
+        "lemma": "vlastnost",
+        "tag": "k1gFnSc7"
+    },
+    {
+        "position": 183,
+        "word": "je",
+        "lemma": "být",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 184,
+        "word": "věk",
+        "lemma": "věk",
+        "tag": "k1gMnSc1"
+    },
+    {
+        "position": 185,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 186,
+        "word": "Lidé",
+        "lemma": "člověk",
+        "tag": "k1gMnPc1"
+    },
+    {
+        "position": 187,
+        "word": "jsou",
+        "lemma": "být",
+        "tag": "k5p3nP"
+    },
+    {
+        "position": 188,
+        "word": "zvyklí",
+        "lemma": "zvyklý",
+        "tag": "k2gMnPc1"
+    },
+    {
+        "position": 189,
+        "word": "soudit",
+        "lemma": "soudit",
+        "tag": "k5"
+    },
+    {
+        "position": 190,
+        "word": "podle",
+        "lemma": "podle",
+        "tag": "k7"
+    },
+    {
+        "position": 191,
+        "word": "čísla",
+        "lemma": "číslo",
+        "tag": "k1gNnSc2"
+    },
+    {
+        "position": 192,
+        "word": "na",
+        "lemma": "na",
+        "tag": "k7"
+    },
+    {
+        "position": 193,
+        "word": "občance",
+        "lemma": "občanka",
+        "tag": "k1gFnSc6"
+    },
+    {
+        "position": 194,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 195,
+        "word": "ale",
+        "lemma": "ale",
+        "tag": "k8"
+    },
+    {
+        "position": 196,
+        "word": "přitom",
+        "lemma": "přitom",
+        "tag": "k6"
+    },
+    {
+        "position": 197,
+        "word": "jsou",
+        "lemma": "být",
+        "tag": "k5p3nP"
+    },
+    {
+        "position": 198,
+        "word": "to",
+        "lemma": "to",
+        "tag": "k3gNnSc1"
+    },
+    {
+        "position": 199,
+        "word": "jen",
+        "lemma": "jen",
+        "tag": "k6"
+    },
+    {
+        "position": 200,
+        "word": "cifry",
+        "lemma": "cifra",
+        "tag": "k1gFnPc1"
+    },
+    {
+        "position": 201,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 202,
+        "word": "které",
+        "lemma": "který",
+        "tag": "k3gFnPc1"
+    },
+    {
+        "position": 203,
+        "word": "nic",
+        "lemma": "nic",
+        "tag": "k3gNnSc4"
+    },
+    {
+        "position": 204,
+        "word": "neřeknou",
+        "lemma": "říct",
+        "tag": "k5p3nP"
+    },
+    {
+        "position": 205,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 206,
+        "word": "Stejně",
+        "lemma": "stejně",
+        "tag": "k6"
+    },
+    {
+        "position": 207,
+        "word": "jako",
+        "lemma": "jako",
+        "tag": "k6"
+    },
+    {
+        "position": 208,
+        "word": "se",
+        "lemma": "se",
+        "tag": "k3"
+    },
+    {
+        "position": 209,
+        "word": "říká",
+        "lemma": "říkat",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 210,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 211,
+        "word": "že",
+        "lemma": "že",
+        "tag": "k8"
+    },
+    {
+        "position": 212,
+        "word": "každý",
+        "lemma": "každý",
+        "tag": "k3gMnSc1"
+    },
+    {
+        "position": 213,
+        "word": "člověk",
+        "lemma": "člověk",
+        "tag": "k1gMnSc1"
+    },
+    {
+        "position": 214,
+        "word": "má",
+        "lemma": "mít",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 215,
+        "word": "tři",
+        "lemma": "tři",
+        "tag": "k4gMnSc4"
+    },
+    {
+        "position": 216,
+        "word": "druhy",
+        "lemma": "druh",
+        "tag": "k1gMnPc4"
+    },
+    {
+        "position": 217,
+        "word": "charakteru",
+        "lemma": "charakter",
+        "tag": "k1gMnSc2"
+    },
+    {
+        "position": 218,
+        "word": "–",
+        "lemma": "–",
+        "tag": ""
+    },
+    {
+        "position": 219,
+        "word": "jeden",
+        "lemma": "jeden",
+        "tag": "k4gMnSc4"
+    },
+    {
+        "position": 220,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 221,
+        "word": "který",
+        "lemma": "který",
+        "tag": "k3gMnSc4"
+    },
+    {
+        "position": 222,
+        "word": "ukazuje",
+        "lemma": "ukazovat",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 223,
+        "word": "lidem",
+        "lemma": "člověk",
+        "tag": "k1gMnPc3"
+    },
+    {
+        "position": 224,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 225,
+        "word": "druhý",
+        "lemma": "druhý",
+        "tag": "k4gMnSc4"
+    },
+    {
+        "position": 226,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 227,
+        "word": "který",
+        "lemma": "který",
+        "tag": "k3gMnSc4"
+    },
+    {
+        "position": 228,
+        "word": "má",
+        "lemma": "mít",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 229,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 230,
+        "word": "a",
+        "lemma": "a",
+        "tag": "k8"
+    },
+    {
+        "position": 231,
+        "word": "třetí",
+        "lemma": "třetí",
+        "tag": "k4gMnSc1"
+    },
+    {
+        "position": 232,
+        "word": "je",
+        "lemma": "být",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 233,
+        "word": "ten",
+        "lemma": "ten",
+        "tag": "k3gMnSc1"
+    },
+    {
+        "position": 234,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 235,
+        "word": "který",
+        "lemma": "který",
+        "tag": "k3gMnSc4"
+    },
+    {
+        "position": 236,
+        "word": "si",
+        "lemma": "si",
+        "tag": "k3"
+    },
+    {
+        "position": 237,
+        "word": "myslí",
+        "lemma": "myslet",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 238,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 239,
+        "word": "že",
+        "lemma": "že",
+        "tag": "k8"
+    },
+    {
+        "position": 240,
+        "word": "má",
+        "lemma": "mít",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 241,
+        "word": "–",
+        "lemma": "–",
+        "tag": ""
+    },
+    {
+        "position": 242,
+        "word": "má",
+        "lemma": "mít",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 243,
+        "word": "i",
+        "lemma": "i",
+        "tag": "k8"
+    },
+    {
+        "position": 244,
+        "word": "tři",
+        "lemma": "tři",
+        "tag": "k4gMnSc4"
+    },
+    {
+        "position": 245,
+        "word": "druhy",
+        "lemma": "druh",
+        "tag": "k1gMnPc4"
+    },
+    {
+        "position": 246,
+        "word": "věku",
+        "lemma": "věk",
+        "tag": "k1gMnSc2"
+    },
+    {
+        "position": 247,
+        "word": "–",
+        "lemma": "–",
+        "tag": ""
+    },
+    {
+        "position": 248,
+        "word": "jeden",
+        "lemma": "jeden",
+        "tag": "k4gMnSc4"
+    },
+    {
+        "position": 249,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 250,
+        "word": "který",
+        "lemma": "který",
+        "tag": "k3gMnSc1"
+    },
+    {
+        "position": 251,
+        "word": "vybafne",
+        "lemma": "vybafnout",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 252,
+        "word": "z",
+        "lemma": "z",
+        "tag": "k7"
+    },
+    {
+        "position": 253,
+        "word": "rodného",
+        "lemma": "rodný",
+        "tag": "k2gMnSc2"
+    },
+    {
+        "position": 254,
+        "word": "listu",
+        "lemma": "list",
+        "tag": "k1gMnSc2"
+    },
+    {
+        "position": 255,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 256,
+        "word": "druhý",
+        "lemma": "druhý",
+        "tag": "k4gMnSc4"
+    },
+    {
+        "position": 257,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 258,
+        "word": "který",
+        "lemma": "který",
+        "tag": "k3gMnSc1"
+    },
+    {
+        "position": 259,
+        "word": "vybafne",
+        "lemma": "vybafnout",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 260,
+        "word": "z",
+        "lemma": "z",
+        "tag": "k7"
+    },
+    {
+        "position": 261,
+        "word": "ksichtu",
+        "lemma": "ksicht",
+        "tag": "k1gMnSc2"
+    },
+    {
+        "position": 262,
+        "word": "a",
+        "lemma": "a",
+        "tag": "k8"
+    },
+    {
+        "position": 263,
+        "word": "třetí",
+        "lemma": "třetí",
+        "tag": "k4gMnSc4"
+    },
+    {
+        "position": 264,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 265,
+        "word": "který",
+        "lemma": "který",
+        "tag": "k3gMnSc1"
+    },
+    {
+        "position": 266,
+        "word": "si",
+        "lemma": "si",
+        "tag": "k3"
+    },
+    {
+        "position": 267,
+        "word": "bafá",
+        "lemma": "bafat",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 268,
+        "word": "mezi",
+        "lemma": "mezi",
+        "tag": "k7"
+    },
+    {
+        "position": 269,
+        "word": "myšlenkami",
+        "lemma": "myšlenka",
+        "tag": "k1gFnPc7"
+    },
+    {
+        "position": 270,
+        "word": "a",
+        "lemma": "a",
+        "tag": "k8"
+    },
+    {
+        "position": 271,
+        "word": "smyšlenkami",
+        "lemma": "smyšlenka",
+        "tag": "k1gFnPc7"
+    },
+    {
+        "position": 272,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 273,
+        "word": "Přičemž",
+        "lemma": "přičemž",
+        "tag": "k6"
+    },
+    {
+        "position": 274,
+        "word": "se",
+        "lemma": "se",
+        "tag": "k3"
+    },
+    {
+        "position": 275,
+        "word": "některé",
+        "lemma": "některý",
+        "tag": "k3"
+    },
+    {
+        "position": 276,
+        "word": "mohou",
+        "lemma": "moct",
+        "tag": "k5p3nP"
+    },
+    {
+        "position": 277,
+        "word": "občas",
+        "lemma": "občas",
+        "tag": "k6"
+    },
+    {
+        "position": 278,
+        "word": "shodovat",
+        "lemma": "shodovat",
+        "tag": "k5"
+    },
+    {
+        "position": 279,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 280,
+        "word": "ale",
+        "lemma": "ale",
+        "tag": "k8"
+    },
+    {
+        "position": 281,
+        "word": "i",
+        "lemma": "i",
+        "tag": "k8"
+    },
+    {
+        "position": 282,
+        "word": "nepředpokládaně",
+        "lemma": "nepředpokládaně",
+        "tag": "k6"
+    },
+    {
+        "position": 283,
+        "word": "měnit",
+        "lemma": "měnit",
+        "tag": "k5"
+    },
+    {
+        "position": 284,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 285,
+        "word": "Já",
+        "lemma": "já",
+        "tag": "k3p1nSc1"
+    },
+    {
+        "position": 286,
+        "word": "si",
+        "lemma": "si",
+        "tag": "k3"
+    },
+    {
+        "position": 287,
+        "word": "třeba",
+        "lemma": "třeba",
+        "tag": "k9"
+    },
+    {
+        "position": 288,
+        "word": "někdy",
+        "lemma": "někdy",
+        "tag": "k6"
+    },
+    {
+        "position": 289,
+        "word": "připadám",
+        "lemma": "připadat",
+        "tag": "k5p1nS"
+    },
+    {
+        "position": 290,
+        "word": "na",
+        "lemma": "na",
+        "tag": "k7"
+    },
+    {
+        "position": 291,
+        "word": "šest",
+        "lemma": "šest",
+        "tag": "k4c4"
+    },
+    {
+        "position": 292,
+        "word": "a",
+        "lemma": "a",
+        "tag": "k8"
+    },
+    {
+        "position": 293,
+        "word": "jindy",
+        "lemma": "jindy",
+        "tag": "k6"
+    },
+    {
+        "position": 294,
+        "word": "na",
+        "lemma": "na",
+        "tag": "k7"
+    },
+    {
+        "position": 295,
+        "word": "šedesát",
+        "lemma": "šedesát",
+        "tag": "k4c4"
+    },
+    {
+        "position": 296,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 297,
+        "word": "vy",
+        "lemma": "vy",
+        "tag": "k3p2nP"
+    },
+    {
+        "position": 298,
+        "word": "ne",
+        "lemma": "ne",
+        "tag": "k9"
+    },
+    {
+        "position": 299,
+        "word": "?",
+        "lemma": "?",
+        "tag": ""
+    },
+    {
+        "position": 300,
+        "word": "Pytluje",
+        "lemma": "pytlovat",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 301,
+        "word": "se",
+        "lemma": "se",
+        "tag": "k3"
+    },
+    {
+        "position": 302,
+        "word": "ale",
+        "lemma": "ale",
+        "tag": "k9"
+    },
+    {
+        "position": 303,
+        "word": "i",
+        "lemma": "i",
+        "tag": "k8"
+    },
+    {
+        "position": 304,
+        "word": "podle",
+        "lemma": "podle",
+        "tag": "k7"
+    },
+    {
+        "position": 305,
+        "word": "jiných",
+        "lemma": "jiný",
+        "tag": "k2gMnPc2"
+    },
+    {
+        "position": 306,
+        "word": "klíčů",
+        "lemma": "klíč",
+        "tag": "k1gMnPc2"
+    },
+    {
+        "position": 307,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 308,
+        "word": "ať",
+        "lemma": "ať",
+        "tag": "k8"
+    },
+    {
+        "position": 309,
+        "word": "už",
+        "lemma": "už",
+        "tag": "k6"
+    },
+    {
+        "position": 310,
+        "word": "je",
+        "lemma": "být",
+        "tag": "k5p3nS"
+    },
+    {
+        "position": 311,
+        "word": "to",
+        "lemma": "to",
+        "tag": "k3gNnSc1"
+    },
+    {
+        "position": 312,
+        "word": "zjev",
+        "lemma": "zjev",
+        "tag": "k1gMnSc1"
+    },
+    {
+        "position": 313,
+        "word": "(",
+        "lemma": "(",
+        "tag": ""
+    },
+    {
+        "position": 314,
+        "word": "hlásím",
+        "lemma": "hlásit",
+        "tag": "k5p1nS"
+    },
+    {
+        "position": 315,
+        "word": "se",
+        "lemma": "se",
+        "tag": "k3"
+    },
+    {
+        "position": 316,
+        "word": "dobrovolně",
+        "lemma": "dobrovolně",
+        "tag": "k6"
+    },
+    {
+        "position": 317,
+        "word": "k",
+        "lemma": "k",
+        "tag": "k7"
+    },
+    {
+        "position": 318,
+        "word": "vyjeveným",
+        "lemma": "vyjevený",
+        "tag": "k2gNnPc3"
+    },
+    {
+        "position": 319,
+        "word": "zjevením",
+        "lemma": "zjevení",
+        "tag": "k1gNnPc3"
+    },
+    {
+        "position": 320,
+        "word": ")",
+        "lemma": ")",
+        "tag": ""
+    },
+    {
+        "position": 321,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 322,
+        "word": "nebo",
+        "lemma": "nebo",
+        "tag": "k8"
+    },
+    {
+        "position": 323,
+        "word": "třeba",
+        "lemma": "třeba",
+        "tag": "k9"
+    },
+    {
+        "position": 324,
+        "word": "národnost",
+        "lemma": "národnost",
+        "tag": "k1gFnSc1"
+    },
+    {
+        "position": 325,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 326,
+        "word": "A",
+        "lemma": "a",
+        "tag": "k9"
+    },
+    {
+        "position": 327,
+        "word": "teď",
+        "lemma": "teď",
+        "tag": "k6"
+    },
+    {
+        "position": 328,
+        "word": "si",
+        "lemma": "si",
+        "tag": "k3"
+    },
+    {
+        "position": 329,
+        "word": "zalezu",
+        "lemma": "zalézt",
+        "tag": "k5p1nS"
+    },
+    {
+        "position": 330,
+        "word": "do",
+        "lemma": "do",
+        "tag": "k7"
+    },
+    {
+        "position": 331,
+        "word": "pytle",
+        "lemma": "pytel",
+        "tag": "k1gMnSc2"
+    },
+    {
+        "position": 332,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 333,
+        "word": "Spacího",
+        "lemma": "spací",
+        "tag": "k2gMnSc2"
+    },
+    {
+        "position": 334,
+        "word": ",",
+        "lemma": ",",
+        "tag": ""
+    },
+    {
+        "position": 335,
+        "word": "ten",
+        "lemma": "ten",
+        "tag": "k3gMnSc1"
+    },
+    {
+        "position": 336,
+        "word": "jediný",
+        "lemma": "jediný",
+        "tag": "k2gMnSc1"
+    },
+    {
+        "position": 337,
+        "word": "se",
+        "lemma": "se",
+        "tag": "k3"
+    },
+    {
+        "position": 338,
+        "word": "povoluje",
+        "lemma": "povolovat",
+        "tag": "k5p3n3"
+    },
+    {
+        "position": 339,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    },
+    {
+        "position": 340,
+        "word": "Tak",
+        "lemma": "tak",
+        "tag": "k9"
+    },
+    {
+        "position": 341,
+        "word": "sladké",
+        "lemma": "sladký",
+        "tag": "k2gMnPc4"
+    },
+    {
+        "position": 342,
+        "word": "sny",
+        "lemma": "sen",
+        "tag": "k1gMnPc4"
+    },
+    {
+        "position": 343,
+        "word": ".",
+        "lemma": ".",
+        "tag": ""
+    }
 ]
