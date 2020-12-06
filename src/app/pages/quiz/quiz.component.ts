@@ -10,6 +10,7 @@ import * as _ from 'lodash';
 import { MatSnackBar } from '@angular/material';
 import { ProgressService } from '@shared/services';
 import * as firebase from 'firebase';
+import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
@@ -22,9 +23,12 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
   public currentSectionId: string;
   public isLoading = true;
   public slideDone: boolean[];
+  public progressData;
+  public _ = _;
+
   @ViewChildren(TaskDirective) taskContainers: QueryList<TaskDirective>;
 
-  constructor(private snackBar: MatSnackBar, public url: ActivatedRoute, public files: HttpClient, private componentFactoryResolver: ComponentFactoryResolver, private progress: ProgressService ) {
+  constructor(private sanitizer: DomSanitizer, private snackBar: MatSnackBar, public url: ActivatedRoute, public files: HttpClient, private componentFactoryResolver: ComponentFactoryResolver, private progress: ProgressService ) {
     super();
   }
 
@@ -64,7 +68,7 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
   }
 
   preventDragOnMatching(index, e) {
-    if (this.currentSection.quizes[index].type == 'matching') {
+    if (index < this.currentSection.quizes.length && this.currentSection.quizes[index].type == 'matching') {
       e.stopPropagation();
     }
   }
@@ -74,15 +78,18 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
     viewContainerRef.clear();
     const componentRef = viewContainerRef.createComponent(componentFactory);
     this.progress.updated.subscribe(() => {
-      const progressData = this.progress.getProgress();
-      if(progressData) {
-        (<TaskComponent>componentRef.instance).progress = progressData[this.currentLesson].sections[this.currentSectionId].quizResults[index];
+      this.progressData = this.progress.getProgress();
+      if(this.progressData ) {
+        (<TaskComponent>componentRef.instance).progress = this.progressData[this.currentLesson].sections[this.currentSectionId].quizResults[index];
         if((<TaskComponent>componentRef.instance).progress && (<TaskComponent>componentRef.instance).progress.answer) {
           this.slideDone[index] = true;
         }
         componentRef.changeDetectorRef.detectChanges();
       }
     });
+    if(task.data.question) {
+      task.data.question = this.sanitizer.bypassSecurityTrustHtml(task.data.question);
+    }
     (<TaskComponent>componentRef.instance).data = task.data;
     this.safeSubscribe(
       (<TaskComponent>componentRef.instance).taskSubmitted,
@@ -153,6 +160,22 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  getQuizIcon(quiz) {
+    return quiz.points == 0 ? 'close' : 'done';
+  }
+
+  calculatePoints(lesson, section, quiz): {max: number, current: number} {
+    const quizProgress = this.progressData[lesson].sections[section].quizResults[quiz];
+    return { max: quizProgress.maxPoints, current: quizProgress.points };
+  }
+
+  pointsShow(points: {max: number, current: number}) {
+    if (points.max == 0) {
+      return '';
+    }
+    return '(Body: ' + points.current.toString() + '/' + points.max.toString() + ')';
   }
 
 }

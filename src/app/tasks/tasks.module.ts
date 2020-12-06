@@ -4,7 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { TaskDirective } from "./task.directive";
 import { MultichoiceComponent } from './multichoice/multichoice.component';
 import { SinglechoiceComponent } from './singlechoice/singlechoice.component';
-import { MatRadioModule, MatButtonModule, MatInputModule, MatCheckboxModule, MatTableModule, MatPaginatorModule } from "@angular/material";
+import { MatRadioModule, MatButtonModule, MatInputModule, MatCheckboxModule, MatTableModule, MatPaginatorModule, MatGridListModule } from "@angular/material";
 import { MultifillComponent } from './multifill/multifill.component';
 import { SanitizePipe } from "@shared/pipes/sanitize-pipe.pipe";
 import { MatchingComponent } from "./matching/matching.component";
@@ -28,7 +28,8 @@ import { MajkaComponent } from "./majka/majka.component";
     MatPaginatorModule,
     DragDropModule,
     TreeRenderersModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule
   ],
   declarations: [
     TaskDirective,

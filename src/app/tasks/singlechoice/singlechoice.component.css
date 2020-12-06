@@ -6,3 +6,11 @@
   .example-radio-button {
     margin: 5px;
   }
+
+.incorrect {
+  color: red;
+}
+
+.correct {
+  color: green;
+}

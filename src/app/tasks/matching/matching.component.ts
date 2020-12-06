@@ -46,7 +46,7 @@ export class MatchingComponent implements TaskComponent, OnInit {
 
   loadProgress() {
     console.log(this.progress);
-    if (this.progress && this.progress.answer) {
+    if (this.progress && this.progress.answer && !this.isAnswered) {
       this.isCorrect = [];
       this.optionsPool = [];
       this.answer = this.progress.answer;
@@ -62,8 +62,33 @@ export class MatchingComponent implements TaskComponent, OnInit {
     for (let fixedIndex in _.keys(this.data.optionsFixed)) {
       this.isCorrect.push(_.xor(this.answer[fixedIndex], this.data.correct[this.data.optionsFixed[fixedIndex]]).length === 0);
     }
-    this.taskSubmitted.emit({points: Math.round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points), answer: this.answer});
+    this.taskSubmitted.emit({points: this.getPoints(), answer: this.answer});
     this.isAnswered = true;
+  }
+
+  getPoints() {
+    return Math.round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points);
+  }
+
+  getInflection(points: number) {
+    return points === 1 ? '' : (points > 1 && points < 5 ? 'y' : 'ů');
+  }
+
+  getOptionColor(index) {
+    if(this.isAnswered == false) {
+      return [];
+    }
+    if (_.xor(this.answer[index], this.data.correct[this.data.optionsFixed[index]]).length === 0) {
+      return ['correct'];
+    }
+    return ['incorrect'];
+  }
+
+  getCorrectAnswer(index) {
+    if(this.isAnswered == false || _.xor(this.answer[index], this.data.correct[this.data.optionsFixed[index]]).length === 0) {
+      return '';
+    }
+    return '(správná odpověď: ' + this.data.correct[this.data.optionsFixed[index]].join(', ') + ')';
   }
 
   public drop(event: CdkDragDrop<string[]>, index: number = -1): void {

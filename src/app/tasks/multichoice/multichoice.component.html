@@ -2,8 +2,9 @@
 <ul>
     <li *ngFor="let option of data.options; let i = index">
         <mat-checkbox color="primary" class="example-checkbox" [disabled]="isAnswered" [(ngModel)]="answer[i]">
-            <span [innerHtml]="option"></span>
+            <span [innerHtml]="option"[ngClass]="getOptionColor(i)"></span> {{getCorrectAnswer(i)}}
         </mat-checkbox>
     </li>
 </ul>
+<b *ngIf="isAnswered">{{getPoints() == 0 ? 'Špatně' : getPoints() == data.points ? 'Správně' : 'Částečně správně' }}! ({{getPoints()}} bod{{getInflection(getPoints())}})</b><br/>
 <button mat-raised-button color="primary" (click)="submit()" [disabled]="isAnswered">Odeslat odpověď</button>

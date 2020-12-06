@@ -37,22 +37,23 @@ export class TreesComponent implements TaskComponent, OnInit {
   public counter = 1;
   public tree: TreeModel;
   @ViewChild("mainRenderer", {static: false}) renderer: D3TreeRendererComponent;
-  @ViewChild("resultRenderer", {static: false}) result: D3TreeRendererComponent;
+  //@ViewChild("resultRenderer", {static: false}) result: D3TreeRendererComponent;
 
 
 
   loadProgress() {
     console.log(this.progress);
-    if (this.progress && this.progress.answer) {
+    if (this.progress && this.progress.answer && !this.isAnswered) {
       this.isAnswered = true;
       this.reconstructTree(this.progress.answer, this.renderer);
-      if(this.progress.answer != this.data.correct) {
+      /*if(this.progress.answer != this.data.correct) {
         this.reconstructTree(this.data.correct, this.result);
-      }
+      }*/
     }
   };
 
   reconstructTree(encoded, renderer) {
+      this.clear(renderer);
       let lowestNodes = encoded.match(/\[([^\[\],]*),([^\[\],]*)\]/g);
       while(lowestNodes) {
         for(let node of lowestNodes) {
@@ -69,6 +70,15 @@ export class TreesComponent implements TaskComponent, OnInit {
         }
       }
   }
+
+  getPoints() {
+    return this.tree.export() === this.data.correct ? this.data.points : 0;
+  }
+
+  getInflection(points: number) {
+    return points === 1 ? '' : (points > 1 && points < 5 ? 'y' : 'ů');
+  }
+
   constructor(
     ) {
       this.windowWidth = (window.innerWidth - 100);
@@ -164,7 +174,7 @@ export class TreesComponent implements TaskComponent, OnInit {
       this.taskSubmitted.emit({points: this.data.points, answer: result});
     } else {
       this.taskSubmitted.emit({points: 0, answer: result});
-      this.reconstructTree(this.data.correct, this.result);
+      //this.reconstructTree(this.data.correct, this.result);
     }
   }
 }

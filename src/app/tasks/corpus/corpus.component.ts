@@ -28,25 +28,33 @@ export class CorpusComponent implements TaskComponent, AfterViewInit {
   @Output() taskSubmitted: EventEmitter<{points: number, answer: number[]}> = new EventEmitter();
   public answer: number[] = [];
   public dataSource = new MatTableDataSource<CorporaItem>(_.map(this.answer, (position) => this.corpus.get(position)));
+  public dataSourceResults = new MatTableDataSource<CorporaItem>([]);
+
   public isAnswered = false;
   public word = '.*';
   public lemma = '.*';
   public tag = '.*';
 
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild('main', {static: true}) paginatorMain: MatPaginator;
+  @ViewChild('results', {static: true}) paginatorResults: MatPaginator;
+
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
+    this.dataSource.paginator = this.paginatorMain;
+    this.dataSource.paginator = this.paginatorResults;
   }
 
   constructor(public corpus: CorporaService) { 
   }
 
   loadProgress() {
-    if (this.progress && this.progress.answer) {
+    if (this.progress && this.progress.answer && !this.isAnswered) {
       this.isAnswered = true;
       this.answer = this.progress.answer;
       this.dataSource = new MatTableDataSource<CorporaItem>(_.map(this.answer, (position) => this.corpus.get(position)));
+      this.dataSource.paginator = this.paginatorMain;
+      this.dataSourceResults = new MatTableDataSource<CorporaItem>(_.map(this.data.correct, (position) => this.corpus.get(position)));
+      this.dataSourceResults.paginator = this.paginatorResults;
     }
   }
 
@@ -56,6 +64,14 @@ export class CorpusComponent implements TaskComponent, AfterViewInit {
       points: Math.round(this.calculateF1Score(this.answer, this.data.correct) * this.data.points)
     });
     this.isAnswered = true;
+  }
+
+  getPoints() {
+    return Math.round(this.calculateF1Score(this.answer, this.data.correct) * this.data.points);
+  }
+
+  getInflection(points: number) {
+    return points === 1 ? '' : (points > 1 && points < 5 ? 'y' : 'ů');
   }
 
   calculateF1Score(dataSampleTrue: number[], correctDataTrue: number[]): number {
@@ -81,7 +97,7 @@ export class CorpusComponent implements TaskComponent, AfterViewInit {
   public show() {
     this.answer = this.corpus.find(new RegExp(this.word), new RegExp(this.tag), new RegExp(this.lemma));
     this.dataSource = new MatTableDataSource<CorporaItem>(_.map(this.answer, (position) => this.corpus.get(position)));
-    this.dataSource.paginator = this.paginator;
+    this.dataSource.paginator = this.paginatorMain;
   }
 
 }

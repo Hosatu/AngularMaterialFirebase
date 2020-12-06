@@ -4,11 +4,12 @@
 body {
     background-color: #f7f7f7;
 }
-a {
-    color:#D32F2F;
 
+a {
+    color: #D3312F;
 }
-a.hover {
+
+a:hover {
     color: #455A64;
 }
 app-multifill ul {
@@ -126,4 +127,10 @@ code.multiline {
 /* Mobile format portrait (small) */
 @media only screen and (max-width: 320px) {
 
+}
+
+app-corpus .mat-grid-tile figure {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: left !important;
 }

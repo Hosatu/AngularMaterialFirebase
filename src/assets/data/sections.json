@@ -85,6 +85,59 @@
                     }
                 },
                 {
+                    "title": "Doplňte znělostní protiklady",
+                    "type": "multifill",
+                    "data": {
+                        "points": 5,
+                        "question": "Doplňte znělostní protiklady",
+                        "template": "<ul><li>p - <input class=\"multifill\" id='answer-2-0'><label for=\"answer-2-0\"></label></li><li>z - <input class=\"multifill\" id='answer-2-1'><label for=\"answer-2-1\"></label></li><li>t - <input class=\"multifill\" id='answer-2-2'><label for=\"answer-2-2\"></label></li><li>f - <input class=\"multifill\" id='answer-2-3'><label for=\"answer-2-3\"></label></li><li>š - <input class=\"multifill\" id='answer-2-4'><label for=\"answer-2-4\"></label><li>ď - <input class=\"multifill\" id='answer-2-5'><label for=\"answer-2-5\"></label></li></li></ul>",
+                        "answers": [
+                            {
+                                "id": "answer-2-0",
+                                "values": [
+                                    "b"
+                                ],
+                                "reference": "b"
+                            },
+                            {
+                                "id": "answer-2-1",
+                                "values": [
+                                    "s"
+                                ],
+                                "reference": "s"
+                            },
+                            {
+                                "id": "answer-2-2",
+                                "values": [
+                                    "d"
+                                ],
+                                "reference": "d"
+                            },
+                            {
+                                "id": "answer-2-3",
+                                "values": [
+                                    "v"
+                                ],
+                                "reference": "v"
+                            },
+                            {
+                                "id": "answer-2-4",
+                                "values": [
+                                    "ž"
+                                ],
+                                "reference": "ž"
+                            },
+                            {
+                                "id": "answer-2-5",
+                                "values": [
+                                    "ť"
+                                ],
+                                "reference": "ť"
+                            }
+                        ]
+                    }
+                },
+                {
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
