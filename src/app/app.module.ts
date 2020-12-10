@@ -50,6 +50,9 @@ import { SanitizePipe } from './shared/pipes/sanitize-pipe.pipe';
 import { TreeRenderersModule } from '@shared/tree-renderers/tree-renderers.module';
 import { D3CreatorService } from '@shared/services/d3-creator.service';
 
+export function appFactory() {
+  return 'plinek';
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,7 +85,7 @@ import { D3CreatorService } from '@shared/services/d3-creator.service';
     MiscModule,
     MatCarouselModule,
     TreeRenderersModule,
-    NgxAuthFirebaseUIModule.forRoot(firebaseKeys,()=>'plinek', {
+    NgxAuthFirebaseUIModule.forRoot(firebaseKeys, appFactory, {
       toastMessageOnAuthSuccess: false, // whether to open/show a snackbar message on auth success - default : true
       toastMessageOnAuthError: false, // whether to open/show a snackbar message on auth error - default : true
     })

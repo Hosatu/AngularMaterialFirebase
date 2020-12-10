@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
       this.progress.initProgress();
     }
     firebase.auth().onAuthStateChanged((authState)=> {
+      console.error(authState)
       if(authState.uid) {
         this.progress.initProgress();
       }
