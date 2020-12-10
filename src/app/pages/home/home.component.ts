@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 
 export class HomeComponent {
-  public fullImagePath: string = '/assets/img/mb-bg-06.png';
+  public fullImagePath: string = '/assets/img/pokus-pozadi.png';
   public onToTop(): void {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   }

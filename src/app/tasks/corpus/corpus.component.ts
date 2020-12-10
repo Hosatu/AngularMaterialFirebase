@@ -3,6 +3,7 @@ import { MatPaginator, MatTableDataSource } from '@angular/material';
 import { CorporaItem, CorporaService } from '@shared';
 import { TaskComponent } from '../task';
 import * as _ from 'lodash';
+import { round } from '@shared/utilities';
 
 export declare interface CorpusData {
   question: string;
@@ -61,7 +62,7 @@ export class CorpusComponent implements TaskComponent, AfterViewInit {
   submit() {
     this.taskSubmitted.emit({
       answer: this.answer,
-      points: Math.round(this.calculateF1Score(this.answer, this.data.correct) * this.data.points)
+      points: this.getPoints()
     });
     this.isAnswered = true;
     this.dataSourceResults = new MatTableDataSource<CorporaItem>(_.map(this.data.correct, (position) => this.corpus.get(position)));
@@ -69,7 +70,7 @@ export class CorpusComponent implements TaskComponent, AfterViewInit {
   }
 
   getPoints() {
-    return Math.round(this.calculateF1Score(this.answer, this.data.correct) * this.data.points);
+    return round(this.calculateF1Score(this.answer, this.data.correct) * this.data.points, 1);
   }
 
   getInflection(points: number) {

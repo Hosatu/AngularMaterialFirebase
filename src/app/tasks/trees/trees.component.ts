@@ -26,7 +26,7 @@ export class TreesComponent implements TaskComponent, OnInit {
   }
   @Input() set progress(value: any) {
       this._progress = value;
-      this.loadProgress();
+      setTimeout(()=>this.loadProgress(), 1000);
   }
   @Output() taskSubmitted: EventEmitter<{points:number, answer: string}> = new EventEmitter();
   private selected: { [key: string]: TreeModel } = { 'first': null, 'second': null };
@@ -42,8 +42,8 @@ export class TreesComponent implements TaskComponent, OnInit {
 
 
   loadProgress() {
-    console.log(this.progress);
-    if (this.progress && this.progress.answer && !this.isAnswered) {
+    console.log(this.progress, this.renderer);
+    if (this.progress && this.progress.answer && !this.isAnswered && this.renderer) {
       this.isAnswered = true;
       this.reconstructTree(this.progress.answer, this.renderer);
       /*if(this.progress.answer != this.data.correct) {
@@ -72,7 +72,9 @@ export class TreesComponent implements TaskComponent, OnInit {
   }
 
   getPoints() {
-    return this.tree.export() === this.data.correct ? this.data.points : 0;
+    if(this.tree) {
+      return this.tree.export() === this.data.correct ? this.data.points : 0;
+    }
   }
 
   getInflection(points: number) {
@@ -140,6 +142,9 @@ export class TreesComponent implements TaskComponent, OnInit {
   }
 
   clear(renderer) {
+    if(!renderer) {
+      return;
+    }
     this.cleanSelection(renderer);
     renderer.clear();
     this.counter = 0;

@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter, ViewChildren, TemplateR
 import { TaskComponent } from '../task';
 import { DOCUMENT } from '@angular/common';
 import * as _ from 'lodash';
+import { round } from '@shared/utilities';
 
 export declare type MultifillData = {
   question: string;
@@ -81,7 +82,7 @@ export class MultifillComponent implements TaskComponent, OnInit {
   }
 
   getPoints() {
-    return Math.round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points);
+    return round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points, 1);
   }
 
   getAnswer(id: number) {

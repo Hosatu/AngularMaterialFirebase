@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TaskComponent } from '../task';
 import * as _ from "lodash";
+import { round } from '@shared/utilities';
 
 export declare type MultichoiceData = {
   question: string;
@@ -60,7 +61,7 @@ export class MultichoiceComponent implements TaskComponent, OnInit {
   }
 
   getPoints() {
-    return Math.round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points);
+    return round(_.filter(this.isCorrect).length / this.isCorrect.length * this.data.points, 1);
   }
 
   getInflection(points: number) {

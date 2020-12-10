@@ -6,12 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./third-block.component.scss']
 })
 export class ThirdBlockComponent  {
-  titleThree = 'Angular 8';
-  contentThree = 'Angular is a framework for building client applications in HTML and TypeScript that compiles to JavaScript.';
+  titleThree = 'Počítačová lingvistika';
+  contentThree = 'Počítačová lingvistika je (mimo jiné) bakalářský a magisterský studijní program na Filozofické fakultě Masarykovy univerzity, kde je vyučován od roku 2010 (dříve pod názvem Český jazyk se specializací počítačová lingvistika). Jde tedy o poměrně mladý program, který má však nepochybně velký potenciál a rozhodně si zaslouží vaši pozornost.';
 
-  titleFour = 'Material 2';
-  contentFour = 'Material Design is a unified system that combines theory, resources, and tools for crafting digital experiences.';
+  titleFour = 'Ústav českého jazyka';
+  contentFour = 'Ústav českého jazyka je pracoviště na Filozofické fakultě Masarykovy univerzity zajišťující výuku v rámci programu Počítačová lingvistika. Nabízí především lingvisticky orientované předměty, ale také řadu praktických předmětů včetně nejrůznějších projektů a exkurzí.';
 
-  titleFive = 'Firebase';
-  contentFive = 'Firebase is built on Google infrastructure and scales automatically, for even the largest apps.';
+  titleFive = 'Centrum zpracování přirozeného jazyka';
+  contentFive = 'Centrum zpracování přirozeného jazyka je pracoviště na Fakultě informatiky Masarykovy univerzity a podílí se na výuce v rámci programu Počítačová ligvistika. Také zde vzniká mnoho zajímavých nástrojů.';
 }

@@ -3,9 +3,7 @@
     <mat-card-title><h1>{{titleCard}}</h1></mat-card-title>
     <mat-card-subtitle>{{subTitleCard}}</mat-card-subtitle>
   </mat-card-header>
-  <img mat-card-md-image [src]="angularImage">
-  <img mat-card-md-image [src]="angularImage">
-  <img mat-card-md-image [src]="angularImage">
+  <img mat-card-lg-image [src]="angularImage" style="float:right;">
   
   <mat-card-content>  
       <br>
@@ -19,10 +17,11 @@
         <li type=disc>to vše a mnoho dalšího zcela zdarma</li>
       </ul>
     <p>Tak hurá do toho.</p>
+    
   </mat-card-content>
-
-
   <mat-card-actions class="buttonCard">
-    <a mat-raised-button routerLink="/prihlaseni"><h3>Zapsat se do kurzu</h3></a>
+    <a mat-raised-button *ngIf="!authService.isAuthenticated()" color="primary" routerLink='/prihlaseni'><h3>Zapsat se do kurzu</h3></a>
+    <a mat-raised-button *ngIf="authService.isAuthenticated()" color="primary" routerLink='/kurz'><h3>Vyzkoušejte si náš kurz</h3></a>
+
   </mat-card-actions>
 </mat-card>

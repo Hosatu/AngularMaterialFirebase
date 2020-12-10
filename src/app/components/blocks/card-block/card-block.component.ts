@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '@shared';
 
 @Component({
   selector: 'app-card-block',
@@ -8,13 +9,13 @@ import { Component } from '@angular/core';
 export class CardBlockComponent {
   titleCard = 'Proč vyzkoušet náš kurz?';
   
-  subTitleCard = 'A proč ne?';
+  subTitleCard = '';
   contentCard = '';
   angularImage: string;
   angularImage2: '/assets/img/muni-arts.png';
 
 
-  constructor() {
+  constructor(public authService: AuthService) {
     this.angularImage = '/assets/img/logo.png'; 
   }
 

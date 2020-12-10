@@ -964,7 +964,7 @@
                     "data": {
                         "points": 2,
                         "question": "Doplňte kód pro výpočet průměrné délky slova v korpusu (zachovejte diakritiku).",
-                        "template": "<code class='multiline'>korpus = [{\"tvar\": \"kočkou\", \"lemma\": \"kočka\", \"značka\": \"k1gFnSc7\"}, {\"tvar\": \"divokou\", \"lemma\": \"divoký\", \"značka\": \"k2gFnSc7\"}]\ncelková_délka = 0\nfor položka in korpus:\n\tcelková_délka += len(položka<input class=\"multifill\" id='answer-3-0'><label for=\"answer-3-0\"></label>:\nprint(<input class=\"multifill\" id='answer-3-1'><label for=\"answer-3-1\"></label> /len(korpus))\t<i># len(x) je délka slova, pokud je x text, a počet položek, pokud je x seznam</i></code>",
+                        "template": "<code class='multiline'>korpus = [{\"tvar\": \"kočkou\", \"lemma\": \"kočka\", \"značka\": \"k1gFnSc7\"}, {\"tvar\": \"divokou\", \"lemma\": \"divoký\", \"značka\": \"k2gFnSc7\"}]\ncelková_délka = 0\nfor položka in korpus:\n\tcelková_délka += len(položka<input class=\"multifill\" id='answer-3-0'><label for=\"answer-3-0\"></label>):\nprint(<input class=\"multifill\" id='answer-3-1'><label for=\"answer-3-1\"></label> /len(korpus))\t<i># len(x) je délka slova, pokud je x text, a počet položek, pokud je x seznam</i></code>",
                         "answers": [
                             {
                                 "id": "answer-3-0",
@@ -2001,6 +2001,7 @@
                         "<a target='blank' href='http://psych.fullerton.edu/mbirnbaum/psych101/Eliza.htm'>Vyzkoušejte si chatování s Elizou</a> (probíhá v angličtině)."                       
                     ]
                 }
+
             ],
             "quizes":[
                 {
@@ -2043,16 +2044,16 @@
                     "title": "",
                     "text":["V rámci počítačové lingvistiky a zpracování přirozeného jazyka vzniká celá řada dalších specializovaných programů, nástrojů a výzkumů. Existují například nástroje na <b>určování autorství</b> (tedy hledání pravděpodobného autora na základě typických znaků v textu, jako jsou konkrétní slova, ale i jejich spojení, slovosled a podobně) nebo tématu textu. Nejspíše jste zaznamenali i nástroje na <b>kontrolu plagiátů</b>, které porovnávají texty a hledají mezi nimi shody. Provádí se také <b>analýza sentimentu</b>, v rámci níž se například zjišťuje, které z recenzí jsou pozitivní a které negativní, a mnoho dalšího."]
                 },
+
                 {
-                    "title": "",
-                    "text":["Nakonec si ukážeme ještě některé konkrétní nástroje, které by pro vás mohly být zajímavé. Jedním takovým je například Webové rozhraní pro systém doplňování čárek.",
-                        "<a target='blank' href='https://nlp.fi.muni.cz/projekty/punctuation/'>Vyzkoušejte si ho</a>."
-                    ]
+                    "title":"",
+                    "text":["Nakonec si ukážeme ještě některé konkrétní nástroje, které by pro vás mohly být zajímavé. Jedním takovým je například <a target='blank' href='https://nlp.fi.muni.cz/projekty/punctuation/'>Webové rozhraní pro systém doplňování čárek</a>. Vyzkoušejte si ho.", "<iframe width='90%' height='300' src='https://nlp.fi.muni.cz/projekty/punctuation/' frameborder='0' ></iframe>"]
                 },
+
                 {
                     "title": "Doplňování diakritiky",
-                    "text":["V současné době stále více lidí píše na internetu nebo do různých messengerů bez diakritiky. V Centru zpracování přirozeného jazyka tak vznikl nástroj, který <b>diakritiku doplňuje</b>.",
-                    "Můžete si ho <a target='blank' href='http://nlp.fi.muni.cz/cz_accent/'>sami vyzkoušet</a>."]
+                    "text":["V současné době stále více lidí píše na internetu nebo do různých messengerů bez diakritiky. V Centru zpracování přirozeného jazyka tak vznikl <a target='blank' href='http://nlp.fi.muni.cz/cz_accent/'>nástroj</a>, který <b>diakritiku doplňuje</b>.",
+                    "Můžete si ho sami vyzkoušet.", "<iframe width='90%' height='250' src='http://nlp.fi.muni.cz/cz_accent/' frameborder='0' ></iframe>"]
                 },
                 {
                     "title": "Webová typografie",
@@ -2060,17 +2061,24 @@
                         "<a target='blank' href='http://www.webovatypografie.cz/'>Vyzkoušejte si práci s Webovou typografií</a>."]
 
                 },
+
+
                 {
                     "title": "Korpusy a korpusové nástroje",
-                    "text":["Pro práci s jazykovými daty, vyhledávání různých jevů, ale i zajímavostí je pak možné využít nejrůznější korpusy a řadu korpusových nástrojů.",
-                        "Pro vyhledávání konkrétních slov a získání základního přehledu o tom, jak používají, můžeme použít nástroj Slovo v kostce, který sdružuje různé informace o slově. Pro pokročilejší práci s korpusem pak můžeme použít korpusový manažer KonText, který nám umožňuje vybrat si nejvhodnější korpus, zadávat specifičtější dotazy a zobrazit všechny odpovídající výskyty. SyD pak umožňuje porovnávat užití dvou a více slov (například synonym nebo dublet), a to jak v současném jazyce, tak i z hlediska proměny v čase. Pro zkoumání slovotvorby je užitečný nástroj Morfio, Treq slouží k vyhledávání překladových ekvivalentů a KWords k odhalení klíčových slov v zadaném textu.",
-                        "<a target='blank' href='https://www.korpus.cz/'>Vyzkoušejte si práci s korpusovými nástroji</a>. V horní liště můžete přepínat mezi jednotlivými nástroji."
+                    "text":["Pro práci s jazykovými daty, vyhledávání různých jevů, ale i zajímavostí je pak možné využít nejrůznější korpusy a řadu korpusových nástrojů dostupných na <a target='blank' href='https://www.korpus.cz/'>korpus.cz</a>.",
+                        "Pro vyhledávání konkrétních slov a získání základního přehledu o tom, jak používají, můžeme použít nástroj Slovo v kostce, který sdružuje různé informace o slově. Pro pokročilejší práci s korpusem pak můžeme použít korpusový manažer KonText, který nám umožňuje vybrat si nejvhodnější korpus, zadávat specifičtější dotazy a zobrazit všechny odpovídající výskyty. SyD pak umožňuje porovnávat užití dvou a více slov (například synonym nebo dublet), a to jak v současném jazyce, tak i z hlediska proměny v čase. Pro zkoumání slovotvorby je užitečný nástroj Morfio, Treq slouží k vyhledávání překladových ekvivalentů a KWords k odhalení klíčových slov v zadaném textu."
+                        
                         ]
+                },
+                {
+                    "title":"Vyzkoušejte si práci s korpusovými nástroji",
+                    "text":["V horní liště vloženého okna můžete přepínat mezi jednotlivými nástroji. Nástroj KonText bohužel není v tomto zobrazení funkční, můžete si ho ovšem vyzkoušet přímo na stránce <a target='blank' href='https://www.korpus.cz/'>korpus.cz</a>","<iframe width='95%' height='300' src='https://korpus.cz/' frameborder='0' ></iframe>"]
                 },
                 {
                     "title":"SKELL",
                     "text":["Pro učení jazyků může být užitečný nástroj SKELL, který je založen na <b>korpusu</b> a poskytuje k hledaným výrazům <b>příklady užití</b>, <b>častý kontext</b> a slova, která se objevují v <b>podobném kontextu</b> (tedy nejen synonyma). Data jsou aktuálně dostupná pro češtinu, angličtinu, němčinu, ruštinu, italštinu a estonštinu.", "Opět si ho můžete <a target='blank' href='https://skell.sketchengine.co.uk/run.cgi/skell'>sami vyzkoušet</a>."]
                 }
+
             ],
             "quizes":[
                 {

@@ -6,6 +6,7 @@ import { MatButtonModule, MatCardModule } from '@angular/material';
 // Components
 import { CardBlockComponent } from './card-block/card-block.component';
 import { ThirdBlockComponent } from './third-block/third-block.component';
+import { AppRoutingModule } from 'src/app/app.routing';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,7 @@ import { ThirdBlockComponent } from './third-block/third-block.component';
   ],
   imports: [
     CommonModule,
-    MatButtonModule, MatCardModule
+    MatButtonModule, MatCardModule, AppRoutingModule
   ],
   exports: [
     CardBlockComponent,
