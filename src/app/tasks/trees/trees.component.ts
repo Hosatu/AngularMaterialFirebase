@@ -170,6 +170,7 @@ export class TreesComponent implements TaskComponent, OnInit {
   submit() {
     const result = this.tree.export();
     this.isAnswered = true;
+    console.log(result, this.data.correct)
     if(result == this.data.correct) {
       this.taskSubmitted.emit({points: this.data.points, answer: result});
     } else {

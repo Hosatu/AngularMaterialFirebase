@@ -34,7 +34,8 @@
                                             <h4><mat-icon>{{ getQuizIcon(_.get(progressData, [currentLesson, 'sections', currentSectionId, 'quizResults', quiz], []))}}</mat-icon> Úloha {{_.toInteger(quiz) + 1}} {{pointsShow(calculatePoints(currentLesson, currentSectionId, quiz))}}</h4>
                                         </li>
                                     </ul>
-                                    <button mat-raised-button color="primary" [routerLink]="['/kurz/'+currentSection.next[0]+'/'+currentSection.next[1]]">DALŠÍ</button>
+                                    <button *ngIf="currentSection.next" mat-raised-button color="primary" [routerLink]="['/kurz/'+currentSection.next[0]+'/'+currentSection.next[1]]">DALŠÍ</button>
+                                    <button *ngIf="!currentSection.next" mat-raised-button color="primary" [routerLink]="['/postup-kurzem']">HOTOVO! ZOBRAZIT VÝSLEDKY</button>
                                     
                                 </mat-card-content>
                             </mat-card>

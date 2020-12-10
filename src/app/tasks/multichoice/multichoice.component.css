@@ -5,3 +5,6 @@
   .correct {
     color: green;
   }
+  .example-checkbox span {
+    font-weight: normal;
+  }

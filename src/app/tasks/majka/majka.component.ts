@@ -49,7 +49,7 @@ export class MajkaComponent implements TaskComponent, OnInit {
     if(this.isAnswered == false) {
       return [];
     }
-    if (option == this.data.correct) {
+    if (option.Lemma+':'+option.Tag == this.data.correct) {
       return ['correct'];
     }
       return ['incorrect'];
@@ -86,7 +86,7 @@ export class MajkaComponent implements TaskComponent, OnInit {
     if(this.answer == this.data.correct) {
       this.taskSubmitted.emit({points: this.data.points, answer: { word: this.majkaWord, selected: this.answer}});
     } else {
-      this.taskSubmitted.emit({points: 0, answer: this.answer});
+      this.taskSubmitted.emit({points: 0, answer: { word: this.majkaWord, selected: this.answer}});
     }
     this.isAnswered = true;
   }

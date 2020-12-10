@@ -7,7 +7,7 @@
     <ng-template #lessonContent>
         <mat-grid-list *ngIf="currentLesson; else unknownLesson" [cols]="currentLesson.sections.length" rowHeight="80px">
             <mat-grid-tile [colspan]="currentLesson.sections.length"  [style.background]="currentLesson.background" rowspan="1">
-                <h1>{{currentLesson.title}}</h1>
+                <h1 class="title">{{currentLesson.title}}</h1>
             </mat-grid-tile>
             <mat-grid-tile [colspan]="currentLesson.sections.length" rowspan="2">
                 {{currentLesson.description}}

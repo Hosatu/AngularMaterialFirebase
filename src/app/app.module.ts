@@ -82,7 +82,10 @@ import { D3CreatorService } from '@shared/services/d3-creator.service';
     MiscModule,
     MatCarouselModule,
     TreeRenderersModule,
-    NgxAuthFirebaseUIModule.forRoot(firebaseKeys)
+    NgxAuthFirebaseUIModule.forRoot(firebaseKeys,()=>'plinek', {
+      toastMessageOnAuthSuccess: false, // whether to open/show a snackbar message on auth success - default : true
+      toastMessageOnAuthError: false, // whether to open/show a snackbar message on auth error - default : true
+    })
   ],
   providers: [
     UserService,

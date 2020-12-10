@@ -15,9 +15,10 @@ export class ProgressComponent implements OnInit {
     'fonetika': ['úvod', 'výslovnost', 'vývoj', 'programování', 'zpracování řeči'],
     'morfologie': ['úvod', 'korpusy', 'statistika', 'programování', 'morfolog. analýza'],
     'syntax': ['grafy', 'úvod', 'konstituenty', 'typy konstituentů', 'synt. analýza'],
-    'sémantika': ['úvod', 'význam']
+    'sémantika':  ["úvod", "význam", "lexikografie a nástroje", "predikátová logika"],
+    'nástroje':["našeptávače a korektory", "překladače a chatboty", "další nástroje"]
   };
-  public lessons = ['fonetika', 'morfologie', 'syntax', 'sémantika'];
+  public lessons = ['fonetika', 'morfologie', 'syntax', 'sémantika', 'nástroje'];
 
   constructor(private progress: ProgressService) {
     this.progress.updated.subscribe(() => {

@@ -1,4 +1,4 @@
-import { Component, OnInit, ComponentFactoryResolver, ViewChild, ViewChildren, QueryList, ViewContainerRef } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver, ViewChild, ViewChildren, QueryList, ViewContainerRef, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { HasSubscriptions } from '@shared/utilities';
 import { HttpClient } from '@angular/common/http';
@@ -28,7 +28,7 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
 
   @ViewChildren(TaskDirective) taskContainers: QueryList<TaskDirective>;
 
-  constructor(private sanitizer: DomSanitizer, private snackBar: MatSnackBar, public url: ActivatedRoute, public files: HttpClient, private componentFactoryResolver: ComponentFactoryResolver, private progress: ProgressService ) {
+  constructor(private changeDetectorRef: ChangeDetectorRef, private sanitizer: DomSanitizer, private snackBar: MatSnackBar, public url: ActivatedRoute, public files: HttpClient, private componentFactoryResolver: ComponentFactoryResolver, private progress: ProgressService ) {
     super();
   }
 
@@ -77,20 +77,23 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
     const componentFactory = this.componentFactoryResolver.resolveComponentFactory(Tasks[task.type]);
     viewContainerRef.clear();
     const componentRef = viewContainerRef.createComponent(componentFactory);
+    if(task.data.question) {
+      task.data.question = this.sanitizer.bypassSecurityTrustHtml(task.data.question);
+    }
+    (<TaskComponent>componentRef.instance).data = task.data;
     this.progress.updated.subscribe(() => {
+      (<TaskComponent>componentRef.instance).data = task.data;
       this.progressData = this.progress.getProgress();
       if(this.progressData ) {
         (<TaskComponent>componentRef.instance).progress = this.progressData[this.currentLesson].sections[this.currentSectionId].quizResults[index];
         if((<TaskComponent>componentRef.instance).progress && (<TaskComponent>componentRef.instance).progress.answer) {
           this.slideDone[index] = true;
         }
-        componentRef.changeDetectorRef.detectChanges();
+        if (!componentRef.changeDetectorRef['destroyed']) {
+          componentRef.changeDetectorRef.detectChanges();
+        }
       }
     });
-    if(task.data.question) {
-      task.data.question = this.sanitizer.bypassSecurityTrustHtml(task.data.question);
-    }
-    (<TaskComponent>componentRef.instance).data = task.data;
     this.safeSubscribe(
       (<TaskComponent>componentRef.instance).taskSubmitted,
       (data: {points: number, answer: any}) => {
@@ -108,28 +111,32 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
               newProgress,
             {
               [this.currentLesson]: {
-                finished: this.currentLesson != this.currentSection.next[0],
+                finished: !this.currentSection.next || this.currentLesson != this.currentSection.next[0],
                 sections: {
                   [this.currentSectionId]: {
                     finished: true
                   }
                 }
               }
-            },
-            {
-              [this.currentSection.next[0]]: {
-                unlocked: true,
-                sections: {
-                  [this.currentSection.next[1]]: {
-                    unlocked: true
+            });
+            if(this.currentSection.next) {
+              newProgress = _.merge(newProgress,
+                {
+                  [this.currentSection.next[0]]: {
+                    unlocked: true,
+                    sections: {
+                      [this.currentSection.next[1]]: {
+                        unlocked: true
+                      }
+                    }
                   }
                 }
-              }
-            });
+              )
+            }
           }
           this.progress.updateProgress(firebase.auth().currentUser.uid, newProgress);
         }
-        if (data.points == task.data.points) {
+        /**if (data.points == task.data.points) {
           this.snackBar.open('Správná odpověď! ' + data.points + ' bod' + this.getInflection(data.points) + '.', 'Zavřít', {
             verticalPosition: 'bottom'
           });
@@ -141,7 +148,7 @@ export class QuizComponent extends HasSubscriptions implements OnInit {
           this.snackBar.open('Částečně správná odpověď! ' + data.points + ' bod' + this.getInflection(data.points) + '.', 'Zavřít', {
             verticalPosition: 'bottom'
           });
-        }
+        } */
       }
     );
   }

@@ -4,7 +4,7 @@
 <mat-horizontal-stepper [linear]="isLinear">
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
-      <ng-template matStepLabel>Fill out your name</ng-template>
+      <ng-template matStepLabel>Vyplňte jméno</ng-template>
       <mat-form-field>
         <input matInput placeholder="First name and last name" formControlName="name" required>
       </mat-form-field>
@@ -15,21 +15,21 @@
   </mat-step>
   <mat-step [stepControl]="secondFormGroup">
     <form [formGroup]="secondFormGroup">
-      <ng-template matStepLabel>Fill out your email</ng-template>
+      <ng-template matStepLabel>Vyplňte e-mail</ng-template>
       <mat-form-field>
         <input matInput placeholder="Email" formControlName="email" required>
       </mat-form-field>
       <div>
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext [disabled]="secondFormGroup.invalid">Next</button>
+        <button mat-button matStepperNext [disabled]="secondFormGroup.invalid">Další</button>
       </div>
     </form>
   </mat-step>
   <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    You are now done.
+    <ng-template matStepLabel>Hotovo</ng-template>
+    Hotovo.
     <div>
-      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperPrevious>Zpět</button>
     </div>
   </mat-step>
 </mat-horizontal-stepper>

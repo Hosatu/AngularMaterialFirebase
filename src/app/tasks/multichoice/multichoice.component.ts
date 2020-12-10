@@ -32,7 +32,7 @@ export class MultichoiceComponent implements TaskComponent, OnInit {
   constructor() { }
 
   ngOnInit() {
-    if(!this.answer) {
+    if(!this.answer || !this.answer.length) {
       this.answer = new Array(this.data.options.length).fill(false);
     }
   }
@@ -71,14 +71,14 @@ export class MultichoiceComponent implements TaskComponent, OnInit {
     if(this.isAnswered == false) {
       return [];
     }
-    if (this.answer[index] == this.data.correct[index]) {
+    if (this.data.correct[index]) {
       return ['correct'];
     }
     return ['incorrect'];
   }
 
   getCorrectAnswer(index) {
-    if(this.isAnswered == false || this.data.correct == this.answer) {
+    if(this.isAnswered == false) {
       return '';
     }
     if (this.answer[index] == this.data.correct[index]) {

@@ -26,7 +26,7 @@ export class CorpusComponent implements TaskComponent, AfterViewInit {
       this.loadProgress();
   }
   @Output() taskSubmitted: EventEmitter<{points: number, answer: number[]}> = new EventEmitter();
-  public answer: number[] = [];
+  public answer: number[];
   public dataSource = new MatTableDataSource<CorporaItem>(_.map(this.answer, (position) => this.corpus.get(position)));
   public dataSourceResults = new MatTableDataSource<CorporaItem>([]);
 
@@ -64,6 +64,8 @@ export class CorpusComponent implements TaskComponent, AfterViewInit {
       points: Math.round(this.calculateF1Score(this.answer, this.data.correct) * this.data.points)
     });
     this.isAnswered = true;
+    this.dataSourceResults = new MatTableDataSource<CorporaItem>(_.map(this.data.correct, (position) => this.corpus.get(position)));
+    this.dataSourceResults.paginator = this.paginatorResults;
   }
 
   getPoints() {
@@ -95,7 +97,7 @@ export class CorpusComponent implements TaskComponent, AfterViewInit {
   }
 
   public show() {
-    this.answer = this.corpus.find(new RegExp(this.word), new RegExp(this.tag), new RegExp(this.lemma));
+    this.answer = this.corpus.find(new RegExp("^"+this.word+"$"), new RegExp("^"+this.tag+"$"), new RegExp("^"+this.lemma+"$"));
     this.dataSource = new MatTableDataSource<CorporaItem>(_.map(this.answer, (position) => this.corpus.get(position)));
     this.dataSource.paginator = this.paginatorMain;
   }

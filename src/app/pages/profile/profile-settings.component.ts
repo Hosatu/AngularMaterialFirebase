@@ -30,19 +30,19 @@ export class ProfileSettingsComponent implements OnInit {
 
   public onPasswordReset(): void {
     this.userService.sendUserPasswordResetEmail();
-    this.alertService.showToaster('Reset password is sent to your email');
+    this.alertService.showToaster('E-mail pro reset hesla odeslán.');
   }
 
   public onUpdateUserInfo(form: NgForm): void {
     const displayName = form.value.displayName;
     const bio = form.value.bio;
     this.userService.updateUserInfo(firebase.auth().currentUser.uid, displayName, bio);
-    this.alertService.showToaster('Your settings are saved');
+    this.alertService.showToaster('Nastavení uloženo.');
   }
 
   public onLogout(): void {
     this.authService.logout();
-    this.alertService.showToaster('Logout succesful');
+    this.alertService.showToaster('Odhlášení proběhlo úspěšně');
   }
 
 }

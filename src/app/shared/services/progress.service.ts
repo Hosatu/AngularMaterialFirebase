@@ -38,6 +38,7 @@ export class ProgressService extends HasSubscriptions{
    loadProgress(uid) {
     return firebase.firestore().collection(`progress`).doc(uid).get().then((snap) => snap.data()).then((data) => {
       this.progress = data;
+      console.log("PROGRESS LOAD")
       this.updated.next();
     })
    }
@@ -48,8 +49,9 @@ export class ProgressService extends HasSubscriptions{
 
    updateProgress(uid, value) {
     firebase.firestore().collection(`progress`).doc(uid).update(value).then(()=> {
+      console.log("FB UPDATE")
       this.loadProgress(uid);
-      this.updated.next();
+      //this.updated.next();
     });
    }
 }

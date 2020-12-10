@@ -24,7 +24,7 @@ export class UserService {
   }
 
   public keepInTouch(email: string) {
-    this.alertService.showToaster('Your email is saved');
+    this.alertService.showToaster('E-mail uložen.');
     return firebase.database().ref().child('touch/').push({
       email: email
     });

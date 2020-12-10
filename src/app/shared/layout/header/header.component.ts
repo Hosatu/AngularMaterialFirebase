@@ -32,7 +32,7 @@ export class HeaderComponent {
   }
 
   public onLogout(): void {
-    this.alertService.showToaster('Logout succesful');
+    this.alertService.showToaster('Odhlášení proběhlo úspěšně.');
     return this.authService.logout();
   }
 }

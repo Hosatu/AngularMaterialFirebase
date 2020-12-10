@@ -11,3 +11,7 @@ mat-card {
     opacity: 0.5;
     pointer-events: none;
 }
+
+.title {
+    color: white;
+}

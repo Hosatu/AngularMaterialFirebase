@@ -25,25 +25,19 @@ export class CourseComponent implements OnInit {
       id: 'syntax',
       label: 'Syntax',
       colspan: 1,
-      rowspan: 1,
-    },
-    {
-      id: 'nástroje',
-      label: 'Nástroje',
-      colspan: 1,
-      rowspan: 2,
-    },
-    {
-      id: 'test',
-      label: 'Test',
-      colspan: 1,
       rowspan: 2,
     },
     {
       id: 'sémantika',
       label: 'Sémantika',
       colspan: 1,
-      rowspan: 1,
+      rowspan: 2,
+    },
+    {
+      id: 'nástroje',
+      label: 'Nástroje',
+      colspan: 1,
+      rowspan: 2,
     }
   ]
 

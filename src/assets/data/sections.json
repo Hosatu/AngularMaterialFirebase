@@ -19,124 +19,11 @@
                         "<b>Fonologie</b> pak zkoumá zvukovou stránku jazyka z hlediska funkce, vlivu na význam. Její základní jednotkou je <b>foném</b>, což je hláska schopná rozlišit význam. Díky těmto jednotkám vnímáme rozdíl například mezi slovy <i>pes</i> a <i>pas</i>, <i>les</i> a <i>lev</i> a podobně. Význam však pouze rozlišují, jeho nositelem jsou až vyšší jazykové jednotky."
                     ]
                 }
-            ],
-            "quizes": [  
-                {
-                    "title": "TEST",
-                    "type": "corpus",
-                    "data":{
-                        "question": "TEST QUESTION",
-                        "points": 3,
-                        "correct": [3]
-                    }
-                }, 
-                {
-                    "title": "Zvolte všechny správné odpovědi",
-                    "type":"multichoice",
-                    "data":{
-                        "points": 3,
-                        "question": "Kterou část / které části věty <i>Věž kostela sv. Gabriela měří 43 m.</i> by bylo nutné v rámci syntézy řeči rozepsat?",
-                        "options":[
-                            "Věž",
-                            "kostela",
-                            "sv.",
-                            "Gabriela",
-                            "měří",
-                            "43",
-                            "m"
 
-                        ],
-                        "correct": [
-                            false,
-                            false,
-                            true,
-                            false,
-                            false,
-                            true,
-                            true                    
-                        ]
-                    
-                    }
-                },
-                {
-                    "title": "Na vynechaná místa přesuň odpovídající položky z nabídky",
-                    "type": "matching",
-                    "data":{
-                        "points": 4,
-                        "question": "Přiřaď české termíny k latinským ekvivalentům.",
-                        "optionsFixed": ["casus","verbum","akuzativ", "substantivum"],
-                        "optionsMatch": ["4. pád","podstatné jméno","sloveso","pád"],
-                        "correct": {
-                            "casus": ["pád"],
-                            "verbum": ["sloveso"],
-                            "akuzativ": ["4. pád"],
-                            "substantivum": ["podstatné jméno"]
-                        }
-                    }
-                },
-                {
-                    "title": "Zvolte správnou odpověď",
-                    "type": "trees",
-                    "data": {
-                        "points": 2,
-                        "question": "Vytvoř strukturu věty",
-                        "constituents": "<Pron>I,<V>see,<N>trees,<P>of,<A>green",
-                        "correct": "[I,[see,[trees,[of,green]]]]"
-                    }
-                },
-                {
-                    "title": "Doplňte znělostní protiklady",
-                    "type": "multifill",
-                    "data": {
-                        "points": 5,
-                        "question": "Doplňte znělostní protiklady",
-                        "template": "<ul><li>p - <input class=\"multifill\" id='answer-2-0'><label for=\"answer-2-0\"></label></li><li>z - <input class=\"multifill\" id='answer-2-1'><label for=\"answer-2-1\"></label></li><li>t - <input class=\"multifill\" id='answer-2-2'><label for=\"answer-2-2\"></label></li><li>f - <input class=\"multifill\" id='answer-2-3'><label for=\"answer-2-3\"></label></li><li>š - <input class=\"multifill\" id='answer-2-4'><label for=\"answer-2-4\"></label><li>ď - <input class=\"multifill\" id='answer-2-5'><label for=\"answer-2-5\"></label></li></li></ul>",
-                        "answers": [
-                            {
-                                "id": "answer-2-0",
-                                "values": [
-                                    "b"
-                                ],
-                                "reference": "b"
-                            },
-                            {
-                                "id": "answer-2-1",
-                                "values": [
-                                    "s"
-                                ],
-                                "reference": "s"
-                            },
-                            {
-                                "id": "answer-2-2",
-                                "values": [
-                                    "d"
-                                ],
-                                "reference": "d"
-                            },
-                            {
-                                "id": "answer-2-3",
-                                "values": [
-                                    "v"
-                                ],
-                                "reference": "v"
-                            },
-                            {
-                                "id": "answer-2-4",
-                                "values": [
-                                    "ž"
-                                ],
-                                "reference": "ž"
-                            },
-                            {
-                                "id": "answer-2-5",
-                                "values": [
-                                    "ť"
-                                ],
-                                "reference": "ť"
-                            }
-                        ]
-                    }
-                },
+
+            ],
+            "quizes": [
+
                 {
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
@@ -462,11 +349,12 @@
                             "asimilaci znělosti",
                             "neutralizaci znělosti"
                         ],
-                        "correct": "neutralizaci znělosti"
+                        "correct": "neutralizaci znělosti",
+                        "points": 1
                     }
                 },
                 {
-                    "title": "Doplňte odpovídající text",
+                    "title": "Doplňte odpovídající kód pro neutralizaci znělosti",
                     "type": "multifill",
                     "data": {
                         "points": 2,
@@ -613,15 +501,10 @@
                     "title": "Jak poznat morfém",
                     "text": [
                         "Abychom mohli rozhodnout, jestli určitá část slova skutečně odpovídá morfému, posuzujeme splnění těchto vlastností: <b>izolovatelnost</b>, <b>opakování</b>, <b>význam</b> a <b>kontrastivnost</b>.",
-                        "Izolovatelnost znamená, že jsme schopni určitou část slova „vypíchnout“ jako samostatnou jednotku.",
-                        "Opakování nám říká, že se nejedná o jediný kontext, ve kterém se morfém může objevit (tedy že například morfém <i>ob-</i> najdeme jak u slovesa <i>objet</i>, tak i u sloves jako <i>obcházet</i>, <i>obtočit</i> a podobně)."
-                    ]
-                },
-                {
-                    "title": "",
-                    "text": [
-                        "Význam je prostý – každý morfém by měl nést nějaký význam (buď plný, nebo třeba jen přidání nebo změnu nějaké vlastnosti, například čísla nebo vidu).",
-                        "Kontrastivnost pak znamená, že přítomnost různých morfémů ve stejném okolí značí (alespoň do určité míry) jiný význam (<i>na-ložit</i> není totéž co <i>vy-ložit</i>)."
+                        "<b>Izolovatelnost</b> znamená, že jsme schopni určitou část slova „vypíchnout“ jako samostatnou jednotku.",
+                        "<b>Opakování</b> nám říká, že se nejedná o jediný kontext, ve kterém se morfém může objevit (tedy že například morfém <i>ob-</i> najdeme jak u slovesa <i>objet</i>, tak i u sloves jako <i>obcházet</i>, <i>obtočit</i> a podobně).",
+                        "<b>Význam</b> je prostý – každý morfém by měl nést nějaký význam (buď plný, nebo třeba jen přidání nebo změnu nějaké vlastnosti, například čísla nebo vidu).",
+                        "<b>Kontrastivnost</b> pak znamená, že přítomnost různých morfémů ve stejném okolí značí (alespoň do určité míry) jiný význam (<i>na-ložit</i> není totéž co <i>vy-ložit</i>)."
                     ]
                 }
             ],
@@ -733,12 +616,7 @@
                 {
                     "title": "Značkování",
                     "text": [
-                        "Jednotlivé texty v korpusu jsou rozděleny na slova, která jsou typicky <b>označkována</b> – jsou jim přiřazeny hodnoty relevantních kategorií, jako je například slovní druh, rod, číslo nebo pád. Výsledná kombinace těchto hodnot se nazývá <b>morfologická značka</b> nebo také <b>tag</b>. Díky těmto značkám můžeme korpus využívat k vyhledávání podle různých kritérií."
-                    ]
-                },
-                {
-                    "title": "",
-                    "text": [
+                        "Jednotlivé texty v korpusu jsou rozděleny na slova, která jsou typicky <b>označkována</b> – jsou jim přiřazeny hodnoty relevantních kategorií, jako je například slovní druh, rod, číslo nebo pád. Výsledná kombinace těchto hodnot se nazývá <b>morfologická značka</b> nebo také <b>tag</b>. Díky těmto značkám můžeme korpus využívat k vyhledávání podle různých kritérií.",
                         "Samotný proces přiřazování morfologické značky (<b>značkování</b>, <b>anotace</b>) může probíhat několika způsoby. Samozřejmě je možné ho provádět ručně, to je ale velmi nákladné a poměrně pomalé, proto se upřednostňují spíše automatické přístupy, které jsou založené na předem stanovených pravidlech nebo statistice. V praxi se ovšem tyto přístupy často kombinují."
                     ]
                 },
@@ -768,13 +646,8 @@
                 {
                     "title": "Lemma vs. slovní tvar",
                     "text": [
-                        "Pojem <b>lemma</b> označuje <b>základní tvar</b> slova, který toto slovo reprezentuje. Je to forma, pod kterou bychom mohli slovo hledat ve slovníku. U ohebných slov jde o první pád jednotného čísla (kachna) nebo infinitiv (psát), u neohebných je to slovo samo (haf). Slovní tvar pak odpovídá jakékoliv další formě slova (například <i>kachnou</i> nebo <i>psala</i>)."
-                    ]
-                },
-                {
-                    "title": "",
-                    "text": [
-                        "Při tvorbě korpusu obvykle dochází k tzv. lemmatizaci, což je proces, při kterém se slovu přiřadí jeho lemma. Díky tomu pak můžeme vyhledávat nejen konkrétní tvary slov (prostřednictvím atributu word), ale také libovolné tvary, které se v korpusu objevují (s využitím lemmatu). To nám umožňuje lépe upřesnit, co hledáme, a získat tak relevantní výsledky pro různé účely."
+                        "Pojem <b>lemma</b> označuje <b>základní tvar</b> slova, který toto slovo reprezentuje. Je to forma, pod kterou bychom mohli slovo hledat ve slovníku. U ohebných slov jde o první pád jednotného čísla (<i>kachna</i>) nebo infinitiv (<i>psát</i>), u neohebných je to slovo samo (<i>haf</i>). <b>Slovní</b> tvar pak odpovídá jakékoliv další formě slova (například <i>kachnou</i> nebo <i>psala</i>).",
+                        "Při tvorbě korpusu obvykle dochází k tzv. <b>lemmatizaci</b>, což je proces, při kterém se slovu přiřadí jeho lemma. Díky tomu pak můžeme vyhledávat nejen konkrétní tvary slov (prostřednictvím atributu word), ale také libovolné tvary, které se v korpusu objevují (s využitím lemmatu). To nám umožňuje lépe upřesnit, co hledáme, a získat tak relevantní výsledky pro různé účely."
                     ]
                 },
                 {
@@ -874,7 +747,35 @@
                         ],
                         "correct": "k1gFnSc4"
                     }
+                },
+                {
+                    "title": "",
+                    "type": "corpus",
+                    "data":{
+                        "question": "Najděte všechny výskyty slova <i>pytel</i> v libovolném tvaru",
+                        "points": 3,
+                        "correct": [2, 42, 49, 55, 63, 71, 331]
+                    }
+                }, 
+                {
+                    "title": "",
+                    "type": "corpus",
+                    "data":{
+                        "question": "Najděte všechna podstatná jména rodu ženského v jednotném čísle a druhém pádě.",
+                        "points": 3,
+                        "correct": [142, 151]
+                    }
+                }, 
+                {
+                    "title": "",
+                    "type": "corpus",
+                    "data":{
+                        "question": "Najděte všechna slova začínající řetězcem <i>pyt</p>",
+                        "points": 3,
+                        "correct": [2, 28, 42, 49, 55, 63, 71, 110, 181, 300, 331]
+                    }
                 }
+
             ]
         },
         "statistika": {
@@ -942,7 +843,25 @@
                         ],
                         "correct": "prostřední hodnota"
                     }
+                },
+                {
+                    "title": "Zvolte správnou odpověď",
+                    "type": "singlechoice",
+                    "data": {
+                        "points": 1,
+                        "question": "Určete modus a medián délky následujících slov: kočka, pes, žába, žirafa, myš",
+                        "options":[
+                            "modus = 4, medián = 3",
+                            "modus = 4,2 a medián = 3 ",
+                            "modus = 3, medián = 4",
+                            "modus = 3, medián = 4,2"
+                        ],
+                        "correct": "modus = 3, medián = 4"
+    
                 }
+            }
+            
+                            
             ]
         },
         "programování": {
@@ -1008,6 +927,7 @@
                     "title": "Zvolte všechny správné odpovědi",
                     "type": "multichoice",
                     "data": {
+                        "points": 2,
                         "question": "Mezi složené proměnné patří:",
                         "options": [
                             "slovník",
@@ -1027,6 +947,7 @@
                     "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
+                        "points": 1,
                         "question": "Pro opakující se činnosti se v programovaní používají konstrukce zvané",
                         "options": [
                             "podmínky",
@@ -1140,9 +1061,9 @@
                 {
                     "title": "",
                     "text": ["Abychom mohli správně zachycovat syntaktické struktury, potřebujeme nejprve pochopit základy teorie grafů. Graf představuje skupinu několika <b>vrcholů</b> (<b>uzlů</b>), které jsou propojeny <b>hranami</b>. Každý graf je tedy dán množinou vrcholů (V) a množinou hran (H), přičemž každá hrana spojuje dva vrcholy, a zapisujeme ji tedy jako množinu těchto dvou prvků. Například:",
-                    "OBRÁZEK",
                     "V = {1, 2, 3, 4}",
-                    "H = {{1, 2}, {1, 4}, {2, 3}, {3, 4}}" 
+                    "H = {{1, 2}, {1, 4}, {2, 3}, {3, 4}}",
+                    "<img src='../../../assets/img/grafy-popis2.png'/>" 
                     ]
                     
                 },
@@ -1181,7 +1102,7 @@
                     "type": "singlechoice",
                     "data": {
                         "points": 1,
-                        "question":"Na kterém obrázku je znázorněn úplný graf? OBRÁZEK",
+                        "question":"Na kterém obrázku je znázorněn úplný graf? <br><img src='../../../assets/img/skupina-grafu.png'/>",
                         "options": [
                             "Obr. A",
                             "Obr. B",
@@ -1196,7 +1117,7 @@
                     "type": "singlechoice",
                     "data": {
                         "points": 1,
-                        "question":"Na kterém obrázku je znázorněn graf, který není souvislý? OBRÁZEK",
+                        "question":"Na kterém obrázku je znázorněn graf, který není souvislý? <br><img src='../../../assets/img/skupina-grafu.png'/>",
                         "options": [
                             "Obr. A",
                             "Obr. B",
@@ -1211,7 +1132,7 @@
                     "type": "singlechoice",
                     "data": {
                         "points": 1,
-                        "question":"Na kterém obrázku je znázorněn stromový graf? OBRÁZEK",
+                        "question":"Na kterém obrázku je znázorněn stromový graf? <br><img src='../../../assets/img/skupina-grafu.png'/>",
                         "options": [
                             "Obr. A",
                             "Obr. B",
@@ -1226,7 +1147,7 @@
                     "type": "multichoice",
                     "data": {
                         "points": 3,
-                        "question":"Které kombinace vrcholů z uvedeného obrázku (při zachování všech hran, které do nich vedou) mohou tvořit podgraf v podobě cyklu? OBRÁZEK",
+                        "question":"Které kombinace vrcholů z uvedeného obrázku (při zachování všech hran, které do nich vedou) mohou tvořit podgraf v podobě cyklu? <br><img src='../../../assets/img/grafy-podgraf.png'/>",
                         "options": [
                             "1, 2, 3, 4",
                             "3, 4, 5, 6",
@@ -1275,13 +1196,13 @@
                     "title": "Binární větvení",
                     "text": ["Zmíněné skládání významů probíhá v generativní syntaxi vždy po dvojicích. Nové uzly se tak tvoří spojením dvou složek a z jednoho uzlu mohou jít pouze dvě větve (čáry do dalšího uzlu). Samotná slova (jednotky na nejnižší úrovni) představují také uzly.",
                         "Základní struktura pak vypadá tak, že se sloveso spojí s předmětem, čímž vznikne událost, která může být lokalizována. Například <i>[[Číst knihu] [v knihovně]].</i>",
-                        "OBRÁZEK"
+                        "<img src='../../../assets/img/cist-knihu.png'/>"
                     ]
                 }
             ],
             "quizes": [
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "points": 1,
@@ -1296,7 +1217,7 @@
                     }
                 },
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "points": 1,
@@ -1310,7 +1231,7 @@
                     }
                 },
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "points": 1,
@@ -1325,7 +1246,7 @@
                     }
                 },
                 {
-                    "title": "Zvol správnou odpověď",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "points": 1,
@@ -1423,34 +1344,25 @@
                         "correct": "rozdělení konstituentu"
                     }
                 },
+                
                 {
-                    "title": "Zvolte správnou odpověď",
-                    "type": "trees",
-                    "data": {
-                        "points": 5,
-                        "question": "Vytvoř strukturu věty",
-                        "constituents": "<Pron>I,<V>see,<N>trees,<P>of,<A>green",
-                        "correct": "[I,[see,[trees,[of,green]]]]"
-                    }
-                },
-                {
-                    "title": "Kliknutím vyberte uzly, které chcete spojit, a spojte je pomocí tlačítka Merge",
+                    "title": "Kliknutím vyberte uzly, které chcete spojit, a spojte je pomocí tlačítka Spojit uzly",
                     "type": "trees",
                     "data": {
                         "points": 2,
-                        "question": "Vytvoř strukturu spojení <i>vyhnání podvodníka z Brna</i> ve významu zachycujícím původ podvodníka (nově vzniklé uzly označuj čísly od 1)",
-                        "constituents": "<vyhnání>,<podvodníků>, <z Brna>",
-                        "correct": "[vyhnání,[podvodníků,z Brna]"
+                        "question": "Vytvořte strukturu spojení <i>vyhnání podvodníků z Brna</i> ve významu zachycujícím původ podvodníků",
+                        "constituents": "<uzel A>vyhnání,<uzel B>podvodníků, <uzel C>z Brna",
+                        "correct": "[vyhnání,[podvodníků,z Brna]]"
                     }
                 },
                 {
-                    "title": "Kliknutím vyberte uzly, které chcete spojit, a spojte je pomocí tlačítka Merge",
+                    "title": "Kliknutím vyberte uzly, které chcete spojit, a spojte je pomocí tlačítka Spojit uzly",
                     "type": "trees",
                     "data": {
                         "points": 2,
-                        "question": "Vytvoř strukturu spojení vyhnání podvodníka z Brna ve významu zachycujícím původ podvodníka (nově vzniklé uzly označuj čísly od 1)",
-                        "constituents": "<vyhnání>,<podvodníků>, <z Brna>",
-                        "correct": "[vyhnání,podvodníků],z Brna]"
+                        "question": "Vytvořte strukturu spojení <i>vyhnání podvodníků z Brna</i> ve významu zachycujícím místo, kde k události došlo",
+                        "constituents": "<uzelA>vyhnání,<uzel B>podvodníků>, <uzel C>z Brna",
+                        "correct": "[[vyhnání,podvodníků],z Brna]"
                     }
                 }
             ]
@@ -1462,13 +1374,14 @@
                 {
                     "title": "",
                     "text": ["Jak jsme zmínili, konstituent se obvykle skládá ze dvou částí, které ale nejsou rovnocenné. Jedna z nich je nadřazena druhé a říkáme jí hlava. Ta je zpravidla doplněna komplementem a společně vytvářejí frázi. Tato fráze bývá rozvíjena specifikátorem a celé toto spojení může být doplněno adjunktem.",
-                        "Každý konečný uzel má také svůj typ, který odpovídá jeho funkci ve větě (slovnímu druhu). Pro plnovýznamová slovesa je to V (verbum), pro podstatná jména je to N (nomen), pro přídavná jména A (adjektivum) apod."
+                        "<img src='../../../assets/img/typy-konstituentu.png'/>"
+                        
                     ]
                 },
                 {
                     "title": "Hlava",
                     "text": ["Hlava tvoří základ fráze. Určuje totiž typ významu, tedy například jestli se jedná o činnost/děj (pak jde o slovesnou frázi), nebo spíše nějakou věc (v případě jmenné fráze). Např. <i>umývat nádobí</i> je fráze, která se skládá z podstatného jména (nádobí) a slovesa (umývat). Ty ale nejsou rovnocenné, protože fráze <i>umývat nádobí</i> není napůl sloveso/děj a napůl podstatné jméno / věc. Fráze <i>umývat nádobí</i> označuje děj (zaměřený na nějakou věc). Naopak spojení <i>umývané nádobí</i> označuje věc (která je zasažena dějem). Hlavou <i>umývat nádobí</i> je tedy slovo <i>umývat</i>, zatímco hlavou fráze <i>umývané nádobí</i> je <i>nádobí</i>.",
-                    "Typ hlavy se také promítne do názvu celého konstituentu. Pokud jde například o sloveso, výsledný uzel (fráze) bude označen VP (verbal phrase). Hlava také určuje tvar nehlavy (například udává pád)."
+                    "Hlava také určuje tvar nehlavy (například udává pád)."
                     ]
                 },
                 {
@@ -1528,11 +1441,11 @@
                     }
                 }, 
                 {
-                    "title":"Na vynechaná místa přesuňte odpovídající položky z nabídky",
+                    "title":"",
                     "type":"matching",
                     "data":{
                         "points": 4,
-                        "question": "V následující větě určete, který uzel odpovídá kterému typu konstituentu OBRÁZEK",
+                        "question": "V následující větě určete, který uzel odpovídá kterému typu konstituentu <br><img src='../../../assets/img/Jana-kreslila.png'/>",
                         "optionsFixed": ["komplement",
                             "hlava",
                             "specifikátor",
@@ -1542,7 +1455,7 @@
                             "Jana",
                             "kreslila",
                             "obrázek",
-                            "do pomátníku"
+                            "do památníku"
                         ],
                         "correct": {
                             "komplement": ["obrázek"],
@@ -1575,13 +1488,17 @@
             ],
             "quizes": [
                 {
-                    "title": "OTÁZKA/ÚKOL SYNT/SET - TODO",
+                    "title": "Zvolte správnou odpověď",
                     "type": "singlechoice",
                     "data": {
                         "points": 1,
-                        "question": "Xy",
-                        "options": ["a", "b"],
-                        "correct": "a"
+                        "question": "Co je výsledkem syntaktické analýzy?",
+                        "options": ["rozpoznání jazyka, kterým je věta napsána",
+                             "rozpoznání hranic jednotlivých slov",
+                             "syntaktická struktura dané věty",
+                             "určení toho, zda je pořadí slov ve větě správné"
+                            ],
+                        "correct": "syntaktická struktura dané věty"
                     }
                 }
             ]
@@ -1599,11 +1516,8 @@
                 {
                     "title": "Sémantika",
                     "text": ["Sémantika se zabývá významem slov a významovými vztahy, jako je například synonymie. Význam je ovšem velmi obtížně uchopitelný, a proto je tato rovina z hlediska počítačového zpracování patrně nejvíce problematická."]
-                },
-                {
-                    "title": "Stránka 3",
-                    "text": "asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "
                 }
+
             ],
             "quizes": [
                 {
@@ -1662,20 +1576,19 @@
                 {
                     "title": "Homonymie",
                     "text": ["Dalším problémem je pak <b>homonymie</b> (víceznačnost), kdy jedno slovo může mít v závislosti na kontextu více různých významů.",
-                        "Pravděpodobně jste se setkali s typickými příklady, jako je <i>koruna</i> (platidlo, část stromu, královský klenot). K homonymii ale může docházet i napříč slovními druhy, viz například <i>stát</i> (sloveso a podstatné jméno se zcela odlišným významem). Někdy se naopak mohou významy lišit jen mírně – například u podstatných jmen typu <i>stavení</i> (může označovat řadu pádových forem a bez kontextu nedokážeme určit, o kterou z nich se jedná). "
+                        "Pravděpodobně jste se setkali s typickými příklady, jako je <i>koruna</i> (platidlo, část stromu, královský klenot). K homonymii ale může docházet i napříč slovními druhy, viz například <i>stát</i> (sloveso a podstatné jméno se zcela odlišným významem). Někdy se naopak mohou významy lišit jen mírně – například u podstatných jmen typu <i>stavení</i> (může označovat řadu pádových forem a bez kontextu nedokážeme určit, o kterou z nich se jedná).",
+                        "Tato víceznačnost způsobuje komplikace například při automatickém značkování korpusů, kdy je na výběr více možných značek pro dané slovo. Je tedy třeba na základě kontextu rozhodnout, která značka je správná (tento proces se nazývá <b>desambiguace</b>), což nemusejí automatické nástroje vždy správně vyhodnotit."
                     ]
-                },
-                {
-                    "title": "",
-                    "text": ["Tato víceznačnost způsobuje komplikace například při automatickém značkování korpusů, kdy je na výběr více možných značek pro dané slovo. Je tedy třeba na základě kontextu rozhodnout, která značka je správná (tento proces se nazývá <b>desambiguace</b>), což nemusejí automatické nástroje vždy správně vyhodnotit."]
                 },
                 {
                     "title": "WordNet",
                     "text": ["K zachycení významů a vztahů mezi nimi můžeme mimo jiné použít takzvanou sémantickou síť. Tu si můžeme představit jako graf, který propojuje jednotlivá slova různými typy vztahů. Příkladem takové sítě je WordNet. Jeho základ tvoří synonymické řady, které nazýváme <b>synsety</b>. Ty mají přiřazený význam. Mezi jednotlivými synsety můžeme pozorovat další vztahy, například nadřazenost – podřazenost, celek – část a podobně. První WordNet byl vytvořený v 80. letech na univerzitě v Princetonu a stále se vyvíjí. Dnes už existuje i česká verze (která vzniká na Fakultě informatiky Masarykovy univerzity) nebo mezinárodní projekt EuroWordNet."]
                 },
                 {
-                    "title": "Ukázka z WordNetu - TODO",
-                    "text": ["asdhkasjd hkasd hasdk haskdj haskdj haskdj haskj "]
+                    "title": "Ukázka z českého WordNetu",
+                    "text": ["Ukázka pro slovo <i>kocour</i>", 
+                        "<img src='../../../assets/img/kocour.png'/>"
+                    ]
                 }
             ],
             "quizes": [
@@ -1765,7 +1678,7 @@
                     "type": "singlechoice",
                     "data": {
                         "points": 1,
-                        "question": "a obrázku je zachycen výpis z WordNetu pro slovo lev. Co označuje relace pojmenovaná jako mero_part (vztahy jsou popisovány v pořadí související slovo ku hledanému)? OBRÁZEK",
+                        "question": "Na obrázku je zachycen výpis z WordNetu pro slovo lev. Co označuje relace pojmenovaná jako mero_part (vztahy jsou popisovány v pořadí související slovo ku hledanému)? <br><img src='../../../assets/img/lev-sn-mensi.png'/>",
                         "options": ["vztah celek – část",
                             "vztah část – celek",
                             "nadřazené slovo",
@@ -1805,7 +1718,7 @@
                     "type": "singlechoice",
                     "data": {
                         "points":1,
-                        "question": "Jak je to podle příručky s velkými písmeny u pohádkové KARKULKY?",
+                        "question": "Jak je to podle příručky s velkými písmeny u pohádkové KARKULKY?  <iframe width='100%' height='180' src='https://prirucka.ujc.cas.cz/' frameborder='0' ></iframe> Pro zobrazení výsledku vyhledávání je třeba posunout stránku.",
                         "options": ["jediný možný zápis je Červená Karkulka", 
                         "jediný možný zápis je Červená karkulka",
                         "oba zápisy jsou možné, ale Červená Karkulka je v souladu s Pravidly českého pravopisu",
@@ -1996,15 +1909,15 @@
                             ],
                         "optionsMatch": [
                             "¬ ∃y∀x Ucitel(x, y) => Rad(y, x)",
-                            "¬ ∃x∀y Ucitel(x, y)=> ¬Rad(x, y)",
+                            "¬ ∃x∀y Ucitel(x, y) => ¬Rad(x, y)",
                             "¬ ∃x∀y Ucitel(x, y) => Rad(x, y)",
-                            "¬ ∃y∀x Ucitel(x, y)=> ¬Rad(y, x)"
+                            "¬ ∃y∀x Ucitel(x, y) => ¬Rad(y, x)"
                         ],
                         "correct": {
                             "Neexistuje žák, který má rád všechny své učitele": ["¬ ∃y∀x Ucitel(x, y) => Rad(y, x)"],
-                            "Neexistuje žák, který má všechny své učitele nerad": ["¬ ∃y∀x Ucitel(x, y)=> ¬Rad(y, x)"],
+                            "Neexistuje žák, který má všechny své učitele nerad": ["¬ ∃y∀x Ucitel(x, y) => ¬Rad(y, x)"],
                             "Neexistuje učitel, který má rád všechny své žáky": ["¬ ∃x∀y Ucitel(x, y) => Rad(x, y)"],
-                            "Neexistuje učitel, který má všechny své žáky nerad": ["¬ ∃x∀y Ucitel(x, y)=> ¬Rad(x, y)"]
+                            "Neexistuje učitel, který má všechny své žáky nerad": ["¬ ∃x∀y Ucitel(x, y) => ¬Rad(x, y)"]
                         }
                     }
                 }
@@ -2019,11 +1932,8 @@
             "content": [
                 {
                     "title": "Prediktivní psaní",
-                    "text":["Kromě nástrojů, které jsme si představili v předchozích lekcích, má počítačová lingvistika využití v celé řadě dalších situací. Jednou z těch, se kterými jste se pravděpodobně setkali, je takzvané <b>prediktivní psaní</b>. Jedná se o funkci, kterou známe například z <b>chytrých telefonů</b>, které nám během psaní napovídají, co (možná) chceme psát. S obdobnou funkcí se můžeme setkat i u <b>internetových vyhledávačů</b>, které mimo jiné využívají i zmíněnou <b>morfologickou analýzu</b>. Díky tomu můžeme klíčová slova vyhledávat ve všech možných tvarech zároveň, čímž získáme mnohem více výsledků."]
-                },
-                {
-                    "title": "",
-                    "text":["Vyzkoušejte si nástroj pro prediktivní psaní vyvíjený v Centru zpracování přirozeného jazyka na Fakultě informatiky Masarykovy univerzity. Snažte se co nejvíce využít možnosti, které vám nabízí. Zkuste s jeho pomocí napsat třeba krátkou pohádku a nechte se překvapit, co z toho vznikne. Bylo nebylo... IFRAME"]
+                    "text":["Kromě nástrojů, které jsme si představili v předchozích lekcích, má počítačová lingvistika využití v celé řadě dalších situací. Jednou z těch, se kterými jste se pravděpodobně setkali, je takzvané <b>prediktivní psaní</b>. Jedná se o funkci, kterou známe například z <b>chytrých telefonů</b>, které nám během psaní napovídají, co (možná) chceme psát. S obdobnou funkcí se můžeme setkat i u <b>internetových vyhledávačů</b>, které mimo jiné využívají i zmíněnou <b>morfologickou analýzu</b>. Díky tomu můžeme klíčová slova vyhledávat ve všech možných tvarech zároveň, čímž získáme mnohem více výsledků.", 
+                        "<a target='blank' href='https://nlp.fi.muni.cz/projekty/predictive/predictive-ui/index-cs.html'>Vyzkoušejte si</a> nástroj pro prediktivní psaní vyvíjený v Centru zpracování přirozeného jazyka na Fakultě informatiky Masarykovy univerzity. Snažte se co nejvíce využít možnosti, které vám nabízí. Zkuste s jeho pomocí napsat třeba krátkou pohádku a nechte se překvapit, co z toho vznikne. Bylo nebylo..."]
                 },
                 {
                     "title": "Korektory",
@@ -2087,12 +1997,8 @@
                 },
                 {
                     "title": "",
-                    "text":["Prvním úspěšnějším pokusem o chatbota byl v šedesátých letech projekt <b>Eliza</b>, který napodoboval rozhovor s psychoterapeutem. Poměrně zajímavým příkladem ze současnosti je pak mobilní aplikace <b>Replika</b> (má ovšem i webové rozhraní), která má představovat věrnou a naslouchající virtuální kamarádku nebo kamaráda, a poskytnout tak psychickou podporu a pocit zázemí."                       
-                    ]
-                },
-                {
-                    "title": "Eliza",
-                    "text":["Vyzkoušejte si chatování s Elizou (probíhá v angličtině). IFRAME: http://psych.fullerton.edu/mbirnbaum/psych101/Eliza.htm"                       
+                    "text":["Prvním úspěšnějším pokusem o chatbota byl v šedesátých letech projekt <b>Eliza</b>, který napodoboval rozhovor s psychoterapeutem. Poměrně zajímavým příkladem ze současnosti je pak mobilní aplikace <b>Replika</b> (má ovšem i webové rozhraní), která má představovat věrnou a naslouchající virtuální kamarádku nebo kamaráda, a poskytnout tak psychickou podporu a pocit zázemí.",
+                        "<a target='blank' href='http://psych.fullerton.edu/mbirnbaum/psych101/Eliza.htm'>Vyzkoušejte si chatování s Elizou</a> (probíhá v angličtině)."                       
                     ]
                 }
             ],
@@ -2139,34 +2045,31 @@
                 },
                 {
                     "title": "",
-                    "text":["Nakonec si ukážeme ještě některé konkrétní nástroje, které by pro vás mohly být zajímavé. Jedním takovým je například <a href=\"https://nlp.fi.muni.cz/projekty/punctuation/\">Webové rozhraní pro systém doplňování čárek</a>.",
-                        "Vyzkoušejte si ho. IFRAME"
+                    "text":["Nakonec si ukážeme ještě některé konkrétní nástroje, které by pro vás mohly být zajímavé. Jedním takovým je například Webové rozhraní pro systém doplňování čárek.",
+                        "<a target='blank' href='https://nlp.fi.muni.cz/projekty/punctuation/'>Vyzkoušejte si ho</a>."
                     ]
                 },
                 {
                     "title": "Doplňování diakritiky",
-                    "text":["V současné době stále více lidí píše na internetu nebo do různých messengerů bez diakritiky. V Centru zpracování přirozeného jazyka tak vznikl <a href=\"http://nlp.fi.muni.cz/cz_accent/\">nástroj</a>, který <b>diakritiku doplňuje</b>.",
-                    "Můžete si ho sami vyzkoušet. IFRAME"]
+                    "text":["V současné době stále více lidí píše na internetu nebo do různých messengerů bez diakritiky. V Centru zpracování přirozeného jazyka tak vznikl nástroj, který <b>diakritiku doplňuje</b>.",
+                    "Můžete si ho <a target='blank' href='http://nlp.fi.muni.cz/cz_accent/'>sami vyzkoušet</a>."]
                 },
                 {
                     "title": "Webová typografie",
-                    "text":["Za zmínku určitě stojí také <a href=\"http://www.webovatypografie.cz/\">Webová typografie</a>, která by měla pomoci odstranit nejčastější <b>typografické chyby</b>.",
-                        "Vyzkoušejte si práci s Webovou typografií IFRAME"]
+                    "text":["Za zmínku určitě stojí také Webová typografie, která by měla pomoci odstranit nejčastější <b>typografické chyby</b>.",
+                        "<a target='blank' href='http://www.webovatypografie.cz/'>Vyzkoušejte si práci s Webovou typografií</a>."]
 
                 },
                 {
                     "title": "Korpusy a korpusové nástroje",
-                    "text":["Pro práci s jazykovými daty, vyhledávání různých jevů, ale i zajímavostí je pak možné využít nejrůznější korpusy a řadu korpusových nástrojů, které jsou k nalezení na <a href=\"https://www.korpus.cz/\">korpus.cz</a>",
-                        "Pro vyhledávání konkrétních slov a získání základního přehledu o tom, jak používají, můžeme použít nástroj Slovo v kostce, který sdružuje různé informace o slově. Pro pokročilejší práci s korpusem pak můžeme použít korpusový manažer KonText, který nám umožňuje vybrat si nejvhodnější korpus, zadávat specifičtější dotazy a zobrazit všechny odpovídající výskyty. SyD pak umožňuje porovnávat užití dvou a více slov (například synonym nebo dublet), a to jak v současném jazyce, tak i z hlediska proměny v čase. Pro zkoumání slovotvorby je užitečný nástroj Morfio, Treq slouží k vyhledávání překladových ekvivalentů a KWords k odhalení klíčových slov v zadaném textu."
+                    "text":["Pro práci s jazykovými daty, vyhledávání různých jevů, ale i zajímavostí je pak možné využít nejrůznější korpusy a řadu korpusových nástrojů.",
+                        "Pro vyhledávání konkrétních slov a získání základního přehledu o tom, jak používají, můžeme použít nástroj Slovo v kostce, který sdružuje různé informace o slově. Pro pokročilejší práci s korpusem pak můžeme použít korpusový manažer KonText, který nám umožňuje vybrat si nejvhodnější korpus, zadávat specifičtější dotazy a zobrazit všechny odpovídající výskyty. SyD pak umožňuje porovnávat užití dvou a více slov (například synonym nebo dublet), a to jak v současném jazyce, tak i z hlediska proměny v čase. Pro zkoumání slovotvorby je užitečný nástroj Morfio, Treq slouží k vyhledávání překladových ekvivalentů a KWords k odhalení klíčových slov v zadaném textu.",
+                        "<a target='blank' href='https://www.korpus.cz/'>Vyzkoušejte si práci s korpusovými nástroji</a>. V horní liště můžete přepínat mezi jednotlivými nástroji."
                         ]
                 },
                 {
-                    "title": "Korpusové nástroje",
-                    "text":["Vyzkoušejte si práci s korpusovými nástroji. V horní liště vloženého okna můžete přepínat mezi jednotlivými nástroji. IFRAME"]
-                },
-                {
                     "title":"SKELL",
-                    "text":["Pro učení jazyků může být užitečný nástroj <a href=\"https://skell.sketchengine.co.uk/run.cgi/skell\">SKELL</a>, který je založen na <b>korpusu</b> a poskytuje k hledaným výrazům <b>příklady užití</b>, <b>častý kontext</b> a slova, která se objevují v <b>podobném kontextu</b> (tedy nejen synonyma). Data jsou aktuálně dostupná pro češtinu, angličtinu, němčinu, ruštinu, italštinu a estonštinu. Opět si ho můžete sami vyzkoušet. IFRAME"]
+                    "text":["Pro učení jazyků může být užitečný nástroj SKELL, který je založen na <b>korpusu</b> a poskytuje k hledaným výrazům <b>příklady užití</b>, <b>častý kontext</b> a slova, která se objevují v <b>podobném kontextu</b> (tedy nejen synonyma). Data jsou aktuálně dostupná pro češtinu, angličtinu, němčinu, ruštinu, italštinu a estonštinu.", "Opět si ho můžete <a target='blank' href='https://skell.sketchengine.co.uk/run.cgi/skell'>sami vyzkoušet</a>."]
                 }
             ],
             "quizes":[
@@ -2205,7 +2108,7 @@
                     "type": "singlechoice",
                     "data": {
                         "points": 1,
-                        "question": "Pomocí nástroje SyD porovnejte slova skříň a almara. Kdy bylo podle dostupných dat jejich používání nejvyrovnanější? IFRAME",
+                        "question": "Pomocí nástroje SyD porovnejte slova skříň a almara. Kdy bylo podle dostupných dat jejich používání nejvyrovnanější? <iframe width='90%' height='200' src='https://syd.korpus.cz/' frameborder='0' ></iframe>",
                         "options": ["v první polovině 18. století", 
                             "ve druhé polovině 18. století", 
                             "v první polovině 19. století", 

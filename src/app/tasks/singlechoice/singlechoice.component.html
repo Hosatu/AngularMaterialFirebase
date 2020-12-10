@@ -4,5 +4,5 @@
     <span [innerHtml]="option" [ngClass]="getOptionColor(option)"></span> 
   </mat-radio-button>
 </mat-radio-group>
-<b>{{getCorrectAnswer()}}</b><br/>
+<span [innerHTML]="getCorrectAnswer()"></span><br/>
 <button mat-raised-button color="primary" (click)="submit()" [disabled]="isAnswered || !answer">Odeslat odpověď</button>

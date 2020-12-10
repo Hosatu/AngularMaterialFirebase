@@ -3,11 +3,11 @@
   <span (close)="closeAlert(alert)">{{ alert.message }}</span>
 </p>
 <d3-tree-renderer #mainRenderer class="canvas" (nodeSelected)="onNodeSelected(mainRenderer,$event)" fontSize="15" fontColor="green" [initialNodes]="data.constituents" height="250" [width]="windowWidth"></d3-tree-renderer>
-<button mat-raised-button color="primary" [disabled]="!canMerge()" (click)="mergeNodes(mainRenderer)">Merge nodes</button> 
-<button mat-raised-button color="danger" [disabled]="!canUnselect()" (click)="clearSelected(mainRenderer)">Clear selected</button>
-<button mat-raised-button color="danger" [disabled]="isAnswered" (click)="clear(mainRenderer)">Reset</button>
+<button mat-raised-button color="primary" [disabled]="!canMerge()" (click)="mergeNodes(mainRenderer)">Spojit uzly</button> 
+<button mat-raised-button color="danger" [disabled]="!canUnselect()" (click)="clearSelected(mainRenderer)">Vymazat výběr</button>
+<button mat-raised-button color="danger" [disabled]="isAnswered" (click)="clear(mainRenderer)">Resetovat</button>
 <button mat-raised-button color="primary" [disabled]="isAnswered || !tree" (click)="submit()" >Odeslat odpověď</button><br/>
 <img *ngIf="isAnswered" src="../../../assets/img/{{data.correct}}.png"/>
-<b *ngIf="isAnswered">{{getPoints() == 0 ? 'Špatně' : 'Správně' }}! ({{getPoints()}} bod{{getInflection(getPoints())}})</b><br/>
+<span *ngIf="isAnswered">{{getPoints() == 0 ? 'Špatně' : 'Správně' }}! ({{getPoints()}} bod{{getInflection(getPoints())}})</span><br/>
 
 <!--d3-tree-renderer #resultRenderer class="canvas" (nodeSelected)="onNodeSelected(mainRenderer,$event)" fontSize="15" fontColor="green" [initialNodes]="data.constituents" height="250" [width]="windowWidth"></d3-tree-renderer-->

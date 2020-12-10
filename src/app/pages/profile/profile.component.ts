@@ -57,7 +57,7 @@ export class ProfileComponent implements OnInit {
 
   public onPasswordReset(): void {
     this.userService.sendUserPasswordResetEmail();
-    this.alertService.showToaster('Reset password is sent to your email');
+    this.alertService.showToaster('E-mail pro reset hesla odeslán.');
   }
 
 }

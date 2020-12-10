@@ -121,23 +121,23 @@
             "našeptávače a korektory": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{
+
+                }
             }, 
             "překladače a chatboty": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{
+
+                }
+
             }, 
             "další nástroje": {
                 "unlocked": false,
                 "finished": false,
-                "quiz-results":[
-                    
-                ]
+                "quizResults":{}
+ 
             }
         }
     }
