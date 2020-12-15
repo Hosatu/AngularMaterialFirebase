@@ -659,8 +659,8 @@
                 {
                     "title": "",
                     "text": [
-                        "Tečka reprezentuje <b>libovolný znak</b>. Na místě, kde ji v dotazu použije, tak může být ve vyhledaných slovech jakékoliv písmeno (nebo jiný znak).",
-                        "Symbol * pak značí <b>libovolný počet opakování</b> předcházejícího znaku nebo skupiny znaků (pak bychom ovšem už museli použít další regulární výraz, abychom tuto skupinu ohraničili.",
+                        "Tečka reprezentuje <b>libovolný znak</b>. Na místě, kde ji v dotazu použijeme, tak může být ve vyhledaných slovech jakékoliv písmeno (nebo jiný znak).",
+                        "Symbol * pak značí <b>libovolný počet opakování</b> předcházejícího znaku nebo skupiny znaků (pak bychom ovšem už museli použít další regulární výraz, abychom tuto skupinu ohraničili).",
                         "Pokud tyto dva výrazy spojíme do podoby <b>.*</b>, můžeme hledat slova, jejichž <b>část má libovolnou podobu</b>. Například všechna slova začínající řetězcem <i>auto-</i> (pomocí dotazu <i>auto.*</i>) nebo končící řetězcem <i>-mat>/i> (dotazem <i>.*mat</i>)."
                     ]
                 }
